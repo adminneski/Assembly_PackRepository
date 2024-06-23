@@ -1,0 +1,6 @@
+[SSL_Settings]
+Protocol=HTTP
+CertFile=.\certificate.crt
+KeyFile=.\certificate.key
+RootCertFile=.\certificate.pem
+CertPassword=

@@ -1,0 +1,6 @@
+Possiveis Soluções Erros GOXORM
+
+------>
+Error:  FireDAC 109 - string constant is not terminated properly or is too long
+Motivo: No Valor Default da Dto tem alguns propriedade passando default dessa forma [ '''' ] como fosse passar espaço em Branco 
+------>
