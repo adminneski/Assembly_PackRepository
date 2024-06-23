@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Tag="21650" Version="2021.2" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="495615" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="44312,9280314236" ReportOptions.Description.Text="This report builds the big matrix that contains 1001 rows and columns (over 1 million cells). &#13;&#10;In this report, the table is filled in the script. To do this&#13;&#10;- create the Table object that you need. &#13;&#10;- in the object inspector window, click the Events tab and create the OnManualBuild event handler. See this example code for more details." ReportOptions.LastChange="44339,8565324768" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;procedure TableObject1OnManualBuild(Sender: TfrxComponent);&#13;&#10;var&#13;&#10;  i, j: Integer;&#13;&#10;begin&#13;&#10;  for i := 0 to 1000 do&#13;&#10;  begin&#13;&#10;    if i = 0 then&#13;&#10;      TableObject1.TableBuilder.PrintRow(0, tbHeader)&#13;&#10;    else&#13;&#10;      TableObject1.TableBuilder.PrintRow(1);&#13;&#10;    for j := 0 to 1000 do&#13;&#10;      if j = 0 then&#13;&#10;        TableObject1.TableBuilder.PrintColumn(0, tbHeader)&#13;&#10;      else&#13;&#10;        TableObject1.TableBuilder.PrintColumn(1);&#13;&#10;  end;&#13;&#10;end;&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end." OnReportPrint="frxReportAbstractOnReportPrint">
+  <TfrxDataPage Name="Data" HGuides.Text="" VGuides.Text="" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" HGuides.Text="" VGuides.Text="" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" Frame.Typ="0" MirrorMode="0">
+    <TfrxReportTitle Name="ReportTitle1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="54,8561873" Left="0" Top="16" Width="718,1107" Child="Child1">
+      <TfrxMemoView Name="Memo28" AllowVectorExport="True" Left="0" Top="0" Width="718,26086956" Height="50,8561873" Font.Charset="1" Font.Color="16777215" Font.Height="-24" Font.Name="Arial" Font.Style="1" Frame.Typ="0" FillType="ftGlass" Fill.Color="5328461" Fill.Blend="0,2" Fill.Hatch="True" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="Dynamic table - stress test"/>
+    </TfrxReportTitle>
+    <TfrxPageFooter Name="PageFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="20" Left="0" Top="192" Width="718,1107">
+      <TfrxMemoView Name="Memo1" AllowVectorExport="True" Left="642,5201" Top="0" Width="75,5906" Height="18,89765" Frame.Typ="0" HAlign="haRight" Text="[Page#]"/>
+    </TfrxPageFooter>
+    <TfrxChild Name="Child1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="40,15893636" Left="0" Top="92" Width="718,1107" Stretched="True" ToNRows="0" ToNRowsMode="rmCount">
+      <TfrxTableObject Name="TableObject1" AllowVectorExport="True" Left="2,54545455" Top="2,36363636" StretchMode="smActualHeight" OnManualBuild="TableObject1OnManualBuild">
+        <TfrxTableColumn Name="TableColumn1" Width="75,5906" MinWidth="0" MaxWidth="75,5906"/>
+        <TfrxTableColumn Name="TableColumn2" AutoSize="True" Width="75,5906" MinWidth="0" MaxWidth="200"/>
+        <TfrxTableRow Name="TableRow1" MinHeight="0" MaxHeight="0" Height="18,89765">
+          <TfrxTableCell Name="TableCell1" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="15" Fill.BackColor="1553663" ParentFont="False" Text="Mul"/>
+          <TfrxTableCell Name="TableCell2" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="15" Fill.BackColor="1553663" ParentFont="False" Text="[TableColumn]"/>
+        </TfrxTableRow>
+        <TfrxTableRow Name="TableRow2" MinHeight="0" MaxHeight="0" Height="18,89765">
+          <TfrxTableCell Name="TableCell6" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="15" Fill.BackColor="1553663" ParentFont="False" Text="[TableRow]"/>
+          <TfrxTableCell Name="TableCell7" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="10937087" ParentFont="False" Text="[&#60;TableRow&#62; * &#60;TableColumn&#62;]"/>
+        </TfrxTableRow>
+      </TfrxTableObject>
+    </TfrxChild>
+  </TfrxReportPage>
+</TfrxReport>

@@ -1,0 +1,110 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+
+Agradecimentos:
+
+* Administradores:
+- Daniel Simões de Almeida
+
+{******************************************************************************
+|* ACBrLibMail
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+13/03/2024
+--- ACBrLibMailDataModule,ACBrLibMailBase  --
+[*] Adicionado uses ACBrUtil.filesIO
+Por: Daniel Morais Infocotidiano
+
+11/01/2023
+--- ACBrLibMailBase ---
+[-] Correção para conversão das respostas com Erros, em ANSI, se assim estiver configurado
+	Por: Antonio Carlos Junior
+
+20/07/2022
+--- ACBrLibEMAIL ---
+[*] Remoção de Warning @deprecated ref. ACBrUtils
+
+07/09/2020
+--- ACBrLibMAILMT, ACBrLibMAILST ---
+[+] Removido o metodo MAIL_ConfigImportar.
+   Por: Rafael Dias
+[+] Removido o metodo MAIL_ConfigExportar.
+   Por: Rafael Dias
+[-] Removido o metodo MAIL_ImportarConfig.
+   Por: Rafael Dias
+
+03/01/2020
+--- ACBrLibMailClass ---
+[+] Adicionado o metodo MAIL_ImportarConfig.
+   Por: Rafael Dias
+
+23/08/2018
+--- ACBrLibMail ---
+[+] Adicionado a nova propriedade para confirmação de entrega.
+    Por: Rafael Dias
+
+15/08/2018
+--- ACBrLibMail ---
+[*] Melhorias no codigo para evitar duplicação de codigo.
+    Por: Rafael Dias
+
+14/08/2018
+--- ACBrLibMail ---
+[-] Corrigido erro ao inicializar datamodule.
+    Por: Rafael Dias
+
+13/08/2018
+--- ACBrLibMail ---
+[+] Adcionado o metodo MAIL_AddBody e MAIL_AddAltBody, para poder adicionar o corpo do email.
+    Por: Rafael Dias
+
+09/08/2018
+--- ACBrLibMail ---
+[-] Correção nos nomes das Unit do DataModule para seguir o padrão.
+    Por: Rafael Dias
+[-] Correção do LFM do DataModule estava com o nome da classe incorreto.
+    Por: Rafael Dias
+[-] Remoção de metodos com Stream.
+    Por: Rafael Dias
+[-] Correções nos metodos para não usarem parametros opcionais e enum.
+    Por: Rafael Dias
+[*] Adicionados os modos de compilação padrão.
+    Por: Rafael Dias
+
+02/08/2018
+--- ACBrLibMail ---
+[+] Inicio do projeto.
+   Por: Italo Jurisato Junior

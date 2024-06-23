@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="ACBr_NF3e"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Juliomar Marchetti - Daniel Simões de Almeida"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e;..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\DANF3e;..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base;..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\Servicos"/>
+        <UnitOutputDirectory Value="..\..\..\..\Lib\Lazarus\ACBrDFe\ACBrNF3e\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Other>
+        <CompilerMessages>
+          <IgnoredMessages idx5024="True"/>
+        </CompilerMessages>
+      </Other>
+    </CompilerOptions>
+    <Description Value="ACBr - Nota Fiscal de Energia Elétrica Eletrônica - (http://www.projetoacbr.com.br/)"/>
+    <License Value="LGPL"/>
+    <Files Count="16">
+      <Item1>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\ACBrNF3e.pas"/>
+        <UnitName Value="ACBrNF3e"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\ACBrNF3eReg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="ACBrNF3eReg"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\ACBrNF3eNotasFiscais.pas"/>
+        <UnitName Value="ACBrNF3eNotasFiscais"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\ACBrNF3eConfiguracoes.pas"/>
+        <UnitName Value="ACBrNF3eConfiguracoes"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\ACBrNF3eWebServices.pas"/>
+        <UnitName Value="ACBrNF3eWebServices"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\DANF3e\ACBrNF3eDANF3eClass.pas"/>
+        <UnitName Value="ACBrNF3eDANF3eClass"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\Servicos\ACBrNF3eConsSit.pas"/>
+        <UnitName Value="ACBrNF3eConsSit"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\Servicos\ACBrNF3eEnvEvento.pas"/>
+        <UnitName Value="ACBrNF3eEnvEvento"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\Servicos\ACBrNF3eEventoClass.pas"/>
+        <UnitName Value="ACBrNF3eEventoClass"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\ACBrNF3eClass.pas"/>
+        <UnitName Value="ACBrNF3eClass"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\ACBrNF3eXmlReader.pas"/>
+        <UnitName Value="ACBrNF3eXmlReader"/>
+      </Item11>
+      <Item12>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\ACBrNF3eXmlWriter.pas"/>
+        <UnitName Value="ACBrNF3eXmlWriter"/>
+      </Item12>
+      <Item13>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\Servicos\ACBrNF3eRetConsSit.pas"/>
+        <UnitName Value="ACBrNF3eRetConsSit"/>
+      </Item13>
+      <Item14>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\Servicos\ACBrNF3eRetEnvEvento.pas"/>
+        <UnitName Value="ACBrNF3eRetEnvEvento"/>
+      </Item14>
+      <Item15>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\ACBrNF3eConversao.pas"/>
+        <UnitName Value="ACBrNF3eConversao"/>
+      </Item15>
+      <Item16>
+        <Filename Value="..\..\..\..\Fontes\ACBrDFe\ACBrNF3e\Base\ACBrNF3eConsts.pas"/>
+        <UnitName Value="ACBrNF3eConsts"/>
+      </Item16>
+    </Files>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="ACBrDFeComum"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,14 @@
+object LibBALDM: TLibBALDM
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 257
+  VerticalOffset = 127
+  Width = 150
+  object ACBrBAL1: TACBrBAL
+    Porta = 'COM1'
+    Left = 57
+    Top = 21
+  end
+end

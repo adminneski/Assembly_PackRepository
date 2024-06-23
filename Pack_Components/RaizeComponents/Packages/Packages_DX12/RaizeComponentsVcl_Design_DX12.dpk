@@ -1,0 +1,48 @@
+{$I ..\..\RzComps.inc}
+
+package RaizeComponentsVcl_Design_DX12;
+
+{$R *.res}
+{$R '..\..\RaizeComponentsVcl_24x24.dcr'}
+{$R '..\..\RaizeComponentsVcl_16x16.dcr'}
+{$R '..\..\RaizeComponentsVcl_32x32.dcr'}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $50800000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Raize  Lite Components by Gobet'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  Vcl,
+  DesignIDE,
+  DclStd,
+  VclImg,
+  RaizeComponentsVcl_DX12;
+
+contains
+  RaizeComponentsVcl_Reg in '..\..\RaizeComponentsVcl_Reg.pas',
+  RzDesignEditors in '..\..\RzDesignEditors.pas';
+
+end.

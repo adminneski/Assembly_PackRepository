@@ -1,0 +1,2334 @@
+Versao Instalador: 2.16.0.21
+Versão do delphi: Delphi 11 Alexandria Win32
+Dir. Instalação : D:\Neski_Components\ACBr\
+Dir. Bibliotecas: D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32
+
+Removendo librarypaths da instalação anterior do ACBr na IDE...
+...OK
+Removendo pacotes 32bits da instalação anterior do ACBr na IDE...
+...OK
+Criando diretórios de bibliotecas para Win32...
+...OK
+Adicionando library paths para Win32...
+...OK
+Alterando a variável de ambiente PATH do Delphi...
+...OK
+
+COMPILANDO OS PACOTES...
+Cleaning package cache for ACBr_synapse.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\synapse\ACBr_synapse.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\synapse\ACBr_synapse.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+44607 lines, 1.12 seconds, 381956 bytes code, 29460 bytes data.
+Compilation success
+Pacote "ACBr_synapse.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Comum.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrComum\ACBr_Comum.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrComum\ACBr_Comum.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+87427 lines, 1.84 seconds, 513316 bytes code, 17640 bytes data.
+Compilation success
+Pacote "ACBr_Comum.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Comum.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrComum\DCLACBr_Comum.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrComum\DCLACBr_Comum.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2734 lines, 0.50 seconds, 12428 bytes code, 228 bytes data.
+Compilation success
+Pacote "DCLACBr_Comum.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_OpenSSL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenSSL\ACBr_OpenSSL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenSSL\ACBr_OpenSSL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+17134 lines, 0.48 seconds, 122140 bytes code, 1772 bytes data.
+Compilation success
+Pacote "ACBr_OpenSSL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_OpenSSL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenSSL\DCLACBr_OpenSSL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenSSL\DCLACBr_OpenSSL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+105 lines, 0.28 seconds, 7332 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_OpenSSL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Diversos.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDiversos\ACBr_Diversos.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDiversos\ACBr_Diversos.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+47799 lines, 0.89 seconds, 273916 bytes code, 8832 bytes data.
+Compilation success
+Pacote "ACBr_Diversos.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Diversos.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDiversos\DCLACBr_Diversos.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDiversos\DCLACBr_Diversos.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2592 lines, 0.34 seconds, 10052 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_Diversos.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_PCNComum.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\PCNComum\ACBr_PCNComum.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\PCNComum\ACBr_PCNComum.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+40940 lines, 0.64 seconds, 239084 bytes code, 976 bytes data.
+Compilation success
+Pacote "ACBr_PCNComum.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Serial.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSerial\ACBr_Serial.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSerial\ACBr_Serial.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+414474 lines, 3.86 seconds, 2367884 bytes code, 3704 bytes data.
+Compilation success
+Pacote "ACBr_Serial.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Serial.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSerial\DCLACBr_Serial.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSerial\DCLACBr_Serial.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+10446 lines, 0.72 seconds, 32700 bytes code, 224 bytes data.
+Compilation success
+Pacote "DCLACBr_Serial.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_TXTComum.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBr_TXTComum.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBr_TXTComum.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+6476 lines, 0.55 seconds, 197424 bytes code, 27136 bytes data.
+Compilation success
+Pacote "ACBr_TXTComum.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Convenio115.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrConvenio115\ACBr_Convenio115.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrConvenio115\ACBr_Convenio115.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3722 lines, 0.27 seconds, 41300 bytes code, 336 bytes data.
+Compilation success
+Pacote "ACBr_Convenio115.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Convenio115.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrConvenio115\DCLACBr_Convenio115.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrConvenio115\DCLACBr_Convenio115.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2502 lines, 0.22 seconds, 7320 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_Convenio115.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_LFD.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLFD\ACBr_LFD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLFD\ACBr_LFD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+23226 lines, 0.98 seconds, 351024 bytes code, 416 bytes data.
+Compilation success
+Pacote "ACBr_LFD.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_LFD.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLFD\DCLACBr_LFD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLFD\DCLACBr_LFD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2505 lines, 0.22 seconds, 7608 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_LFD.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_EDI.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrEDI\ACBr_EDI.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrEDI\ACBr_EDI.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+21535 lines, 0.36 seconds, 204324 bytes code, 236 bytes data.
+Compilation success
+Pacote "ACBr_EDI.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_EDI.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrEDI\DCLACBr_EDI.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrEDI\DCLACBr_EDI.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2535 lines, 0.22 seconds, 7348 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_EDI.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_PAF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPAF\ACBr_PAF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPAF\ACBr_PAF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+55924 lines, 1.09 seconds, 171676 bytes code, 388 bytes data.
+Compilation success
+Pacote "ACBr_PAF.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_PAF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPAF\DCLACBr_PAF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPAF\DCLACBr_PAF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2503 lines, 0.33 seconds, 7672 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_PAF.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SEF2.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSEF2\ACBr_SEF2.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSEF2\ACBr_SEF2.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+42295 lines, 0.70 seconds, 229300 bytes code, 260 bytes data.
+Compilation success
+Pacote "ACBr_SEF2.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SEF2.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSEF2\DCLACBr_SEF2.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSEF2\DCLACBr_SEF2.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2502 lines, 0.23 seconds, 7360 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SEF2.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Sintegra.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSintegra\ACBr_Sintegra.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSintegra\ACBr_Sintegra.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+6456 lines, 0.23 seconds, 101368 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_Sintegra.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Sintegra.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSintegra\DCLACBr_Sintegra.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSintegra\DCLACBr_Sintegra.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+101 lines, 0.31 seconds, 7188 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_Sintegra.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SPED.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\ACBr_SPED.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\ACBr_SPED.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+179860 lines, 2.22 seconds, 1768428 bytes code, 748 bytes data.
+Compilation success
+Pacote "ACBr_SPED.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SPED.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\DCLACBr_SPED.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\DCLACBr_SPED.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+69 lines, 0.25 seconds, 8052 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SPED.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SPEDImportar.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\Importar\ACBr_SPEDImportar.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\Importar\ACBr_SPEDImportar.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+7773 lines, 0.61 seconds, 133236 bytes code, 296 bytes data.
+Compilation success
+Pacote "ACBr_SPEDImportar.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SPEDImportar.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\Importar\DCLACBr_SPEDImportar.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\Importar\DCLACBr_SPEDImportar.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2503 lines, 0.28 seconds, 7844 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SPEDImportar.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_DeSTDA.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrDeSTDA\ACBr_DeSTDA.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrDeSTDA\ACBr_DeSTDA.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3338 lines, 0.38 seconds, 58984 bytes code, 248 bytes data.
+Compilation success
+Pacote "ACBr_DeSTDA.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_DeSTDA.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrDeSTDA\DCLACBr_DeSTDA.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrDeSTDA\DCLACBr_DeSTDA.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+94 lines, 0.23 seconds, 7324 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_DeSTDA.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Ponto.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPonto\ACBr_Ponto.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPonto\ACBr_Ponto.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+10474 lines, 0.41 seconds, 65324 bytes code, 320 bytes data.
+Compilation success
+Pacote "ACBr_Ponto.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Ponto.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPonto\DCLACBr_Ponto.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPonto\DCLACBr_Ponto.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2530 lines, 0.22 seconds, 7332 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_Ponto.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_LCDPR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLCDPR\ACBr_LCDPR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLCDPR\ACBr_LCDPR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2510 lines, 0.42 seconds, 39468 bytes code, 272 bytes data.
+Compilation success
+Pacote "ACBr_LCDPR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_LCDPR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLCDPR\DCLACBr_LCDPR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLCDPR\DCLACBr_LCDPR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+91 lines, 0.23 seconds, 7220 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_LCDPR.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_ADRCST.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrADRCST\ACBr_ADRCST.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrADRCST\ACBr_ADRCST.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+25635 lines, 0.42 seconds, 71608 bytes code, 244 bytes data.
+Compilation success
+Pacote "ACBr_ADRCST.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_ADRCST.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrADRCST\DCLACBr_ADRCST.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrADRCST\DCLACBr_ADRCST.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2535 lines, 0.39 seconds, 7324 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_ADRCST.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_TCP.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\ACBr_TCP.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\ACBr_TCP.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+137116 lines, 1.67 seconds, 475048 bytes code, 608 bytes data.
+Compilation success
+Pacote "ACBr_TCP.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_TCP.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_TCP.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_TCP.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+110 lines, 0.22 seconds, 7836 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_TCP.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_MTER.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\ACBr_MTER.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\ACBr_MTER.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+17198 lines, 0.47 seconds, 93528 bytes code, 240 bytes data.
+Compilation success
+Pacote "ACBr_MTER.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_MTER.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_MTER.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_MTER.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+106 lines, 0.36 seconds, 22704 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_MTER.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_PIXCD.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPIXCD\ACBr_PIXCD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPIXCD\ACBr_PIXCD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+127482 lines, 1.76 seconds, 640648 bytes code, 436 bytes data.
+Compilation success
+Pacote "ACBr_PIXCD.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_PIXCD.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPIXCD\DCLACBr_PIXCD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPIXCD\DCLACBr_PIXCD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5213 lines, 0.27 seconds, 12368 bytes code, 224 bytes data.
+Compilation success
+Pacote "DCLACBr_PIXCD.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Integrador.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrIntegrador\ACBr_Integrador.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrIntegrador\ACBr_Integrador.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+9601 lines, 0.34 seconds, 51660 bytes code, 228 bytes data.
+Compilation success
+Pacote "ACBr_Integrador.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Integrador.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrIntegrador\DCLACBr_Integrador.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrIntegrador\DCLACBr_Integrador.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2552 lines, 0.25 seconds, 7440 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_Integrador.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_DFeComum.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBr_DFeComum.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBr_DFeComum.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+119166 lines, 1.44 seconds, 589120 bytes code, 6804 bytes data.
+Compilation success
+Pacote "ACBr_DFeComum.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_DFeComum.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\DCLACBr_DFeComum.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\DCLACBr_DFeComum.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2565 lines, 0.28 seconds, 9276 bytes code, 216 bytes data.
+Compilation success
+Pacote "DCLACBr_DFeComum.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Boleto.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\ACBr_Boleto.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\ACBr_Boleto.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+295252 lines, 3.02 seconds, 2634688 bytes code, 2676 bytes data.
+Compilation success
+Pacote "ACBr_Boleto.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Boleto.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\DCLACBr_Boleto.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\DCLACBr_Boleto.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2531 lines, 0.31 seconds, 9756 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_Boleto.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_PagFor.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPagFor\ACBr_PagFor.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPagFor\ACBr_PagFor.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+153068 lines, 1.20 seconds, 499044 bytes code, 432 bytes data.
+Compilation success
+Pacote "ACBr_PagFor.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_PagFor.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPagFor\DCLACBr_PagFor.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPagFor\DCLACBr_PagFor.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2601 lines, 0.33 seconds, 9664 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_PagFor.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_DebitoAutomatico.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDebitoAutomatico\ACBr_DebitoAutomatico.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDebitoAutomatico\ACBr_DebitoAutomatico.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+66767 lines, 0.66 seconds, 164760 bytes code, 312 bytes data.
+Compilation success
+Pacote "ACBr_DebitoAutomatico.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_DebitoAutomatico.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDebitoAutomatico\DCLACBr_DebitoAutomatico.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDebitoAutomatico\DCLACBr_DebitoAutomatico.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2601 lines, 0.34 seconds, 9452 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_DebitoAutomatico.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBr_NFe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBr_NFe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+87434 lines, 1.03 seconds, 860724 bytes code, 1184 bytes data.
+Compilation success
+Pacote "ACBr_NFe.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DCLACBr_NFe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DCLACBr_NFe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2588 lines, 0.42 seconds, 11508 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFe.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFCeECFVirtual.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBrECFVirtualNFCe\ACBr_NFCeECFVirtual.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBrECFVirtualNFCe\ACBr_NFCeECFVirtual.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3508 lines, 0.47 seconds, 43556 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_NFCeECFVirtual.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFCeECFVirtual.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBrECFVirtualNFCe\DCLACBr_NFCeECFVirtual.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBrECFVirtualNFCe\DCLACBr_NFCeECFVirtual.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2497 lines, 0.44 seconds, 24804 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFCeECFVirtual.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFeDanfeESCPOS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFCe\EscPos\ACBr_NFeDanfeESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFCe\EscPos\ACBr_NFeDanfeESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3649 lines, 0.56 seconds, 54084 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_NFeDanfeESCPOS.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFeDanfeESCPOS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFCe\EscPos\DCLACBr_NFeDanfeESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFCe\EscPos\DCLACBr_NFeDanfeESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2497 lines, 0.64 seconds, 24476 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFeDanfeESCPOS.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_CTe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\ACBr_CTe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\ACBr_CTe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+77684 lines, 0.97 seconds, 681076 bytes code, 1448 bytes data.
+Compilation success
+Pacote "ACBr_CTe.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_CTe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DCLACBr_CTe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DCLACBr_CTe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2588 lines, 0.50 seconds, 11484 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_CTe.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFSe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\ACBr_NFSe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\ACBr_NFSe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+151145 lines, 1.47 seconds, 1941664 bytes code, 372 bytes data.
+Compilation success
+Pacote "ACBr_NFSe.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFSe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DCLACBr_NFSe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DCLACBr_NFSe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2578 lines, 0.38 seconds, 11360 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFSe.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFSeX.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\ACBr_NFSeX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\ACBr_NFSeX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+1180723 lines, 8.84 seconds, 3608988 bytes code, 6556 bytes data.
+Compilation success
+Pacote "ACBr_NFSeX.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFSeX.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DCLACBr_NFSeX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DCLACBr_NFSeX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2616 lines, 0.42 seconds, 14612 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFSeX.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_MDFe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\ACBr_MDFe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\ACBr_MDFe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+66913 lines, 0.72 seconds, 410956 bytes code, 844 bytes data.
+Compilation success
+Pacote "ACBr_MDFe.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_MDFe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DCLACBr_MDFe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DCLACBr_MDFe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5053 lines, 0.36 seconds, 11428 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_MDFe.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_GNRE.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\ACBr_GNRE.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\ACBr_GNRE.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+63883 lines, 0.72 seconds, 172396 bytes code, 340 bytes data.
+Compilation success
+Pacote "ACBr_GNRE.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_GNRE.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\DCLACBr_GNRE.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\DCLACBr_GNRE.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2618 lines, 0.38 seconds, 11176 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_GNRE.dpk" compilado com sucesso.
+Cleaning package cache for ACBre_Social.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBreSocial\ACBre_Social.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBreSocial\ACBre_Social.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+255436 lines, 2.11 seconds, 1429004 bytes code, 7880 bytes data.
+Compilation success
+Pacote "ACBre_Social.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBre_Social.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBreSocial\DCLACBre_Social.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBreSocial\DCLACBre_Social.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5066 lines, 0.42 seconds, 11612 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBre_Social.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Reinf.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrReinf\ACBr_Reinf.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrReinf\ACBr_Reinf.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+120310 lines, 1.22 seconds, 661252 bytes code, 796 bytes data.
+Compilation success
+Pacote "ACBr_Reinf.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Reinf.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrReinf\DCLACBr_Reinf.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrReinf\DCLACBr_Reinf.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5038 lines, 0.41 seconds, 11208 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_Reinf.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SAT.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBr_SAT.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBr_SAT.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+50699 lines, 0.70 seconds, 282700 bytes code, 632 bytes data.
+Compilation success
+Pacote "ACBr_SAT.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SAT.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\DCLACBr_SAT.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\DCLACBr_SAT.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2546 lines, 0.39 seconds, 9080 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SAT.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SATECFVirtual.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBrECFVirtualSAT\ACBr_SATECFVirtual.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBrECFVirtualSAT\ACBr_SATECFVirtual.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3170 lines, 0.81 seconds, 36160 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_SATECFVirtual.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SATECFVirtual.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBrECFVirtualSAT\DCLACBr_SATECFVirtual.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBrECFVirtualSAT\DCLACBr_SATECFVirtual.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+61 lines, 0.56 seconds, 24628 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SATECFVirtual.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SATExtratoESCPOS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\EscPos\ACBr_SATExtratoESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\EscPos\ACBr_SATExtratoESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3395 lines, 0.42 seconds, 47148 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_SATExtratoESCPOS.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SATExtratoESCPOS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\EscPos\DCLACBr_SATExtratoESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\EscPos\DCLACBr_SATExtratoESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2531 lines, 0.48 seconds, 24300 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SATExtratoESCPOS.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SATWS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrSATWS\ACBr_SATWS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrSATWS\ACBr_SATWS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+13040 lines, 0.44 seconds, 36540 bytes code, 228 bytes data.
+Compilation success
+Pacote "ACBr_SATWS.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SATWS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrSATWS\DCLACBr_SATWS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrSATWS\DCLACBr_SATWS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2557 lines, 0.62 seconds, 10668 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SATWS.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_PAFNFCe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrPAFNFCe\ACBr_PAFNFCe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrPAFNFCe\ACBr_PAFNFCe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+10319 lines, 0.41 seconds, 20300 bytes code, 220 bytes data.
+Compilation success
+Pacote "ACBr_PAFNFCe.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_PAFNFCe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrPAFNFCe\DCLACBr_PAFNFCe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrPAFNFCe\DCLACBr_PAFNFCe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2558 lines, 0.44 seconds, 10664 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_PAFNFCe.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_BlocoX.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBlocoX\ACBr_BlocoX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBlocoX\ACBr_BlocoX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+23488 lines, 0.50 seconds, 105912 bytes code, 240 bytes data.
+Compilation success
+Pacote "ACBr_BlocoX.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_BlocoX.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBlocoX\DCLACBr_BlocoX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBlocoX\DCLACBr_BlocoX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2562 lines, 0.33 seconds, 10756 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_BlocoX.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_BPe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\ACBr_BPe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\ACBr_BPe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+49734 lines, 0.64 seconds, 273804 bytes code, 1268 bytes data.
+Compilation success
+Pacote "ACBr_BPe.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_BPe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DCLACBr_BPe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DCLACBr_BPe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2585 lines, 0.36 seconds, 11380 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_BPe.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_BPeDabpeESCPOS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DABPE\EscPos\ACBr_BPeDabpeESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DABPE\EscPos\ACBr_BPeDabpeESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3240 lines, 0.53 seconds, 43788 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_BPeDabpeESCPOS.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_BPeDabpeESCPOS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DABPE\EscPos\DCLACBr_BPeDabpeESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DABPE\EscPos\DCLACBr_BPeDabpeESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2575 lines, 0.39 seconds, 24396 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_BPeDabpeESCPOS.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_ANe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrANe\ACBr_ANe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrANe\ACBr_ANe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+27529 lines, 0.42 seconds, 63272 bytes code, 248 bytes data.
+Compilation success
+Pacote "ACBr_ANe.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_ANe.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrANe\DCLACBr_ANe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrANe\DCLACBr_ANe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2578 lines, 0.34 seconds, 11104 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_ANe.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_CIOT.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCIOT\ACBr_CIOT.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCIOT\ACBr_CIOT.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+40096 lines, 0.61 seconds, 238664 bytes code, 752 bytes data.
+Compilation success
+Pacote "ACBr_CIOT.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_CIOT.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCIOT\DCLACBr_CIOT.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCIOT\DCLACBr_CIOT.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5047 lines, 0.36 seconds, 11136 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_CIOT.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_ONE.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrONE\ACBr_ONE.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrONE\ACBr_ONE.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+43465 lines, 0.59 seconds, 86620 bytes code, 388 bytes data.
+Compilation success
+Pacote "ACBr_ONE.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_ONE.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrONE\DCLACBr_ONE.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrONE\DCLACBr_ONE.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5050 lines, 0.39 seconds, 11248 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_ONE.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NF3e.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\ACBr_NF3e.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\ACBr_NF3e.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+53763 lines, 0.86 seconds, 324500 bytes code, 1500 bytes data.
+Compilation success
+Pacote "ACBr_NF3e.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NF3e.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DCLACBr_NF3e.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DCLACBr_NF3e.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2618 lines, 0.36 seconds, 11476 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NF3e.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NF3eDANF3eESCPOS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DANF3e\EscPos\ACBr_NF3eDANF3eESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DANF3e\EscPos\ACBr_NF3eDANF3eESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5677 lines, 0.41 seconds, 43320 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_NF3eDANF3eESCPOS.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NF3eDANF3eESCPOS.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DANF3e\EscPos\DCLACBr_NF3eDANF3eESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DANF3e\EscPos\DCLACBr_NF3eDANF3eESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5009 lines, 0.42 seconds, 24432 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NF3eDANF3eESCPOS.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_GTIN.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGTIN\ACBr_GTIN.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGTIN\ACBr_GTIN.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+20972 lines, 0.62 seconds, 28696 bytes code, 268 bytes data.
+Compilation success
+Pacote "ACBr_GTIN.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_GTIN.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGTIN\DCLACBr_GTIN.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGTIN\DCLACBr_GTIN.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5087 lines, 0.44 seconds, 12168 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_GTIN.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_TEFD.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTEFD\ACBr_TEFD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTEFD\ACBr_TEFD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+122101 lines, 2.19 seconds, 552036 bytes code, 704 bytes data.
+Compilation success
+Pacote "ACBr_TEFD.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_TEFD.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTEFD\DCLACBr_TEFD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTEFD\DCLACBr_TEFD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5241 lines, 0.75 seconds, 12428 bytes code, 224 bytes data.
+Compilation success
+Pacote "DCLACBr_TEFD.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_OFX.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrOFX\ACBr_OFX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrOFX\ACBr_OFX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2821 lines, 0.38 seconds, 13604 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_OFX.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_OFX.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrOFX\DCLACBr_OFX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrOFX\DCLACBr_OFX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2536 lines, 0.23 seconds, 7184 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_OFX.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_OpenDelivery.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenDelivery\ACBr_OpenDelivery.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenDelivery\ACBr_OpenDelivery.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+33656 lines, 0.53 seconds, 177944 bytes code, 252 bytes data.
+Compilation success
+Pacote "ACBr_OpenDelivery.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_OpenDelivery.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenDelivery\DCLACBr_OpenDelivery.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenDelivery\DCLACBr_OpenDelivery.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2573 lines, 0.48 seconds, 9820 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_OpenDelivery.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_Android.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrAndroid\ACBr_Android.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrAndroid\ACBr_Android.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+14507 lines, 0.72 seconds, 43960 bytes code, 244 bytes data.
+Compilation success
+Pacote "ACBr_Android.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_Android.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrAndroid\DCLACBr_Android.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrAndroid\DCLACBr_Android.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+14399 lines, 0.50 seconds, 44248 bytes code, 244 bytes data.
+Compilation success
+Pacote "DCLACBr_Android.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_BoletoFPDF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\FPDF\ACBr_BoletoFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\FPDF\ACBr_BoletoFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3614 lines, 0.31 seconds, 39424 bytes code, 408 bytes data.
+Compilation success
+Pacote "ACBr_BoletoFPDF.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_BoletoFPDF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\FPDF\DCLACBr_BoletoFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\FPDF\DCLACBr_BoletoFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2562 lines, 0.38 seconds, 11924 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_BoletoFPDF.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFeDanfeFPDF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\FPDF\ACBr_NFeDanfeFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\FPDF\ACBr_NFeDanfeFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+12861 lines, 0.36 seconds, 93280 bytes code, 220 bytes data.
+Compilation success
+Pacote "ACBr_NFeDanfeFPDF.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFeDanfeFPDF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\FPDF\DCLACBr_NFeDanfeFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\FPDF\DCLACBr_NFeDanfeFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5018 lines, 0.44 seconds, 9456 bytes code, 216 bytes data.
+Compilation success
+Pacote "DCLACBr_NFeDanfeFPDF.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFSeXDanfseFPDF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\FPDF\ACBr_NFSeXDanfseFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\FPDF\ACBr_NFSeXDanfseFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+8558 lines, 0.48 seconds, 34076 bytes code, 220 bytes data.
+Compilation success
+Pacote "ACBr_NFSeXDanfseFPDF.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFSeXDanfseFPDF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\FPDF\DCLACBr_NFSeXDanfseFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\FPDF\DCLACBr_NFSeXDanfseFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2573 lines, 0.48 seconds, 12536 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFSeXDanfseFPDF.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SATExtratoFPDF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\FPDF\ACBr_SATExtratoFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\FPDF\ACBr_SATExtratoFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+6008 lines, 0.33 seconds, 29328 bytes code, 216 bytes data.
+Compilation success
+Pacote "ACBr_SATExtratoFPDF.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SATExtratoFPDF.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\FPDF\DCLACBr_SATExtratoFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\FPDF\DCLACBr_SATExtratoFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2531 lines, 0.31 seconds, 9164 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SATExtratoFPDF.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFeDanfeFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fast\ACBr_NFeDanfeFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fast\ACBr_NFeDanfeFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+8182 lines, 0.84 seconds, 84716 bytes code, 216 bytes data.
+Compilation success
+Pacote "ACBr_NFeDanfeFR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFeDanfeFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fast\DCLACBr_NFeDanfeFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fast\DCLACBr_NFeDanfeFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2576 lines, 0.58 seconds, 14492 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFeDanfeFR.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_CTeDacteFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fast\ACBr_CTeDacteFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fast\ACBr_CTeDacteFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+6043 lines, 0.61 seconds, 98296 bytes code, 216 bytes data.
+Compilation success
+Pacote "ACBr_CTeDacteFR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_CTeDacteFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fast\DCLACBr_CTeDacteFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fast\DCLACBr_CTeDacteFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2562 lines, 0.70 seconds, 14196 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_CTeDacteFR.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFSeDanfseFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fast\ACBr_NFSeDanfseFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fast\ACBr_NFSeDanfseFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3772 lines, 0.55 seconds, 47928 bytes code, 216 bytes data.
+Compilation success
+Pacote "ACBr_NFSeDanfseFR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFSeDanfseFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fast\DCLACBr_NFSeDanfseFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fast\DCLACBr_NFSeDanfseFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2559 lines, 0.58 seconds, 14228 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFSeDanfseFR.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFSeXDanfseFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fast\ACBr_NFSeXDanfseFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fast\ACBr_NFSeXDanfseFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+6570 lines, 0.52 seconds, 60088 bytes code, 220 bytes data.
+Compilation success
+Pacote "ACBr_NFSeXDanfseFR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFSeXDanfseFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fast\DCLACBr_NFSeXDanfseFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fast\DCLACBr_NFSeXDanfseFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2565 lines, 0.53 seconds, 17444 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFSeXDanfseFR.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_BoletoFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fast\ACBr_BoletoFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fast\ACBr_BoletoFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3275 lines, 0.41 seconds, 32412 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_BoletoFR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_BoletoFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fast\DCLACBr_BoletoFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fast\DCLACBr_BoletoFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2561 lines, 0.64 seconds, 14808 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_BoletoFR.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_MDFeDamdfeFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fast\ACBr_MDFeDamdfeFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fast\ACBr_MDFeDamdfeFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+4386 lines, 0.39 seconds, 54628 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_MDFeDamdfeFR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_MDFeDamdfeFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fast\DCLACBr_MDFeDamdfeFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fast\DCLACBr_MDFeDamdfeFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2566 lines, 0.45 seconds, 14196 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_MDFeDamdfeFR.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SATExtratoFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fast\ACBr_SATExtratoFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fast\ACBr_SATExtratoFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3544 lines, 0.39 seconds, 33612 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_SATExtratoFR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SATExtratoFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fast\DCLACBr_SATExtratoFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fast\DCLACBr_SATExtratoFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2535 lines, 0.48 seconds, 12072 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SATExtratoFR.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_GNREGuiaFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fast\ACBr_GNREGuiaFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fast\ACBr_GNREGuiaFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5600 lines, 0.39 seconds, 24240 bytes code, 220 bytes data.
+Compilation success
+Pacote "ACBr_GNREGuiaFR.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_GNREGuiaFR.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fast\DCLACBr_GNREGuiaFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fast\DCLACBr_GNREGuiaFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2602 lines, 0.45 seconds, 14112 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_GNREGuiaFR.dpk" compilado com sucesso.
+Cleaning package cache for ACBrDFeReportRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrDFeReportRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrDFeReportRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2711 lines, 0.27 seconds, 11352 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBrDFeReportRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFeDanfeRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fortes\ACBr_NFeDanfeRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fortes\ACBr_NFeDanfeRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+37039 lines, 0.73 seconds, 249120 bytes code, 268 bytes data.
+Compilation success
+Pacote "ACBr_NFeDanfeRL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFeDanfeRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fortes\DCLACBr_NFeDanfeRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fortes\DCLACBr_NFeDanfeRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2546 lines, 0.98 seconds, 10164 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFeDanfeRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFSeDanfseRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fortes\ACBr_NFSeDanfseRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fortes\ACBr_NFSeDanfseRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+8424 lines, 0.72 seconds, 35024 bytes code, 236 bytes data.
+Compilation success
+Pacote "ACBr_NFSeDanfseRL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFSeDanfseRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fortes\DCLACBr_NFSeDanfseRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fortes\DCLACBr_NFSeDanfseRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2578 lines, 0.47 seconds, 10140 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFSeDanfseRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFSeXDanfseRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fortes\ACBr_NFSeXDanfseRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fortes\ACBr_NFSeXDanfseRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+14799 lines, 0.95 seconds, 75352 bytes code, 264 bytes data.
+Compilation success
+Pacote "ACBr_NFSeXDanfseRL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFSeXDanfseRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fortes\DCLACBr_NFSeXDanfseRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fortes\DCLACBr_NFSeXDanfseRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2574 lines, 0.55 seconds, 13376 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFSeXDanfseRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_CTeDacteRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fortes\ACBr_CTeDacteRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fortes\ACBr_CTeDacteRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+26111 lines, 0.97 seconds, 172392 bytes code, 268 bytes data.
+Compilation success
+Pacote "ACBr_CTeDacteRL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_CTeDacteRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fortes\DCLACBr_CTeDacteRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fortes\DCLACBr_CTeDacteRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5016 lines, 0.38 seconds, 10212 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_CTeDacteRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_BoletoRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fortes\ACBr_BoletoRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fortes\ACBr_BoletoRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5330 lines, 0.58 seconds, 104256 bytes code, 220 bytes data.
+Compilation success
+Pacote "ACBr_BoletoRL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_BoletoRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fortes\DCLACBr_BoletoRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fortes\DCLACBr_BoletoRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2531 lines, 0.42 seconds, 10564 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_BoletoRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_MDFeDamdfeRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fortes\ACBr_MDFeDamdfeRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fortes\ACBr_MDFeDamdfeRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+14236 lines, 0.62 seconds, 53944 bytes code, 240 bytes data.
+Compilation success
+Pacote "ACBr_MDFeDamdfeRL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_MDFeDamdfeRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fortes\DCLACBr_MDFeDamdfeRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fortes\DCLACBr_MDFeDamdfeRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2574 lines, 0.41 seconds, 10128 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_MDFeDamdfeRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_SATExtratoRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fortes\ACBr_SATExtratoRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fortes\ACBr_SATExtratoRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+3984 lines, 0.48 seconds, 46700 bytes code, 212 bytes data.
+Compilation success
+Pacote "ACBr_SATExtratoRL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_SATExtratoRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fortes\DCLACBr_SATExtratoRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fortes\DCLACBr_SATExtratoRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2530 lines, 0.55 seconds, 9904 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_SATExtratoRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_GNREGuiaRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fortes\ACBr_GNREGuiaRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fortes\ACBr_GNREGuiaRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+8334 lines, 0.47 seconds, 32224 bytes code, 220 bytes data.
+Compilation success
+Pacote "ACBr_GNREGuiaRL.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_GNREGuiaRL.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fortes\DCLACBr_GNREGuiaRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fortes\DCLACBr_GNREGuiaRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2541 lines, 0.36 seconds, 9944 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_GNREGuiaRL.dpk" compilado com sucesso.
+Cleaning package cache for ACBr_NFCom.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFCom\ACBr_NFCom.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFCom\ACBr_NFCom.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+52755 lines, 0.75 seconds, 255000 bytes code, 1176 bytes data.
+Compilation success
+Pacote "ACBr_NFCom.dpk" compilado com sucesso.
+Cleaning package cache for DCLACBr_NFCom.bpl
+Cleaning ok
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFCom\DCLACBr_NFCom.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFCom\DCLACBr_NFCom.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2616 lines, 0.41 seconds, 11400 bytes code, 212 bytes data.
+Compilation success
+Pacote "DCLACBr_NFCom.dpk" compilado com sucesso.
+
+INSTALANDO OS PACOTES...
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrComum\DCLACBr_Comum.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrComum\DCLACBr_Comum.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrComum\DCLACBr_Comum.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2734 lines, 0.39 seconds, 12428 bytes code, 228 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Comum.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Comum.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Comum.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenSSL\DCLACBr_OpenSSL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenSSL\DCLACBr_OpenSSL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenSSL\DCLACBr_OpenSSL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+105 lines, 0.20 seconds, 7332 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_OpenSSL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_OpenSSL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_OpenSSL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDiversos\DCLACBr_Diversos.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDiversos\DCLACBr_Diversos.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDiversos\DCLACBr_Diversos.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2592 lines, 0.31 seconds, 10052 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Diversos.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Diversos.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Diversos.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSerial\DCLACBr_Serial.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSerial\DCLACBr_Serial.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSerial\DCLACBr_Serial.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+10446 lines, 0.48 seconds, 32700 bytes code, 224 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Serial.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Serial.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Serial.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrConvenio115\DCLACBr_Convenio115.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrConvenio115\DCLACBr_Convenio115.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrConvenio115\DCLACBr_Convenio115.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2502 lines, 0.23 seconds, 7320 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Convenio115.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Convenio115.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Convenio115.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLFD\DCLACBr_LFD.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLFD\DCLACBr_LFD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLFD\DCLACBr_LFD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2505 lines, 0.22 seconds, 7608 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_LFD.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_LFD.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_LFD.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrEDI\DCLACBr_EDI.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrEDI\DCLACBr_EDI.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrEDI\DCLACBr_EDI.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2535 lines, 0.19 seconds, 7348 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_EDI.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_EDI.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_EDI.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPAF\DCLACBr_PAF.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPAF\DCLACBr_PAF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPAF\DCLACBr_PAF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2503 lines, 0.19 seconds, 7672 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_PAF.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_PAF.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_PAF.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSEF2\DCLACBr_SEF2.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSEF2\DCLACBr_SEF2.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSEF2\DCLACBr_SEF2.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2502 lines, 0.25 seconds, 7360 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SEF2.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SEF2.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SEF2.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSintegra\DCLACBr_Sintegra.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSintegra\DCLACBr_Sintegra.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSintegra\DCLACBr_Sintegra.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+101 lines, 0.19 seconds, 7188 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Sintegra.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Sintegra.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Sintegra.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\DCLACBr_SPED.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\DCLACBr_SPED.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\DCLACBr_SPED.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+69 lines, 0.31 seconds, 8052 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SPED.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SPED.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SPED.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\Importar\DCLACBr_SPEDImportar.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\Importar\DCLACBr_SPEDImportar.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrSPED\Importar\DCLACBr_SPEDImportar.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2503 lines, 0.23 seconds, 7844 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SPEDImportar.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SPEDImportar.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SPEDImportar.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrDeSTDA\DCLACBr_DeSTDA.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrDeSTDA\DCLACBr_DeSTDA.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrDeSTDA\DCLACBr_DeSTDA.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+94 lines, 0.45 seconds, 7324 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_DeSTDA.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_DeSTDA.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_DeSTDA.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPonto\DCLACBr_Ponto.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPonto\DCLACBr_Ponto.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrPonto\DCLACBr_Ponto.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2530 lines, 0.50 seconds, 7332 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Ponto.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Ponto.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Ponto.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLCDPR\DCLACBr_LCDPR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLCDPR\DCLACBr_LCDPR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrLCDPR\DCLACBr_LCDPR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+91 lines, 0.28 seconds, 7220 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_LCDPR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_LCDPR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_LCDPR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrADRCST\DCLACBr_ADRCST.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrADRCST\DCLACBr_ADRCST.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrADRCST\DCLACBr_ADRCST.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2535 lines, 0.30 seconds, 7324 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_ADRCST.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_ADRCST.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_ADRCST.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_TCP.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_TCP.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_TCP.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+110 lines, 0.33 seconds, 7836 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_TCP.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_TCP.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_TCP.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_MTER.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_MTER.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTCP\DCLACBr_MTER.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+106 lines, 0.44 seconds, 22704 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_MTER.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_MTER.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_MTER.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPIXCD\DCLACBr_PIXCD.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPIXCD\DCLACBr_PIXCD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPIXCD\DCLACBr_PIXCD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5213 lines, 0.34 seconds, 12368 bytes code, 224 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_PIXCD.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_PIXCD.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_PIXCD.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrIntegrador\DCLACBr_Integrador.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrIntegrador\DCLACBr_Integrador.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrIntegrador\DCLACBr_Integrador.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2552 lines, 0.41 seconds, 7440 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Integrador.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Integrador.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Integrador.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\DCLACBr_DFeComum.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\DCLACBr_DFeComum.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\DCLACBr_DFeComum.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2565 lines, 0.36 seconds, 9276 bytes code, 216 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_DFeComum.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_DFeComum.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_DFeComum.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\DCLACBr_Boleto.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\DCLACBr_Boleto.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\DCLACBr_Boleto.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2531 lines, 0.42 seconds, 9756 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Boleto.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Boleto.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Boleto.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPagFor\DCLACBr_PagFor.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPagFor\DCLACBr_PagFor.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrPagFor\DCLACBr_PagFor.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2601 lines, 0.39 seconds, 9664 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_PagFor.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_PagFor.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_PagFor.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDebitoAutomatico\DCLACBr_DebitoAutomatico.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDebitoAutomatico\DCLACBr_DebitoAutomatico.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDebitoAutomatico\DCLACBr_DebitoAutomatico.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2601 lines, 0.45 seconds, 9452 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_DebitoAutomatico.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_DebitoAutomatico.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_DebitoAutomatico.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DCLACBr_NFe.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DCLACBr_NFe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DCLACBr_NFe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2588 lines, 0.64 seconds, 11508 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFe.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFe.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFe.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBrECFVirtualNFCe\DCLACBr_NFCeECFVirtual.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBrECFVirtualNFCe\DCLACBr_NFCeECFVirtual.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\ACBrECFVirtualNFCe\DCLACBr_NFCeECFVirtual.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2497 lines, 0.72 seconds, 24804 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFCeECFVirtual.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFCeECFVirtual.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFCeECFVirtual.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFCe\EscPos\DCLACBr_NFeDanfeESCPOS.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFCe\EscPos\DCLACBr_NFeDanfeESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFCe\EscPos\DCLACBr_NFeDanfeESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2497 lines, 0.72 seconds, 24476 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFeDanfeESCPOS.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFeDanfeESCPOS.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFeDanfeESCPOS.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DCLACBr_CTe.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DCLACBr_CTe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DCLACBr_CTe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2588 lines, 0.61 seconds, 11484 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_CTe.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_CTe.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_CTe.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DCLACBr_NFSe.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DCLACBr_NFSe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DCLACBr_NFSe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2578 lines, 0.59 seconds, 11360 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFSe.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFSe.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFSe.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DCLACBr_NFSeX.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DCLACBr_NFSeX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DCLACBr_NFSeX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2616 lines, 0.62 seconds, 14612 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFSeX.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFSeX.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFSeX.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DCLACBr_MDFe.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DCLACBr_MDFe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DCLACBr_MDFe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5053 lines, 0.50 seconds, 11428 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_MDFe.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_MDFe.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_MDFe.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\DCLACBr_GNRE.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\DCLACBr_GNRE.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\DCLACBr_GNRE.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2618 lines, 0.50 seconds, 11176 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_GNRE.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_GNRE.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_GNRE.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBreSocial\DCLACBre_Social.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBreSocial\DCLACBre_Social.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBreSocial\DCLACBre_Social.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5066 lines, 0.56 seconds, 11612 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBre_Social.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBre_Social.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBre_Social.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrReinf\DCLACBr_Reinf.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrReinf\DCLACBr_Reinf.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrReinf\DCLACBr_Reinf.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5038 lines, 0.41 seconds, 11208 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Reinf.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Reinf.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Reinf.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\DCLACBr_SAT.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\DCLACBr_SAT.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\DCLACBr_SAT.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2546 lines, 0.28 seconds, 9080 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SAT.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SAT.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SAT.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBrECFVirtualSAT\DCLACBr_SATECFVirtual.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBrECFVirtualSAT\DCLACBr_SATECFVirtual.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\ACBrECFVirtualSAT\DCLACBr_SATECFVirtual.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+61 lines, 0.48 seconds, 24628 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SATECFVirtual.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SATECFVirtual.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SATECFVirtual.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\EscPos\DCLACBr_SATExtratoESCPOS.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\EscPos\DCLACBr_SATExtratoESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\EscPos\DCLACBr_SATExtratoESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2531 lines, 0.42 seconds, 24300 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SATExtratoESCPOS.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SATExtratoESCPOS.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SATExtratoESCPOS.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrSATWS\DCLACBr_SATWS.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrSATWS\DCLACBr_SATWS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrSATWS\DCLACBr_SATWS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2557 lines, 0.41 seconds, 10668 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SATWS.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SATWS.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SATWS.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrPAFNFCe\DCLACBr_PAFNFCe.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrPAFNFCe\DCLACBr_PAFNFCe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrPAFNFCe\DCLACBr_PAFNFCe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2558 lines, 0.48 seconds, 10664 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_PAFNFCe.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_PAFNFCe.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_PAFNFCe.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBlocoX\DCLACBr_BlocoX.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBlocoX\DCLACBr_BlocoX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBlocoX\DCLACBr_BlocoX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2562 lines, 0.41 seconds, 10756 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_BlocoX.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_BlocoX.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_BlocoX.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DCLACBr_BPe.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DCLACBr_BPe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DCLACBr_BPe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2585 lines, 0.36 seconds, 11380 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_BPe.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_BPe.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_BPe.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DABPE\EscPos\DCLACBr_BPeDabpeESCPOS.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DABPE\EscPos\DCLACBr_BPeDabpeESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrBPe\DABPE\EscPos\DCLACBr_BPeDabpeESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2575 lines, 0.53 seconds, 24396 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_BPeDabpeESCPOS.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_BPeDabpeESCPOS.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_BPeDabpeESCPOS.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrANe\DCLACBr_ANe.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrANe\DCLACBr_ANe.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrANe\DCLACBr_ANe.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2578 lines, 0.36 seconds, 11104 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_ANe.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_ANe.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_ANe.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCIOT\DCLACBr_CIOT.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCIOT\DCLACBr_CIOT.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCIOT\DCLACBr_CIOT.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5047 lines, 0.34 seconds, 11136 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_CIOT.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_CIOT.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_CIOT.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrONE\DCLACBr_ONE.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrONE\DCLACBr_ONE.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrONE\DCLACBr_ONE.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5050 lines, 0.41 seconds, 11248 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_ONE.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_ONE.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_ONE.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DCLACBr_NF3e.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DCLACBr_NF3e.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DCLACBr_NF3e.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2618 lines, 0.33 seconds, 11476 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NF3e.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NF3e.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NF3e.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DANF3e\EscPos\DCLACBr_NF3eDANF3eESCPOS.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DANF3e\EscPos\DCLACBr_NF3eDANF3eESCPOS.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNF3e\DANF3e\EscPos\DCLACBr_NF3eDANF3eESCPOS.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5009 lines, 0.41 seconds, 24432 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NF3eDANF3eESCPOS.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NF3eDANF3eESCPOS.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NF3eDANF3eESCPOS.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGTIN\DCLACBr_GTIN.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGTIN\DCLACBr_GTIN.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGTIN\DCLACBr_GTIN.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5087 lines, 0.41 seconds, 12168 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_GTIN.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_GTIN.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_GTIN.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTEFD\DCLACBr_TEFD.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTEFD\DCLACBr_TEFD.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTEFD\DCLACBr_TEFD.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5241 lines, 0.20 seconds, 12428 bytes code, 224 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_TEFD.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_TEFD.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_TEFD.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrOFX\DCLACBr_OFX.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrOFX\DCLACBr_OFX.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrTXT\ACBrOFX\DCLACBr_OFX.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2536 lines, 0.19 seconds, 7184 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_OFX.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_OFX.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_OFX.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenDelivery\DCLACBr_OpenDelivery.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenDelivery\DCLACBr_OpenDelivery.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrOpenDelivery\DCLACBr_OpenDelivery.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2573 lines, 0.30 seconds, 9820 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_OpenDelivery.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_OpenDelivery.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_OpenDelivery.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrAndroid\DCLACBr_Android.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrAndroid\DCLACBr_Android.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrAndroid\DCLACBr_Android.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+14399 lines, 0.42 seconds, 44248 bytes code, 244 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_Android.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Android.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_Android.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\FPDF\DCLACBr_BoletoFPDF.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\FPDF\DCLACBr_BoletoFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\FPDF\DCLACBr_BoletoFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2562 lines, 0.36 seconds, 11924 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_BoletoFPDF.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_BoletoFPDF.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_BoletoFPDF.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\FPDF\DCLACBr_NFeDanfeFPDF.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\FPDF\DCLACBr_NFeDanfeFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\FPDF\DCLACBr_NFeDanfeFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5018 lines, 0.31 seconds, 9456 bytes code, 216 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFeDanfeFPDF.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFeDanfeFPDF.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFeDanfeFPDF.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\FPDF\DCLACBr_NFSeXDanfseFPDF.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\FPDF\DCLACBr_NFSeXDanfseFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\FPDF\DCLACBr_NFSeXDanfseFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2573 lines, 0.33 seconds, 12536 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFSeXDanfseFPDF.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFSeXDanfseFPDF.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFSeXDanfseFPDF.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\FPDF\DCLACBr_SATExtratoFPDF.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\FPDF\DCLACBr_SATExtratoFPDF.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\FPDF\DCLACBr_SATExtratoFPDF.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2531 lines, 0.27 seconds, 9164 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SATExtratoFPDF.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SATExtratoFPDF.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SATExtratoFPDF.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fast\DCLACBr_NFeDanfeFR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fast\DCLACBr_NFeDanfeFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fast\DCLACBr_NFeDanfeFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2576 lines, 0.41 seconds, 14492 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFeDanfeFR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFeDanfeFR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFeDanfeFR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fast\DCLACBr_CTeDacteFR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fast\DCLACBr_CTeDacteFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fast\DCLACBr_CTeDacteFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2562 lines, 0.45 seconds, 14196 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_CTeDacteFR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_CTeDacteFR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_CTeDacteFR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fast\DCLACBr_NFSeDanfseFR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fast\DCLACBr_NFSeDanfseFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fast\DCLACBr_NFSeDanfseFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2559 lines, 0.44 seconds, 14228 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFSeDanfseFR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFSeDanfseFR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFSeDanfseFR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fast\DCLACBr_NFSeXDanfseFR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fast\DCLACBr_NFSeXDanfseFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fast\DCLACBr_NFSeXDanfseFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2565 lines, 0.75 seconds, 17444 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFSeXDanfseFR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFSeXDanfseFR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFSeXDanfseFR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fast\DCLACBr_BoletoFR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fast\DCLACBr_BoletoFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fast\DCLACBr_BoletoFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2561 lines, 0.52 seconds, 14808 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_BoletoFR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_BoletoFR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_BoletoFR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fast\DCLACBr_MDFeDamdfeFR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fast\DCLACBr_MDFeDamdfeFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fast\DCLACBr_MDFeDamdfeFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2566 lines, 0.56 seconds, 14196 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_MDFeDamdfeFR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_MDFeDamdfeFR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_MDFeDamdfeFR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fast\DCLACBr_SATExtratoFR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fast\DCLACBr_SATExtratoFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fast\DCLACBr_SATExtratoFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2535 lines, 0.44 seconds, 12072 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SATExtratoFR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SATExtratoFR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SATExtratoFR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fast\DCLACBr_GNREGuiaFR.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fast\DCLACBr_GNREGuiaFR.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fast\DCLACBr_GNREGuiaFR.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2602 lines, 0.53 seconds, 14112 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_GNREGuiaFR.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_GNREGuiaFR.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_GNREGuiaFR.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fortes\DCLACBr_NFeDanfeRL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fortes\DCLACBr_NFeDanfeRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFe\DANFE\NFe\Fortes\DCLACBr_NFeDanfeRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2546 lines, 0.36 seconds, 10164 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFeDanfeRL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFeDanfeRL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFeDanfeRL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fortes\DCLACBr_NFSeDanfseRL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fortes\DCLACBr_NFSeDanfseRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSe\DANFSE\Fortes\DCLACBr_NFSeDanfseRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2578 lines, 0.36 seconds, 10140 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFSeDanfseRL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFSeDanfseRL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFSeDanfseRL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fortes\DCLACBr_NFSeXDanfseRL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fortes\DCLACBr_NFSeXDanfseRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFSeX\DANFSE\Fortes\DCLACBr_NFSeXDanfseRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2574 lines, 0.47 seconds, 13376 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFSeXDanfseRL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFSeXDanfseRL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFSeXDanfseRL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fortes\DCLACBr_CTeDacteRL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fortes\DCLACBr_CTeDacteRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrCTe\DACTE\Fortes\DCLACBr_CTeDacteRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+5016 lines, 0.38 seconds, 10212 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_CTeDacteRL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_CTeDacteRL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_CTeDacteRL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fortes\DCLACBr_BoletoRL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fortes\DCLACBr_BoletoRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrBoleto\FC\Fortes\DCLACBr_BoletoRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2531 lines, 0.41 seconds, 10564 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_BoletoRL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_BoletoRL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_BoletoRL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fortes\DCLACBr_MDFeDamdfeRL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fortes\DCLACBr_MDFeDamdfeRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrMDFe\DAMDFE\Fortes\DCLACBr_MDFeDamdfeRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2574 lines, 0.36 seconds, 10128 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_MDFeDamdfeRL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_MDFeDamdfeRL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_MDFeDamdfeRL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fortes\DCLACBr_SATExtratoRL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fortes\DCLACBr_SATExtratoRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrSAT\Extrato\Fortes\DCLACBr_SATExtratoRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2530 lines, 0.38 seconds, 9904 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_SATExtratoRL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SATExtratoRL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_SATExtratoRL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fortes\DCLACBr_GNREGuiaRL.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fortes\DCLACBr_GNREGuiaRL.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrGNRE\GNRE\Fortes\DCLACBr_GNREGuiaRL.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2541 lines, 0.36 seconds, 9944 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_GNREGuiaRL.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_GNREGuiaRL.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_GNREGuiaRL.dpk" instalado com sucesso.
+Installing package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFCom\DCLACBr_NFCom.dpk
+Compiling package D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFCom\DCLACBr_NFCom.dpk
+"C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\dcc32.exe" "D:\Neski_Components\ACBr\Pacotes\Delphi\ACBrDFe\ACBrNFCom\DCLACBr_NFCom.dpk"
+Embarcadero Delphi for Win32 compiler version 35.0
+Copyright (c) 1983,2022 Embarcadero Technologies, Inc.
+2616 lines, 0.41 seconds, 11400 bytes code, 212 bytes data.
+Compilation success
+Cleaning package cache for DCLACBr_NFCom.bpl
+Cleaning ok
+Registering package D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFCom.bpl
+Registration ok
+Installation of package finished
+Pacote "ACBr_NFCom.dpk" instalado com sucesso.
+
+INSTALANDO OUTROS REQUISITOS...
+Limpeza library path com sucesso
+Cópia dos arquivos necessário feita com sucesso para: D:\Neski_Components\ACBr\Lib\Delphi\LibD28\Win32
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\libcrypto-1_1.dll"
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\libssl-1_1.dll"
+OPENSSL instalado com sucesso em "C:\WINDOWS\SysWOW64"
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\libexslt.dll"
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\libiconv.dll"
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\libxml2.dll"
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\libxslt.dll"
+LibXml2 instalado com sucesso em "C:\WINDOWS\SysWOW64"
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\iconv.dll"
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\inpout32.dll"
+AVISO: Arquivo já se encontra no destino. Não sobrescrito: "C:\WINDOWS\SysWOW64\msvcr71.dll"
+DLLs diversas instalado com sucesso em "C:\WINDOWS\SysWOW64"

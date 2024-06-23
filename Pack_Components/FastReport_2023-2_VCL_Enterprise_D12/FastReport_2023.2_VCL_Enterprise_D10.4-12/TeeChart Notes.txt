@@ -1,0 +1,19 @@
+TeeChart:
+------------------------------------------------------------
+-Edit C:.. ..\Sources\FastCore\VCL\Sources\frTeeChartVer.inc and comment/uncomment appropiated line
+
+-Edit package frTeeChartFiles.dpk and modify required clause according:
+requires
+  {$IFDEF TeeChartStd} TEE, TEEUI, {$ENDIF}
+  {$IFDEF TeeChartStd7}TEE77, TEEUI77, {$ENDIF}
+  {$IFDEF TeeChartStd8}TEE87, TEEUI87, {$ENDIF}
+  {$IFDEF TeeChartStd9}TEE97, TEEUI97, {$ENDIF}
+  {$IFDEF TeeChart4}   TEE47, TEEPRO47, {$ENDIF}
+  {$IFDEF TeeChart5}   TEE57, TEEPRO57, {$ENDIF}
+  {$IFDEF TeeChart6}   TEE67, TEEPRO67, {$ENDIF}
+  {$IFDEF TeeChart7}   TEE77, TEEPRO77, {$ENDIF}
+  {$IFDEF TeeChart8}   TEE87, TEEPRO87, {$ENDIF}
+  {$IFDEF TeeChart9}   TEE97, TEEPRO97, {$ENDIF}
+  {$IFDEF TeeChart10}  TEE928, TEEPRO928, {$ENDIF}
+=========
+www.downloadly.ir

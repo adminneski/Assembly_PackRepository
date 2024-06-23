@@ -1,0 +1,45 @@
+package frIBXFiles;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'FastReport VCL IBX Components rtl'}
+{$LIBSUFFIX AUTO}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  ibxpress,
+  frReportFiles;
+
+contains
+  fs_iibxrtti in '..\Sources\FastScript\VCL\Sources\fs_iibxrtti.pas',
+  fqbIBXEngine in '..\Sources\FastQueryBuilder\VCL\Sources\fqbIBXEngine.pas',
+  frxIBXRTTI in '..\Sources\FastReport\VCL\Sources\frxIBXRTTI.pas',
+  frxIBXComponents in '..\Sources\FastReport\VCL\Sources\frxIBXComponents.pas',
+  frxIBXEditor in '..\Sources\FastReport\VCL\Sources\frxIBXEditor.pas';
+
+end.

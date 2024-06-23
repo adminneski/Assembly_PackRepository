@@ -1,0 +1,1322 @@
+object FormPrincipal: TFormPrincipal
+  Left = 304
+  Height = 500
+  Top = 164
+  Width = 1140
+  Caption = 'ACBrTEFD - Demo não fiscal'
+  ClientHeight = 500
+  ClientWidth = 1140
+  Constraints.MinHeight = 500
+  Constraints.MinWidth = 1024
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  ParentFont = True
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.4'
+  object Splitter2: TSplitter
+    Left = 806
+    Height = 500
+    Top = 0
+    Width = 5
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object pPrincipal: TPanel
+    Left = 0
+    Height = 500
+    Top = 0
+    Width = 806
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 500
+    ClientWidth = 806
+    TabOrder = 1
+    object pgPrincipal: TPageControl
+      Left = 0
+      Height = 376
+      Top = 0
+      Width = 806
+      ActivePage = tsOperacao
+      Align = alTop
+      Images = ImageList1
+      TabIndex = 1
+      TabOrder = 0
+      object tsConfiguracao: TTabSheet
+        Caption = 'Configuração'
+        ClientHeight = 348
+        ClientWidth = 798
+        ImageIndex = 0
+        object pConfiguracao: TPanel
+          Left = 0
+          Height = 348
+          Top = 0
+          Width = 798
+          Align = alClient
+          BevelOuter = bvNone
+          ClientHeight = 348
+          ClientWidth = 798
+          TabOrder = 0
+          object gbConfigImpressora: TGroupBox
+            Left = 10
+            Height = 115
+            Top = 186
+            Width = 778
+            Align = alTop
+            BorderSpacing.Around = 10
+            Caption = 'Impressora'
+            ClientHeight = 95
+            ClientWidth = 774
+            TabOrder = 1
+            object Label25: TLabel
+              AnchorSideBottom.Side = asrCenter
+              Left = 176
+              Height = 15
+              Top = 48
+              Width = 73
+              Caption = 'Linhas à pular'
+            end
+            object seLinhasPular: TSpinEdit
+              Left = 176
+              Height = 23
+              Top = 65
+              Width = 75
+              Alignment = taCenter
+              MaxValue = 255
+              TabOrder = 4
+            end
+            object Label26: TLabel
+              AnchorSideBottom.Side = asrCenter
+              Left = 9
+              Height = 15
+              Top = 48
+              Width = 106
+              Caption = 'Espaços entre linhas'
+            end
+            object seEspLinhas: TSpinEdit
+              Left = 9
+              Height = 23
+              Top = 65
+              Width = 75
+              Alignment = taCenter
+              MaxValue = 255
+              TabOrder = 3
+            end
+            object Label27: TLabel
+              AnchorSideBottom.Side = asrCenter
+              Left = 376
+              Height = 15
+              Top = 48
+              Width = 43
+              Caption = 'Colunas'
+            end
+            object seColunas: TSpinEdit
+              Left = 376
+              Height = 23
+              Top = 65
+              Width = 75
+              Alignment = taCenter
+              MaxValue = 999
+              MinValue = 1
+              TabOrder = 5
+              Value = 48
+            end
+            object Label28: TLabel
+              AnchorSideTop.Side = asrBottom
+              Left = 9
+              Height = 15
+              Top = -1
+              Width = 41
+              Caption = 'Modelo'
+              Color = clDefault
+              Transparent = False
+            end
+            object cbxModeloPosPrinter: TComboBox
+              Left = 9
+              Height = 23
+              Top = 16
+              Width = 145
+              ItemHeight = 15
+              Style = csDropDownList
+              TabOrder = 0
+            end
+            object Label7: TLabel
+              Left = 176
+              Height = 15
+              Top = -1
+              Width = 28
+              Caption = 'Porta'
+            end
+            object cbxPorta: TComboBox
+              Left = 176
+              Height = 23
+              Top = 16
+              Width = 161
+              ItemHeight = 15
+              TabOrder = 1
+            end
+            object Label29: TLabel
+              AnchorSideLeft.Side = asrCenter
+              Left = 376
+              Height = 15
+              Top = -1
+              Width = 79
+              BorderSpacing.Bottom = 2
+              Caption = 'Pág. de código'
+              Color = clDefault
+              Transparent = False
+            end
+            object cbxPagCodigo: TComboBox
+              Left = 376
+              Height = 23
+              Hint = 'Pagina de código usada pela Impressora POS'
+              Top = 16
+              Width = 76
+              ItemHeight = 15
+              Style = csDropDownList
+              TabOrder = 2
+            end
+            object btSerial: TSpeedButton
+              AnchorSideLeft.Side = asrBottom
+              AnchorSideBottom.Side = asrBottom
+              Left = 280
+              Height = 23
+              Top = 40
+              Width = 25
+              Images = ImageList1
+              ImageIndex = 6
+              OnClick = btSerialClick
+            end
+            object btTestarPosPrinter: TBitBtn
+              Left = 536
+              Height = 52
+              Top = 18
+              Width = 112
+              Caption = 'Testar Impressora'
+              Layout = blGlyphTop
+              Images = ImageList1
+              ImageIndex = 4
+              OnClick = btTestarPosPrinterClick
+              TabOrder = 6
+            end
+            object btProcuraImpressoras: TSpeedButton
+              AnchorSideLeft.Side = asrBottom
+              AnchorSideBottom.Side = asrBottom
+              Left = 312
+              Height = 23
+              Top = 40
+              Width = 25
+              Images = ImageList1
+              ImageIndex = 12
+              OnClick = btProcuraImpressorasClick
+            end
+          end
+          object gbConfigTEF: TGroupBox
+            Left = 10
+            Height = 166
+            Top = 10
+            Width = 778
+            Align = alTop
+            BorderSpacing.Around = 10
+            Caption = 'TEF'
+            ClientHeight = 146
+            ClientWidth = 774
+            TabOrder = 0
+            object cbxGP: TComboBox
+              Left = 9
+              Height = 23
+              Top = 20
+              Width = 135
+              ItemHeight = 15
+              Style = csDropDownList
+              TabOrder = 0
+            end
+            object Label1: TLabel
+              Left = 9
+              Height = 15
+              Top = 0
+              Width = 85
+              Caption = 'Gerenciador TEF'
+            end
+            object cbMultiplosCartoes: TCheckBox
+              Left = 321
+              Height = 19
+              Top = 26
+              Width = 113
+              Caption = 'Multiplos Cartões'
+              TabOrder = 8
+            end
+            object cbSuportaDesconto: TCheckBox
+              Left = 160
+              Height = 19
+              Top = 26
+              Width = 114
+              Caption = 'Suporta Desconto'
+              TabOrder = 4
+            end
+            object cbSuportaSaque: TCheckBox
+              Left = 160
+              Height = 19
+              Top = 48
+              Width = 96
+              Caption = 'Suporta Saque'
+              TabOrder = 5
+            end
+            object Label10: TLabel
+              Left = 368
+              Height = 15
+              Top = 52
+              Width = 66
+              Caption = 'Máx.Cartões'
+            end
+            object seMaxCartoes: TSpinEdit
+              Left = 368
+              Height = 23
+              Top = 69
+              Width = 72
+              Alignment = taCenter
+              MaxValue = 20
+              TabOrder = 9
+            end
+            object cbIMprimirViaReduzida: TCheckBox
+              Left = 160
+              Height = 19
+              Top = 4
+              Width = 136
+              Caption = 'Imprimir Via Reduzida'
+              TabOrder = 3
+            end
+            object Label11: TLabel
+              Left = 9
+              Height = 15
+              Top = 48
+              Width = 45
+              Alignment = taRightJustify
+              Caption = 'Arq.Log:'
+            end
+            object edLog: TEdit
+              Cursor = crIBeam
+              Left = 9
+              Height = 23
+              Top = 65
+              Width = 110
+              TabOrder = 1
+            end
+            object SbArqLog: TSpeedButton
+              Left = 120
+              Height = 22
+              Top = 65
+              Width = 24
+              Caption = '...'
+              OnClick = SbArqLogClick
+              ParentFont = False
+            end
+            object Label12: TLabel
+              Left = 368
+              Height = 15
+              Top = 94
+              Width = 76
+              Caption = 'Troco Máximo'
+            end
+            object seTrocoMaximo: TFloatSpinEdit
+              Left = 368
+              Height = 23
+              Top = 110
+              Width = 72
+              Alignment = taCenter
+              MaxValue = 100000
+              TabOrder = 10
+            end
+            object cbSuportaReajusteValor: TCheckBox
+              Left = 160
+              Height = 19
+              Top = 70
+              Width = 138
+              Caption = 'Suporta Reajuste Valor'
+              TabOrder = 6
+            end
+            object btTestarTEF: TBitBtn
+              Left = 9
+              Height = 28
+              Top = 105
+              Width = 110
+              Caption = 'Testar TEF'
+              Images = ImageList1
+              ImageIndex = 5
+              OnClick = btTestarTEFClick
+              TabOrder = 2
+            end
+            object GroupBox1: TGroupBox
+              Left = 464
+              Height = 120
+              Top = 20
+              Width = 302
+              Caption = 'Software House e Aplicação'
+              ClientHeight = 100
+              ClientWidth = 298
+              TabOrder = 11
+              object Label14: TLabel
+                Left = 8
+                Height = 15
+                Top = 0
+                Width = 65
+                Caption = 'Razão Social'
+              end
+              object edRazaoSocial: TEdit
+                Left = 8
+                Height = 23
+                Top = 16
+                Width = 176
+                TabOrder = 0
+                Text = 'PROJETO ACBR'
+              end
+              object Label16: TLabel
+                Left = 8
+                Height = 15
+                Top = 48
+                Width = 88
+                Caption = 'Nome Aplicação'
+              end
+              object edAplicacaoNome: TEdit
+                Left = 8
+                Height = 23
+                Top = 64
+                Width = 176
+                TabOrder = 2
+                Text = 'TEFDemoNF'
+              end
+              object Label18: TLabel
+                Left = 192
+                Height = 15
+                Top = 0
+                Width = 43
+                Caption = 'Registro'
+              end
+              object edRegistro: TEdit
+                Left = 192
+                Height = 23
+                Top = 16
+                Width = 96
+                TabOrder = 1
+                Text = '123456'
+              end
+              object Label19: TLabel
+                Left = 192
+                Height = 15
+                Top = 48
+                Width = 34
+                Caption = 'Versão'
+              end
+              object edAplicacaoVersao: TEdit
+                Left = 192
+                Height = 23
+                Top = 64
+                Width = 96
+                TabOrder = 3
+                Text = '1.0'
+              end
+            end
+            object cbxQRCode: TComboBox
+              Left = 160
+              Height = 23
+              Top = 110
+              Width = 128
+              ItemHeight = 15
+              ItemIndex = 1
+              Items.Strings = (
+                'Não Suportado'
+                'Auto'
+                'Exibir no PinPad'
+                'Exibir na Tela'
+                'Imprimir'
+              )
+              Style = csDropDownList
+              TabOrder = 12
+              Text = 'Auto'
+            end
+            object Label9: TLabel
+              Left = 160
+              Height = 15
+              Top = 94
+              Width = 44
+              Caption = 'QRCode'
+            end
+            object cbConfirmarAntesComprovantes: TCheckBox
+              Left = 321
+              Height = 19
+              Top = 4
+              Width = 188
+              Caption = 'Confirmar Antes Comprovantes'
+              TabOrder = 7
+            end
+          end
+          object pBotoesConfiguracao: TPanel
+            Left = 10
+            Height = 39
+            Top = 311
+            Width = 778
+            Align = alTop
+            BorderSpacing.Left = 10
+            BorderSpacing.Right = 10
+            ClientHeight = 39
+            ClientWidth = 778
+            TabOrder = 2
+            object btLerParametros: TBitBtn
+              Left = 178
+              Height = 28
+              Top = 6
+              Width = 136
+              Caption = 'Ler Parâmetros'
+              Images = ImageList1
+              ImageIndex = 3
+              OnClick = btLerParametrosClick
+              TabOrder = 1
+            end
+            object btSalvarParametros: TBitBtn
+              Left = 11
+              Height = 28
+              Top = 6
+              Width = 136
+              Caption = 'Salvar Parâmetros'
+              Images = ImageList1
+              ImageIndex = 2
+              OnClick = btSalvarParametrosClick
+              TabOrder = 0
+            end
+          end
+        end
+      end
+      object tsOperacao: TTabSheet
+        Caption = 'Operação'
+        ClientHeight = 348
+        ClientWidth = 798
+        ImageIndex = 1
+        object pOperacao: TPanel
+          Left = 0
+          Height = 348
+          Top = 0
+          Width = 793
+          Align = alClient
+          BevelOuter = bvNone
+          ClientHeight = 348
+          ClientWidth = 793
+          Constraints.MinWidth = 460
+          TabOrder = 0
+          object gbTotaisVenda: TGroupBox
+            Left = 3
+            Height = 136
+            Top = 56
+            Width = 787
+            Align = alTop
+            BorderSpacing.Around = 3
+            Caption = 'Valores da Operação'
+            ClientHeight = 116
+            ClientWidth = 783
+            TabOrder = 0
+            object Label2: TLabel
+              Left = 25
+              Height = 15
+              Top = 8
+              Width = 60
+              Caption = 'Valor Inicial'
+            end
+            object seValorInicialVenda: TFloatSpinEdit
+              Left = 24
+              Height = 23
+              Top = 24
+              Width = 89
+              Alignment = taRightJustify
+              MaxValue = 100000
+              OnChange = seValorInicialVendaChange
+              TabOrder = 0
+            end
+            object Label3: TLabel
+              Left = 136
+              Height = 15
+              Top = 8
+              Width = 50
+              Caption = 'Desconto'
+            end
+            object seTotalDesconto: TFloatSpinEdit
+              Left = 136
+              Height = 23
+              Top = 24
+              Width = 89
+              Alignment = taRightJustify
+              MaxValue = 100000
+              OnChange = seTotalDescontoChange
+              TabOrder = 1
+            end
+            object Label4: TLabel
+              Left = 248
+              Height = 15
+              Top = 8
+              Width = 56
+              Caption = 'Acréscimo'
+            end
+            object seTotalAcrescimo: TFloatSpinEdit
+              Left = 248
+              Height = 23
+              Top = 24
+              Width = 89
+              Alignment = taRightJustify
+              MaxValue = 100000
+              OnChange = seTotalAcrescimoChange
+              TabOrder = 2
+            end
+            object Label5: TLabel
+              Left = 25
+              Height = 15
+              Top = 64
+              Width = 83
+              Caption = 'Total Operação'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label6: TLabel
+              Left = 136
+              Height = 15
+              Top = 64
+              Width = 57
+              Caption = 'Total Pago'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Label13: TLabel
+              Left = 248
+              Height = 15
+              Top = 64
+              Width = 31
+              Caption = 'Troco'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object edTotalVenda: TEdit
+              Left = 25
+              Height = 25
+              Top = 80
+              Width = 89
+              Alignment = taRightJustify
+              Font.Height = -13
+              Font.Style = [fsBold]
+              ParentFont = False
+              ReadOnly = True
+              TabStop = False
+              TabOrder = 5
+              Text = '0.00'
+            end
+            object edTotalPago: TEdit
+              Left = 136
+              Height = 25
+              Top = 80
+              Width = 89
+              Alignment = taRightJustify
+              Font.Height = -13
+              Font.Style = [fsBold]
+              ParentFont = False
+              ReadOnly = True
+              TabStop = False
+              TabOrder = 4
+              Text = '0.00'
+            end
+            object edTroco: TEdit
+              Left = 248
+              Height = 25
+              Top = 80
+              Width = 89
+              Alignment = taRightJustify
+              Font.Height = -13
+              Font.Style = [fsBold]
+              ParentFont = False
+              ReadOnly = True
+              TabStop = False
+              TabOrder = 3
+              Text = '0.00'
+            end
+            object btEfetuarPagamentos: TBitBtn
+              Left = 661
+              Height = 28
+              Top = 78
+              Width = 113
+              Anchors = [akTop, akRight]
+              Caption = 'Pagamentos'
+              Default = True
+              Enabled = False
+              Images = ImageList1
+              ImageIndex = 1
+              OnClick = btEfetuarPagamentosClick
+              ParentFont = False
+              TabOrder = 11
+            end
+            object btAdministrativo: TBitBtn
+              Left = 661
+              Height = 28
+              Top = 0
+              Width = 113
+              Anchors = [akTop, akRight]
+              Caption = 'Administrativo'
+              Enabled = False
+              Images = ImageList1
+              ImageIndex = 10
+              OnClick = btAdministrativoClick
+              ParentFont = False
+              TabOrder = 8
+            end
+            object cbSimularErroNoDoctoFiscal: TCheckBox
+              Left = 360
+              Height = 19
+              Top = 86
+              Width = 151
+              Caption = 'Simular Erro Docto Fiscal'
+              TabOrder = 6
+            end
+            object cbTestePayGo: TComboBox
+              Left = 360
+              Height = 23
+              Top = 24
+              Width = 137
+              ItemHeight = 15
+              Items.Strings = (
+                '00 - Livre'
+                '02 - CRT - Venda à vista aprovada com pré-seleção de parâmetros'
+                '03 - CRT - Venda parcelada aprovada com pré-seleção de parâmetros'
+                '04 - CRT - Venda aprovada em moeda estrangeira'
+                '27 - CRT - Venda aprovada com pré-seleção de parâmetros de carteira digital'
+                '31 - ADM - Operação bem sucedida com valor pré-definido'
+              )
+              ItemWidth = 500
+              Style = csDropDownList
+              TabOrder = 7
+            end
+            object Label8: TLabel
+              Left = 360
+              Height = 15
+              Top = 8
+              Width = 63
+              Caption = 'Teste PayGo'
+            end
+            object btObterCPF: TButton
+              Left = 661
+              Height = 25
+              Top = 28
+              Width = 113
+              Anchors = [akTop, akRight]
+              Caption = 'Solicita CPF'
+              OnClick = btObterCPFClick
+              TabOrder = 9
+            end
+            object btMsgPinPad: TButton
+              Left = 661
+              Height = 25
+              Top = 53
+              Width = 113
+              Anchors = [akTop, akRight]
+              Caption = 'Msg PinPad'
+              OnClick = btMsgPinPadClick
+              TabOrder = 10
+            end
+          end
+          object gbPagamentos: TGroupBox
+            Left = 3
+            Height = 150
+            Top = 195
+            Width = 787
+            Align = alClient
+            BorderSpacing.Around = 3
+            Caption = 'Pagamentos'
+            ClientHeight = 130
+            ClientWidth = 783
+            TabOrder = 1
+            object sgPagamentos: TStringGrid
+              Left = 0
+              Height = 130
+              Top = 0
+              Width = 677
+              Align = alClient
+              AutoEdit = False
+              ColCount = 7
+              Columns = <              
+                item
+                  Title.Caption = 'Item'
+                  Width = 35
+                end              
+                item
+                  Title.Caption = 'Forma de Pagamento'
+                  Width = 150
+                end              
+                item
+                  Title.Alignment = taRightJustify
+                  Title.Caption = 'Valor'
+                  Width = 100
+                end              
+                item
+                  Title.Caption = 'NSU'
+                  Width = 110
+                end              
+                item
+                  Title.Caption = 'Rede'
+                  Width = 110
+                end              
+                item
+                  Title.Caption = 'Status'
+                  Width = 100
+                end              
+                item
+                  Title.Caption = 'CNPJ Credenciadora'
+                  Width = 140
+                end>
+              DefaultColWidth = 30
+              FixedCols = 0
+              Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect, goSmoothScroll]
+              RowCount = 1
+              TabOrder = 0
+              UseXORFeatures = True
+            end
+            object pBotoesPagamentos: TPanel
+              Left = 677
+              Height = 130
+              Top = 0
+              Width = 106
+              Align = alRight
+              BevelOuter = bvNone
+              ClientHeight = 130
+              ClientWidth = 106
+              TabOrder = 1
+              object btIncluirPagamentos: TBitBtn
+                Left = 8
+                Height = 28
+                Top = 16
+                Width = 88
+                Anchors = [akTop, akRight]
+                Caption = 'Incluir'
+                Images = ImageList1
+                ImageIndex = 8
+                OnClick = btIncluirPagamentosClick
+                ParentFont = False
+                TabOrder = 0
+              end
+              object btExcluirPagamento: TBitBtn
+                Left = 8
+                Height = 28
+                Top = 48
+                Width = 88
+                Anchors = [akTop, akRight]
+                Caption = 'Excluir'
+                Images = ImageList1
+                ImageIndex = 9
+                OnClick = btExcluirPagamentoClick
+                ParentFont = False
+                TabOrder = 1
+              end
+            end
+          end
+          object pStatus: TPanel
+            Left = 3
+            Height = 50
+            Top = 3
+            Width = 787
+            Align = alTop
+            BorderSpacing.Around = 3
+            BevelInner = bvLowered
+            BevelWidth = 2
+            Caption = 'CAIXA LIVRE'
+            ClientHeight = 50
+            ClientWidth = 787
+            Font.Height = -24
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 2
+            object btOperacao: TBitBtn
+              Left = 8
+              Height = 28
+              Top = 11
+              Width = 120
+              Cancel = True
+              Caption = 'Cancelar Operação'
+              Images = ImageList1
+              OnClick = btOperacaoClick
+              ParentFont = False
+              TabOrder = 0
+              Visible = False
+            end
+            object lNumOperacao: TLabel
+              Left = 689
+              Height = 42
+              Top = 4
+              Width = 84
+              Align = alRight
+              BorderSpacing.Right = 10
+              Caption = '000000'
+              Layout = tlCenter
+              Visible = False
+            end
+          end
+        end
+        object Splitter1: TSplitter
+          Left = 793
+          Height = 348
+          Top = 0
+          Width = 5
+          Align = alRight
+          ResizeAnchor = akRight
+        end
+      end
+    end
+    object pLogs: TPanel
+      Left = 0
+      Height = 119
+      Top = 381
+      Width = 806
+      Align = alClient
+      ClientHeight = 119
+      ClientWidth = 806
+      TabOrder = 1
+      object mLog: TMemo
+        Left = 4
+        Height = 111
+        Top = 4
+        Width = 775
+        Align = alClient
+        BorderSpacing.Around = 3
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        WordWrap = False
+      end
+      object sbLimparLog: TSpeedButton
+        Left = 782
+        Height = 117
+        Top = 1
+        Width = 23
+        Align = alRight
+        Images = ImageList1
+        ImageIndex = 7
+        OnClick = sbLimparLogClick
+      end
+    end
+    object Splitter3: TSplitter
+      Cursor = crVSplit
+      Left = 0
+      Height = 5
+      Top = 376
+      Width = 806
+      Align = alTop
+      ResizeAnchor = akTop
+    end
+  end
+  object pImpressao: TPanel
+    Left = 811
+    Height = 500
+    Top = 0
+    Width = 329
+    Align = alRight
+    BevelOuter = bvNone
+    ClientHeight = 500
+    ClientWidth = 329
+    Constraints.MinWidth = 230
+    TabOrder = 2
+    object mImpressao: TMemo
+      Left = 0
+      Height = 57
+      Top = 255
+      Width = 329
+      Align = alClient
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = 'Lucida Console'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+      WordWrap = False
+    end
+    object lSaidaImpressao: TLabel
+      Left = 5
+      Height = 21
+      Top = 229
+      Width = 319
+      Align = alTop
+      Alignment = taCenter
+      BorderSpacing.Around = 5
+      Caption = 'Saída de Impressão'
+      Font.Height = -16
+      ParentFont = False
+    end
+    object pSimulador: TPanel
+      Left = 0
+      Height = 68
+      Top = 432
+      Width = 329
+      Align = alBottom
+      ClientHeight = 68
+      ClientWidth = 329
+      TabOrder = 1
+      object btMudaPagina: TBitBtn
+        Left = 112
+        Height = 52
+        Top = 8
+        Width = 112
+        Anchors = [akTop]
+        Caption = 'Operaçoes'
+        Color = clMenuHighlight
+        Layout = blGlyphTop
+        Images = ImageList1
+        ImageIndex = 1
+        OnClick = btMudaPaginaClick
+        TabOrder = 0
+      end
+    end
+    object pMensagem: TPanel
+      Left = 0
+      Height = 193
+      Top = 31
+      Width = 329
+      Align = alTop
+      Anchors = []
+      BevelInner = bvLowered
+      BevelWidth = 2
+      BorderStyle = bsSingle
+      ClientHeight = 189
+      ClientWidth = 325
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+      object pMensagemOperador: TPanel
+        Left = 4
+        Height = 70
+        Top = 4
+        Width = 317
+        Align = alTop
+        ClientHeight = 70
+        ClientWidth = 317
+        TabOrder = 0
+        Visible = False
+        object lTituloMsgOperador: TLabel
+          Left = 1
+          Height = 13
+          Top = 1
+          Width = 315
+          Align = alTop
+          Caption = 'Mensagem Operador'
+          Font.Height = -11
+          ParentFont = False
+        end
+        object lMensagemOperador: TLabel
+          Left = 1
+          Height = 55
+          Top = 14
+          Width = 315
+          Align = alClient
+          Alignment = taCenter
+          Caption = 'lMensagemOperador'
+          Layout = tlCenter
+          WordWrap = True
+        end
+      end
+      object pMensagemCliente: TPanel
+        Left = 4
+        Height = 111
+        Top = 74
+        Width = 317
+        Align = alClient
+        ClientHeight = 111
+        ClientWidth = 317
+        TabOrder = 1
+        Visible = False
+        Wordwrap = True
+        object lTituloMensagemCliente: TLabel
+          Left = 1
+          Height = 13
+          Top = 1
+          Width = 315
+          Align = alTop
+          Caption = 'Mensagem Cliente'
+          Font.Height = -11
+          ParentFont = False
+        end
+        object lMensagemCliente: TLabel
+          Left = 1
+          Height = 96
+          Top = 14
+          Width = 315
+          Align = alClient
+          Alignment = taCenter
+          Caption = 'lMensagemCliente'
+          Layout = tlCenter
+          WordWrap = True
+        end
+      end
+    end
+    object pImpressoraBotes: TPanel
+      Left = 0
+      Height = 34
+      Top = 398
+      Width = 329
+      Align = alBottom
+      ClientHeight = 34
+      ClientWidth = 329
+      TabOrder = 3
+      object btImprimir: TBitBtn
+        Left = 160
+        Height = 28
+        Top = 2
+        Width = 80
+        Anchors = [akTop, akRight]
+        Caption = 'Imprimir'
+        Images = ImageList1
+        ImageIndex = 4
+        OnClick = btImprimirClick
+        TabOrder = 0
+      end
+      object btLimparImpressora: TBitBtn
+        Left = 243
+        Height = 28
+        Top = 2
+        Width = 80
+        Anchors = [akTop, akRight]
+        Caption = 'Limpar'
+        Images = ImageList1
+        ImageIndex = 7
+        OnClick = btLimparImpressoraClick
+        TabOrder = 1
+      end
+      object cbEnviarImpressora: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 8
+        Width = 113
+        Caption = 'Enviar Impressora'
+        Checked = True
+        OnChange = cbEnviarImpressoraChange
+        State = cbChecked
+        TabOrder = 2
+      end
+    end
+    object lURLTEF: TLabel
+      Cursor = crHandPoint
+      Left = 5
+      Height = 21
+      Top = 5
+      Width = 319
+      Align = alTop
+      Alignment = taCenter
+      BorderSpacing.Around = 5
+      Caption = 'projetoacbr.com.br/tef'
+      Color = clBlack
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      Transparent = False
+      OnClick = lURLTEFClick
+    end
+    object pQRCode: TPanel
+      Left = 0
+      Height = 86
+      Top = 312
+      Width = 329
+      Align = alBottom
+      ClientHeight = 86
+      ClientWidth = 329
+      TabOrder = 4
+      Visible = False
+      object imgQRCode: TImage
+        Left = 1
+        Height = 84
+        Top = 1
+        Width = 327
+        Align = alClient
+        Center = True
+        Proportional = True
+        Stretch = True
+      end
+    end
+  end
+  object ACBrTEFD1: TACBrTEFD
+    AutoFinalizarCupom = False
+    EsperaSTS = 7
+    TEFPayGo.LogDebug = True
+    TEFPayGo.ArqTemp = 'C:\TEF_DIAL\req\intpos.tmp'
+    TEFPayGo.ArqReq = 'C:\TEF_DIAL\req\intpos.001'
+    TEFPayGo.ArqSTS = 'C:\TEF_DIAL\resp\intpos.sts'
+    TEFPayGo.ArqResp = 'C:\TEF_DIAL\resp\intpos.001'
+    TEFPayGo.GPExeName = 'C:\TEF_DIAL\tef_dial.exe'
+    TEFPayGoWeb.SuportaViasDiferenciadas = True
+    TEFPayGoWeb.UtilizaSaldoTotalVoucher = False
+    TEFPayGoWeb.ConfirmarTransacoesPendentes = True
+    TEFPayGoWeb.PerguntarCartaoDigitadoAposCancelarLeitura = False
+    TEFPayGoWeb.OnExibeMenu = PayGoWebExibeMenu
+    TEFPayGoWeb.OnObtemCampo = PayGoWebObtemCampo
+    TEFPayGoWeb.OnExibeMensagem = PayGoWebExibeMensagem
+    TEFPayGoWeb.OnAguardaPinPad = PayGoWebAguardaPinPad
+    TEFPayGoWeb.OnAvaliarTransacaoPendente = PayGoWebAvaliarTransacaoPendente
+    TEFDial.ArqTemp = 'C:\TEF_DIAL\req\intpos.tmp'
+    TEFDial.ArqReq = 'C:\TEF_DIAL\req\intpos.001'
+    TEFDial.ArqSTS = 'C:\TEF_DIAL\resp\intpos.sts'
+    TEFDial.ArqResp = 'C:\TEF_DIAL\resp\intpos.001'
+    TEFDial.GPExeName = 'C:\TEF_DIAL\tef_dial.exe'
+    TEFDisc.ArqTemp = 'C:\TEF_Disc\req\intpos.tmp'
+    TEFDisc.ArqReq = 'C:\TEF_Disc\req\intpos.001'
+    TEFDisc.ArqSTS = 'C:\TEF_Disc\resp\intpos.sts'
+    TEFDisc.ArqResp = 'C:\TEF_Disc\resp\intpos.001'
+    TEFDisc.GPExeName = 'C:\TEF_Disc\tef_Disc.exe'
+    TEFHiper.ArqTemp = 'c:\HiperTEF\req\IntPos.tmp'
+    TEFHiper.ArqReq = 'C:\HiperTEF\req\IntPos.001'
+    TEFHiper.ArqSTS = 'C:\HiperTEF\resp\IntPos.sts'
+    TEFHiper.ArqResp = 'C:\HiperTEF\resp\IntPos.001'
+    TEFHiper.GPExeName = 'C:\HiperTEF\HiperTEF.exe'
+    TEFCliSiTef.ArqLOG = 'CliSiTef.log'
+    TEFCliSiTef.EnderecoIP = 'localhost'
+    TEFCliSiTef.CodigoLoja = '00000000'
+    TEFCliSiTef.NumeroTerminal = 'SE000001'
+    TEFCliSiTef.OnExibeMenu = CliSiTefExibeMenu
+    TEFCliSiTef.OnObtemCampo = CliSiTefObtemCampo
+    TEFVeSPague.EnderecoIP = 'localhost'
+    TEFVeSPague.Porta = '60906'
+    TEFVeSPague.TemPendencias = False
+    TEFVeSPague.TransacaoCRT = 'Cartao Vender'
+    TEFVeSPague.TransacaoCHQ = 'Cheque Consultar'
+    TEFVeSPague.TransacaoCNC = 'Administracao Cancelar'
+    TEFVeSPague.TransacaoReImpressao = 'Administracao Reimprimir'
+    TEFVeSPague.TransacaoPendente = 'Administracao Pendente'
+    TEFGPU.ArqTemp = 'C:\TEF_GPU\req\intpos.tmp'
+    TEFGPU.ArqReq = 'C:\TEF_GPU\req\intpos.001'
+    TEFGPU.ArqSTS = 'C:\TEF_GPU\resp\intpos.sts'
+    TEFGPU.ArqResp = 'C:\TEF_GPU\resp\intpos.001'
+    TEFGPU.GPExeName = 'C:\TEF_GPU\GPU.exe'
+    TEFBanese.ArqTemp = 'C:\bcard\req\pergunta.tmp'
+    TEFBanese.ArqReq = 'C:\bcard\req\pergunta.txt'
+    TEFBanese.ArqSTS = 'C:\bcard\resp\status.txt'
+    TEFBanese.ArqResp = 'C:\bcard\resp\resposta.txt'
+    TEFBanese.ArqRespBkp = 'C:\bcard\resposta.txt'
+    TEFBanese.ArqRespMovBkp = 'C:\bcard\copiamovimento.txt'
+    TEFAuttar.ArqTemp = 'C:\Auttar_TefIP\req\intpos.tmp'
+    TEFAuttar.ArqReq = 'C:\Auttar_TefIP\req\intpos.001'
+    TEFAuttar.ArqSTS = 'C:\Auttar_TefIP\resp\intpos.sts'
+    TEFAuttar.ArqResp = 'C:\Auttar_TefIP\resp\intpos.001'
+    TEFAuttar.GPExeName = 'C:\Program Files (x86)\Auttar\IntegradorTEF-IP.exe'
+    TEFGood.ArqTemp = 'C:\good\gettemp.dat'
+    TEFGood.ArqReq = 'C:\good\getreq.dat'
+    TEFGood.ArqSTS = 'C:\good\getstat.dat'
+    TEFGood.ArqResp = 'C:\good\getresp.dat'
+    TEFGood.GPExeName = 'C:\good\GETGoodMed.exe'
+    TEFFoxWin.ArqTemp = 'C:\FwTEF\req\intpos.tmp'
+    TEFFoxWin.ArqReq = 'C:\FwTEF\req\intpos.001'
+    TEFFoxWin.ArqSTS = 'C:\FwTEF\rsp\intpos.sts'
+    TEFFoxWin.ArqResp = 'C:\FwTEF\rsp\intpos.001'
+    TEFFoxWin.GPExeName = 'C:\FwTEF\bin\FwTEF.exe'
+    TEFPetrocard.ArqTemp = 'C:\CardTech\req\intpos.tmp'
+    TEFPetrocard.ArqReq = 'C:\CardTech\req\intpos.001'
+    TEFPetrocard.ArqSTS = 'C:\CardTech\resp\intpos.sts'
+    TEFPetrocard.ArqResp = 'C:\CardTech\resp\intpos.001'
+    TEFPetrocard.GPExeName = 'C:\CardTech\sac.exe'
+    TEFCrediShop.ArqTemp = 'C:\tef_cshp\req\intpos.tmp'
+    TEFCrediShop.ArqReq = 'C:\tef_cshp\req\intpos.001'
+    TEFCrediShop.ArqSTS = 'C:\tef_cshp\resp\intpos.sts'
+    TEFCrediShop.ArqResp = 'C:\tef_cshp\resp\intpos.001'
+    TEFCrediShop.GPExeName = 'C:\tef_cshp\vpos_tef.exe'
+    TEFTicketCar.ArqTemp = 'C:\TCS\TX\INTTCS.tmp'
+    TEFTicketCar.ArqReq = 'C:\TCS\TX\INTTCS.001'
+    TEFTicketCar.ArqSTS = 'C:\TCS\RX\INTTCS.RET'
+    TEFTicketCar.ArqResp = 'C:\TCS\RX\INTTCS.001'
+    TEFTicketCar.GPExeName = 'C:\TCS\tcs.exe'
+    TEFTicketCar.NumLoja = 0
+    TEFTicketCar.NumCaixa = 0
+    TEFTicketCar.AtualizaPrecos = False
+    TEFConvCard.ArqTemp = 'C:\ger_convenio\tx\crtsol.tmp'
+    TEFConvCard.ArqReq = 'C:\ger_convenio\tx\crtsol.001'
+    TEFConvCard.ArqSTS = 'C:\ger_convenio\rx\crtsol.ok'
+    TEFConvCard.ArqResp = 'C:\ger_convenio\rx\crtsol.001'
+    TEFConvCard.GPExeName = 'C:\ger_convcard\convcard.exe'
+    OnAguardaResp = ACBrTEFD1AguardaResp
+    OnExibeMsg = ACBrTEFD1ExibeMsg
+    OnExibeQRCode = ACBrTEFD1ExibeQRCode
+    OnBloqueiaMouseTeclado = ACBrTEFD1BloqueiaMouseTeclado
+    OnComandaECF = ACBrTEFD1ComandaECF
+    OnComandaECFSubtotaliza = ACBrTEFD1ComandaECFSubtotaliza
+    OnComandaECFPagamento = ACBrTEFD1ComandaECFPagamento
+    OnComandaECFAbreVinculado = ACBrTEFD1ComandaECFAbreVinculado
+    OnComandaECFImprimeVia = ACBrTEFD1ComandaECFImprimeVia
+    OnInfoECF = ACBrTEFD1InfoECF
+    OnAntesFinalizarRequisicao = ACBrTEFD1AntesFinalizarRequisicao
+    OnDepoisConfirmarTransacoes = ACBrTEFD1DepoisConfirmarTransacoes
+    OnDepoisCancelarTransacoes = ACBrTEFD1DepoisCancelarTransacoes
+    OnGravarLog = ACBrTEFD1GravarLog
+    Left = 960
+    Top = 296
+  end
+  object ACBrPosPrinter1: TACBrPosPrinter
+    ConfigBarras.MostrarCodigo = False
+    ConfigBarras.LarguraLinha = 0
+    ConfigBarras.Altura = 0
+    ConfigBarras.Margem = 0
+    ConfigQRCode.Tipo = 2
+    ConfigQRCode.LarguraModulo = 4
+    ConfigQRCode.ErrorLevel = 0
+    LinhasEntreCupons = 0
+    Left = 960
+    Top = 248
+  end
+  object ImageList1: TImageList
+    Left = 960
+    Top = 200
+    Bitmap = {
+      4C7A0D0000001000000010000000240600000000000078DAED5B69685C55147E
+      5D62B5D19A1A691B1BEDA255C4E2825AC605378CD62E82E8280A2A1597404DEC
+      884BC040B42A55245134AD4D058D490B25F8477FD4FAC3058BA962B10AFE504B
+      553A5A4D292E6D68354E329E43BF4B4FAE779D699834CE818F4EDE7BDF7D7739
+      F79EEF9E779B24C36C2AE142C2B9F81D6B8D8441429EB093B09C302182CFCFAE
+      1265E45086CB4E252C238CC3DFC76865FC4C98EEE0DF46182064F0FE0A4233DE
+      ADEA7083837F2B9EFB9BF030B8FFE05A1EF558EAE0CF23F4E3D901F15E850384
+      CB3C7DF692C6D1F119A1D651C6718436C26F787E08ED91656C27CCF28CC55984
+      DBD127DCE6EF0D65D446F8C305183FBD2DB322CAB8C852466C3D4C6D3939B21E
+      B28C3EC2E991F34BF5C71EC2C2A4309B4B3827195D369950474807E272CC5365
+      8F60EEE40371101C653D40A8E9CFF3EFACB8EE43D6C0CF47E248F38B6DFFD1CC
+      5FA5ADD93EE410EBA4FF5E17E1BF8B0895C9D8B289841AACAB36D8DA3C9ED04A
+      F81173C3864D842A03BF06DC564B7FD713F662EC361BCAA845F9694BFDD47D35
+      FE9BB4B6A8FBF596765F4CD82DF8592DFE28FE5E4BBB776BBAC0C60FF5DF103E
+      C7FF6D887303917CD63C8F429BB05F3C094D11CAEF439C527636E18F08BEAE99
+      EAB436E8FC99845D5A1B39563F085DF893E1DE0CC167CDB93AC07FB378CF0B42
+      AF4A1DE79B3FB5A86B4552B6525B95E33AAFEFCF105E23BC4CB88B709A78E64A
+      C28B062E6BBA2F31D787E0C72A2EB10F3611AEC16F3DDEDD4DD8070DDF823D1C
+      FBD31CC2BD846F312FFB0DF1FF52C29F78668EA55D3713FE32E807F6C5B7F1EE
+      9485BB109AD5A43FD8EF6F223C64D92BB2C66E3768A84CD90547A5F9D62F9FF9
+      D64F9FF9625FA836B4C1B67F7980B03E80DF8D7CC5B15ADE241718BBB761AE2E
+      13FC8D11B1FF3C94D13D82FB8F3683066B8BE09B7458DAC14F89F7F8F8EAB994
+      C37F5CF51F69FF2D76FE94DA780D3F9FB0029A88D7EE06C27CE87C979D44E844
+      2CD1FD8DF5DF5AC2140B97E3446F80DFBE6F286302E6AE8BC7B1F31DC2EFA887
+      6CCB0211576D5CD602C713BAD096F982FF4400770AE2BF5A271A04BF0BD73E47
+      1C955AF775BCB749CBE9B50B7E37AE7D8CBCEF3D1803E64ED2F2A10A6B04BF45
+      5C7F0FF9D62BF0DE66CBDE7A85E05F02ADA3EEBD0B7DDD645917F7C1C712A141
+      DED29ED969C8612A741AB406BFEF8B00FFE9859F9A6C06EA71C0C0EB878FF972
+      8615E88F168C4B17FC6341642EBD5476A3250EBE41B83A80FF2B61AB81CFD77E
+      098CFF6A7D974807ACDF29B1FEB7219FD02AFECE3BE246681CED19C5FCEE007E
+      A7837FBD87CB7B9AAB1C7C5E533F71F03F34EC9B755BA4E51AE43A7A6D80FFB0
+      2EDB6279F7A488FC624CBFEB96F99FEE77AA84DEAA43EE28A6BFE4FA3D803C5D
+      8F67CEDAFA5BC2C7E778F0AA859BB1DCCF04E6EF7A8E003F4473BAF8FAFD98FC
+      23F3F9FBE26231B68B71AD107EAAC8FA9BFAE344C2A786756350D3592E9B893C
+      86DC332C8D5833C68A8D25FDDF6B293354FFA70DFBD67C84FEB7F16DFA5FD559
+      F1D49E51FDDDEBD1FF317C9BFE0FADBF4BFFFBF821FADF357E65FD5F9EFFB1FB
+      FF42E6BF0D31FBFF7C11F35F47ECFC77F143E6BF0B21F3DF86D0F99F2FEFFF4B
+      62F3E01F4AAB3E9FC49DD97A25197E9E268B6BA1167B3E6489E1FB940B3F24C3
+      CF5FAD2FC0FF4732FF5EE6C7F13716C07F53F0EF207C1390FB57D891FCF7FC5E
+      7540EE5F615A401EA4D4F13F23E27F6360FCAFF6C4FF0EECD56CF17F6BC0B87D
+      602883F30C1B448E6A5772F8FCB03AEF9515FBC30E47FCE7B19D8D6706C1E5DC
+      E119620FAAC7FF66F12ECE953F8D5CC83A70ABF0AFCC85375AE2BF2A636572E8
+      8C52A581EB8AFF795167C55FA7F5872BFEE7B43AAFC4EF0EAD8C8C25FE7F071F
+      577556FD313B397C46C715FF8750464EEB8F1D62FC4CF19FCF4A6C0F8CFFD516
+      1FACF1C4FF0D05C6FF66F8D8C4E4E8B04AF451EC39A569C8B77F8531DC82B535
+      A4DDD3F1FD6B0FF4463DD6E883F01FDFDAD30EFFAAD1AEF377FDFD89FB0CFE54
+      ACFF8F19EE9D40F89AF0AC837F0ADE7DA7E11EB77D33E6A0CD26C377575BF654
+      7C5EED714FFB1BF0BD6C097256E33186DC877CE67C6E40DE7C2DFCFCA3E4D099
+      20FE06D787BADD1FA05F2B90E75B8398FC14E14CF4EBFE2272E07C3EEF39F8C2
+      F202CB18073FE2B97D4B1165DC97C4FDBF8111B57F012614E5BC
+    }
+  end
+end

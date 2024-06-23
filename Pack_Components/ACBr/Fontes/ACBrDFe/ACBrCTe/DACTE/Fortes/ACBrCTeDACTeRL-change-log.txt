@@ -1,0 +1,262 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+Agradecimentos:
+
+* Administradores:
+- Daniel Simões de Almeida
+- André Ferreira de Moraes
+
+* Desenvolvedores:
+
+{******************************************************************************
+|* ACBrCTeDACTeRL
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+14/06/2023
+-- ACBrCTeDACTeRLRetrato --
+[*] Adiciona flags visando viabilizar impressão dos quadros "Componentes do Valor da Prestação de Serviço" e "Documentos Originários" 
+    quando houver muitas informações e não couber na primeira página.
+  Por: Diego F
+
+08/08/2022
+-- ACBrCTeDACTeRLClass --
+[*] Alterado o método ImprimirDANFSePDF para utilizar a função DefinirNomeArquivo, que
+    tem por objetico utilizar o nome informado em NomeDocumento em vez do nome padrão
+    ao gerar o PDF.
+   Por: Italo Giurizzato Junior
+
+02/08/2022
+-- ACBrCTeDACTeRLClass --
+[*] Alterado para ser utilizado a função DefinirNomeArqPDF nos métodos:
+    ImprimirDACTePDF, ImprimirEVENTOPDF e ImprimirINUTILIZACAOPDF
+   Por: Italo Giurizzato Junior
+
+06/04/2021
+-- ACBrCTeDACTeRLRetrato --
+[*] Ajuste de conversão do arquivo .lfm 
+   Por: José M S Junior
+
+09/03/2021
+-- ACBrCTeDACTeRLRetrato --
+[*] Ajustes na impressão: Peso Bruto/Peso Base Calc/Peso Aferido/Cubagem e Qtde Volumes.
+   Por: Douglas GV
+
+07/07/2020
+-- ACBrCTeDACTeRLRetrato --
+[*] Mensagens mais objetivas quando o CT-e esta sem o protocolo de autorização.
+   Por: Mario Inacio
+
+14/05/2020
+-- ACBrCTeDACTeRLClass --
+[*] Corrigido o nome do PDF de eventos.
+   Por: Italo Jurisato Junior
+
+14/05/2020
+-- ACBrCTeDACTeRLRetrato --
+[*] A variável CarregouLogo estava sendo atribuida mas não estava sendo
+    utilizada. Incluido as linhas que estavam faltando.
+   Por: Italo Jurisato Junior
+
+01/04/2020
+-- ACBrCTeDAEventoRLRetrato --
+[+] Inclusão dos eventos novos.
+   Por: Italo Jurisato Junior
+
+19/02/2020
+-- ACBrCTeDACTeRLRetrato --
+[*] Alterado a mensagem "Declaração Doc." por "N. Doc." pois não estava sendo 
+    impresso o numero da declaração.
+  Por: Italo Jurisato Junior
+
+04/02/2020
+-- ACBrCTeDAInutRL --
+[*] https://www.projetoacbr.com.br/forum/topic/56085-memoryleak-em-impress%C3%A3o-de-inutiliza%C3%A7%C3%A3o-de-numeros/
+  por: Jéter Rabelo Ferreira
+
+12/11/2019
+-- ACBrCTeDACTeRLRetratoA5 --
+[*] O quadro ICMS ST conforme consta na NT 2016/002 não deve ser mais impresso.
+    Realizado ajustes para imprimir o quadro se a versão do CT-e for 2.00
+  por: Italo Jurisato Junior
+
+11/11/2019
+-- ACBrCTeDACTeRLRetrato --
+[*] O quadro ICMS ST conforme consta na NT 2016/002 não deve ser mais impresso.
+    Realizado ajustes para imprimir o quadro se a versão do CT-e for 2.00
+  por: Italo Jurisato Junior
+
+01/11/2019
+-- ACBrCTeDACTeRLRetrato --
+[*] Ajustes nas larguras dos quadros dos modais Aério e Aquaviário.
+  por: Italo Jurisato Junior
+
+31/10/2019
+-- ACBrCTeDACTeRLRetrato --
+[-] Correção nas larguras dos quadros.
+   https://www.projetoacbr.com.br/forum/topic/54627-erro-na-impress%C3%A3o-do-cte-os-rodovi%C3%A1rio-com-fortes-report/
+  por: Italo Jurisato Junior
+
+24/10/2019
+-- ACBrCTeDACTeRLRetrato --
+[-] Correção nas larguras dos quadros.
+   https://www.projetoacbr.com.br/forum/topic/54578-erro-na-impress%C3%A3o-do-cte-rodovi%C3%A1rio-com-fortes-report/
+  por: Italo Jurisato Junior
+
+24/10/2019
+-- ACBrCTeDACTeRLRetrato --
+[-] Corrigido compatibilidade no arquivo .lfm
+  por: José M S Junior
+
+21/10/2019
+-- ACBrCTeDACTeRLRetrato --
+[*] Ajuste na impressão do Código de Barras Adicional, impresso somente quando o
+    CT-e for emitido em Contingência FS-DA.
+  por: Italo Jurisato Junior
+-- ACBrCTeDACTeRLRetrato --
+[-] https://www.projetoacbr.com.br/forum/topic/54391-erro-ao-imprimir-de-ct-e-os/
+  por: wm Rodrigo
+
+18/10/2019
+-- ACBrCTeDACTeRLRetrato --
+[-] Possível correção para o problema de: list index out of bounds(0)
+  por: Italo Jurisato Junior
+
+16/10/2019
+-- ACBrCTeDACTeRLRetrato --
+[*] Alteração em nomes de objetos (para o Lazarus).
+  por: Italo Jurisato Junior
+
+07/08/2019
+-- ACBrCTeDACTeRLRetrato --
+[+] Incluido a impressão do QR-Code caso a string do mesmo esteja presente
+    no XML.
+  por: Hugo lmf / Italo Jurisato Junior
+
+04/07/2019
+-- ACBrCTeDACTeRLRetrato --
+[*] Melhorias no DACTE tanto para o modal Rodoviário quanto o Aereo.
+  por: Italo Jurisato Junior
+
+26/04/2019
+-- ACBrCTeDACTeRLRetrato --
+[*] Corrigido a altura da banda para mostrar as mensagens de cancelamento e outros.
+  por: Elton Barbosa / Italo Jurisato Junior
+
+08/08/2018
+-- Diversos --
+[*] Alterações visando deixar o componente em conformidade com a Nota Técnica 2018/002.
+  por: Italo Jurisato Junior
+
+26/07/2018
+[-] Correção na hora de exporta para PDF e não é informado o CTe. 
+    Por: Rafael Dias.
+
+05/01/2018
+[*] Ajustes referente Descrição com caracteres especiais na DACTE
+    		Por: José M. S. Junior
+
+14/11/2017
+[*] Ajustes para imprimir a chave do CT-e cancelado.
+   Por: Leonardo Quinino
+
+13/11/2017
+[*] Ajustes para imprimir o Evento de Prestação de Serviço em Desacordo
+   Por: Cleonir
+
+27/10/2017
+[+] adição dos demais documentos
+		https://www.projetoacbr.com.br/forum/topic/39577-dacte-informações-dos-demais-documentos-infoutros/
+		Por : Juliomar Marchetti
+		
+06/09/2017
+[+] Ajustes referente impressão Produtos Perigosos com diversos itens.
+   		http://www.projetoacbr.com.br/forum/topic/38613-erro-no-dacte/
+    		Por: José M. S. Junior
+
+18/08/2017
+[+] Adequações visando a impressão correta do DACTE do CT-e e CT-e OS versão 3.0
+    		Por: Junior Santos
+
+03/07/2017
+[+] Adicionado validador para versão 3.0 na emissão da DACTE, Retirado campo "Forma de Pagamento" baseado nas alterações da versão.
+		http://www.projetoacbr.com.br/forum/topic/37467-urgente-problema-na-forma-de-pgto-e-na-data-prev-entrega/
+		Por: José M. S. Junior
+
+09/06/2017
+[+] Adicionado validador para versão 3.0 na emissão da DACTE, Modificando os Campos referente ao Modal Rodoviario baseado nas alterações da versão.
+		http://www.projetoacbr.com.br/forum/topic/36827-cte-30-erro-na-dacte/                
+		Por: José M. S. Junior
+
+12/05/2017
+[-] Correção para evitar erros de data
+		http://www.projetoacbr.com.br/forum/topic/34759-impressao-de-cte-com-dados-do-conj-transportador-nao-xml/?do=findComment&comment=240127
+		por : Juliomar Marchetti
+		
+12/01/2017
+[-] necessário abrir e salvar no lazarus os lfm do dacte pois estavam com acentuação erradas
+		por: Juliomar Marchetti
+		
+09/01/2017
+[+] Mudanças no dacte em retrato
+		http://www.projetoacbr.com.br/forum/topic/34390-dacte-fortes/
+		por Juliomar Marchetti
+		
+21/12/2016
+[+] Adição do detalhamento de veículos novos
+		http://www.projetoacbr.com.br/forum/topic/34043-imprimir-o-detalhamento-de-ve%C3%ADculos-novos/
+		por Juliomar Marchetti
+		
+08/12/2016
+[*] Modificação para melhorar a visualização do campos de volumes
+		http://www.projetoacbr.com.br/forum/topic/33721-impress%C3%A3o-do-campo-da-quantidade-de-volumes-e-tipo-rodado/
+		http://www.projetoacbr.com.br/forum/topic/33727-impress%C3%A3o-dos-campos-peso-aferido-kg-e-nome-do-motorista/
+		por : Juliomar Marchetti
+		
+08/12/2016
+[*] Arrumado para atender as casas decimais e nome do motorista espaço
+		http://www.projetoacbr.com.br/forum/topic/33727-impress%C3%A3o-dos-campos-peso-aferido-kg-e-nome-do-motorista/
+		por: Juliomar Marchetti
+
+07/12/2016
+[+] Adição da impressão da inutilização de CT-e
+		http://www.projetoacbr.com.br/forum/topic/33618-erro-ao-imprimir-inutiliza%C3%A7%C3%A3o/
+		por : Juliomar Marchetti
+		
+03/10/2016
+-- ACBrCTeDACTeRLRetratoA5 --
+[*] Correção de impressão em A5
+		http://www.projetoacbr.com.br/forum/topic/32160-formato-impressao-ct-e-a5-com-alguns-erros/
+    Por: Juliomar Marchetti

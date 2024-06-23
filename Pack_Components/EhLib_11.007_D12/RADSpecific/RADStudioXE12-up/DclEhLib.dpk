@@ -1,0 +1,70 @@
+package DclEhLib;
+
+{$R *.res}
+{$R '..\..\Common\EhLibReg.dcr'}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'EhLib 11 Components'}
+{$LIBSUFFIX AUTO}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  designide,
+  dcldb,
+  EhLib;
+
+contains
+  RichEdEh in '..\..\Common\RichEdEh.pas' {RichStrEditDlgEh},
+  EhLibReg in '..\..\Common\EhLibReg.pas',
+  GridEhEd in '..\..\Common\GridEhEd.pas',
+  PropStorageEditEh in '..\..\Common\PropStorageEditEh.pas' {PropStorageEditEhForm},
+  UpdateSQLEditEh in '..\..\Common\UpdateSQLEditEh.pas',
+  FormSelectFromList in '..\..\Common\FormSelectFromList.pas' {fSelectFromList},
+  MemTableDesignEh in '..\..\Common\MemTableDesignEh.pas',
+  SelectFromListDialog in '..\..\Common\SelectFromListDialog.pas' {fSelectFromListDialog},
+  SQLDriverEditEh in '..\..\Common\SQLDriverEditEh.pas',
+  SQLEditFrameEh in '..\..\Common\SQLEditFrameEh.pas',
+  DesignConnectionListEh in '..\..\Common\DesignConnectionListEh.pas' {fDesignConnectionListEh},
+  MemTableEditEh in '..\..\Common\MemTableEditEh.pas' {MemTableDataForm},
+  MTCreateDataDriver in '..\..\Common\MTCreateDataDriver.pas' {fMTCreateDataDriver},
+  StorablePropsDesignIntfEh in '..\..\Common\StorablePropsDesignIntfEh.pas',
+  DBVertGridsDesignEditorEh in '..\..\Common\DBVertGridsDesignEditorEh.pas',
+  EhLibDesignAbout in '..\..\Common\EhLibDesignAbout.pas' {fAbout},
+  EhLibDesignForms in '..\..\Common\EhLibDesignForms.pas',
+  EhLibSplash in '..\..\Common\EhLibSplash.pas',
+  LookupLinkDesignEh in '..\..\Common\LookupLinkDesignEh.pas' {LookupLinkFields},
+  EhLibDesignEditFavouriteComponents in '..\..\Common\EhLibDesignEditFavouriteComponents.pas' {SelectComponentListFormEh},
+  EhLibSelectFromListDesignEh in '..\..\Common\EhLibSelectFromListDesignEh.pas' {SelectFromListDesignForm},
+  PivotGridRegEh in '..\..\Common\PivotGridRegEh.pas',
+  PivotGridPivotFieldsEditors in '..\..\Common\PivotGridPivotFieldsEditors.pas',
+  CompoMansDesignEh in '..\..\Common\CompoMansDesignEh.pas' {CompoListEditor},
+  ComponentChildrenDesignEditorsEh in '..\..\Common\ComponentChildrenDesignEditorsEh.pas' {CompChildrenEditor},
+  ComponentChildrenDesignSelectClassDialogEh in '..\..\Common\ComponentChildrenDesignSelectClassDialogEh.pas' {SelectImpExpClassForm},
+  PlannerDesignEditorsEh in '..\..\Common\PlannerDesignEditorsEh.pas',
+  DefaultItemsCollectionEditorsEh in '..\..\Common\DefaultItemsCollectionEditorsEh.pas',
+  DataSetImpExpDesignEh in '..\..\Common\DataSetImpExpDesignEh.pas',
+  MemTableDesignFrameEh in '..\..\Common\MemTableDesignFrameEh.pas' {MemTableDesignFrame: TFrame};
+
+end.

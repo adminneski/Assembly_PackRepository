@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="ACBr_TEFD"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Daniel Simões de Almeida"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\..\..\Fontes\ACBrTEFD;..\..\..\Fontes\ACBrPicPay"/>
+        <UnitOutputDirectory Value="..\..\..\Lib\Lazarus\ACBrTEFD\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+      <Linking>
+        <Debugging>
+          <DebugInfoType Value="dsDwarf3"/>
+          <UseHeaptrc Value="True"/>
+          <TrashVariables Value="True"/>
+          <UseExternalDbgSyms Value="True"/>
+        </Debugging>
+      </Linking>
+      <Other>
+        <CompilerMessages>
+          <IgnoredMessages idx5024="True"/>
+        </CompilerMessages>
+      </Other>
+    </CompilerOptions>
+    <Description Value="ACBr - Transferência Eletrônica de Fundos (http://www.projetoacbr.com.br/)"/>
+    <License Value="LGPL"/>
+    <Version Major="4" Minor="3" Release="9"/>
+    <Files Count="28">
+      <Item1>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDReg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="ACBrTEFDReg"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFD.pas"/>
+        <UnitName Value="ACBrTEFD"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDClass.pas"/>
+        <UnitName Value="ACBrTEFDClass"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFComum.pas"/>
+        <UnitName Value="ACBrTEFComum"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDDial.pas"/>
+        <UnitName Value="ACBrTEFDDial"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDPayGo.pas"/>
+        <UnitName Value="ACBrTEFDPayGo"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDPayGoWeb.pas"/>
+        <UnitName Value="ACBrTEFDPayGoWeb"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDDisc.pas"/>
+        <UnitName Value="ACBrTEFDDisc"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDHiper.pas"/>
+        <UnitName Value="ACBrTEFDHiper"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDCliSiTef.pas"/>
+        <UnitName Value="ACBrTEFDCliSiTef"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDVeSPague.pas"/>
+        <UnitName Value="ACBrTEFDVeSPague"/>
+      </Item11>
+      <Item12>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDBanese.pas"/>
+        <UnitName Value="ACBrTEFDBanese"/>
+      </Item12>
+      <Item13>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDCappta.pas"/>
+        <UnitName Value="ACBrTEFDCappta"/>
+      </Item13>
+      <Item14>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFCliSiTefComum.pas"/>
+        <UnitName Value="ACBrTEFCliSiTefComum"/>
+      </Item14>
+      <Item15>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFPayGoComum.pas"/>
+        <UnitName Value="ACBrTEFPayGoComum"/>
+      </Item15>
+      <Item16>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFPayGoWebComum.pas"/>
+        <UnitName Value="ACBrTEFPayGoWebComum"/>
+      </Item16>
+      <Item17>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrPOS.pas"/>
+        <UnitName Value="ACBrPOS"/>
+      </Item17>
+      <Item18>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrPOSPGWebAPI.pas"/>
+        <UnitName Value="ACBrPOSPGWebAPI"/>
+      </Item18>
+      <Item19>
+        <Filename Value="..\..\..\Fontes\ACBrPicPay\ACBrPicpay.pas"/>
+        <UnitName Value="ACBrPicpay"/>
+      </Item19>
+      <Item20>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFPayGoRedes.pas"/>
+        <UnitName Value="ACBrTEFPayGoRedes"/>
+      </Item20>
+      <Item21>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFAPI.pas"/>
+        <UnitName Value="ACBrTEFAPI"/>
+      </Item21>
+      <Item22>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFAPIComum.pas"/>
+        <UnitName Value="ACBrTEFAPIComum"/>
+      </Item22>
+      <Item23>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFAPIPayGoWeb.pas"/>
+        <UnitName Value="ACBrTEFAPIPayGoWeb"/>
+      </Item23>
+      <Item24>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFAPICliSiTef.pas"/>
+        <UnitName Value="ACBrTEFAPICliSiTef"/>
+      </Item24>
+      <Item25>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDCliSiTefModular.pas"/>
+        <UnitName Value="ACBrTEFDCliSiTefModular"/>
+      </Item25>
+      <Item26>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDDirecao.pas"/>
+        <UnitName Value="ACBrTEFDDirecao"/>
+      </Item26>
+      <Item27>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDDialScopeGetcard.pas"/>
+        <UnitName Value="ACBrTEFDDialScopeGetcard"/>
+      </Item27>
+			<Item28>
+        <Filename Value="..\..\..\Fontes\ACBrTEFD\ACBrTEFDElgin.pas"/>
+        <UnitName Value="ACBrTEFDElgin"/>
+      </Item28>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="ACBrTCP"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

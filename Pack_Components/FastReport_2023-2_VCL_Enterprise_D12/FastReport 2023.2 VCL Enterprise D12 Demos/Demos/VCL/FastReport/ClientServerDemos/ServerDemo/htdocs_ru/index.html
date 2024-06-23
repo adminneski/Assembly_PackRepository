@@ -1,0 +1,63 @@
+<!--#include virtual="header.html" --> || Тестовая страница 
+<!--#include virtual="top.html" -->
+<p><font face="Tahoma" size="4">
+<b>Доступные отчёты</b><br></font></p>
+<font face="Tahoma" size="2">
+<!--#echo var="SERVER_REPORTS_HTML"-->
+</font>
+<br>
+<p><font face="Tahoma" size="4">
+<b>Тестирование параметров</b>
+</font></p>
+
+<table width="750" border="0" cellspacing="2" cellpadding="2">
+<tr><td class=tit>
+<b>1.Отключение навигатора старниц</b>
+</td></tr>
+<tr><td class=txtbody>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&multipage=0&pagenav=0" target=_blank>01.Простой отчет без навигатора страниц на одной странице</a>
+<br>&nbsp;
+</td></tr>
+<tr><td class=tit>
+<b>2.Страницы</b>
+</td></tr>
+<tr><td class=txtbody>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&multipage=0" target=_blank>01.Простой отчет на одной странице</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&multipage=1" target=_blank>02.Простой отчет разбитый на страницы</a>
+<br>&nbsp;
+</td></tr>
+<tr><td class=tit>
+<b>3.Диапазон страниц</b>
+</td></tr>
+<tr><td class=txtbody>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\03.%C2%EB%EE%E6%E5%ED%FB%E5%20%E3%F0%F3%EF%EF%FB.fr3&pagerange=1-2&multipage=0&pagenav=0" target=_blank>01.Вложенные группы - страницы 1-2 без навигатора страниц</a>
+<br>&nbsp;
+</td></tr>
+<tr><td class=tit>
+<b>4.Передача параметров из строки запроса</b>
+</td></tr>
+<tr><td class=txtbody>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&multipage=0&param1=Test param1&param2=Test param2" target=_blank>01.Простой отчет с параметрами Param1='Test param1' и Param2='Test param2'</a>
+<br>&nbsp;
+</td></tr>
+<tr><td class=tit>
+<b>5.Экспорт в различные форматы</b>
+</td></tr>
+<tr><td class=txtbody>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&format=PDF">01.Простой отчет в формате PDF</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\03.%C2%EB%EE%E6%E5%ED%FB%E5%20%E3%F0%F3%EF%EF%FB.fr3&format=PDF">02.Вложенные группы в PDF</a>
+<br><a href="result?report=2.%CA%F0%EE%F1%F1-%F2%E0%E1%FB\05.%C4%E2%E5%20%F1%F2%F0%EE%EA%E8,%20%EE%E4%E8%ED%20%F1%F2%EE%EB%E1%E5%F6.fr3&format=PDF">03.Кросс-таб в PDF</a>
+<br><a href="result?report=3.%C4%E8%E0%E3%F0%E0%EC%EC%FB\01.%D1%F2%F0%E0%ED%FB.fr3&format=PDF">04.Страны в PDF</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&format=RTF">05.Простой отчет в RTF</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\07.%CD%E5%F1%EA%EE%EB%FC%EA%EE%20%F1%F2%EE%EB%E1%F6%EE%E2%20%E2%ED%F3%F2%F0%E8%20%E1%FD%ED%E4%E0.fr3&format=XML">06.Многоколоночный в XML</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\07.%CD%E5%F1%EA%EE%EB%FC%EA%EE%20%F1%F2%EE%EB%E1%F6%EE%E2%20%E2%ED%F3%F2%F0%E8%20%E1%FD%ED%E4%E0.fr3&format=XLS">07.Многоколоночный в XLS</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&format=TXT">08.Простой отчет в TXT</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&format=FRP">09.Простой отчет в FP3</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&format=JPG">10.Простой отчет в JPG</a>
+<br><a href="result?report=1.%CF%F0%EE%F1%F2%FB%E5%20%EE%F2%F7%E5%F2%FB\01.%CF%F0%EE%F1%F2%EE%E9%20%EE%F2%F7%E5%F2.fr3&format=ODS">12.Простой отчет в ODS (Open Document Spreadsheet)</a>
+<br>&nbsp;
+</td></tr>
+</table>
+<!--#include virtual="bottom.html" -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+IDEs supported D10.4, D11, D12
+
+Open delphi IDE.
+
+Tools- Options - language - delphi - library -> Library Path 
+  Win32 -> add  C:\... \Lib$(ProductVersion)\$(Platform)
+  Win64 -> add  C:\... \Lib$(ProductVersion)\$(Platform)
+
+
+Tools - Options - Environment Variables -> User Systems Overrides
+  Edit PATH variable. add -> C:\... \LibXX.0\Win32; ... to the existing content.
+  where XX = 21->D10.4, 22->D11, 23->D12
+Note that if the PATH var does not already exist in the "User System Overrides" section, then add it as follow:
+Variable Name = PATH
+Content = C:\... \LibXX.0\Win32;$(PATH)
+
+
+Open C:\... \RADSpecific\RADStudioXE12-up\EhLibProjGroup.groupproj
+Compile and install needed packages
+
+Copy resource files from "C:\... \LibResources" dir to 
+C:\... \LibXX.0\$(Platform) dirs
+
+

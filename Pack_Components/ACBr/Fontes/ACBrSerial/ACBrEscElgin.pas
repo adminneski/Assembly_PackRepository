@@ -1,0 +1,142 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{ Direitos Autorais Reservados (c) 2022 Daniel Simoes de Almeida               }
+{                                                                              }
+{ Colaboradores nesse arquivo:                                                 }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+
+{$I ACBr.inc}
+
+unit ACBrEscElgin;
+
+interface
+
+uses
+  Classes, SysUtils,
+  ACBrPosPrinter, ACBrEscBematech, ACBrConsts
+  {$IFDEF NEXTGEN}
+   ,ACBrBase
+  {$ENDIF};
+
+type
+
+  { TACBrEscElgin }
+
+  TACBrEscElgin = class(TACBrEscBematech)
+  private
+  public
+    constructor Create(AOwner: TACBrPosPrinter);
+
+    function ComandoQrCode(const ACodigo: AnsiString): AnsiString; override;
+    function ComandoGaveta(NumGaveta: Integer = 1): AnsiString; override;
+    procedure LerStatus(var AStatus: TACBrPosPrinterStatus); override;
+  end;
+
+
+implementation
+
+Uses
+  Math, ACBrUtil.FilesIO, ACBrUtil.Strings, ACBrUtil.Math;
+
+{ TACBrEscElgin }
+
+constructor TACBrEscElgin.Create(AOwner: TACBrPosPrinter);
+begin
+  inherited Create(AOwner);
+
+  fpModeloStr := 'EscElgin';
+end;
+
+function TACBrEscElgin.ComandoGaveta(NumGaveta: Integer): AnsiString;
+var
+  Tempo: Integer;
+begin
+  with fpPosPrinter.ConfigGaveta do
+  begin
+    Tempo := max(TempoON, TempoOFF);
+    Result := ESC + 'v' + 'n' + AnsiChr( Tempo );
+  end;
+end;
+
+procedure TACBrEscElgin.LerStatus(var AStatus: TACBrPosPrinterStatus);
+var
+  b: Byte;
+  Ret: AnsiString;
+begin
+  try
+    Ret := fpPosPrinter.TxRx(ENQ);
+    if (Length(Ret) > 0) then
+    begin
+      b := Ord(Ret[1]);
+      if not TestBit(b, 0) then
+        AStatus := AStatus + [stOffLine];
+      if TestBit(b, 1) then
+        AStatus := AStatus + [stSemPapel];
+      if TestBit(b, 2) then
+        AStatus := AStatus + [stGavetaAberta];
+      if not TestBit(b, 3) then
+        AStatus := AStatus + [stTampaAberta];
+      if TestBit(b, 4) then
+        AStatus := AStatus + [stPoucoPapel];
+    end;
+  except
+    AStatus := AStatus + [stErroLeitura];
+  end;
+end;
+
+function TACBrEscElgin.ComandoQrCode(const ACodigo: AnsiString): AnsiString;
+var
+  Quality: AnsiChar;
+begin
+  with fpPosPrinter.ConfigQRCode do
+  begin
+    Result := GS + 'o' + #0 +             // Set parameters of QRCODE barcode
+              AnsiChr(LarguraModulo) +    // Basic element width
+              #0 +                        // Language mode: 0:Chinese 1:Japanese
+              AnsiChr(Tipo) ;             // Symbol type: 1:Original type 2:Enhanced type(Recommended)
+
+    case ErrorLevel of
+      1: Quality := 'M';
+      2: Quality := 'Q';
+      3: Quality := 'H';
+    else
+      Quality := 'L';
+    end;
+
+    Result := Result +
+              GS  + 'k' + // Bar Code
+              #11 +       // Type = QRCode. Number of Characters: 4-928
+              Quality +
+              'A,' +      // Data input mode Range: A-automatic (Recommended). M-manual
+              ACodigo +
+              #0;
+  end;
+end;
+
+end.
+

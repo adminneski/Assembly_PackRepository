@@ -1,0 +1,152 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8;net452;netstandard2.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Product>ACBrLib.CTe</Product>
+    <Company>Projeto ACBr</Company>
+    <Authors>Projeto ACBr</Authors>
+    <Copyright>Copyright © Projeto ACBr 2018 - 2021</Copyright>
+    <PackageProjectUrl>http://projetoacbr.com.br/</PackageProjectUrl>
+    <RepositoryType>svn</RepositoryType>
+    <RepositoryUrl>http://svn.code.sf.net/p/acbr/code/trunk2/</RepositoryUrl>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Version>1.0.3.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net452'">
+    <DefineConstants>NET45;NETFULL</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net452|AnyCPU'">
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DocumentationFile>..\..\bin\Debug\net452\ACBrLib.CTe.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net452|AnyCPU'">
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DocumentationFile>..\..\bin\Release\net452\ACBrLib.CTe.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DocumentationFile>..\..\bin\Debug\netstandard2.0\ACBrLib.CTe.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DocumentationFile>..\..\bin\Release\netstandard2.0\ACBrLib.CTe.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <Compile Include="..\Shared\CTeConfig.cs" Link="CTeConfig.cs" />
+	  <Compile Include="..\Shared\DACTeConfig.cs" Link="DACTeConfig.cs" />
+	  <Compile Include="..\Shared\CTe\CTe.cs" Link="CTe\CTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfCTe.cs" Link="CTe\InfCTe.cs" />
+	  <Compile Include="..\Shared\CTe\IdentificacaoCTe.cs" Link="CTe\IdentificacaoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ComplementoCTe.cs" Link="CTe\ComplementoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\EmitenteCTe.cs" Link="CTe\EmitenteCTe.cs" />
+	  <Compile Include="..\Shared\CTe\RemetenteCTe.cs" Link="CTe\RemetenteCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ExpedidorCTe.cs" Link="CTe\ExpedidorCTe.cs" />
+	  <Compile Include="..\Shared\CTe\RecebedorCTe.cs" Link="CTe\RecebedorCTe.cs" />
+	  <Compile Include="..\Shared\CTe\DestinatarioCTe.cs" Link="CTe\DestinatarioCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ValoresPrestacaoServicoCTe.cs" Link="CTe\ValoresPrestacaoServicoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InformacoesRelativasImpostosCTe.cs" Link="CTe\InformacoesRelativasImpostosCTe.cs" />
+	  <Compile Include="..\Shared\CTe\GrupoInformacoesNormalSubstitutoCTe.cs" Link="CTe\GrupoInformacoesNormalSubstitutoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\DetalhamentoComplementadoCTe.cs" Link="CTe\DetalhamentoComplementadoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\DetalhamentoAnulacaoCTe.cs" Link="CTe\DetalhamentoAnulacaoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InformacoesSuplementaresCTe.cs" Link="CTe\InformacoesSuplementaresCTe.cs" />
+	  <Compile Include="..\Shared\CTe\RodoviarioCTe.cs" Link="CTe\RodoviarioCTe.cs" />
+	  
+
+
+	  <Compile Include="..\Shared\CTe\TipoCTe.cs" Link="CTe\TipoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ModalCTe.cs" Link="CTe\ModalCTe.cs" />
+	  <Compile Include="..\Shared\CTe\TipoServicoCTe.cs" Link="CTe\TipoServicoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfPercursoCTe.cs" Link="CTe\InfPercursoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\FluxoCTe.cs" Link="CTe\FluxoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\PassCTe.cs" Link="CTe\PassCTe.cs" />
+	  <Compile Include="..\Shared\CTe\IndicadorTomadorCTe.cs" Link="CTe\IndicadorTomadorCTe.cs" />
+	  <Compile Include="..\Shared\CTe\Tomador4CTe.cs" Link="CTe\Tomador4CTe.cs" />
+	  <Compile Include="..\Shared\CTe\Tomador3CTe.cs" Link="CTe\Tomador3CTe.cs" />
+	  <Compile Include="..\Shared\CTe\TomadorCTeOS.cs" Link="CTe\TomadorCTeOS.cs" />
+	  <Compile Include="..\Shared\CTe\EntregaCTe.cs" Link="CTe\EntregaCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ObsContCTe.cs" Link="CTe\ObsContCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ObsFiscoCTe.cs" Link="CTe\ObsFiscoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ComponentesValorPrestacaoCTe.cs" Link="CTe\ComponentesValorPrestacaoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ICMS00CTe.cs" Link="CTe\ICMS00CTe.cs" />
+	  <Compile Include="..\Shared\CTe\ICMS20CTe.cs" Link="CTe\ICMS20CTe.cs" />
+	  <Compile Include="..\Shared\CTe\ICMS45CTe.cs" Link="CTe\ICMS45CTe.cs" />
+	  <Compile Include="..\Shared\CTe\ICMS60CTe.cs" Link="CTe\ICMS60CTe.cs" />
+	  <Compile Include="..\Shared\CTe\ICMS90CTe.cs" Link="CTe\ICMS90CTe.cs" />
+	  <Compile Include="..\Shared\CTe\ICMSOutraUFCTe.cs" Link="CTe\ICMSOutraUFCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ICMSSNCTe.cs" Link="CTe\ICMSSNCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ICMSUFFimCTe.cs" Link="CTe\ICMSUFFimCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfCargaCTe.cs" Link="CTe\InfCargaCTe.cs" />
+	  <Compile Include="..\Shared\CTe\TipoPeriodoCTe.cs" Link="CTe\TipoPeriodoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\TipoHorarioCTe.cs" Link="CTe\TipoHorarioCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfQCTe.cs" Link="CTe\InfQCTe.cs" />
+	  <Compile Include="..\Shared\CTe\CodUniMedidaCTe.cs" Link="CTe\CodUniMedidaCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfDocCTe.cs" Link="CTe\InfDocCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfNFCTe.cs" Link="CTe\InfNFCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfNFeCTe.cs" Link="CTe\InfNFeCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfUnidCargaCTe.cs" Link="CTe\InfUnidCargaCTe.cs" />
+	  <Compile Include="..\Shared\CTe\TipoUnidCargaCTe.cs" Link="CTe\TipoUnidCargaCTe.cs" />
+	  <Compile Include="..\Shared\CTe\LacreUnidadeCargaCTe.cs" Link="CTe\LacreUnidadeCargaCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfUnidTranspCTe.cs" Link="CTe\InfUnidTranspCTe.cs" />
+	  <Compile Include="..\Shared\CTe\TipoUnidTranspCTe.cs" Link="CTe\TipoUnidTranspCTe.cs" />
+	  <Compile Include="..\Shared\CTe\LacreUnidadeTranspCTe.cs" Link="CTe\LacreUnidadeTranspCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfOutrosCTe.cs" Link="CTe\InfOutrosCTe.cs" />
+	  <Compile Include="..\Shared\CTe\TipoDocCTe.cs" Link="CTe\TipoDocCTe.cs" />
+	  <Compile Include="..\Shared\CTe\DocAntCTe.cs" Link="CTe\DocAntCTe.cs" />
+	  <Compile Include="..\Shared\CTe\EmiDocAntCTe.cs" Link="CTe\EmiDocAntCTe.cs" />
+	  <Compile Include="..\Shared\CTe\IdDocAntPapCTe.cs" Link="CTe\IdDocAntPapCTe.cs" />
+	  <Compile Include="..\Shared\CTe\TipoDocAnteriorCTe.cs" Link="CTe\TipoDocAnteriorCTe.cs" />
+	  <Compile Include="..\Shared\CTe\IdDocAntEleCTe.cs" Link="CTe\IdDocAntEleCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfModalCTe.cs" Link="CTe\InfModalCTe.cs" />
+	  <Compile Include="..\Shared\CTe\VeicNovosCTe.cs" Link="CTe\VeicNovosCTe.cs" />
+	  <Compile Include="..\Shared\CTe\CobrCTe.cs" Link="CTe\CobrCTe.cs" />
+	  <Compile Include="..\Shared\CTe\FatCTe.cs" Link="CTe\FatCTe.cs" />
+	  <Compile Include="..\Shared\CTe\DupCTe.cs" Link="CTe\DupCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfCteSubCTe.cs" Link="CTe\InfCteSubCTe.cs" />
+	  <Compile Include="..\Shared\CTe\TomaICMSCTe.cs" Link="CTe\TomaICMSCTe.cs" />
+	  <Compile Include="..\Shared\CTe\RefNFCTe.cs" Link="CTe\RefNFCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfGlobalizadoCTe.cs" Link="CTe\InfGlobalizadoCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfServVincCTe.cs" Link="CTe\InfServVincCTe.cs" />
+	  <Compile Include="..\Shared\CTe\InfCTeMultimodalCTe.cs" Link="CTe\InfCTeMultimodalCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ProtCTe.cs" Link="CTe\ProtCTe.cs" />
+	  <Compile Include="..\Shared\CTe\ComponentesValGTVe.cs" Link="CTe\ComponentesValGTVe.cs" />
+	  <Compile Include="..\Shared\CTe\InfGTVe.cs" Link="CTe\InfGTVe.cs" />
+	  <Compile Include="..\Shared\CTe\TipoComponenteGTVe.cs" Link="CTe\TipoComponenteGTVe.cs" />
+	  <Compile Include="..\Shared\CTe\InfRespTec.cs" Link="CTe\InfRespTec.cs" />
+	  <Compile Include="..\Shared\CTe\InfTributacaoFederal.cs" Link="CTe\InfTributacaoFederal.cs" />
+	  <Compile Include="..\Shared\CTe\InfServico.cs" Link="CTe\InfServico.cs" />
+	  <Compile Include="..\Shared\CTe\ResponsavelSeguro.cs" Link="CTe\ResponsavelSeguro.cs" />
+	  <Compile Include="..\Shared\CTe\Seguro.cs" Link="CTe\Seguro.cs" />
+	  <Compile Include="..\Shared\CTe\InfDocRef.cs" Link="CTe\InfDocRef.cs" />
+	  <Compile Include="..\Shared\CTe\TipoFretamento.cs" Link="CTe\TipoFretamento.cs" />
+	  <Compile Include="..\Shared\CTe\InfFretamento.cs" Link="CTe\InfFretamento.cs" />
+	  <Compile Include="..\Shared\CTe\TipoProprietario.cs" Link="CTe\TipoProprietario.cs" />
+	  <Compile Include="..\Shared\CTe\Proprietario.cs" Link="CTe\Proprietario.cs" />
+	  <Compile Include="..\Shared\CTe\VeiculosCTe.cs" Link="CTe\VeiculosCTe.cs" />
+	  <Compile Include="..\Shared\CTe\OrdensColetaCTe.cs" Link="CTe\OrdensColetaCTe.cs" />
+
+	  <Compile Include="..\Shared\Respostas\ConsultaCTeResposta.cs" Link="Respostas\ConsultaCTeResposta.cs" />
+	  <Compile Include="..\Shared\Respostas\CancelamentoCTeResposta.cs" Link="Respostas\CancelamentoCTeResposta.cs" />
+	  <Compile Include="..\Shared\Respostas\InutilizacaoCTeResposta.cs" Link="Respostas\InutilizacaoCTeResposta.cs" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Shared\ACBrLib.Core\ACBrLib.Core.csproj" />
+  </ItemGroup>
+
+</Project>

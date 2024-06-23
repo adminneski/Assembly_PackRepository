@@ -1,0 +1,176 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+Agradecimentos:
+
+* Administradores:
+- Daniel Simões de Almeida
+
+{******************************************************************************
+|* ACBrLibNFe
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+20/05/2024
+-- ACBrLib.NFSe.csproj, ACBrLib.Core.csproj, ACBrLibHandle.cs --
+[*] Correção no Core do C# para não sobrescrever a variável PATH do usuário/sistema
+  Por: gostartlab
+
+16/05/2024
+-- ACBrLibHandle.cs --
+[*] Correção na localização das dependências distribuídas na estrutura dos pacotes nuget quando houver mais de um nuget na mesma aplicação
+  Por: Renato Rubinho
+
+13/05/2024
+-- ACBrLibHandle.cs --
+[*] Buscar dependências distribuídas na estrutura dos pacotes nuget e exibir na exceção o caminho previsto quando não for encontrado
+  Por: Renato Rubinho
+
+09/05/2024
+-- build.cake --
+[*] Adicionada informação no final dos scripts para identificar quando foram executados com sucesso
+  Por: Renato Rubinho
+
+30/04/2024
+-- ACBrLibHandle.cs --
+[*] TK-5375 - Compatibilização da LibraryPath da ACBrLib.Core com pacote self-contained
+  Por: gostartlab, Renato Rubinho
+
+03/04/2024
+-- Diversos --
+[+] Implementado método LIB_OpenSSLInfo
+  Por: Renato Rubinho
+
+21/02/2024
+-- ACBrLib.hnd, Diversos inis --
+[+] Enviados arquivos ini da versão 1.2 do e-Social com correção do Encoding e configurado help da Lib
+  Por: Renato Rubinho
+
+19/02/2024
+-- ACBrLibConfig, ACBrLibConsts--
+[*] TK-5014 Ajustado para criptografar Usuario e Senha do Provedor ConsultaCNPJ
+  Por: Daniel Morais InfoCotidiano
+-- Diversos --
+[+] Scripts para compilação dos nugets para c# com cake
+  Por: Renato Rubinho
+
+14/02/2024
+-- Diversos --
+[+] Renomeados os imports de todos os projetos MT para diferenciar os pacotes nugets gerados
+  Por: Renato Rubinho
+
+12/02/2024
+-- ACBrLibConsultaCadastro --
+[*] Substitui pcnRetConsCad por ACBrDFeComum.RetConsCad visando compatibilização com o processo de remoção da pcn.
+  Por: Diego Folieni
+
+06/02/2022
+--- ACBrLibComum ---
+[+] Adicionado o método 'ConverterUTF8ParaAnsi', converter a resposta de UTF8
+    para ANSI, se assim estiver configurado na Lib
+    (por: DSA)
+
+20/07/2022
+--- ACBrLibComum ---
+[*] Remoção de Warning @deprecated ref. ACBrUtils
+
+14/06/2022
+---DFeReportConfig---
+[-] Remoção do campo FAX da classe DFeReportConfig da lib, compatibilizando com o componente DFeReport
+
+21/12/2021
+--- ACBrLibComum ---
+[*] Melhoria em "LIB_Inicializar", e para evitar A.V. em "LiberarLib" caso a Lib
+    não consiga ser criada
+
+--- ACBrLibDataModule ---
+[-] Adicionado .LFM, para permitir que Lazarus faça a herança visual de formulárip
+    (por: DSA)
+
+26/03/2020
+--- ACBrLibRespostas--
+[*] Ajuste na geração de Respostas tipo data e hora
+
+26/02/2020
+--- ACBrLibRespostas--
+[-] Correção na geração XML Retorno com subitens de objetos 
+
+22/06/2020
+--- ACBrLibCertUtils ---
+[*] Ajuste para obter dados do certificado utilizando OpenSSL
+
+17/03/2020
+--- ACBrLibConfig ---
+[*] Ajuste para que os métodos TLibConfig.GravarValor e TLibConfig.LerValor,
+    verifique se houve modificações no arquivo de Configuração no Disco, antes
+    de processar o novo valor
+
+[-] Ajuste em TLibConfig.SetNomeArquivo, para que o Novo arquivo seja carregado
+    na memória, após atribuido
+    (por: DSA)
+
+--- ACBrLibDeviceUtils ---
+[+] Adicionado Classe para funções utilitárias do Componente ACBrDevice.
+Por: José M S Junior
+
+16/01/2020
+--- ACBrLibConsultaCadastro
+[-] Ajuste na formatação de retorno do campo CEP
+   Por: José M S Junior
+
+16/01/2020
+--- ACBrLibCTeClass, ACBrLibConsultaCadastro, ACBrLibDistribuicaoDFe, ACBrLibConsReciDFe ---
+[-] Correção nos métodos Respostas da LibDFe devido alteração na nomenclatura do Retorno de Consulta
+   Por: José M S Junior
+
+27/06/2019
+--- ACBrLibComum ---
+[+] Adicionado validação para campo DateTime na geração da Resposta, para evitar problema de gerar o campo com data inicial do Sistema
+
+12/02/2019
+--- ACBrLibConfig ---
+[-] Modificado comportamento enviado anteriormente que gravava o arquivo de log no diretório
+	da DLL, evitando possíveis erros de escrita em diretórios do sistema do Windows.
+[+] Adicionada propriedade TipoCorte
+
+--- ACBrLibConsts ---
+[+] Adicionadas novas constantes.
+
+30/01/2019
+--- ACBrLibComum ---
+[+] Modificada inicialização da lib, informando um path válido, onde o arquivo de
+	configuração será automaticamente criado caso não exista.  Por: (Celso Marigo Junior)
+[*] Na inicialização do arquivo de logs, caso path do arquivo não exista, será
+	utilizado path da aplicação.  Por: (Celso Marigo Junior)
+

@@ -1,0 +1,271 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+Agradecimentos:
+
+* Administradores:
+- Daniel Simões de Almeida
+
+{******************************************************************************
+|* ACBrLibBoleto
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+14/05/2024
+-- ACBrLibBoletoConfig --
+[*] #TK-5441 - Ajustado para ler a propriedade e realizar a quebra de linha | (pipe) e ele estava sobrescrevendo o INI, desabilitado a escrita.
+	https://www.projetoacbr.com.br/forum/topic/77745-acbrlib-boleto-cef-sac-caixa-n%C3%A3o-informado/
+        Por: Daniel de Morais InfoCotidiano
+
+02/05/2024
+-- ACBrLibBoletoRespostas --
+[*] #TK-5016-1 - Add NossoNumeroCorrespondente para tratar a propriedade utilizada no Inter API V3
+        Por: Daniel de Morais InfoCotidiano
+
+19/04/2024
+-- ACBrLibBoletoST --
+[*] Ajuste visando correção de problema de liberação de memória encontrado no Boleto_Finalizar
+ #TK-5367 - https://www.projetoacbr.com.br/forum/topic/77391-erro-ao-fechar-projeto-demo-acbrlibboletodemo-c/
+        Por: Diego Folieni
+
+16/04/2024
+--- ACBrLibBoletoBase, ACBrLibBoletoST, ACBrLibBoletoMT, ACBrLibBoletoStaticImport, ACBrLibBoletoStaticImportMT ---
+[+] Novo método Boleto_GerarRemessaStream
+    #TK-5181 - https://www.projetoacbr.com.br/forum/topic/76687-gerar-remessa-stream/
+	Por: Antonio Carlos Junior
+
+27/03/2024
+--- ACBrLibBoletoRespostas ---
+[*] TK-5273 Add a propriedade CodigoEstadoTituloCobranca para retorno do mesmo na consulta
+Por: Daniel InfoCotidiano
+
+13/03/2024
+--- ACBrLibBoletoDataModule, ACBrLibBoletoConsts, ACBrLibBoletoConfig ---
+[*] TK-4361 Mudança no nivel de Log ACBrBoleto
+Por: Victor Panda, Daniel InfoCotidiano, Antonio Carlos Junior
+
+24/01/2024
+--- ACBrLibBoletoRespostas --
+[+]TK-5003 Adicionado a propriedade ValorPago que existe no componente, mas não existia na reposta da lib. Neste caso o valor esta voltando nesta propriedade.
+https://www.projetoacbr.com.br/forum/topic/75952-banco-santander-ignora-o-valor-pago-quando-motivo-de-rejei%C3%A7%C3%A3o-vem-preenchido/
+Por: Daniel Morais InfoCotidiano
+
+27/12/2023
+--- ACBrLibBoletoBase --
+[*]TK-4800 Revert 31691 para remover TEnconding
+Por: Daniel Morais InfoCotidiano
+
+16/11/2023
+--ACBrLibBoletoBase.pas--
+[-]TK-4672 ACBr Boleto - DescricaoTipoOcorrencia CodificaoResposta
+   Por: Victor H Gonzales - Pandaaa
+
+01/11/2023
+--- ACBrLibBoletoConfig, ACBrLibBoletoDataModule ---
+[-] Correção na leitura de CPF / CNPJ
+    Por: Antonio Carlos Junior e Victor H Gonzales - Pandaaa
+
+25/04/2023
+--- ACBrLibBoletoConfig, ACBrLibBoletoConsts, ACBrLibBoletoDataModule ---
+[+] Criação do campo LerNossoNumeroCompleto - #TK-3857
+    Por Antonio Carlos Junior
+
+21/03/2023
+--- ACBrLibBoletoConfig, ACBrLibBoletoConsts, ACBrLibBoletoDataModule ---
+[+] Criação dos campos ArquivoCRT e ArquivoKEY para Inter e Sicoob
+    Por: Antonio Carlos Junior
+
+11/01/2023
+--- ACBrLibBoletoBase ---
+[-] Correção para conversão das respostas com Erros, em ANSI, se assim estiver configurado
+	Por: Antonio Carlos Junior
+
+25/11/2022
+---ACBrLibBoletoConfig, ACBrLibBoletoConsts, ACBrLibBoletoDataModule---
+[*] Criação campos para leitura de novas propriedades do PIX (Y03) Santander CNAB240 - TK3201
+	Por: Antonio Carlos Junior
+
+17/08/2022
+--- ACBrLibBoleto, ACBrLibBoletoBase ---
+[*] Atualização das chamadas de envio por API e atualização das classes resposta baseado no refactory do componente boleto
+
+20/07/2022
+--- ACBrLibBoleto ---
+[*] Remoção de Warning @deprecated ref. ACBrUtils
+
+27/05/2022
+--- ACBrLibDataModule, ACBrLibConsts, ACBrLibConfig --
+[+] Adicionado propriedade de configuração de Impressão: CalcularNomeArquivoPDFIndividual
+    Por: José M S Junior
+
+04/04/2022
+--- ACBrLibBoletoBase, ACBrLibBoletoMT, ACBrLibBoletoST, ACBrLibBoletoStaticImportsMT,ACBrLibBoletoStaticImports, ACBrLibBoleto.dpr --
+[+] Adicionado método Boleto_ConsultarTitulosPorPeriodo utilizado na consulta por API BB
+    Por: José M S Junior
+
+27/01/2022
+--- ACBrLibBoletoBase, ACBrLibBoletoDataModule --
+[-] Correção de erro na troca de layout de impressão.
+    Por: José M S Junior
+
+06/01/2022
+--- ACBrLibBoletoBase, ACBrLibBoletoMT, ACBrLibBoletoST --
+[*] Adicionado novos metodos para retornar o pdf em Base64 Boleto_SalvarPDF e Boleto_SalvarPDFBoleto.
+    Por: Rafael Dias
+
+21/12/2021
+--- ACBrLibBoletoDataModule ---
+[-] Correção para herença visual em Lazarus de "TLibDataModule"
+    (por: DSA)
+
+15/12/2021
+--- ACBrLibBoletoDataModule, ACBrLibBoletoConfig ACBrLibBoletoConsts --
+[+] Adicionado novos parametros as configurações de Banco e Cedente.
+    Por: Rafael Dias
+
+13/12/2021
+--- ACBrLibBoletoDataModule, ACBrLibBoletoConfig ACBrLibBoletoConsts --
+[+] Adicionado novo parametro: PrefixArqRemessa
+    Por: José M S Junior
+
+03/10/2021
+--- ACBrLibBoletoBase, ACBrLibBoletoConsts, ACBrLibBoletoRespostas
+[-] Corrigido erro no retono do metodo ObterRetorno.
+[*] Melhorias nas respostas do envio de Boleto Web.
+    Por: José M S Junior
+
+06/07/2021
+--- ACBrLibBoletoDataModule, ACBrLibBoletoBase, ACBrLibBoletoMT, ACBrLibBoletoST, ACBrLibBoletoConsts,
+    ACBrLibBoletoConfig, ACBrLibBoletoRespostas, ACBrLibBoletoStaticImport --
+[*] Adicionado as parametrizações e o método EnviarBoleto para integração da ACBrLibBoleto via API ou WebService
+    Por: José M S Junior
+
+20/06/2021
+--- ACBrLibBoletoDataModule, ACBrLibBoletoBase --
+[*] Atualização da propriedade LayoutBol, lendo a partir do arquivo .ini de Dados Cedente
+    Por: José M S Junior
+
+30/04/2020
+--- ACBrLibBoletoRespostas, ACBrLibBoletoConsts --
+[+] Adicionar funcionalidades de Resposta para BoletoWeb na lib.
+    Por: José M S Junior
+
+29/03/2020
+--- ACBrLibBoletoRespostas --
+[*] Ajuste na nomenclatura de chaves para classe Respostas de Processamento de Retorno.
+    Por: José M S Junior
+
+26/02/2020
+--- ACBrLibBoletoBase, ACBrLibBoletoRespostas --
+[+] Criado Classe Resposta com a estrutura dos Títulos para obter Retornos. E adicionado o método ObterRetorno
+    Por: José M S Junior
+
+--- ACBrLibBoletoBase--
+[+] Adicionado o Método GerarPDFBoleto que permite gerar Boletos individuais passando indice da lista.
+    Por: José M S Junior
+
+28/12/2020
+--- ACBrLibBoletoBase --
+[+] Adicionado o metodo Boleto_EnviarEmailBoleto
+    Por: Rafael Dias
+
+22/11/2020
+--- ACBrLibBoletoBase --
+[-] Correção do metodo Boleto_SetDiretorioArquivo
+    Por: Rafael Dias
+
+30/09/2020
+--- ACBrLibBoletoBase --
+[-] Ajuste na passagem do parametro de Indice para os metodos:
+RetornarLinhaDigitavel, RetornarCodigoBarras, RetornarNossoNumero
+    Por: José M S Junior
+
+07/09/2020
+--- ACBrLibBoletoMT, ACBrLibBoletoST ---
+[+] Adicionado o metodo Boleto_ConfigImportar.
+   Por: Rafael Dias
+[+] Adicionado o metodo Boleto_ConfigExportar.
+   Por: Rafael Dias
+[-] Removido o metodo Boleto_ImportarConfig.
+   Por: Rafael Dias
+
+09/06/2020
+--- ACBrLibBoletoClass, ACBrLibBoletoConfig --
+[-] Ajuste de declaração de USES
+    Por: José M S Junior	
+
+19/05/2020
+--- ACBrLibBoletoDataModule --
+[-] Corrigido erro ao configurar o cedente como pessoa fisica.
+    Por: Rafael Dias
+
+27/02/2020
+--- ACBrLibBoletoConfig --
+[-] Removido a propriedade TamanhoMaximoNossoNumero, pois a mesma causava erro na geração dos boletos.
+    Por: Rafael Dias
+
+23/02/2020
+--- ACBrLibBoleto --
+[+] Adicionado o metodo Boleto_ImprimirBoleto. 
+    Por: Rafael Dias
+
+20/02/2020
+--- ACBrLibBoletoConfig --
+[*] Ajuste na leitura e escrita do .INI campo "LayoutRetorno", baseado na classe Leitura em ACBrBoleto 
+    (Por: Jose M S Junior)
+
+17/02/2020
+--- ACBrLibBoletoConfig --
+[+] Adicionado propriedade para remover acentuação do arquivo de remessa.
+    Por: Rafael Dias
+
+03/01/2020
+--- ACBrLibBoleto --
+[+] Adicionado o metodo Boleto_ImportarConfig.
+    Por: Rafael Dias
+
+15/04/2018
+--- ACBrLibBoleto --
+[*] Ajustes no tratamento de retornos dos métodos LibBoleto
+
+15/02/2018
+--- ACBrLibBoleto --
+[*] Ajustes e adicionado UnitTest para todos os métodos
+
+30/11/2018
+--- ACBrLibBoleto ---
+
+[+] Adicionado métodos e parametrizações para comunicação com Componente ACBrBoleto
+ (Utilizado também pelo ACBrMonitorPlus).
+

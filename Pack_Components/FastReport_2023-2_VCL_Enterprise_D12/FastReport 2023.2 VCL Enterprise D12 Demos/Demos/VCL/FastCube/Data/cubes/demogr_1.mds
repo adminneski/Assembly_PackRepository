@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<slice version="2" timestamp="09.04.2013 9:32:36">
+  <Script ScriptLanguage="PascalScript" Code="begin&#13;&#10;&#13;&#10;end.&#13;&#10;"/>
+  <fields>
+    <field name="AGE_GROUP" caption="AGE_GROUP" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="COUNTRY" caption="COUNTRY" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="PEOPLE" caption="PEOPLE" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="SEX" caption="SEX" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="YEAR" caption="YEAR" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+  </fields>
+  <page_fields>
+    <fields>
+      <field name="AGE_GROUP" caption="AGE_GROUP" alignment="taLeftJustify" captionwidth="100" field_name="AGE_GROUP" SortDirection="fcsd_Desc" TotalPosition="fctp_After" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+      <field name="YEAR" caption="YEAR" alignment="taLeftJustify" captionwidth="100" field_name="YEAR" SortDirection="fcsd_Desc" TotalPosition="fctp_After" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+    </fields>
+  </page_fields>
+  <xaxis_fields GrandTotalPosition="fctp_Before" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields/>
+    <AdditionalGrandTotals/>
+  </xaxis_fields>
+  <yaxis_fields GrandTotalPosition="fctp_Before" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_BySelected" AxisType="at_Standard">
+    <fields>
+      <field name="COUNTRY" caption="COUNTRY" alignment="taLeftJustify" captionwidth="100" field_name="COUNTRY" SortDirection="fcsd_Desc" TotalPosition="fctp_After" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+    </fields>
+    <AdditionalGrandTotals/>
+  </yaxis_fields>
+  <measure_fields caption="Measures" CaptionWidth="100" Region="X" Position="0">
+    <fields>
+      <field name="PEOPLE" caption="PEOPLE" alignment="taRightJustify" captionwidth="100" field_name="PEOPLE" AgrFunc="af_Sum" Visible="-1" DisplayAs="da_Value" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" ScriptFunctionForTotals="" ScriptOrderForTotals="0" CalcAllCells="0" CalcAllCellsForTotals="0" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="-1" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%2.2n" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS/>
+      </field>
+      <field name="PEOPLE" caption="PEOPLE %" alignment="taRightJustify" captionwidth="100" field_name="PEOPLE" AgrFunc="af_Sum" Visible="-1" DisplayAs="da_ColPercentTotal" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" ScriptFunctionForTotals="" ScriptOrderForTotals="-1" CalcAllCells="0" CalcAllCellsForTotals="0" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="0" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%2.2n" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS/>
+      </field>
+      <field name="PEOPLE" caption="PEOPLE range" alignment="taRightJustify" captionwidth="100" field_name="PEOPLE" AgrFunc="af_Sum" Visible="-1" DisplayAs="da_ColRank" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" ScriptFunctionForTotals="" ScriptOrderForTotals="-1" CalcAllCells="0" CalcAllCellsForTotals="0" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="0" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%2.2n" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS/>
+      </field>
+    </fields>
+  </measure_fields>
+  <selection col="0" row="226" measure="0"/>
+  <options HideColZeros="0" HideRowZeros="0"/>
+  <groups version="2" timestamp="09.04.2013 9:32:36"/>
+  <filters version="2" timestamp="09.04.2013 9:32:36">
+    <filter name="#UVFilter">
+      <field name="YEAR" type="uvfield" fcxVarType="fcvtString" StoreEnabledValues="0">
+        <values>
+          <value value="1996"/>
+          <value value="1997"/>
+          <value value="1998"/>
+          <value value="1999"/>
+          <value value="2000"/>
+          <value value="2001"/>
+          <value value="2002"/>
+          <value value="2003"/>
+          <value value="2004"/>
+          <value value="2005"/>
+        </values>
+      </field>
+    </filter>
+  </filters>
+</slice>

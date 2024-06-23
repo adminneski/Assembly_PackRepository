@@ -1,0 +1,81 @@
+package ACBr_TEFD;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'ACBr - Transferência Eletrônica de Fundos (http://www.projetoacbr.com.br/)'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  ACBr_Comum,
+  soaprtl,
+  ACBr_Diversos,
+  ACBr_TCP;
+
+contains
+  ACBrTEFComum in '..\..\..\Fontes\ACBrTEFD\ACBrTEFComum.pas',
+  ACBrTEFPayGoComum in '..\..\..\Fontes\ACBrTEFD\ACBrTEFPayGoComum.pas',
+  ACBrTEFPayGoRedes in '..\..\..\Fontes\ACBrTEFD\ACBrTEFPayGoRedes.pas',
+  ACBrTEFD in '..\..\..\Fontes\ACBrTEFD\ACBrTEFD.pas',
+  ACBrTEFDClass in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDClass.pas',
+  ACBrTEFDCliSiTef in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDCliSiTef.pas',
+  ACBrTEFDPayGoWeb in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDPayGoWeb.pas',
+  ACBrTEFDDial in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDDial.pas',
+  ACBrTEFDPayGo in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDPayGo.pas',
+  ACBrTEFDDisc in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDDisc.pas',
+  ACBrTEFDGpu in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDGpu.pas',
+  ACBrTEFDHiper in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDHiper.pas',
+  ACBrTEFDVeSPague in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDVeSPague.pas',
+  ACBrTEFDBanese in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDBanese.pas',
+  ACBrTEFDCrediShop in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDCrediShop.pas',
+  ACBrTEFDPetroCard in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDPetroCard.pas',
+  ACBrTEFDCliDTEF in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDCliDTEF.pas',
+  ACBrTEFDFoxWin in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDFoxWin.pas',
+  ACBrTEFDGoodCard in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDGoodCard.pas',
+  ACBrTEFDAuttar in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDAuttar.pas',
+  ACBrTEFDTicketCar in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDTicketCar.pas',
+  ACBrTEFDCappta in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDCappta.pas',
+  ACBrTEFDConvCard in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDConvCard.pas',
+  ACBrTEFCliSiTefComum in '..\..\..\Fontes\ACBrTEFD\ACBrTEFCliSiTefComum.pas',
+  ACBrTEFPayGoWebComum in '..\..\..\Fontes\ACBrTEFD\ACBrTEFPayGoWebComum.pas',
+  ACBrPOS in '..\..\..\Fontes\ACBrTEFD\ACBrPOS.pas',
+  ACBrPOSPGWebAPI in '..\..\..\Fontes\ACBrTEFD\ACBrPOSPGWebAPI.pas',
+  ACBrPicpay in '..\..\..\Fontes\ACBrPicPay\ACBrPicpay.pas',
+  ACBrTEFAPI in '..\..\..\Fontes\ACBrTEFD\ACBrTEFAPI.pas',
+  ACBrTEFAPIComum in '..\..\..\Fontes\ACBrTEFD\ACBrTEFAPIComum.pas',
+  ACBrTEFAPIPayGoWeb in '..\..\..\Fontes\ACBrTEFD\ACBrTEFAPIPayGoWeb.pas',
+  ACBrTEFAPICliSiTef in '..\..\..\Fontes\ACBrTEFD\ACBrTEFAPICliSiTef.pas',
+{$IFDEF DELPHIX_BERLIN_UP}
+  ACBrTEFAndroid in '..\..\..\Fontes\ACBrTEFD\ACBrTEFAndroid.pas',
+{$ENDIF}
+  ACBrTEFDCliSiTefModular in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDCliSiTefModular.pas',
+  ACBrTEFDDirecao in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDDirecao.pas',
+  ACBrTEFDDialScopeGetcard in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDDialScopeGetcard.pas',
+  ACBrTEFDElgin in '..\..\..\Fontes\ACBrTEFD\ACBrTEFDElgin.pas';
+
+end.

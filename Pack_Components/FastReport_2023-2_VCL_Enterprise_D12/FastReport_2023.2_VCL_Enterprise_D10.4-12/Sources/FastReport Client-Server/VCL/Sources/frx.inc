@@ -1,0 +1,1 @@
+{$I ..\..\..\FastReport\VCL\Sources\frx.inc}

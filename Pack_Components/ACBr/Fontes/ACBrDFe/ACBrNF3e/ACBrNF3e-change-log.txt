@@ -1,0 +1,246 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{ Direitos Autorais Reservados (c) 2020 Daniel Simoes de Almeida               }
+{                                                                              }
+{ Colaboradores nesse arquivo: Italo Jurisato Junior                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+
+{******************************************************************************
+|* ACBrNF3e
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+08/05/2024
+-- ACBrNF3eNotasFiscais --
+[*] Reversão da alteração que visava o uso das configurações na geração do XML.
+   Por: Italo Giurizzato Junior
+-- ACBrNF3eXmlWriter --
+[*] Comentado as linhas que usa os dados de configuração na geração do XML.
+   Por: Italo Giurizzato Junior
+
+02/04/2024
+-- Diversos --
+[*] Melhorias no código usando o FixInsight (ainda não ficou 100%).
+  Por: Italo Giurizzato Junior
+
+02/03/2024
+-- ACBrNF3eWebServices --
+[-] Corrigido a procedure DefinirMsgDados no que se refere a eventos.
+-- ACBrNF3eConversao --
+[-] Corrigido a nomenclatura de alguns enumerados usados no envio de eventos.
+-- ACBrNF3eXmlWriter --
+[*] Corrigido o tipo de conversão para a tag: cNF.
+-- ACBrNF3eEnvEvento --
+[-] Corrigido a geração do XML de evento.
+-- ACBrNF3eRetEnvEvento --
+[-] Corrigido o erro de AV.
+  Por: Italo Giurizzato Junior
+
+01/03/2024
+-- ACBrNF3eXmlReader --
+[*] Melhorias na leitura do XML.
+  Por: Italo Giurizzato Junior
+-- ACBrNF3eConversao --
+[-] Inclusão de enumerados para atender tags opcionais.
+-- ACBrNF3eXmlReader --
+[*] Alteração na forma de ler a assinatura do XML.
+-- ACBrNF3eXmlWriter --
+[-] Correções diversas pois estava gerando o XML da forma errada.
+  Por: Italo Giurizzato Junior
+-- ACBrNF3eXmlReader --
+[-] Correção na leitura de tags opcionais que contem AAAA-MM.
+  Por: Italo Giurizzato Junior
+
+28/02/2024
+-- Diversos --
+[*] Realizado diversos ajustes por conta de remoção do parâmentro de saída Ok
+    das funções de conversão.
+  Por: Italo Giurizzato Junior
+
+27/02/2024
+-- ACBrNF3eRetEnvEvento --
+[*] Removido o uso da função ACBrStr ao ler uma mensagem.
+  Por: Italo Giurizzato Junior
+
+23/02/2024
+-- ACBrNF3eConversao --
+[*] Ajustes nas funções: DblToVersaoNF3e, VersaoNF3eToDbl e VersaoQrCodeToDbl.
+  Por: Italo Giurizzato Junior
+
+20/02/2024
+-- Diversos --
+[*] Realizado diversos ajustes para atender NT 2024/001.
+    Atenção: o ambiente de homologação só vai estar disponível em 26/02/2024
+    e o de produção em 13/03/2024
+  Por: Italo Giurizzato Junior
+
+14/02/2024
+-- Diversos --
+[*] Realizado diversos ajustes para poder usar a nova unit: ACBrDFeComum.RetEnvio
+    e outras diversas correções.
+    Remoção da unit ACBrNF3eRetEnv e renomeado a unit ACBrNF3eEvento para
+    ACBrNF3eEventoClass.
+  Por: Italo Giurizzato Junior
+
+13/02/2024
+-- ACBrNF3eWebServices/ACBrNFe3Class/ACBrNF3eXmlReader/
+   ACBrNF3eXmlWriter/ACBrNF3eRetConsSit --
+[*] Refactoring visando a utilizar as units: ACBrDFeComum.Proc.
+-- ACBrNF3eEnvEvento --
+[-] Correção pois a variável de indice não estava sendo inicializada corretamente.
+-- ACBrNF3eProc/ACBrDFeConsStatServ/ACBrDFeDistDFeInt/
+   ACBrDFeRetConsStatServ/ACBrDFeRetDistDFeInt --
+[*] As units acima foram removidas, pois agora vai usar as units 
+    ACBrDFeComum.Proc, ACBrDFeComum.ConsStatServ, ACBrDFeComum.DistDFeInt,
+    ACBrDFeComum.RetConsStatServ, ACBrDFeComum.RetDistDFeInt.
+  Por: Italo Giurizzato Junior
+
+09/02/2024
+-- Diversos --
+[*] Refactoring visando deixar de usar a unit pcnAuxiliar.
+  Por: Italo Giurizzato Junior
+
+02/02/2024
+-- ACBrNF3e/ACBrNF3eWebServices --
+[*] Compatibilização com o D7 e outros ajustes.
+  Por: Italo Giurizzato Junior
+-- Diversos --
+[*] Refactoring visando deixar de usar a unit pcnConsts.
+  Por: Italo Giurizzato Junior
+
+20/10/2022
+-- ACBrNF3eNotasFiscais/ACBrNF3eXmlReader --
+[*] Ajustes para a leitura correta do XML.
+   Por: Fernando Lobato
+
+19/07/2022
+-- Diversos --
+[*] Correções necessárias para o envio correto em modo síncrono e assíncrono.
+   Por: Italo Giurizzato Junior
+
+06/07/2022
+-- Diversos --
+[*] Correções necessárias para validar corretamente o XML.
+   Por: Italo Giurizzato Junior
+
+05/07/2022
+-- Diversos --
+[*] Refactoring no componente.
+   Por: Italo Giurizzato Junior
+
+26/01/2022
+-- ACBrNF3eServicos --
+[*] A UF de SC passa a ter o seu próprio endereço do QR-Code de Consulta.
+   Por: Italo Giurizzato Junior
+
+20/12/2021
+-- ACBrNF3eXmlReader --
+[*] Ajustes por conta da alteração do nome da função
+    ProcessarConteudoXml para ObterConteudoTag.
+   Por: Italo Giurizzato Junior
+
+10/06/2021
+-- Diversos --
+[*] Alterações para deixar o componente em conformidade com a NT 2021/002.
+   Por: Italo Giurizzato Junior
+
+26/04/2021
+-- Diversos --
+[*] Alterações para deixar o componente em conformidade com a NT 2021/001.
+   Por: Italo Giurizzato Junior
+
+07/01/2021
+-- ACBrNF3eXmlWriter --
+[*] Ajuste de conversão de retorno na função ValidarGTIN ao preencher mensagens de Alerta 
+   Por: José M S Junior
+
+13/11/2020
+-- ACBrNF3eNotasFiscais --
+[*] Uso da função ObterDFeXML nos métodos Validar e VerificarAssinatura
+   Por: Italo Giurizzato Junior
+
+22/07/2020
+-- Diversos --
+[+] Acrescentado a unit pcnConsts em algumas units do componente.
+    Por conta da migração de algumas constantes de pcnGerador para
+    pcnConsts.
+   Por: Italo Jurisato Junior
+
+27/04/2020
+-- Diversos --
+[*] Alterações para deixar o componente em conformidade com a NT 2020/002.
+   Por: Italo Jurisato Junior
+
+13/04/2020
+-- Diversos --
+[*] Melhorias no método EnviarEmailEvento.
+   Por: Italo Jurisato Junior
+
+10/03/2020
+-- ACBrNF3e --
+[*] Ao enviar o evento por e-mail não estava sendo informado o nome do XML do 
+    evento corretamente.
+   Por: Italo Jurisato Junior
+
+02/03/2020
+-- ACBrNF3e --
+[+] Agora o XML do evento é anexado ao enviar o mesmo por email.
+   Por: Italo Jurisato Junior
+-- ACBrNF3eWebServices --
+[+] Acrescentado no TratamentoResposta o armazenamento do Path+Nome do
+    XML retornado pelo DistribuicaoDFe.
+   Por: Italo Jurisato Junior
+
+24/02/2020
+-- ACBrNF3e/ACBrNF3eWebServices --
+[+] Implementado a extração dos eventos do retorno da consulta.
+   Por: Italo Jurisato Junior
+
+17/02/2020
+-- pcnNF3eW --
+[*] Remoção da propriedade: AjustarTagNro.
+Por: Italo Jurisato Junior
+
+11/02/2020
+-- ACBrNF3eWebServices --
+[*] Removido as procedures SalvarEnvio e SalvarRetorno do envio de eventos e
+    inutilização, pois já existe essa procedures padrões que salvam os XMLs 
+    de envio e de retorno na pasta correta. 
+   Por: Italo Jurisato Junior
+
+18/12/2019
+[+] Doação do componente para o Projeto ACBr
+   Por: Italo Jurisato Junior
+

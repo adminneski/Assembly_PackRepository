@@ -1,0 +1,141 @@
+package EhLib;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'EhLib 11'}
+{$LIBSUFFIX AUTO}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  rtl,
+  vclimg,
+  vclwinx,
+  xmlrtl,
+  dbrtl,
+  vcldb;
+
+contains
+  DBSumLst in '..\..\Common\DBSumLst.pas',
+  PrnDbgEh in '..\..\Common\PrnDbgEh.pas',
+  PrnDGDlg in '..\..\Common\PrnDGDlg.pas' {fPrnDBGridEHSetupDialog},
+  PrntsEh in '..\..\Common\PrntsEh.pas',
+  PrvFrmEh in '..\..\Common\PrvFrmEh.pas' {PreviewFormEh},
+  PrViewEh in '..\..\Common\PrViewEh.pas',
+  DBGridEh in '..\..\Common\DBGridEh.pas',
+  DBGridEhImpExp in '..\..\Common\DBGridEhImpExp.pas',
+  DBLookupEh in '..\..\Common\DBLookupEh.pas',
+  DBCtrlsEh in '..\..\Common\DBCtrlsEh.pas',
+  ToolCtrlsEh in '..\..\Common\ToolCtrlsEh.pas',
+  DBLookupGridsEh in '..\..\Common\DBLookupGridsEh.pas',
+  CalculatorEh in '..\..\Common\CalculatorEh.pas' {CalculatorEh},
+  DbUtilsEh in '..\..\Common\DbUtilsEh.pas',
+  PropFilerEh in '..\..\Common\PropFilerEh.pas',
+  PropStorageEh in '..\..\Common\PropStorageEh.pas',
+  DBGridEhFindDlgs in '..\..\Common\DBGridEhFindDlgs.pas' {DBGridEhFindDlg},
+  EhLibVCL in '..\..\Common\EhLibVCL.pas',
+  MemTreeEh in '..\..\Common\MemTreeEh.pas',
+  DataDriverEh in '..\..\Common\DataDriverEh.pas',
+  MemTableDataEh in '..\..\Common\MemTableDataEh.pas',
+  MemTableEh in '..\..\Common\MemTableEh.pas',
+  GridsEh in '..\..\Common\GridsEh.pas',
+  DBGridEhSimpleFilterDlg in '..\..\Common\DBGridEhSimpleFilterDlg.pas' {DBGridEhSimpleFilterDialog},
+  DBGridEhGrouping in '..\..\Common\DBGridEhGrouping.pas',
+  EhLibMTE in '..\..\Common\EhLibMTE.pas',
+  EhLibGIFImage in '..\..\Common\EhLibGIFImage.pas',
+  EhLibJPegImage in '..\..\Common\EhLibJPegImage.pas',
+  EhLibPNGImage in '..\..\Common\EhLibPNGImage.pas',
+  DynVarsEh in '..\..\Common\DynVarsEh.pas',
+  DBGridEhToolCtrls in '..\..\Common\DBGridEhToolCtrls.pas' {DBGridEhRes: TDataModule},
+  ObjectInspectorEh in '..\..\Common\ObjectInspectorEh.pas',
+  DBAxisGridsEh in '..\..\Common\DBAxisGridsEh.pas',
+  DBVertGridsEh in '..\..\Common\DBVertGridsEh.pas',
+  DropDownFormEh in '..\..\Common\DropDownFormEh.pas' {CustomDropDownFormEh},
+  DBLookupUtilsEh in '..\..\Common\DBLookupUtilsEh.pas',
+  MemoEditFormsEh in '..\..\Common\MemoEditFormsEh.pas' {MemoEditWinEh: TCustomDropDownFormEh},
+  PictureEditFormsEh in '..\..\Common\PictureEditFormsEh.pas' {PictureEditorDialog},
+  RichEditFormsEh in '..\..\Common\RichEditFormsEh.pas' {RichEditWinEh: TCustomDropDownFormEh},
+  SideOwnedComponentsEh in '..\..\Common\SideOwnedComponentsEh.pas',
+  GridToolCtrlsEh in '..\..\Common\GridToolCtrlsEh.pas',
+  EhLibXmlConsts in '..\..\Common\EhLibXmlConsts.pas',
+  FilterDropDownFormsEh in '..\..\Common\FilterDropDownFormsEh.pas' {FilterDropDownForm: TCustomDropDownFormEh},
+  DBGridFilterDropDownFormsEh in '..\..\Common\DBGridFilterDropDownFormsEh.pas' {DBGridFilterDropDownForm: TCustomDropDownFormEh},
+  EditPivotFieldFormEh in '..\..\Common\EditPivotFieldFormEh.pas' {fEditPivotField},
+  PivotGridsEh in '..\..\Common\PivotGridsEh.pas',
+  PivotGridToolsEh in '..\..\Common\PivotGridToolsEh.pas',
+  CompoMansEh in '..\..\Common\CompoMansEh.pas',
+  DataSetImpExpEh in '..\..\Common\DataSetImpExpEh.pas',
+  XMLSpreadsheetFormatEh in '..\..\Common\XMLSpreadsheetFormatEh.pas',
+  DBGridEhXMLSpreadsheetExp in '..\..\Common\DBGridEhXMLSpreadsheetExp.pas',
+  DBVertGridEhXMLSpreadsheetExp in '..\..\Common\DBVertGridEhXMLSpreadsheetExp.pas',
+  XlsFileReadersEh in '..\..\Common\XlsFileReadersEh.pas',
+  XlsFileWritersEh in '..\..\Common\XlsFileWritersEh.pas',
+  XlsMemFilesEh in '..\..\Common\XlsMemFilesEh.pas',
+  DBGridEhXlsMemFileExporters in '..\..\Common\DBGridEhXlsMemFileExporters.pas',
+  ZipFileProviderEh in '..\..\Common\ZipFileProviderEh.pas',
+  PlannerCalendarPickerEh in '..\..\Common\PlannerCalendarPickerEh.pas',
+  PlannerDataEh in '..\..\Common\PlannerDataEh.pas',
+  PlannerItemDialog in '..\..\Common\PlannerItemDialog.pas' {PlannerItemForm},
+  PlannersEh in '..\..\Common\PlannersEh.pas',
+  PlannerToolCtrlsEh in '..\..\Common\PlannerToolCtrlsEh.pas' {PlannerDataMod: TDataModule},
+  SpreadGridsEh in '..\..\Common\SpreadGridsEh.pas',
+  DBVertGridEhImpExp in '..\..\Common\DBVertGridEhImpExp.pas',
+  PrintUtilsEh in '..\..\Common\PrintUtilsEh.pas',
+  PrintPlannersEh in '..\..\Common\PrintPlannersEh.pas',
+  PrintPivotGridsEh in '..\..\Common\PrintPivotGridsEh.pas',
+  PrintDBVertGridsEh in '..\..\Common\PrintDBVertGridsEh.pas',
+  BasePrintGridPageSetupDialogEh in '..\..\Common\BasePrintGridPageSetupDialogEh.pas' {fSpreadGridsPrintPageSetupDialogEh},
+  SearchPanelsEh in '..\..\Common\SearchPanelsEh.pas' {DataModule1: TDataModule},
+  DateTimeCalendarPickersEh in '..\..\Common\DateTimeCalendarPickersEh.pas',
+  EhLibLangConsts in '..\..\Common\EhLibLangConsts.pas',
+  LanguageResManEh in '..\..\Common\LanguageResManEh.pas',
+  EhLibEmbeddedLangConsts in '..\..\Common\EhLibEmbeddedLangConsts.pas',
+  EhLibImageReses in '..\..\Common\EhLibImageReses.pas',
+  EhLibImageListRes in '..\..\Common\EhLibImageListRes.pas' {EhLibImageListDataMod: TDataModule},
+  SettingsKeepersEh in '..\..\Common\SettingsKeepersEh.pas',
+  EhLibImages in '..\..\Common\EhLibImages.pas',
+  YearPlannersEh in '..\..\Common\YearPlannersEh.pas',
+  XmlDocsEh in '..\..\Common\XmlDocsEh.pas',
+  XmlReaderWriterEh in '..\..\Common\XmlReaderWriterEh.pas',
+  ButtonsEh in '..\..\Common\ButtonsEh.pas',
+  DBGridEhCustomizeColumnsDialogs in '..\..\Common\DBGridEhCustomizeColumnsDialogs.pas' {DBGridEhCustomizeColumnsDialog},
+  PdfDocumentsEh in '..\..\Common\PdfDocumentsEh.pas',
+  PdfElemetsEh in '..\..\Common\PdfElemetsEh.pas',
+  PdfFontsEh in '..\..\Common\PdfFontsEh.pas',
+  PdfGraphicsEh in '..\..\Common\PdfGraphicsEh.pas',
+  PdfImagesEh in '..\..\Common\PdfImagesEh.pas',
+  PdfPrintersEh in '..\..\Common\PdfPrintersEh.pas',
+  PdfWritersEh in '..\..\Common\PdfWritersEh.pas',
+  LaObjectsEh in '..\..\Common\LaObjectsEh.pas',
+  LaControlsEh in '..\..\Common\LaControlsEh.pas',
+  LaGridPanelsEh in '..\..\Common\LaGridPanelsEh.pas',
+  LaHintWindows in '..\..\Common\LaHintWindows.pas',
+  LaFlowRichBlocksEh in '..\..\Common\LaFlowRichBlocksEh.pas',
+  LaObjectTreeViewForms in '..\..\Common\LaObjectTreeViewForms.pas',
+  LaPanelsEh in '..\..\Common\LaPanelsEh.pas';
+
+end.

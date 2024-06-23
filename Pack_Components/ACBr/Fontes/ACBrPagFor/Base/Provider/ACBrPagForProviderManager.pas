@@ -1,0 +1,120 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{ Direitos Autorais Reservados (c) 2022 Daniel Simoes de Almeida               }
+{                                                                              }
+{ Colaboradores nesse arquivo: Italo Giurizzato Junior                         }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+
+{$I ACBr.inc}
+
+unit ACBrPagForProviderManager;
+
+interface
+
+uses
+  SysUtils, Classes,
+  ACBrPagForInterface;
+
+type
+
+  TACBrPagForProviderManager = class
+  public
+    class function GetProvider(ACBrPagFor: TComponent): IACBrPagForProvider;
+  end;
+
+implementation
+
+uses
+  ACBrPagFor, ACBrPagForConversao,
+
+  PagFor.BancoCECRED.Provider,
+  PagFor.BancodoBrasil.Provider,
+  PagFor.Banrisul.Provider,
+  PagFor.Bradesco.Provider,
+  PagFor.Caixa.Provider,
+  PagFor.HSBC.Provider,
+  PagFor.Inter.Provider,
+  PagFor.Itau.Provider,
+  PagFor.Safra.Provider,
+  PagFor.Santander.Provider,
+  PagFor.Sicoob.Provider,
+  PagFor.Sicredi.Provider,
+  PagFor.UnicredCooperativa.Provider;
+
+  { TACBrPagForProviderManager }
+
+class function TACBrPagForProviderManager.GetProvider(ACBrPagFor: TComponent): IACBrPagForProvider;
+begin
+  with TACBrPagfor(ACBrPagFor).Configuracoes.Geral do
+  begin
+    case Banco of
+      pagBancoCECRED:
+        Result := TACBrPagForProviderBancoCECRED.Create(ACBrPagFor);
+
+      pagBancodoBrasil:
+        Result := TACBrPagForProviderBancodoBrasil.Create(ACBrPagFor);
+
+      pagBanrisul:
+        Result := TACBrPagForProviderBanrisul.Create(ACBrPagFor);
+
+      pagBradesco:
+        Result := TACBrPagForProviderBradesco.Create(ACBrPagFor);
+
+      pagCaixaEconomica:
+        Result := TACBrPagForProviderCaixa.Create(ACBrPagFor);
+
+      pagHSBC:
+        Result := TACBrPagForProviderHSBC.Create(ACBrPagFor);
+
+      pagInter:
+        Result := TACBrPagForProviderInter.Create(ACBrPagFor);
+
+      pagItau:
+        Result := TACBrPagForProviderItau.Create(ACBrPagFor);
+
+      pagSafra:
+        Result := TACBrPagForProviderSafra.Create(ACBrPagFor);
+
+      pagSantander:
+        Result := TACBrPagForProviderSantander.Create(ACBrPagFor);
+
+      pagBanCooB:
+        Result := TACBrPagForProviderSicoob.Create(ACBrPagFor);
+
+      pagSicredi:
+        Result := TACBrPagForProviderSicredi.Create(ACBrPagFor);
+
+      pagUnicredCooperativa:
+        Result := TACBrPagForProviderUnicredCooperativa.Create(ACBrPagFor);
+    else
+      Result := nil;
+    end;
+  end;
+end;
+
+end.

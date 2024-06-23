@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Tag="21650" Version="2021.2" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="495615" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="44312,9280314236" ReportOptions.Description.Text="Demonstrates how to print multiple Table columns with a script. To do this:&#13;&#10;- select the Table object;&#13;&#10;- go to the &#34;Properties&#34; window and click the &#34;Events&#34; tab  to view a list of available events;&#13;&#10;- doubleclick the &#34;ManualBuild&#34; event;&#13;&#10;- you will see an empty event handler. You need to print columns using “TableObject.TableBuilder.PrintColumn” method; you must also print all rows in each column (using PrintRows method).&#13;&#10;When you run a report, the Table will repeat a column and fill it with data." ReportOptions.LastChange="44344,9769307639" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;procedure TableObject1OnManualBuild(Sender: TfrxComponent);&#13;&#10;var&#13;&#10;  DS: TfrxDBDataset;&#13;&#10;begin&#13;&#10;  DS := TfrxDBDataset(Report.GetDataset('Bio'));&#13;&#10;  TableObject1.TableBuilder.PaginationOrder := tpAcrossThenDown;&#13;&#10;&#13;&#10;  TableObject1.TableBuilder.PrintColumn(0, tbHeader);&#13;&#10;  TableObject1.TableBuilder.PrintRow(0, tbHeader);&#13;&#10;  TableObject1.TableBuilder.PrintRows(1);&#13;&#10;  DS.First;&#13;&#10;  while not DS.Eof do&#13;&#10;  begin&#13;&#10;    TableObject1.TableBuilder.PrintColumn(1);&#13;&#10;    TableObject1.TableBuilder.PrintRow(0, tbHeader);&#13;&#10;    TableObject1.TableBuilder.PrintRows(1);&#13;&#10;    DS.Next;&#13;&#10;  end;&#13;&#10;&#13;&#10;  TableObject1.TableBuilder.PrintColumn(2);&#13;&#10;  TableObject1.TableBuilder.PrintRow(0, tbHeader);&#13;&#10;  TableObject1.TableBuilder.PrintRows(1);&#13;&#10;&#13;&#10;end;&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end." OnReportPrint="frxReportAbstractOnReportPrint">
+  <Datasets>
+    <item DataSet="ReportData.BioDS" DataSetName="Bio"/>
+  </Datasets>
+  <TfrxDataPage Name="Data" HGuides.Text="" VGuides.Text="" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" HGuides.Text="" VGuides.Text="" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" Frame.Color="255" Frame.Typ="0" MirrorMode="0">
+    <TfrxReportTitle Name="ReportTitle1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="78,3561873" Left="0" Top="16" Width="718,1107" AllowSplit="True" Child="Child1">
+      <TfrxMemoView Name="Memo28" AllowVectorExport="True" Left="0" Top="0" Width="637,30168593" Height="78,3561873" Font.Charset="1" Font.Color="16777215" Font.Height="-24" Font.Name="Arial" Font.Style="1" Frame.Color="16777215" Frame.Typ="8" Frame.Width="4" FillType="ftGlass" Fill.Color="5328461" Fill.Blend="0,2" Fill.Hatch="True" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="Catalog of the sea fishes"/>
+    </TfrxReportTitle>
+    <TfrxPageFooter Name="PageFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="18,89765" Left="0" Top="412" Width="718,1107">
+      <TfrxMemoView Name="Memo1" AllowVectorExport="True" Left="642,5201" Top="0" Width="75,5906" Height="18,89765" Frame.Typ="0" HAlign="haRight" Text="[Page#]"/>
+    </TfrxPageFooter>
+    <TfrxChild Name="Child1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="235,52257273" Left="0" Top="116" Width="718,1107" ToNRows="0" ToNRowsMode="rmCount">
+      <TfrxTableObject Name="TableObject1" AllowVectorExport="True" Left="3,33333332" Top="0" StretchMode="smActualHeight" OnManualBuild="TableObject1OnManualBuild">
+        <TfrxTableColumn Name="TableColumn1" Width="124,226963636364" MinWidth="0" MaxWidth="75,5906"/>
+        <TfrxTableColumn Name="TableColumn2" Width="169,681509090909" MinWidth="0" MaxWidth="75,5906"/>
+        <TfrxTableColumn Name="TableColumn4" Width="71,5906" MinWidth="0" MaxWidth="75,5906"/>
+        <TfrxTableRow Name="TableRow1" MinHeight="0" MaxHeight="0" Height="41,1703772727273">
+          <TfrxTableCell Name="TableCell1" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="16777215" Font.Height="-19" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="5328461" ParentFont="False" VAlign="vaCenter" Text="Catalogue No"/>
+          <TfrxTableCell Name="TableCell2" AllowVectorExport="True" Restrictions="8" DataField="Species No" DataSet="ReportData.BioDS" DataSetName="Bio" Font.Charset="1" Font.Color="16777215" Font.Height="-19" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="5328461" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="[Bio.&#34;Species No&#34;]"/>
+          <TfrxTableCell Name="TableCell14" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="16777215" Font.Height="-19" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="5328461" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="Count"/>
+        </TfrxTableRow>
+        <TfrxTableRow Name="TableRow2" MinHeight="0" MaxHeight="0" Height="20">
+          <TfrxTableCell Name="TableCell6" AllowVectorExport="True" Restrictions="8" DataSet="ReportData.BioDS" DataSetName="Bio" Font.Charset="1" Font.Color="16777215" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Color="16777215" Frame.Typ="15" Frame.LeftLine.Color="0" Frame.TopLine.Color="0" Fill.BackColor="2964403" ParentFont="False" Text="Common Name:"/>
+          <TfrxTableCell Name="TableCell7" AllowVectorExport="True" Restrictions="8" DataField="Common Name" DataSet="ReportData.BioDS" DataSetName="Bio" Frame.Typ="15" Text="[Bio.&#34;Common Name&#34;]">
+            <Formats>
+              <item/>
+              <item/>
+            </Formats>
+          </TfrxTableCell>
+          <TfrxTableCell Name="TableCell15" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="0" Font.Height="-27" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" RowSpan="5" Text="[Count(TableCell7)]"/>
+        </TfrxTableRow>
+        <TfrxTableRow Name="TableRow3" MinHeight="0" MaxHeight="0" Height="20">
+          <TfrxTableCell Name="TableCell3" AllowVectorExport="True" Restrictions="8" DataSet="ReportData.BioDS" DataSetName="Bio" Font.Charset="1" Font.Color="16777215" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Color="16777215" Frame.Typ="15" Frame.LeftLine.Color="0" Fill.BackColor="2964403" ParentFont="False" Text="Category:"/>
+          <TfrxTableCell Name="TableCell4" AllowVectorExport="True" Restrictions="8" DataField="Category" DataSet="ReportData.BioDS" DataSetName="Bio" Frame.Typ="15" Text="[Bio.&#34;Category&#34;]"/>
+          <TfrxTableCell Name="TableCell16" AllowVectorExport="True" Restrictions="8" Frame.Typ="15" Text=""/>
+        </TfrxTableRow>
+        <TfrxTableRow Name="TableRow4" MinHeight="0" MaxHeight="0" Height="20">
+          <TfrxTableCell Name="TableCell8" AllowVectorExport="True" Restrictions="8" DataSet="ReportData.BioDS" DataSetName="Bio" Font.Charset="1" Font.Color="16777215" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Color="16777215" Frame.Typ="15" Frame.LeftLine.Color="0" Fill.BackColor="2964403" ParentFont="False" Text="Species Name:"/>
+          <TfrxTableCell Name="TableCell9" AllowVectorExport="True" Restrictions="8" DataField="Species Name" DataSet="ReportData.BioDS" DataSetName="Bio" Frame.Typ="15" Text="[Bio.&#34;Species Name&#34;]"/>
+          <TfrxTableCell Name="TableCell17" AllowVectorExport="True" Restrictions="8" Frame.Typ="15" Text=""/>
+        </TfrxTableRow>
+        <TfrxTableRow Name="TableRow5" MinHeight="0" MaxHeight="0" Height="20">
+          <TfrxTableCell Name="TableCell10" AllowVectorExport="True" Restrictions="8" DataSet="ReportData.BioDS" DataSetName="Bio" Font.Charset="1" Font.Color="16777215" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Color="16777215" Frame.Typ="15" Frame.LeftLine.Color="0" Fill.BackColor="2964403" ParentFont="False" Text="Length In:"/>
+          <TfrxTableCell Name="TableCell11" AllowVectorExport="True" Restrictions="8" DataField="Length In" DataSet="ReportData.BioDS" DataSetName="Bio" Frame.Typ="15" Text="[Bio.&#34;Length In&#34;]"/>
+          <TfrxTableCell Name="TableCell18" AllowVectorExport="True" Restrictions="8" Frame.Typ="15" Text=""/>
+        </TfrxTableRow>
+        <TfrxTableRow Name="TableRow6" MinHeight="0" MaxHeight="0" Height="114,352195454545">
+          <TfrxTableCell Name="TableCell12" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="16777215" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Color="16777215" Frame.Typ="15" Frame.LeftLine.Color="0" Frame.BottomLine.Color="0" Fill.BackColor="2964403" ParentFont="False" Text="Photo:"/>
+          <TfrxTableCell Name="TableCell13" AllowVectorExport="True" Restrictions="8" Frame.Typ="15" ContainerPadding.LeftPading="2" ContainerPadding.TopPading="2" ContainerPadding.RightPading="2" ContainerPadding.BottomPading="2" Text="">
+            <TfrxPictureView Name="Picture1" Align="baClient" AllowVectorExport="True" Left="2" Top="2" Width="165,681509090909" Height="110,352195454545" DataField="Graphic" DataSet="ReportData.BioDS" DataSetName="Bio" Frame.Typ="0" HightQuality="False" Transparent="False" TransparentColor="16777215"/>
+          </TfrxTableCell>
+          <TfrxTableCell Name="TableCell19" AllowVectorExport="True" Restrictions="8" Font.Charset="1" Font.Color="0" Font.Height="-27" Font.Name="Arial" Font.Style="0" Frame.Typ="15" ParentFont="False" Text=""/>
+        </TfrxTableRow>
+      </TfrxTableObject>
+    </TfrxChild>
+  </TfrxReportPage>
+</TfrxReport>

@@ -1,0 +1,60 @@
+package NeskiLib_DX104_Sydney;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Neski - Lib Componentes'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  designIDE,
+  dbrtl,
+  vcldb,
+  VclSmp,
+  dsnap,
+  vcl,
+  vclx,
+  vclimg,
+  FireDAC,
+  FireDACCommonDriver,
+  FireDACCommon,
+  PngComponentsD;
+
+contains
+  ColRegIni in '..\ColRegIni.pas',
+  Neski_Registrar in '..\Neski_Registrar.pas',
+  DlgNSK_DBLocaliza in '..\DlgNSK_DBLocaliza.pas' {DlgDBLocaliza},
+  DlgNSK_DBLocalizaPlus in '..\DlgNSK_DBLocalizaPlus.pas' {DlgDBLocalizaPlus},
+  NSK_DataSet in '..\NSK_DataSet.pas',
+  NSK_DBLocaliza in '..\NSK_DBLocaliza.pas',
+  NSK_DBLocalizaPlus in '..\NSK_DBLocalizaPlus.pas',
+  NSK_DBNavigator in '..\NSK_DBNavigator.pas',
+  NSK_Encryp in '..\NSK_Encryp.pas',
+  NSK_Explorer in '..\NSK_Explorer.pas',
+  Gradient in '..\Gradient.pas',
+  rkSmartTabs in '..\rkSmartTabs.pas';
+
+end.

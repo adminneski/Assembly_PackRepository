@@ -1,0 +1,112 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{ Direitos Autorais Reservados (c) 2020 Daniel Simoes de Almeida               }
+{                                                                              }
+{ Colaboradores nesse arquivo: Leivio Ramos de Fontenele                       }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+
+{$I ACBr.inc}
+
+package ACBr_Reinf;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'ACBr - Reinf - (http://www.projetoacbr.com.br/)'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  rtl,
+  ACBr_DFeComum;
+
+contains
+  ACBrReinf in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\ACBrReinf.pas',
+  ACBrReinfConfiguracoes in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\ACBrReinfConfiguracoes.pas',
+  ACBrReinfEventos in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\ACBrReinfEventos.pas',
+  ACBrReinfLoteEventos in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\ACBrReinfLoteEventos.pas',
+  ACBrReinfWebServices in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\ACBrReinfWebServices.pas',
+  pcnCommonReinf in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnCommonReinf.pas',
+  pcnConversaoReinf in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnConversaoReinf.pas',
+  pcnEventosReinf in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnEventosReinf.pas',
+  pcnGeradorReinf in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnGeradorReinf.pas',
+  pcnReinfConsulta in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfConsulta.pas',
+  pcnReinfR1000 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR1000.pas',
+  pcnReinfR1050 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR1050.pas',
+  pcnReinfR1070 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR1070.pas',
+  pcnReinfR2010 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2010.pas',
+  pcnReinfR2020 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2020.pas',
+  pcnReinfR2030 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2030.pas',
+  pcnReinfR2040 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2040.pas',
+  pcnReinfR2050 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2050.pas',
+  pcnReinfR2055 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2055.pas',
+  pcnReinfR2060 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2060.pas',
+  pcnReinfR2070 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2070.pas',
+  pcnReinfR2098 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2098.pas',
+  pcnReinfR2099 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR2099.pas',
+  pcnReinfR3010 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR3010.pas',
+  pcnReinfR4010 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR4010.pas',
+  pcnReinfR4020 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR4020.pas',
+  pcnReinfR4040 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR4040.pas',
+  pcnReinfR4080 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR4080.pas',
+  pcnReinfR4099 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR4099.pas',
+  pcnReinfR5001 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR5001.pas',
+  pcnReinfR5011 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR5011.pas',
+  pcnReinfR9000 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR9000.pas',
+  pcnReinfR9001 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR9001.pas',
+  pcnReinfR9005 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfR9005.pas',
+  pcnReinfRetConsulta in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfRetConsulta.pas',
+  pcnReinfRetConsulta_R9011 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfRetConsulta_R9011.pas',
+  pcnReinfRetConsulta_R9015 in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfRetConsulta_R9015.pas',
+  pcnReinfRetEventos in '..\..\..\..\Fontes\ACBrDFe\ACBrReinf\PCNReinf\pcnReinfRetEventos.pas';
+
+end.

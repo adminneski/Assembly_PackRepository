@@ -1,0 +1,14 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	</head>
+	<body> 
+		<form enctype="multipart/form-data" action="post.php" method="POST">
+			<!-- MAX_FILE_SIZE field must be specified before file upload field -->
+			<input type="hidden" name="MAX_FILE_SIZE" value="3000000000" />
+			<!-- The input element name defines the name in the $ _FILES array -->
+			Send this: <input name="userfile" type="file" accept=".fp3"/>
+			<input type="submit" value="Send File" />
+		</form>
+	</body>
+</html> 

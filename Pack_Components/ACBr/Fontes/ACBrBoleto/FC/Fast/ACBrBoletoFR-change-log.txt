@@ -1,0 +1,207 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+Agradecimentos:
+
+* Administradores:
+- Daniel Simões de Almeida
+- André Ferreira de Moraes
+
+* Desenvolvedores:
+- Juliana Tamizou, Daniel Simões de Almeida - Doação do componente ao projeto ACBr
+
+{******************************************************************************
+|* ACBrBoletoFC - Componentes para impressão dos boletos em Fast Report
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+01/02/2023
+[*] TK-3476 Inclusão do QrCode no Carnê no arquivo fast BoletoCarne.fr3
+Por  Daniel de Morais
+
+24/02/2022
+[-] TK-2409 Correção na geração de senha do PDF quando o boleto é gerado individualmente.
+Por : Pandaaa
+
+11/01/2022
+[-] TK-2255 Correção da impressão do QrCode do EMV do PIX
+[*] TK-2247 Alterado a visibilidade das propriedades do relatório e exportadores para publico, afim de manipulação direta pelo programador;
+Report , HTMLExport, JPEGExport, PDFExport
+[+] TK-2256 Adicionado Suporte a Stream 
+
+Por : Pandaaa
+
+21/10/2021
+--ACBrBoletoFR--
+[*] Remoção da classe TdmACBrBoletoFCFR e do .dfm associado, com criação dos
+    objetos via código.
+    https://www.projetoacbr.com.br/forum/topic/64675-fast-report-4-5-e-202106-property-does-not-exists-no-dfm/
+  Por: BigWings
+
+25/05/2021
+--ACBrBoletoFR--
+[+] Adicionado o campo CIP para impressão no Boleto
+Contribuição: [Panda]Victor Gonzales
+https://www.projetoacbr.com.br/forum/topic/62571-informa%C3%A7%C3%B5es-de-cip-e-benefici%C3%A1rio-no-boleto-do-bradesco-cnab-400/
+
+19/04/2021 -- ACBrBoletoFCFR --
+Ajustes para validar uso campo "UsoBanco"
+https://www.projetoacbr.com.br/forum/topic/61981-preenchimento-da-informa%C3%A7%C3%A3o-uso-banco-no-boleto/
+
+11/12/2020
+-- ACBrBoletoFCFR --
+[+] Adicionado funcionalidade para impressão e geração de pdf individual utilizando a lista de títulos
+    https://www.projetoacbr.com.br/forum/topic/60463-impress%C3%A3o-boletos-separados-fast-report/
+  Por: José M S Junior
+
+20/01/2020
+-- ACBrBoletoFCFR --
+[-] Correção para geração do PDF após remoção da senha.
+    https://www.projetoacbr.com.br/forum/topic/55854-gerar-pdf-com-senha/
+  Por: BigWings
+
+08/01/2020
+ACBrBoletoFCFR
+[*] https://www.projetoacbr.com.br/forum/topic/54585-propriedades-do-arquivo-pdf-exportado-em-preview-fastreport/
+   Por: Gustavo Costa
+[*] https://www.projetoacbr.com.br/forum/topic/54727-sugest%C3%A3o-de-altera%C3%A7%C3%A3o-no-fonte-de-boletos-para-telefone-do-cedente/
+   Por: César A. S. Cardoso
+
+20/02/2019
+ACBrBoletoFCFR
+[*] Ajuste para implementar a configuração de número de cópias a imprimir.
+		por: BigWings
+
+02/10/2018
+ACBrBoletoFCFR
+[+] Possibilidade de acrescentar alterar o nome do arquivo.
+		https://www.projetoacbr.com.br/forum/topic/46211-boleto-exporta%C3%A7%C3%A3o-pdf-com-nome-personalizado-finenhum-fastreport/
+		por : Victor H. Gonzales - Panda (aprovado por Elton)
+
+18/04/2017
+[*] Correção do Sacador para fast report
+		http://www.projetoacbr.com.br/forum/topic/36305-avalista-no-arquivo-fastreport-boletonovofr3/
+		por : Juliomar Marchetti
+		
+14/02/2017
+ACBrBoletoFCFR
+[-] Correção de bug, pois não havia tratamento e sempre que era gerado pdf ou impresso novamente o boleto indiferente o fr3 usado
+		duplicava elas
+		http://www.projetoacbr.com.br/forum/topic/35086-mensagem-duplicando/
+		por : Juliomar Marchetti
+		
+11/09/2016
+ACBrBoletoFCFR
+[-] Modificado para montar a carteira em cima do título igual é feito em fortes report
+		http://www.projetoacbr.com.br/forum/topic/30973-problema-na-homologa%C3%A7%C3%A3o-banco-do-nordeste/?do=findComment&comment=212158
+		por: Juliomar Marchetti
+		
+18/06/2016
+[*] Adição de duas propriedades para habilitar o envio das fontes e do background no boleto junto no pdf
+		http://www.projetoacbr.com.br/forum/topic/29486-fastreport-thread-ajustes/
+		por Juliomar Marchetti
+
+16/06/2016
+-- ACBrBoletoFCFR --
+[*] Adicionado a propriedade IncorporarBackgroundPdf e IncorporarFontesPdf (Paulo Monteiro)
+
+13/06/2016
+-- ACBrBoletoFCFR
+[*] Melhoria para funcionamento em threads
+		http://www.projetoacbr.com.br/forum/topic/29486-fastreport-thread-ajustes/#comment-201083
+		(Juliomar Marchetti)
+
+19/04/2016
+-- ACBrBoletoFCFR --
+[*] Adicionado a propriedade modo thread para quem utiliza o recurso de geração de boleto em aplicações multi thread datasnap, 
+    isapi, etc. (Paulo Monteiro)
+
+12/03/2016
+[*] Modificado para deixar alguns botões fora do preview em fast report
+		por: Juliomar Marchetti
+
+29/02/2016
+-- ACBrBoletoFCFR --
+[-] acerto na montagem do codigo do cedente para FastReport.
+    por: Carlos Nascimento
+
+10/09/2015
+-- ACBrBoletoFCFR --
+[+] Adicionadas as orientações do Banco.
+[*] Acerto na data de vencimento da remessa Caixa.
+    http://www.projetoacbr.com.br/forum/topic/24039-remessa-240-cef/#comment-156598
+
+07/05/2014
+-- ACBrBoletoFCFR --
+[*] Adicionado algumas propriedades na exportação para pdf seguindo o padrão dos outros componentes 
+    e setando o frxPDFExport.Background := false; isso faz diminuir 70% do tamanho do pdf (Paulo Monteiro)
+
+Data: 27/08/2013
+--ACBrBoletoFCFR -- 
+[-] Passado a utilizar a função MontarCampoCedente na impressão dos boletos.
+    (OsvaldoKalvaitir)
+
+Data: 14/06/2013
+-- ACBrBoletoFCFR ver. 0.0.13a --
+[-] Corrigido problema com a impressão das logomarcas dos bancos. (por: Solivan Araujo)
+
+Data: 09/01/2013
+-- ACBrBoletoFCFR ver 0.0.12a --
+[-] Alterado componente para respeitar a propriedade MostrarSetup.(NazarenoNeto)
+
+Data: 08/01/2013
+-- ACBrBoletoFCFR ver 0.0.11a -
+[*] Adicionado impressão do complemento do endereço do sacado.(Juliana Tamizou)	
+	
+Alterações anteriores a 01/01/2013
+	
+-- ACBrBoletoFC --
+[+] Adicionado novo tipo de Layout: lPadraoEntrega, para substituir a
+    propriedade: ComprovanteEntrega   (DSA)
+
+Versao 0.0.10a do FastReport 13/08/2012
+[+] Adicionado suporte a impressão de boletos em carnê.(Rodrigo Rodrigues)
+[*] Efetuado ajuste para que todas as versões do Delphi consigam ler corretamente
+    a propriedade displayformat dos componentes utilizados para data.(Fábio)
+	
+Versao 0.0.10a do FastReport 13/10/2012
+[+] Corrigida impressão do DV da Agência quando o mesmo for superior a 9.(Leonardo)	
+
+Versao 0.0.09a do FastReport 02/07/2012
+[+] Lançado a 1a versão para impressão dos boletos em FastReport.
+    (por: Isaque Pinheiro)	
+
+Versao 0.0.1 do FastReport 05/08/2011
+[-] Lançado a 1a versão para impressão dos boletos em FastReport.
+    (por: Isaque Pinheiro)

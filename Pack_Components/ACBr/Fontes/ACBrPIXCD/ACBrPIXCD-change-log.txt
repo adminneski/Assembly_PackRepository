@@ -1,0 +1,617 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{ Biblioteca multi plataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na página do Projeto ACBr     }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{                                                                              }
+{******************************************************************************}
+Agradecimentos:
+
+* Administradores:
+- Daniel Simões de Almeida
+
+* Desenvolvedores:
+- Daniel Simões de Almeida - Doação do componente ao projeto ACBr
+- Elias César Vieira
+
+{******************************************************************************
+|* ACBrPIXCD
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+23/05/2024
+-- ACBrPIXCD --
+[+] Inclusão do novo PSP Banrisul
+    por: Elias César Vieira
+
+14/05/2024
+-- ACBrSchemasMatera --
+[*] Inclusão de novo status no enumerado TMateraAccountStatus
+    por: MatheusHenrique9
+
+19/04/2024
+-- ACBrSchemasMatera --
+[*] Correção de problema ao converter String para tipo TMateraWithdrawType
+    por: MatheusHenrique9
+
+26/03/2024
+-- ACBrSchemasMatera --
+[*] Correção no método NewSchema de algumas classes.
+    por: MatheusHenrique9
+
+22/03/2024
+-- ACBrPIXPSPMatera --
+[*] Alteração para corrigir problema de acentuação ao criar uma conta
+    por: Elias César
+
+08/03/2024
+-- ACBrSchemasMatera --
+[-] Correção do schema de leitura de saldo.
+    por: nazarenoneto / Rev.: Alexandre de Paula
+
+23/02/2024
+-- ACBrPIXPSPGate2All --
+[-] Correção na conversão do Valor do Pix para Gate2All, que conssidera o valor
+    inteiro, sem decimais
+    (por: DSA)
+
+21/02/2024
+-- ACBrPIXPSPShipay --
+[*] Alteração para Renovar o Token quando necessário.
+    por: Robert Marx
+
+15/02/2024
+-- ACBrPIXPSPMatera, ACBrSchemasMatera --
+[+] Adição da consulta de Alias V2
+    por: Alexandre de Paula
+
+08/02/2024
+-- ACBrPIXPSPGate2All --
+[+] Inclusão do novo PSP Gate2All
+    por: Elias César
+
+26/01/2024
+-- ACBrPIXPSP --
+[-] Correção para forçar a autenticação novamente após alterar as credenciais.
+    Por: Elias César
+
+15/01/2024
+-- ACBrPIXSchemasCobV --
+[*] Alteração para preencher no json o campo ValidadeAposVencimento com valor zero.
+    por: Elias César
+
+12/01/2024
+-- ACBrPIXPSPMatera --
+[*] Alteração para preencher automaticamente os campos de Tipo conta e Tipo Cliente ao 
+    criar uma nova conta.
+    por: Elias César
+
+21/12/2023
+-- ACBrSchemasMatera --
+[-] Correção do tipo da propriedade taxIdentifier
+    Por: Elias César
+
+19/12/2023
+-- ACBrPIXSchemasCob, ACBrPIXSchemasCob, ACBrPIXSchemasDevolucao --
+[+] Incluída função "LoadFromIni" para ser utilizada na lib do componente ACBrPIXCD
+    Por: Antônio e Elias
+
+18/12/2023
+-- ACBrPIXPSPShipay --
+[*] Correção na leitura das datas na resposta do PSP Shipay.
+    Por: Elias César
+
+15/12/2023
+[+] Incluída possibilidade de consultar pagametos por período;
+[*] Alteração para criar um objeto pix na cobrança consultada, caso exista um pagamento.
+    Por: norldir
+
+13/12/2023
+-- ACBrPIXPSPSantander --
+[*] Alteração na URL ao Revisar Cobrança. Santander utiliza API v2 para essa rotina.
+    Por: SIDesenvolvimento
+
+06/12/2023
+-- ACBrPIXPSPMercadoPago --
+[-] Remoção da URL a pedido do MercadoPago.
+
+28/11/2023
+-- ACBrPIXPSPMatera --
+[*] Alterado método DevolucaoSolicitar() para function
+    Por: Elias César
+
+21/11/2023
+-- ACBrPIXPSPMercadoPago --
+[*] Adicionando o header 'X-Idempotency-Key' na criação de cobranças.
+    Por: Elias César
+
+08/11/2023
+-- ACBrPSPAilos --
+[*] Correção da URL de Produção.
+    Por: Alexandre Bugmann
+
+31/10/2023
+-- ACBrPSP --
+[*] Alteração para não validar E2E em casos de PSP que não são padrão Bacen.
+
+-- ACBrPSPMercadoPago --
+[+] Inclusão da possibilidade de efetuar um cancelamento de cobrança.
+    Por: Elias César
+
+27/10/2023
+-- ACBrPIXCDPSPs --
+[-] Correção para que os PSPs possam ser utilizados em todas as plataformas.
+
+27/10/2023
+-- ACBrPSPMercadoPago --
+[+] Inclusão do PSP Mercado Pago
+
+27/10/2023
+-- ACBrPIXCD --
+[*] Remoção de Warnings
+[+] Inclusão de propriedade IsBacen, para validar alguns campos apenas quando o PSP seguir esse padrão.
+
+20/10/2023
+-- ACBrPSP --
+[*] Ajuste para tratar a RespostaHTTP de UTF8 para String nativa da IDE.
+
+16/10/2023
+-- ACBrPIXSchemasPix --
+[*] Ajuste para prevenir erro quando o PSP envia uma resposta fora do padrão (PSP Inter)
+    Por: Elias César
+
+05/10/2023
+-- ACBrPIXPSPCielo --
+[+] Adicionado novo PSP Cielo
+
+02/10/2023
+-- ACBrSchemasMatera --
+[+] Incluídos novos schemas de mapeamento da API específica da Matera
+
+-- ACBrPIXPSPMatera --
+[+] Adicionados métodos para adaptação do PSP Matera com API Padrão Bacen.
+    Por: Elias César
+
+01/09/2023
+-- ACBrSchemasMatera --
+[-] Correções na implementação dos objetos para o PSP Matera
+    Por: Elias César
+
+30/08/2023
+-- ACBrPIXPSPMatera --
+[+] Inclusão do novo PSP Matera (--EM DESENVOLVIMENTO--)
+    Por: Elias César e Alexandre de Paula
+
+14/08/2023
+-- ACBrPIXCD --
+[*] Remoção da fução "Trim()" no momento de setar o conteúdo do PFX, pra não ocorrer 
+    perca de caracteres de controle.
+
+04/08/2023
+-- ACBrPIXPSPBancoDoBrasil --
+[*] Alteração do ResultCode recebido ao solicitar uma devolução de Pix (Método PUT ao endpoint /pix)
+    Por: Elias César
+
+02/08/2023
+-- ACBrPIXPSPSicoob --
+[-] Correções para ambiente Sandbox funcionar corretamente no componente ACBrPIXCD.
+    Por: Lucas VG
+
+24/07/2023
+-- ACBrPIXPSPAilos --
+[-] Correção da URL de homologação no PSP Ailos
+    Por: Genesio Becker
+
+24/07/2023
+-- ACBrPIXPSPBradesco --
+[-] Alteração do ResultCode de 200 pra 201 ao criar uma cobrança com vencimento
+    Por: Elias César
+
+17/07/2023
+-- ACBrPIXPSPBancoDoBrasil --
+[-] Correção para não exibir mensagem de erro incorretamente ao utilizar PSP BB com certificado PFX
+    Por: Elias César
+
+30/06/2023
+-- ACBrPIXPSPAilos --
+[*] Correção em métodos que o PSP Ailos respondem diferente do especificado no Bacen
+[*] Alteração para limpar propriedade exclusiva do PSP Ailos ao criar o componente
+	Por: MaagraowaR e Alexandre de Paula
+	
+05/07/2023
+[*] Ajuste na URL em ambiente de produção API versão 2
+    Por: Elias César
+
+26/06/2023
+-- ACBrPIXPSPSicoob --
+[*] Alteração para renomear a tag 'brcode' para 'pixCopiaECola' na resposta do endpoint /cob
+    Por: Elias César
+
+19/06/2023
+-- ACBrPIXPSPBancoDoBrasil --
+[+] Criação de propriedade para definir qual versão da API utilizar;
+[*] Alteração do PSP para utilizar certificados (Necessário em ambiente de Produção
+    na versão 2 da API).
+    por: Elias César
+
+02/06/2023
+-- ACBrPIXPSPAilos --
+[+] Inclusão do novo PSP Ailos
+    Por: MaagraowaR
+
+22/05/2023
+-- ACBrPIXPSPShipay --
+[+] Inclusão de propriedades para possibilitar a definição das URLs de produção e 
+    sandbox para o PSP Shipay.
+    Por: Elias César
+
+24/04/2023
+-- ACBrPIXPSPShipay --
+[-] Correção no carregamento das carteiras ao utilizar o PSP Shipay controlando o Token manualmente
+    Por: Elias César
+
+06/04/2023
+-- ACBrPIXPSPInter --
+[+] Inclusão do novo PSP Inter
+    Por: Cristian Carvalho e Sidney Alves
+
+08/03/2023
+-- ACBrPIXPSPSantander --
+[*] Ajuste na consulta de Pix Recebidos por Período para formatar os parâmetros de inicio e fim
+    sem os milissegundos, pois o PSP estava retornando erro.
+    por: Elias César
+
+22/02/2023
+-- ACBrPIXPSPBancoDoBrasil --
+[-] Correção para não disparar exception indevidamente quando ocorrerem erros na resposta do método GET
+    Por: Elias César
+
+16/02/2023
+-- ACBrPIXPSPPixPDV --
+[*] Alteração para incluir endpoints específicos da API PixPDV
+
+-- ACBrSchemasPixPDV --
+[+] Inclusão dos Schemas utilizados nos endpoints específicos da API PixPDV
+
+14/02/2023
+-- ACBrPIXSchemasCobV, ACBrPIXSchemasDevolucao, ACBrPIXSchemasLocation, ACBrPIXSchemasLoteCobV --
+[*] Criadas propriedades "Bias" para armazenar informação do TimeZone em propriedades TDateTime.
+    Por: Elias César
+
+13/02/2023
+-- ACBrPIXPSPSicredi --
+[*] Correção da resposta do PSP Sicredi a uma devolução PIX.
+    Por: José Luis
+
+10/02/2023
+-- ACBrPIXPSPShipay --
+[*] Alteração para sempre utilizar o endpoint /order quando a wallet for 'shipay-pagador'
+
+27/01/2023
+-- ACBrPIXPSPPixPDV, ACBrPIXCD --
+[+] Inclusão do novo PSP PIX PDV
+    Por: Elias César
+
+10/01/2023
+-- ACBrPIXCD --
+[+] Inclusão da property Scopes para definir quais os escopos serão enviados na Autenticação dos PSPs
+
+-- ACBrPIXPSPBancoDoBrasil, ACBrPIXPSPPagSeguro, ACBrPIXPSPSicoob, ACBrPIXPSPSicredi --
+[*] Alteração para utilizar a nova property Scopes para enviar os escopos na Autenticação
+
+06/01/2023
+-- ACBrPIXPSPGerenciaNet --
+[*] Exclusão de prcedure desnecessária
+
+-- ACBrPIXPSPBradesco, ACBrPIXCD --
+[+] Inclusão do novo PSP Bradesco
+    Por: Elias César
+
+02/01/2023
+-- ACBrPIXCD --
+[+] Incluídas na classe TACBrPSPCertificate as propriedades relacionadas ao certificado PFX, 
+    para que os PSPs que utilizam esse tipo de certificado também possam herdar dela.
+
+-- ACBrPIXPSPGerenciaNet --
+[*]	Alteração para o PSP GerenciaNET herdar da classe TACBrPSPCertificate
+
+-- ACBrPIXPSPSantander --
+[*] Alteração para o PSP Santander herdar da classe TACBrPSPCertificate
+    Por: Elias César
+
+30/12/2022
+-- ACBrPIXSchemasCob --
+[*] Ajuste para não gravar CobValor.modalidadeAlteracao, se o valor for Falso,
+    pois o campo é opcional, e se não existente é considerado Falso
+    por: DSA e djinfope
+
+23/12/2022
+-- ACBrPIXPSPGerenciaNet -- 
+[+] Inclusão do novo PSP GerenciaNet
+    Por: djinfope
+
+14/12/2022
+-- ACBrPSP --
+[*] Alteração para limpar também as propriedades User e Password do em LimparHTTP
+
+-- ACBrPIXPSPPagSeguro --
+[*] Correção de problema ao Simular pagamento após efetuar a criação de cobrança
+    As propriedades de certificado continuavam preenchidas.
+    Por: Elias César
+
+14/12/2022
+-- ACBrPIXPSPSicoob --
+[*] Alteração para PSP Sicoob herdar da classe TACBrPSPCertificate.
+    por: Elias César
+
+14/12/2022
+-- ACBrPIXPSPSicredi --
+[*] Alteração do path da url API Pix do Sicredi
+[+] Inclusão dos scopes para cobranças com venscimento
+    Por: RUSSOCORP
+
+05/12/2022
+-- ACBrPIXBRCode --
+[-] Correção na geração de QRCode Dinâmico, em "PointOfInformationMethod"
+    http://www.projetoacbr.com.br/forum/index.php?showtopic=69974
+    (por: marcosvillatore)
+
+24/11/2022
+-- ACBrPIXUtil --
+[-] Correção de problema ao criar cobranças quando o caractere para decimal do 
+    Sistema Operacional é '.'(ponto)
+    Por: Elias César
+
+23/11/2022
+-- ACBrPIXPSPSantander --
+[-] Correção do endpoint /cob que não possui método POST no Santander
+    Por: Elias César
+
+21/11/2022
+-- ACBrPIXCDReg, ACBrPIXCD.dpk, ACBrPIXCD.lpk --
+[+] Inclusão de novo PSP PagSeguro
+
+-- ACBrPIXCD.dcr, ACBrPIXCD.lrs --
+[+] Inclusão de resources do ícone para o novo PSP PagSeguro
+    Por: Elias César
+
+27/10/2022
+-- ACBrPIXSchemasCob --
+[*] Correção de problema ocorrido com PSP Siccob quando há retorno de tag com valor Null
+    https://www.projetoacbr.com.br/forum/topic/69458-acbrpixcd-sicredi-mensagem-erro-no-demo-duplicate-object-member-retirada/
+	
+-- ACBrPIXPSPBancoDoBrasil --
+[-] Correção de problema ao consultar lista de pagamentos com o PSP BB
+    Por: Elias César
+
+17/10/2022
+-- ACBrPIXPSPSicoob --
+[-] Ajuste para incluir scopes cobv
+[*] Alteração de 'brcode' para 'pixCopiaECola' no retorno do endpoint cobv
+
+-- ACBrPIXPSPSicredi --
+[-] Ajuste para incluir scopes cobv
+
+-- ACBrPixSchemasCobV --
+[*] Alteração no tipo da classe para incluir também a propiedade pixCopiaECola
+Por: Elias César
+
+04/10/2022
+-- ACBrPIXPSPBancoDoBrasil --
+[*] Alteração para disparar erro caso o PSP não possua o endpoint utilizados
+
+-- ACBrPIXCD --
+[*] Incluído resource de erro para disparar a exceção
+    por: Elias César
+
+20/09/2022
+-- ACBrPIXPSPSicoob --
+[-] Correção para tratar corretamente o retorno do Sicoob ao Solicitar uma devolução
+
+19/09/2022
+-- ACBrPIXCDReg --
+[+] Inclusão de novo PSP Sicoob
+    Por: Huenes
+
+05/09/2022
+-- ACBrPIXCD --
+[*] Inclusão dos parâmetros TxID e Valor na procedure "GerarQRCodeDinamico()",  para 
+    possibilitar informar esses valores à título de informação no Copia e Cola, pois 
+    os valores válidos sempre serão os da URL.
+	
+-- ACBrPIXBRCode --
+[*] Alteração para os tipos de QRCodes validarem o TxID de maneira diferente:
+    - QRCodeEstatico = Tamanho TxID até 25 caracteres;
+    - QRCodeDinamico = Tamanho TxID de 26 a 35 caracteres.
+    Por: Elias César
+
+01/09/2022
+-- ACBrPIXPSPSantander --
+[+] Inclusão de propriedades para certificado PFX e senha. 
+    Necessário para utilizar em ambiente de produção.
+    Por: Washington
+    
+-- ACBrPIXBRCode --
+[*] Criada função "GetPixKeyType()" para carregar corretamente o tipo da chave quando o 
+    QRCode é lido através do "AsString";
+[-] Alteração na maneira que é lido o campo "TransactionAmount", pois o valor estava sempre
+    retornando como zero.
+    Por: Elias César
+
+31/08/2022
+-- ACBrPIXCD --
+[+] Inclusão de nova classe TACBrPSPCertificate para centralizar o controle/envio de Certificados e 
+    Chaves Privadas dos PSPs.
+	
+-- ACBrPIXPSPItau, ACBrPIXPSPSicredi --
+[*] Alteração para herdar de nova classe TACBrPSPCertificate;
+
+
+15/08/2022
+-- ACBrBase --
+[*] Removida a unit 'fpjsons' do uses, pois não é mais utilizada.
+
+-- ACBrPIXPSPBancoDoBrasil, ACBrPIXPSPItau, ACBrPIXPSPSantander, ACBrPIXPSPShipay, ACBrPIXPSPSicredi --
+[*] Alteração para possibilitar a utilização dos PSPs em todas as plataformas de compilação.
+    Por: Elias César
+
+15/08/2022
+-- ACBrPIXPSPSicredi --
+[*] Alteração para compatibilizar o retorno da API Pix Sicredi ao solicitar uma devolução
+    Por: Marcelo A. Rodrigues
+
+11/08/2022
+-- ACBrBase, ACBrSchemas... --
+[*] Adaptações para utilizar a nova unit ACBrJSON.
+
+-- ACBrPIXPSPBancoDoBrasil, ACBrPIXPSPItau, ACBrPIXPSPSantander, ACBrPIXPSPShipay, ACBrPIXPSPSicredi --
+[*] Adaptações para utilizar a nova unit ACBrJSON.
+    Por: Elias César
+
+27/07/2022
+-- ACBrPIXPSPItau --
+[*] Revovendo parâmetros desnecessários ao Renovar Certificado e Gerar
+    Certificado CSR.
+    Por: Elias César
+
+25/07/2022
+-- ACBrPIXSchemasCobV --
+[*] Correções para envio correto do endpoint /cobv
+
+-- ACBrPIXCD --
+[+] Inclusão do endpoint /cobv
+    Por: Elias César
+	
+-- ACBrPIXPSPItau --
+[+] Inclusão de função para renovação do certificado
+[*] Alterações para incluir o certificado nas requisições em ambiente de produção
+    Por: Elias César
+
+21/070/2022
+-- ACBrPIXPSPBancoDoBrasil --
+[-] Correção para incluir delimitador nas requisições do endpoint /cob
+    https://www.projetoacbr.com.br/forum/topic/68247-erro-404-resource-not-found-pixcd-psp-bco-do-brasil/
+    Por: Elias César 
+
+20/07/2022
+-- ACBrShipaySchemas --
+[-] Correção de MemoryLeak ao utilizar a lista de descontos do componente Shipay
+    https://www.projetoacbr.com.br/forum/topic/68222-acbrpixcd-memory-leak/
+	Por: Elias César
+
+12/07/2022
+-- ACBrPIXPSPItau --
+[*] Ajuste para funcionamento correto em ambiente de testes. Alterado para incluir 
+    header 'x-sandbox-token' com o token gerado no momento da autenticação.
+[-] Correção das URLs.
+
+11/07/2022
+-- ACBrPIXSchemasCalendario, ACBrPIXSchemasPix --
+[+] Inclusão de propriedades Bias, responsáveis por armazenar os minutos de diferença 
+    entre o horário local e o TimeZone informado na resposta
+    Por: Elias César
+
+08/07/2022
+-- ACBrPIXCDReg --
+[+] Inclusão de novo PSP Sicredi
+    Por: sidnei_alves1
+
+06/07/2022
+-- ACBrPIXCD --
+[+] Inclusão de possibilidade dos PSP alterarem o Body antes da requisição.
+    Necessário para PSPs como a Shipay, onde o payload é diferente do padrão Bacen.
+[*] Ajuste para concatenar os parâmetros de query na URL sem delimitador. Caso o PSP
+    necessite(como o BB em homologação), deve incluí-lo em "CalcularEndPointPath()".
+	
+-- ACBrPIXPSPBancoDoBrasil --
+[*] Ajuste no retorno da função "CalcularEndPointPath()" para retornar Path com 
+    delimitador em homologação.
+	
+-- ACBrPIXPSPShipay --
+[+] Inclusão de função para converter OrderList em CobsConsultadas para que a
+    consulta de cobranças por período funcione corretamente;
+[*] Refatoração do método "QaundoAcessarEndPoint()" para que as informações da 
+    requisição sejam configuradas separadamente.
+	
+-- ACBrPIXSchemasCobV --
+[-] Correção na leitura do Json(Problema descoberto na execução dos testes unitários).
+
+-- ACBrPIXUtil --
+[*] Alteração na função "FormatarGUID()" para montar corretamente o OrderID.
+
+-- ACBrPIXSchemasTeste --
+[-] Correção dos testes unitários após alterações nos schemas
+
+28/06/2022
+-- ACBrPIXPSPBancoDoBrasil --
+[*] Ajustes para funcionamento da Consulta de Pix recebidos por período.
+    Por: Elias César
+	
+-- ACBrPixSchemasCobV, ACBrShipaySchemas --
+[-] Correções das units
+
+26/06/2022
+-- ACBrPixSchemasCobV --
+[*] Inclusão de tipos enumerados para os campos modalidades das classes de 
+    Desconto, Multa, Juros e Abatimento
+
+-- ACBrShipaySchemas -- 
+[*] Alteração das classes referentes ao Desconto, Multa, Juros e Abatimento para
+    herdarem das classes de ACBrPixSchemasCobV.
+[*] Alteração da classe referente ao Calendário para herdar de ACBrPixSchemasCobV
+    Por: Elias César
+
+17/06/2022
+-- ACBrPIXPSPBancoDoBrasil --
+[-] Correção para leitura correta do Pix Copia e Cola em SimularPagamentoPIX().
+    Por: Icozeira
+
+13/06/2022
+-- ACBrPIXCD --
+[*] Inclusão da constante cEndPointPix para o endpoint '/pix';
+[*] Alteração no modo em que os parâmetros de query são concatenados na URL
+
+-- ACBrPIXPSPBancoDoBrasil --
+[-] Ajuste em "TratarRetornoComErro" para não disparar exception em erros que não
+    possuem status.
+[*] Alteração para utilizar o endpoint '/cobqrcode' para criação de cobranças
+    em ambiente de homologação.
+	por: Icozeira
+	
+-- ACBrPIXPSPShipay --
+[-] Alteração para ler a chave corretamente de OrderCreated.
+
+-- ACBrShipaySchemas --
+[-] Correção de problema ao ler payload de uma ordem order_due_date.
+
+
+Data: 13/06/2022
+[+] Início do ChangeLog ACBrPIXCD

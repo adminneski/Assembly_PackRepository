@@ -1,0 +1,11 @@
+inherited LibDISDM: TLibDISDM
+  Height = 150
+  HorizontalOffset = 266
+  VerticalOffset = 150
+  Width = 150
+  object ACBrDIS1: TACBrDIS[0]
+    Porta = 'COM1'
+    Left = 41
+    Top = 25
+  end
+end

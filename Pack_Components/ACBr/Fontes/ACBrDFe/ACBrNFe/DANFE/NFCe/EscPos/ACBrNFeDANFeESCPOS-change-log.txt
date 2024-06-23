@@ -1,0 +1,84 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+Agradecimentos:
+
+* Administradores:
+- Daniel Simões de Almeida
+- André Ferreira de Moraes
+
+{******************************************************************************
+|* ACBrNFeDANFeESCPOS
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+26/05/2023
+[+]TK-3950 Inclusão recurso para uso de BMP no NFCe.
+   por: Victor H Gonzales - Pandaaa, Daniel Morais
+
+04/08/2020
+[*] Ajustes para melhor impressão, em 40 colunas
+    (por: DSA)
+
+21/07/2020
+[-] Correção para usar as propriedade ImprimeLogoLateral e ImprimeQRCodeLateral corretamente.
+    (por: Rafael Dias)
+
+09/07/2020
+[*] Melhor suporte a impressoras com 32 colunas
+[+] Adicionada a propriedade "SuportaCondensado: Boolean default True"
+    Se essa propriedade for False, o relatorio evitará o uso de Fontes
+    Condensada, e calculará os espaços usando a Fonte Normal
+[*] Linhas que usavam Caractere Expandido, verificam se o número de colunas
+    é o suficiente, caso contrário, usa a fonte normal.
+    (por: DSA)
+
+06/05/2015 
+[*] Refatoração para usar TACBrPosPrinter (por DSA)
+
+28/11/2014: 
+[+] Implementação da possibilidade de utilizar tags nos relatorios (segue o
+    padrão do acbrecf) (por Régys Silveira)
+
+25/11/2014 
+[*] Acertos gerais e adaptação do layout a norma técnica
+[*] adição de método para impressão de relatórios
+[+] adição de impressão de eventos
+(por Régys Silveira)
+
+20/11/2014  
+[+] Contribuições para impressão na Bematech e Daruma. (por Welkson Renny de Medeiros)	
+
+04/04/2013
+[+] Inicio do desenvolvimento. (por André Ferreira de Moraes)

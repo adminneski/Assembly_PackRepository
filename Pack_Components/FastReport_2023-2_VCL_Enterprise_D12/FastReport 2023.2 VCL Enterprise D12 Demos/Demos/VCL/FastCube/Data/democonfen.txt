@@ -1,0 +1,77 @@
+GROUP:New 2.0 features
+CUBE:0;2_0_sample_en1.mdc;Total positions;Total position can be before, after and hidden
+CUBE:0;2_0_sample_en2.mdc;Multiple totals;More than one total can be made for a single measure
+CUBE:0;2_0_sample_en3.mdc;Total values;Totals may have an own aggregate function - different from the measure they are built on
+CUBE:4;2_0_sample_en4.mdc;Radio filter;A filter which are able to choose only 1 value
+CUBE:0;2_0_sample_en5.mdc;Grouping;Dimension member grouping
+CUBE:0;2_0_sample_en7.mdc;Tree like axis;A tree like drawing of horizontal and vertical axes
+CUBE:0;2_0_sample_en8.mdc;Measure rank;Calculation of measure rank
+CUBE:5;2_0_sample_en9.mdc;User events;An ability to change text, style and icon in user event handlers
+CUBE:6;123.mdc;User dataset;File catalog
+CUBE:7;123.mdc;User dataset (calendar);Calendar
+CUBE:2;demo_en1.mds;Demo database;Attributes
+CUBE:0;2_0_sample_en10.mdc;Time splits;Time splits
+CUBE:16;123.mdc;Appending data to Cube - User dataset;File catalogs
+CUBE:12;demo_en1.mds;Appending data to Cube - Demo database;Attributes
+CUBE:22;2_0_append_1.mdc;Appending data to Cube (1)- From Saved cubes;Attributes
+CUBE:23;2_0_Year_2004.mdc;Appending data to Cube (2)- From Saved cubes;Demography
+GROUP:Expressions and Script
+CUBE:0;2_0_sample_en_exp1.mdc;Expressions: Define measure on measure;Example shows definition of a measure using expression with reference to another measure.
+CUBE:0;2_0_sample_en_exp2.mdc;Expressions: Define measure on dimension;Example shows definition of a measure using expression with reference to a dimension.
+CUBE:0;2_0_sample_en_exp3.mdc;Expressions: Complex example;Example shows definition of a measure using expression with reference to both a dimension and a measure. Also note that totals use Sum aggregation.
+CUBE:0;2_0_sample_en_exp4.mdc;Expressions: Measures with calculated filter;Example shows definition of a measure with filter using.
+CUBE:0;sample_9.mdc;Script: Calculated measures;Example shows definition of a measure by means of formulas. Mechanism of calculation of formulas is the FastScript. 
+CUBE:0;2_0_sample_en11.mdc;Script: Detail calculated measures;Formula Detail Script allows you to make custom aggregates.
+GROUP:Data Highlight
+CUBE:0;2_0_sample_en_h1.mdc;Continous Highlight;Example shows different options of the continous highlight.
+CUBE:0;2_0_sample_en_h2.mdc;Range Highlight;Example shows different options of the range highlight.
+CUBE:0;2_0_sample_en_h3.mdc;Top Highlight;Example shows different options of the top highlight.
+CUBE:0;2_0_sample_en_h4.mdc;Average Highlight;Example shows different options of the average highlight.
+CUBE:0;2_0_sample_en_h5.mdc;Unique Highlight;Example shows different options of the unique highlight.
+CUBE:0;2_0_sample_en_h6.mdc;Expression Highlight;Example shows highlights based on expression.
+GROUP:Life Examples
+CUBE:0;sales_en.mdc;Sales;Company sales
+SCHEMA:0;sales_en1.mds;Sales by managers;The analysis of sales by managers
+SCHEMA:0;sales_en2.mds;Sales by categories;The analysis of sales by product categories
+SCHEMA:0;sales_en3.mds;Sales by months;The analysis of sales by months with sorting by quantity
+SCHEMA:0;sales_en4.mds;Debts of clients;Debts of clients, shipments and payments
+SCHEMA:0;sales_en5.mds;Large and small sales;Slicing sales by volumes. Filters in measures. 
+CUBE:0;demographic.mdc;Demography;Population by years, countries, sex and age
+SCHEMA:0;demogr_1.mds;Population in countries;Population in countries for 2006 in decreasing order
+SCHEMA:0;demogr_2.mds;Year dynamics;Population changes by years (look at chart) 
+SCHEMA:0;demogr_3.mds;Sex structure;Sex structure by different age
+CUBE:0;skubd_en.mdc;Work time;Employees movements
+SCHEMA:0;skubd_en1.mds;Employees enter and leave time;Shows employees enter time to enterprise territory and the time of leaving from it 
+SCHEMA:0;skubd_en2.mds;Moving of employees;Shows movings employees on territory of the enterprise 
+SCHEMA:0;skubd_en3.mds;Loading ofn access point;Shows quantity of passes through access points
+GROUP:Features
+CUBE:0;sample_3.mdc;Simple cube;Example shows data in cross-table. The further examples will represent various ways of transformation of this cross-table. 
+CUBE:0;sample_4.mdc;Sorting by data;Example shows sorting cross-table on value of a measure "Price" 
+CUBE:0;sample_5.mdc;Desc sorting by value of axes;Example shows function of sorting of all three dimensions on decrease.
+CUBE:0;sample_6.mdc;Highlight of data;Example shows function changing of values color. Values of measures "Price" and " Work price "> = 1000 are displayed red, and <= 100 dark blue. 
+CUBE:0;sample_7.mdc;Hide zero;Example shows of exception of empty rows. Values " Work price " for elements "Antifreeze", " Motor oil " are excluded, etc. 
+CUBE:0;sample_8.mdc;Percent;Example shows function display of percent on group for measures "Price" and " Work price ".
+CUBE:0;sample_11.mdc;Measures in rows;Example shows full turn cross-table from the first example.Measure are displayed in lines. 
+CUBE:0;sample_12.mdc;Without Measures;Example shows a cross-table without measures in rows/columns. Such cross-table cannot display data.
+CUBE:0;sample_13.mdc;Filtration;Example shows a filtration of values of dimensions. Dimension "Category" is limited only by an element "Consumption", and value  "shop" is excluded from measurement "Seller". 
+CUBE:0;sample_en14.mdc;Date and Time in measures;Example shows using of Time in measures. In the given example time of arrival and leaving of employees according to the access received from the monitoring system is deduced. For this purpose functions the minimal value and the maximal value are used
+GROUP:Integration with FastReport 
+CUBE:3;sample_10.mdc;The simple report;Example shows work with cross-table in the generator of reports FastReport.
+GROUP:New properties
+CUBE:0;sales_en.mdc;New properties;Examples that demonstrates use of new properties.
+SCHEMA:0;first_value_en.mds;"First value";New aggregate function "First value" and "Count of Unique".
+SCHEMA:0;first_value_en.mds;"Count of Unique";New aggregate function "First value" and "Count of Unique".
+SCHEMA:0;text_measure_en.mds;Text measure;Using text calculated measure.
+SCHEMA:0;list_prod_en.mds;Detail records in the script;Using values of detail records in the script for calculated measures.
+LANG:FIELDSORDER=Fields order
+LANG:USECHARTEVENT=Use events
+NEWINDEMO:New in the demo
+NEWINDEMO:Using paint style in the grid (first step). See "Cross table" tab - "Grid style".
+NEWINDEMO:Printing chart in report. See "Cross table" and "Chart" tabs.
+NEWINDEMO:+New aggregate function "Count of Unique". See examples.
+NEWINDEMO:+New aggregate function "First value". See examples.
+NEWINDEMO:+Using text measure. See examples.
+NEWINDEMO:+Using values of detail records in the script for calculated measures. See examples.
+NEWINDEMO:+Export of cube/cube data to the following XML formats: XML for Analysis, xml-msdata (.Net DataSet), ms rowset (ADO), DataPacket (ClientDataset). See export.
+NEWINDEMO:+Using events to format chart. See "Chart" tab.
+NEWINDEMO:+Properties TfcSlice.FieldsOrder: type of order in the Field List (by Field Name, by Field Caption, by order in DataSet, by event OnFieldsListSortCompare). See "Cross table" tab - "Slice options".

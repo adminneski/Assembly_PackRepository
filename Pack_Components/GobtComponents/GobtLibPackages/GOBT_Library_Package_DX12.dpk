@@ -1,0 +1,70 @@
+package GOBT_Library_Package_DX12;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'GOBT Library'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vclimg,
+  designide,
+  dbrtl,
+  vcldb,
+  vclwinx,
+  dsnap,
+  VclSmp;
+
+contains
+  Gobt_Register in '..\Gobt_Register.pas',
+  Gobt_ButtonHint in '..\Gobt_ButtonHint.pas',
+  Gobt_ButtonAdvanced in '..\Gobt_ButtonAdvanced.pas',
+  EXGDIP in '..\EXGDIP.pas',
+  EXGDIPicture in '..\EXGDIPicture.pas',
+  Gobt_Styles in '..\Gobt_Styles.pas',
+  EXGDIPictureDE in '..\EXGDIPictureDE.pas',
+  Gobt_ImageAdvanced in '..\Gobt_ImageAdvanced.pas',
+  Gobt_BlockProgressBar in '..\Gobt_BlockProgressBar.pas',
+  Gobt_ProgressModern in '..\Gobt_ProgressModern.pas',
+  Gobt_ProgressModernColors in '..\Gobt_ProgressModernColors.pas',
+  Gobt_DBToggleSwitch in '..\Gobt_DBToggleSwitch.pas',
+  Gobt_TabEnterBlur in '..\Gobt_TabEnterBlur.pas',
+  Gobt_DirSelected in '..\Gobt_DirSelected.pas',
+  Gobt_DBComboEdit in '..\Gobt_DBComboEdit.pas',
+  Gobt_CurrencyEdit in '..\Gobt_CurrencyEdit.pas',
+  Gobt_DBCheckBoxStr in '..\Gobt_DBCheckBoxStr.pas',
+  Gobt_DBCurrencyEdit in '..\Gobt_DBCurrencyEdit.pas',
+  Gobt_Gradient in '..\Gobt_Gradient.pas',
+  Gobt_StatusBarPro in '..\Gobt_StatusBarPro.pas',
+  Gobt_StatusBarProDE in '..\Gobt_StatusBarProDE.pas',
+  Gobt_WebLabel in '..\Gobt_WebLabel.pas',
+  Gobt_Encryp in '..\Gobt_Encryp.pas',
+  Gobt_BoxTitle in '..\Gobt_BoxTitle.pas',
+  Gobt_CategoryPanelGroup in '..\Gobt_CategoryPanelGroup.pas',
+  Gobt_PageControl in '..\Gobt_PageControl.pas';
+
+end.

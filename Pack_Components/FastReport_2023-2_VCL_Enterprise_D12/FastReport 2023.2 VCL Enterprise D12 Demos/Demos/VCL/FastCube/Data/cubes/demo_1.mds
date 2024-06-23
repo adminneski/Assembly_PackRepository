@@ -1,0 +1,70 @@
+<?xml version="1.1" encoding="utf-8"?>
+<slice version="2" timestamp="04.12.2011 16:16:38">
+  <fields>
+    <field name="orderno" caption="orderno" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="SaleDate" caption="SaleDate" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="ShipDate" caption="ShipDate" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="ShipVIA" caption="ShipVIA" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Terms" caption="Terms" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="PaymentMethod" caption="PaymentMethod" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="partno" caption="partno" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Description" caption="Description" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="PartNo" caption="PartNo" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="qty" caption="qty" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="custno" caption="custno" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Company" caption="Company" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Addr1" caption="Addr1" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Addr2" caption="Addr2" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="City" caption="City" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="State" caption="State" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Zip" caption="Zip" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Country" caption="Country" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Phone" caption="Phone" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="FAX" caption="FAX" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="TaxRate" caption="TaxRate" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Contact" caption="Contact" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="LastInvoiceDate" caption="LastInvoiceDate" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="empno" caption="empno" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="LastName" caption="LastName" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="FirstName" caption="FirstName" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="PhoneExt" caption="PhoneExt" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="HireDate" caption="HireDate" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Salary" caption="Salary" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="Name" caption="Name" Width="0" Height="0" PopUpWidth="120"/>
+  </fields>
+  <page_fields>
+    <fields/>
+  </page_fields>
+  <xaxis_fields GrandTotalPosition="fctp_Before" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields/>
+    <AdditionalGrandTotals/>
+  </xaxis_fields>
+  <yaxis_fields GrandTotalPosition="fctp_Before" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields>
+      <field name="Company" caption="Company" alignment="taLeftJustify" captionwidth="00" field_name="Company" SortDirection="fcsd_Asc" TotalPosition="fctp_Before" UseTotalPositionFromMeasure="0">
+        <display_format decimal_separator="," format_str="" kind="fkText" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <AdditionalTotals/>
+      </field>
+      <field name="orderno" caption="orderno" alignment="taLeftJustify" captionwidth="00" field_name="orderno" SortDirection="fcsd_Asc" TotalPosition="fctp_Hide" UseTotalPositionFromMeasure="0">
+        <display_format decimal_separator="," format_str="%2.2n" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <AdditionalTotals/>
+      </field>
+      <field name="empno" caption="empno" alignment="taLeftJustify" captionwidth="00" field_name="empno" SortDirection="fcsd_Asc" TotalPosition="fctp_Before" UseTotalPositionFromMeasure="0">
+        <display_format decimal_separator="," format_str="%g" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <AdditionalTotals/>
+      </field>
+    </fields>
+    <AdditionalGrandTotals/>
+  </yaxis_fields>
+  <measure_fields caption="Показатели" captionwidth="00" Region="X" Position="1">
+    <fields>
+      <field name="qty" caption="qty" alignment="taRightJustify" captionwidth="00" field_name="qty" AgrFunc="af_Sum" Visible="-1" DisplayAs="da_Value" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="-1" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%g" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS/>
+      </field>
+    </fields>
+  </measure_fields>
+  <selection col="3" row="6" measure="0"/>
+  <options HideColZeros="0" HideRowZeros="0"/>
+  <groups version="2" timestamp="04.12.2011 16:16:38"/>
+</slice>

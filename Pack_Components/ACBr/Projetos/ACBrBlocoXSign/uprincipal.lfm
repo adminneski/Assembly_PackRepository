@@ -1,0 +1,411 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 437
+  Height = 426
+  Top = 253
+  Width = 857
+  ActiveControl = PageControl1
+  Caption = 'ACBrBlocoX'
+  ClientHeight = 426
+  ClientWidth = 857
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 426
+    Top = 0
+    Width = 857
+    ActivePage = tsWSBlocoX
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object tsWSBlocoX: TTabSheet
+      Caption = 'WebService BlocoX'
+      ClientHeight = 398
+      ClientWidth = 849
+      object pnComandos: TPanel
+        Left = 0
+        Height = 398
+        Top = 0
+        Width = 248
+        Align = alLeft
+        ClientHeight = 398
+        ClientWidth = 248
+        TabOrder = 0
+        object btTransmitirArq: TButton
+          AnchorSideLeft.Control = pnComandos
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = pnComandos
+          Left = 24
+          Height = 25
+          Top = 21
+          Width = 200
+          BorderSpacing.Top = 20
+          Caption = 'Transmitir Arquivo'
+          OnClick = btTransmitirArqClick
+          TabOrder = 0
+        end
+        object btCancelarArq: TButton
+          AnchorSideLeft.Control = btConsultarProcessArq
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = btConsultarProcessArq
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 25
+          Top = 101
+          Width = 200
+          BorderSpacing.Top = 15
+          Caption = 'Cancelar Arquivo'
+          OnClick = btCancelarArqClick
+          TabOrder = 1
+        end
+        object btConsultarHistArq: TButton
+          AnchorSideLeft.Control = btCancelarArq
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = btCancelarArq
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 25
+          Top = 141
+          Width = 200
+          BorderSpacing.Top = 15
+          Caption = 'Consultar Histórico Arq.'
+          OnClick = btConsultarHistArqClick
+          TabOrder = 2
+        end
+        object btConsultarPendContrib: TButton
+          AnchorSideLeft.Control = btConsultarHistArq
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = btConsultarHistArq
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 25
+          Top = 181
+          Width = 200
+          BorderSpacing.Top = 15
+          Caption = 'Consultar Pendências Contrib.'
+          OnClick = btConsultarPendContribClick
+          TabOrder = 3
+        end
+        object btConsultarPendDesenvolvedor: TButton
+          AnchorSideLeft.Control = btConsultarPendContrib
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = btConsultarPendContrib
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 25
+          Top = 221
+          Width = 200
+          BorderSpacing.Top = 15
+          Caption = 'Consultar Pendências Dev. Paf-ECF'
+          OnClick = btConsultarPendDesenvolvedorClick
+          TabOrder = 4
+        end
+        object btConsultarProcessArq: TButton
+          AnchorSideLeft.Control = btTransmitirArq
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = btTransmitirArq
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 25
+          Top = 61
+          Width = 200
+          BorderSpacing.Top = 15
+          Caption = 'Consultar Processamento Arq.'
+          OnClick = btConsultarProcessArqClick
+          TabOrder = 5
+        end
+        object btDownloadArq: TButton
+          AnchorSideLeft.Control = btConsultarPendDesenvolvedor
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = btConsultarPendDesenvolvedor
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 25
+          Top = 261
+          Width = 200
+          BorderSpacing.Top = 15
+          Caption = 'Download Arquivo'
+          OnClick = btDownloadArqClick
+          TabOrder = 6
+        end
+        object btListarArquivos: TButton
+          AnchorSideLeft.Control = btDownloadArq
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = btDownloadArq
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 25
+          Top = 301
+          Width = 200
+          BorderSpacing.Top = 15
+          Caption = 'Listar Arquivos'
+          OnClick = btListarArquivosClick
+          TabOrder = 7
+        end
+        object btReprocessarArq: TButton
+          AnchorSideLeft.Control = btListarArquivos
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Control = btListarArquivos
+          AnchorSideTop.Side = asrBottom
+          Left = 24
+          Height = 25
+          Top = 341
+          Width = 200
+          BorderSpacing.Top = 15
+          Caption = 'Reprocessar Arquivo'
+          OnClick = btReprocessarArqClick
+          TabOrder = 8
+        end
+      end
+      object Panel1: TPanel
+        Left = 248
+        Height = 398
+        Top = 0
+        Width = 601
+        Align = alClient
+        ClientHeight = 398
+        ClientWidth = 601
+        TabOrder = 1
+        object mmRetornoBlocoX: TMemo
+          Left = 1
+          Height = 396
+          Top = 1
+          Width = 599
+          Align = alClient
+          TabOrder = 0
+        end
+      end
+    end
+    object tsConfiguracao: TTabSheet
+      Caption = 'Configurações'
+      ClientHeight = 398
+      ClientWidth = 849
+      object gbProxy: TGroupBox
+        AnchorSideTop.Control = edtCertificado
+        AnchorSideTop.Side = asrBottom
+        Left = 15
+        Height = 132
+        Top = 76
+        Width = 503
+        BorderSpacing.Top = 20
+        Caption = 'Proxy'
+        ClientHeight = 112
+        ClientWidth = 499
+        TabOrder = 0
+        object lblProxyHost: TLabel
+          AnchorSideLeft.Control = edProxyHost
+          AnchorSideBottom.Control = edProxyHost
+          Left = 16
+          Height = 15
+          Top = 9
+          Width = 25
+          Anchors = [akLeft, akBottom]
+          Caption = 'Host'
+          ParentColor = False
+        end
+        object edProxyHost: TEdit
+          Left = 16
+          Height = 23
+          Top = 24
+          Width = 299
+          TabOrder = 0
+        end
+        object lblProxyPorta: TLabel
+          AnchorSideLeft.Control = edProxyPorta
+          AnchorSideBottom.Control = edProxyPorta
+          Left = 335
+          Height = 15
+          Top = 9
+          Width = 28
+          Anchors = [akLeft, akBottom]
+          Caption = 'Porta'
+          ParentColor = False
+        end
+        object lblProxyUser: TLabel
+          AnchorSideLeft.Control = edProxyUser
+          AnchorSideBottom.Control = edProxyUser
+          Left = 16
+          Height = 15
+          Top = 57
+          Width = 40
+          Anchors = [akLeft, akBottom]
+          Caption = 'Usuario'
+          ParentColor = False
+        end
+        object edProxyUser: TEdit
+          Left = 16
+          Height = 23
+          Top = 72
+          Width = 299
+          TabOrder = 2
+        end
+        object lblProxySenha: TLabel
+          AnchorSideLeft.Control = edProxySenha
+          AnchorSideBottom.Control = edProxySenha
+          Left = 335
+          Height = 15
+          Top = 57
+          Width = 32
+          Anchors = [akLeft, akBottom]
+          Caption = 'Senha'
+          ParentColor = False
+        end
+        object edProxySenha: TEdit
+          AnchorSideLeft.Control = edProxyUser
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = edProxyUser
+          AnchorSideTop.Side = asrCenter
+          Left = 335
+          Height = 23
+          Top = 72
+          Width = 152
+          BorderSpacing.Left = 20
+          EchoMode = emPassword
+          PasswordChar = '*'
+          TabOrder = 3
+        end
+        object edProxyPorta: TSpinEdit
+          AnchorSideLeft.Control = edProxyHost
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = edProxyHost
+          AnchorSideTop.Side = asrCenter
+          Left = 335
+          Height = 23
+          Top = 24
+          Width = 152
+          BorderSpacing.Left = 20
+          MaxValue = 999999
+          TabOrder = 1
+        end
+      end
+      object edtCertificado: TEdit
+        Left = 30
+        Height = 23
+        Top = 33
+        Width = 269
+        Font.Color = clBlue
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 1
+      end
+      object lbCertificado: TLabel
+        AnchorSideLeft.Control = edtCertificado
+        AnchorSideBottom.Control = edtCertificado
+        Left = 30
+        Height = 15
+        Top = 18
+        Width = 58
+        Anchors = [akLeft, akBottom]
+        Caption = 'Certificado'
+        Font.Color = clMaroon
+        ParentColor = False
+        ParentFont = False
+      end
+      object btnBuscarCertificado: TSpeedButton
+        AnchorSideLeft.Control = edtCertificado
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = edtCertificado
+        AnchorSideTop.Side = asrCenter
+        Left = 299
+        Height = 23
+        Top = 33
+        Width = 31
+        Caption = '...'
+        OnClick = btnBuscarCertificadoClick
+      end
+      object edtSenhaCertificado: TEdit
+        AnchorSideLeft.Control = btnBuscarCertificado
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = btnBuscarCertificado
+        AnchorSideTop.Side = asrCenter
+        Left = 350
+        Height = 23
+        Top = 33
+        Width = 153
+        BorderSpacing.Left = 20
+        EchoMode = emPassword
+        Font.Color = clBlue
+        ParentFont = False
+        PasswordChar = '*'
+        TabOrder = 2
+      end
+      object lbSenhaCertificado: TLabel
+        AnchorSideLeft.Control = edtSenhaCertificado
+        AnchorSideBottom.Control = edtSenhaCertificado
+        Left = 350
+        Height = 15
+        Top = 18
+        Width = 32
+        Anchors = [akLeft, akBottom]
+        Caption = 'Senha'
+        Font.Color = clMaroon
+        ParentColor = False
+        ParentFont = False
+      end
+      object rbtTipoCapicom: TRadioButton
+        AnchorSideLeft.Control = edtSenhaCertificado
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = lbSenhaCertificado
+        Left = 523
+        Height = 19
+        Top = 18
+        Width = 68
+        BorderSpacing.Left = 20
+        Caption = 'Capicom'
+        Checked = True
+        Font.Color = clMaroon
+        ParentFont = False
+        TabOrder = 3
+        TabStop = True
+      end
+      object rbtTipoOpenSSL: TRadioButton
+        AnchorSideLeft.Control = rbtTipoCapicom
+        AnchorSideTop.Control = rbtTipoCapicom
+        AnchorSideTop.Side = asrBottom
+        Left = 523
+        Height = 19
+        Top = 37
+        Width = 67
+        Caption = 'OpenSSL'
+        Font.Color = clMaroon
+        ParentFont = False
+        TabOrder = 4
+      end
+    end
+  end
+  object ACBrEnterTab1: TACBrEnterTab
+    EnterAsTab = True
+    Left = 216
+    Top = 200
+  end
+  object OpenDialog1: TOpenDialog
+    Title = 'Abrir arquivo de Certificado'
+    DefaultExt = '.pfx'
+    Filter = 'Arquivos de certificado|*.pfx|Arquivos XML|*.xml|Arquivos TXT|*.txt|Todos os arquivos|*.*'
+    Options = [ofNoChangeDir, ofEnableSizing, ofViewDetail]
+    Left = 128
+    Top = 200
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 40
+    Top = 200
+  end
+  object ACBrBlocoX1: TACBrBlocoX
+    Configuracoes.VersaoER = erv0205
+    Configuracoes.Geral.SSLLib = libCustom
+    Configuracoes.Geral.SSLCryptLib = cryNone
+    Configuracoes.Geral.SSLHttpLib = httpWinINet
+    Configuracoes.Geral.SSLXmlSignLib = xsNone
+    Configuracoes.Geral.FormatoAlerta = 'TAG:%TAGNIVEL% ID:%ID%/%TAG%(%DESCRICAO%) - %MSG%.'
+    Configuracoes.WebServices.UF = 'SP'
+    Configuracoes.WebServices.AguardarConsultaRet = 0
+    Configuracoes.WebServices.IntervaloTentativas = 5000
+    Configuracoes.WebServices.Salvar = True
+    Configuracoes.WebServices.TimeOut = 500000
+    Configuracoes.WebServices.QuebradeLinha = '|'
+    Left = 312
+    Top = 200
+  end
+end

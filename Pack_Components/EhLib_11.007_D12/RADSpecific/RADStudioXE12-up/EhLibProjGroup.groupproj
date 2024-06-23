@@ -1,0 +1,144 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AB2B7C12-60EF-4597-A33F-D68B77057500}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="EhLib.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DclEhLib.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="EhLibADODataDrivers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DclEhLibADODataDrivers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="EhLibDBXDataDrivers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DclEhLibDBXDataDrivers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="EhLibIBXDataDrivers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DclEhLibIBXDataDrivers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="EhLibBDEDataDrivers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DclEhLibBDEDataDrivers.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="EhLib">
+        <MSBuild Projects="EhLib.dproj"/>
+    </Target>
+    <Target Name="EhLib:Clean">
+        <MSBuild Projects="EhLib.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EhLib:Make">
+        <MSBuild Projects="EhLib.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DclEhLib">
+        <MSBuild Projects="DclEhLib.dproj"/>
+    </Target>
+    <Target Name="DclEhLib:Clean">
+        <MSBuild Projects="DclEhLib.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DclEhLib:Make">
+        <MSBuild Projects="DclEhLib.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EhLibADODataDrivers">
+        <MSBuild Projects="EhLibADODataDrivers.dproj"/>
+    </Target>
+    <Target Name="EhLibADODataDrivers:Clean">
+        <MSBuild Projects="EhLibADODataDrivers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EhLibADODataDrivers:Make">
+        <MSBuild Projects="EhLibADODataDrivers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DclEhLibADODataDrivers">
+        <MSBuild Projects="DclEhLibADODataDrivers.dproj"/>
+    </Target>
+    <Target Name="DclEhLibADODataDrivers:Clean">
+        <MSBuild Projects="DclEhLibADODataDrivers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DclEhLibADODataDrivers:Make">
+        <MSBuild Projects="DclEhLibADODataDrivers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EhLibDBXDataDrivers">
+        <MSBuild Projects="EhLibDBXDataDrivers.dproj"/>
+    </Target>
+    <Target Name="EhLibDBXDataDrivers:Clean">
+        <MSBuild Projects="EhLibDBXDataDrivers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EhLibDBXDataDrivers:Make">
+        <MSBuild Projects="EhLibDBXDataDrivers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DclEhLibDBXDataDrivers">
+        <MSBuild Projects="DclEhLibDBXDataDrivers.dproj"/>
+    </Target>
+    <Target Name="DclEhLibDBXDataDrivers:Clean">
+        <MSBuild Projects="DclEhLibDBXDataDrivers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DclEhLibDBXDataDrivers:Make">
+        <MSBuild Projects="DclEhLibDBXDataDrivers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EhLibIBXDataDrivers">
+        <MSBuild Projects="EhLibIBXDataDrivers.dproj"/>
+    </Target>
+    <Target Name="EhLibIBXDataDrivers:Clean">
+        <MSBuild Projects="EhLibIBXDataDrivers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EhLibIBXDataDrivers:Make">
+        <MSBuild Projects="EhLibIBXDataDrivers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DclEhLibIBXDataDrivers">
+        <MSBuild Projects="DclEhLibIBXDataDrivers.dproj"/>
+    </Target>
+    <Target Name="DclEhLibIBXDataDrivers:Clean">
+        <MSBuild Projects="DclEhLibIBXDataDrivers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DclEhLibIBXDataDrivers:Make">
+        <MSBuild Projects="DclEhLibIBXDataDrivers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EhLibBDEDataDrivers">
+        <MSBuild Projects="EhLibBDEDataDrivers.dproj"/>
+    </Target>
+    <Target Name="EhLibBDEDataDrivers:Clean">
+        <MSBuild Projects="EhLibBDEDataDrivers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EhLibBDEDataDrivers:Make">
+        <MSBuild Projects="EhLibBDEDataDrivers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DclEhLibBDEDataDrivers">
+        <MSBuild Projects="DclEhLibBDEDataDrivers.dproj"/>
+    </Target>
+    <Target Name="DclEhLibBDEDataDrivers:Clean">
+        <MSBuild Projects="DclEhLibBDEDataDrivers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DclEhLibBDEDataDrivers:Make">
+        <MSBuild Projects="DclEhLibBDEDataDrivers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="EhLib;DclEhLib;EhLibADODataDrivers;DclEhLibADODataDrivers;EhLibDBXDataDrivers;DclEhLibDBXDataDrivers;EhLibIBXDataDrivers;DclEhLibIBXDataDrivers;EhLibBDEDataDrivers;DclEhLibBDEDataDrivers"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="EhLib:Clean;DclEhLib:Clean;EhLibADODataDrivers:Clean;DclEhLibADODataDrivers:Clean;EhLibDBXDataDrivers:Clean;DclEhLibDBXDataDrivers:Clean;EhLibIBXDataDrivers:Clean;DclEhLibIBXDataDrivers:Clean;EhLibBDEDataDrivers:Clean;DclEhLibBDEDataDrivers:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="EhLib:Make;DclEhLib:Make;EhLibADODataDrivers:Make;DclEhLibADODataDrivers:Make;EhLibDBXDataDrivers:Make;DclEhLibDBXDataDrivers:Make;EhLibIBXDataDrivers:Make;DclEhLibIBXDataDrivers:Make;EhLibBDEDataDrivers:Make;DclEhLibBDEDataDrivers:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

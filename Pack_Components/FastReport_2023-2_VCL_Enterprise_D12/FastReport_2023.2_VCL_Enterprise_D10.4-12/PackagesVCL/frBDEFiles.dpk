@@ -1,0 +1,45 @@
+package frBDEFiles;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'FastReport VCL BDE Components rtl'}
+{$LIBSUFFIX AUTO}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  bdertl,
+  frReportFiles;
+
+contains
+  fs_ibdertti in '..\Sources\FastScript\VCL\Sources\fs_ibdertti.pas',
+  fqbBDEEngine in '..\Sources\FastQueryBuilder\VCL\Sources\fqbBDEEngine.pas',
+  frxBDEComponents in '..\Sources\FastReport\VCL\Sources\frxBDEComponents.pas',
+  frxBDEEditor in '..\Sources\FastReport\VCL\Sources\frxBDEEditor.pas',
+  frxBDERTTI in '..\Sources\FastReport\VCL\Sources\frxBDERTTI.pas';
+
+end.

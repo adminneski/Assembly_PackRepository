@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="14">
+      <Unit0>
+        <Filename Value="ACBrADRCST_Demo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="47" Y="22"/>
+        <UsageCount Value="222"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="ufrmPrincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="38"/>
+        <CursorPos X="3" Y="43"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCSTReg.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
+        <UsageCount Value="114"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST_Blocos.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="50"/>
+        <CursorPos X="3" Y="76"/>
+        <UsageCount Value="100"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="151"/>
+        <CursorPos Y="185"/>
+        <UsageCount Value="110"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST_Bloco0.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="66"/>
+        <CursorPos Y="90"/>
+        <UsageCount Value="112"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST_Bloco0_Class.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="69"/>
+        <CursorPos X="3" Y="50"/>
+        <UsageCount Value="100"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCSTConversao.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="25" Y="36"/>
+        <UsageCount Value="96"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST_Bloco1_Class.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="580"/>
+        <CursorPos X="16" Y="610"/>
+        <UsageCount Value="110"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST_Bloco1.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="140"/>
+        <CursorPos X="63" Y="166"/>
+        <UsageCount Value="110"/>
+        <Bookmarks Count="3">
+          <Item0 Y="1084" ID="9"/>
+          <Item1 X="3" Y="1063" ID="8"/>
+          <Item2 X="3" Y="852" ID="7"/>
+        </Bookmarks>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST_Bloco9.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="64" Y="52"/>
+        <UsageCount Value="120"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST_Bloco9_Class.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="80"/>
+        <CursorPos X="75" Y="95"/>
+        <UsageCount Value="120"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\..\..\Fontes\ACBrBoleto\FC\Fortes\ACBrBoletoFCFortesFr.pas"/>
+        <ComponentName Value="ACBRBoletoFCFortesFr"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="74" Y="7"/>
+        <UsageCount Value="31"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ADRCST.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1260"/>
+        <UsageCount Value="6"/>
+      </Unit13>
+    </Units>
+    <JumpHistory Count="2" HistoryIndex="1">
+      <Position1>
+        <Filename Value="ufrmPrincipal.pas"/>
+        <Caret Line="85" TopLine="62"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ufrmPrincipal.pas"/>
+        <Caret Line="193" Column="3" TopLine="187"/>
+      </Position2>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\..\..\Fontes\ACBrTXT\ACBrADRCST\ACBrADRCST.pas"/>
+        <Line Value="365"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

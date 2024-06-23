@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="ProjACBrLibComumTest"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="ACBrOpenSSL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="ACBrComum"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="fpcunittestrunner"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="LCL"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="FCL"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="ProjACBrLibComumTest.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="acbrlibcomumtest.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ACBrLibComumTest"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\Fontes\Comum\ACBrLibResposta.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="ProjACBrLibComumTest"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir);..\..\Fontes\Comum"/>
+      <OtherUnitFiles Value="..\..\Fontes\Comum;..\..\Fontes\BAL;..\..\Fontes\Boleto;..\..\Fontes\CEP;..\..\Fontes\ConsultaCNPJ;..\..\Fontes\CTe;..\..\Fontes\eSocial;..\..\Fontes\GTIN;..\..\Fontes\IBGE;..\..\Fontes\Mail;..\..\Fontes\MDFe;..\..\Fontes\NCMs;..\..\Fontes\NFe;..\..\Fontes\NFSe;..\..\Fontes\PIXCD;..\..\Fontes\PosPrinter;..\..\Fontes\Reinf;..\..\Fontes\SAT"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="5">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EResNotFound"/>
+      </Item4>
+      <Item5>
+        <Name Value="EAssertionFailedError"/>
+      </Item5>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

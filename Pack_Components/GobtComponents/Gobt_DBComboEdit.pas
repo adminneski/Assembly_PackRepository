@@ -1,0 +1,1799 @@
+{ ******************************************************* }
+{ }
+{ Delphi VCL Extensions (RX) }
+{ }
+{ Copyright (c) 1995, 1996 AO ROSNO }
+{ Copyright (c) 1997, 1998 Master-Bank }
+{ }
+{ Patched by Polaris Software }
+{ ******************************************************* }
+
+unit Gobt_DBComboEdit;
+
+interface
+
+{$I GOBTLIB.INC}
+
+uses
+  Windows, Classes,
+  StdCtrls, Controls, Messages, SysUtils, Forms, Graphics, Menus, Buttons,
+  Dialogs, FileCtrl, Mask, System.Variants, Vcl.DBCtrls, Data.DB,
+  Datasnap.DBClient, Vcl.DBGrids, System.UITypes, System.Math,
+  Generics.Collections, System.Rtti, Vcl.ExtCtrls;
+
+//  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+//  FireDAC.Stan.Error,
+//  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Comp.DataSet,
+//  FireDAC.Comp.Client,
+
+
+const
+  scAltDown = scAlt + vk_Down;
+  DefEditBtnWidth = 26;
+  DefEditDisplayWidth = 300;
+
+type
+
+{$IFDEF WIN32}
+  TFileExt = type string;
+{$ENDIF}
+  { TPopupWindow }
+  TCloseUpEvent = procedure(Sender: TObject; Accept: Boolean) of object;
+  TPopupAlign = (epaRight, epaLeft);
+
+  TPopupWindow = class(TCustomControl)
+  private
+    FEditor: TWinControl;
+    FCloseUp: TCloseUpEvent;
+    procedure WMMouseActivate(var Message: TMessage); message WM_MOUSEACTIVATE;
+  protected
+    procedure CreateParams(var Params: TCreateParams); override;
+{$IFDEF WIN32}
+    function GetValue: Variant; virtual; abstract;
+    procedure SetValue(const Value: Variant); virtual; abstract;
+{$ELSE}
+    procedure CreateWnd; override;
+    function GetValue: string; virtual; abstract;
+    procedure SetValue(const Value: string); virtual; abstract;
+{$ENDIF}
+    procedure InvalidateEditor;
+    procedure PopupMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure CloseUp(Accept: Boolean); virtual;
+  public
+    constructor Create(AOwner: TComponent); override;
+    function GetPopupText: string; virtual;
+    procedure Hide;
+    procedure Show(Origin: TPoint); virtual; // Polaris
+    property OnCloseUp: TCloseUpEvent read FCloseUp write FCloseUp;
+  end;
+
+  { TCustomComboEdit }
+
+  TEditButton = class(TSpeedButton)
+  private
+    FNoAction: Boolean;
+  protected
+    procedure MouseDown(Button: TMouseButton; Shift: TShiftState;
+      X, Y: Integer); override;
+  public
+    FStandart: Boolean;
+    constructor Create(AOwner: TComponent); override;
+    procedure Click; override;
+  end;
+
+  TGlyphKind = (gkCustom, gkDefault, gkDropDown, gkEllipsis);
+
+  TGoCustomComboEdit = class(TCustomMaskEdit)
+  private
+    FBtnControl: TWinControl;
+    FOnButtonClick: TNotifyEvent;
+    FClickKey: TShortCut;
+    FReadOnly: Boolean;
+    FDirectInput: Boolean;
+    FAlwaysEnable: Boolean;
+    FAlignment: TAlignment;
+    FPopupAlign: TPopupAlign;
+    FGlyphKind: TGlyphKind;
+    procedure SetEditRect;
+    procedure RecreateGlyph;
+    procedure UpdateBtnBounds;
+
+    procedure EditButtonClick(Sender: TObject);
+    function GetMinHeight: Integer;
+    function GetTextHeight: Integer;
+    function GetGlyph: TBitmap;
+    procedure SetGlyph(Value: TBitmap);
+    function GetPopupVisible: Boolean;
+    function GetNumGlyphs: TNumGlyphs;
+    procedure SetNumGlyphs(Value: TNumGlyphs);
+    function GetButtonWidth: Integer;
+    procedure SetButtonWidth(Value: Integer);
+
+    function GetButtonHint: string;
+    procedure SetButtonHint(const Value: string);
+    function GetDirectInput: Boolean;
+    procedure SetReadOnly(Value: Boolean);
+    procedure SetAlignment(Value: TAlignment);
+    function IsCustomGlyph: Boolean;
+    function BtnWidthStored: Boolean;
+
+    procedure SetGlyphKind(Value: TGlyphKind);
+    procedure CMEnabledChanged(var Message: TMessage);
+      message CM_ENABLEDCHANGED;
+    procedure CMFontChanged(var Message: TMessage); message CM_FONTCHANGED;
+    procedure CMCancelMode(var Message: TCMCancelMode); message CM_CANCELMODE;
+    procedure CMEnter(var Message: TMessage); message CM_ENTER;
+    procedure CNCtlColor(var Message: TMessage); message
+{$IFDEF WIN32} CN_CTLCOLOREDIT {$ELSE} CN_CTLCOLOR {$ENDIF};
+    procedure WMSize(var Message: TWMSize); message WM_SIZE;
+    procedure WMKillFocus(var Message: TWMKillFocus); message WM_KILLFOCUS;
+    procedure WMSetFocus(var Message: TMessage); message WM_SETFOCUS;
+    procedure WMPaste(var Message: TWMPaste); message WM_PASTE;
+    procedure WMCut(var Message: TWMCut); message WM_CUT;
+
+{$IFDEF WIN32}
+    procedure CMCtl3DChanged(var Message: TMessage); message CM_CTL3DCHANGED;
+{$ENDIF}
+  protected
+    FButton: TEditButton;
+    FPopupVisible: Boolean;
+    FFocused: Boolean;
+
+    FPopup: TCustomControl;
+    FDefNumGlyphs: TNumGlyphs;
+
+    function GetDefaultBitmap(var DestroyNeeded: Boolean): TBitmap; virtual;
+    procedure PopupDropDown(DisableEdit: Boolean); virtual;
+    procedure PopupCloseUp(Sender: TObject; Accept: Boolean); virtual;
+    procedure ShowPopup(Origin: TPoint); virtual;
+    procedure HidePopup; virtual;
+    procedure UpdatePopupVisible;
+    procedure DoChange; virtual;
+    procedure SetShowCaret;
+    procedure SetDirectInput(Value: Boolean);
+{$IFDEF WIN32}
+    function AcceptPopup(var Value: Variant): Boolean; virtual;
+    procedure AcceptValue(const Value: Variant); virtual;
+    procedure SetPopupValue(const Value: Variant); virtual;
+    function GetPopupValue: Variant; virtual;
+{$ELSE}
+    function AcceptPopup(var Value: string): Boolean; virtual;
+    procedure AcceptValue(const Value: string); virtual;
+    procedure SetPopupValue(const Value: string); virtual;
+    function GetPopupValue: string; virtual;
+{$ENDIF}
+    procedure Change; override;
+    procedure PopupChange; virtual;
+    procedure CreateParams(var Params: TCreateParams); override;
+    procedure CreateWnd; override;
+    function EditCanModify: Boolean; override;
+    function GetReadOnly: Boolean; virtual;
+    procedure KeyDown(var Key: Word; Shift: TShiftState); override;
+    procedure KeyPress(var Key: Char); override;
+    procedure MouseDown(Button: TMouseButton; Shift: TShiftState;
+      X, Y: Integer); override;
+    procedure ButtonClick; dynamic;
+    property Alignment: TAlignment read FAlignment write SetAlignment
+      default taLeftJustify;
+    property AlwaysEnable: Boolean read FAlwaysEnable write FAlwaysEnable
+      default False;
+    property Button: TEditButton read FButton;
+    property ClickKey: TShortCut read FClickKey write FClickKey default scAltDown;
+    property Glyph: TBitmap read GetGlyph write SetGlyph stored IsCustomGlyph;
+    property GlyphKind: TGlyphKind read FGlyphKind write SetGlyphKind
+      default gkCustom;
+    property ButtonWidth: Integer read GetButtonWidth write SetButtonWidth
+      stored BtnWidthStored;
+    property NumGlyphs: TNumGlyphs read GetNumGlyphs write SetNumGlyphs;
+    property ButtonHint: string read GetButtonHint write SetButtonHint;
+    property DirectInput: Boolean read GetDirectInput write SetDirectInput
+      default True;
+    property ReadOnly: Boolean read GetReadOnly write SetReadOnly default False;
+    property PopupAlign: TPopupAlign read FPopupAlign write FPopupAlign
+      default epaRight;
+    property PopupVisible: Boolean read GetPopupVisible;
+    property OnButtonClick: TNotifyEvent read FOnButtonClick
+      write FOnButtonClick;
+  public
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
+    procedure DoClick;
+    procedure SelectAll;
+  end;
+
+  { TComboEdit }
+
+  TGoComboEdit = class(TGoCustomComboEdit)
+  public
+    property Button;
+  published
+    property Align;
+    property Alignment;
+    property AutoSelect;
+    property BorderStyle;
+    property ButtonHint;
+    property CharCase;
+    property ClickKey;
+    property Color;
+    property Ctl3D;
+    property DirectInput;
+    property DragCursor;
+    property DragMode;
+    property EditMask;
+    property Enabled;
+    property Font;
+    property GlyphKind;
+    { Ensure GlyphKind is published before Glyph and ButtonWidth }
+    property Glyph;
+    property ButtonWidth;
+    property HideSelection;
+    property ShowHint;
+{$IFDEF RX_D4}
+    property Anchors;
+    property BiDiMode;
+    property Constraints;
+    property DragKind;
+    property ParentBiDiMode;
+
+{$ENDIF}
+{$IFDEF WIN32}
+{$IFNDEF VER90}
+    property ImeMode;
+    property ImeName;
+{$ENDIF}
+{$ENDIF}
+    property MaxLength;
+    property NumGlyphs;
+    property OEMConvert;
+    property ParentColor;
+    property ParentCtl3D;
+    property ParentFont;
+    property ParentShowHint;
+    property PopupMenu;
+    property ReadOnly;
+    property TabOrder;
+    property TabStop;
+    property Text;
+    property TextHint;
+    property Visible;
+    property OnButtonClick;
+    property OnChange;
+    property OnClick;
+    property OnDblClick;
+    property OnDragDrop;
+    property OnDragOver;
+    property OnEndDrag;
+    property OnEnter;
+    property OnExit;
+    property OnKeyDown;
+    property OnKeyPress;
+    property OnKeyUp;
+    property OnMouseDown;
+    property OnMouseMove;
+    property OnMouseUp;
+{$IFDEF WIN32}
+    property OnStartDrag;
+{$ENDIF}
+{$IFDEF RX_D5}
+    property OnContextPopup;
+{$ENDIF}
+{$IFDEF RX_D4}
+    property OnEndDock;
+    property OnStartDock;
+{$ENDIF}
+  end;
+
+  { TGobt_DBComboEdit }
+
+  TGoDBComboEdit = class(TGoCustomComboEdit)
+  private
+    FDataLink: TFieldDataLink;
+    FNumbersOnly: Boolean;
+{$IFDEF WIN32}
+    FCanvas: TControlCanvas;
+{$ENDIF}
+    FFocused: Boolean;
+    procedure DataChange(Sender: TObject);
+    procedure EditingChange(Sender: TObject);
+    function GetDataField: string;
+    function GetDataSource: TDataSource;
+    function GetField: TField;
+    procedure SetDataField(const Value: string);
+    procedure SetDataSource(Value: TDataSource);
+    procedure SetFocused(Value: Boolean);
+    procedure SetReadOnly(Value: Boolean);
+    procedure UpdateData(Sender: TObject);
+    procedure WMCut(var Message: TMessage); message WM_CUT;
+    procedure WMPaste(var Message: TMessage); message WM_PASTE;
+    procedure CMEnter(var Message: TCMEnter); message CM_ENTER;
+    procedure CMExit(var Message: TCMExit); message CM_EXIT;
+{$IFDEF WIN32}
+    procedure CMGetDataLink(var Message: TMessage); message CM_GETDATALINK;
+    procedure WMPaint(var Message: TWMPaint); message WM_PAINT;
+{$ENDIF}
+  protected
+    procedure Change; override;
+    function EditCanModify: Boolean; override;
+    function GetReadOnly: Boolean; override;
+    procedure KeyDown(var Key: Word; Shift: TShiftState); override;
+    procedure KeyPress(var Key: Char); override;
+    procedure Loaded; override;
+    procedure Notification(AComponent: TComponent;
+      Operation: TOperation); override;
+    procedure Reset; override;
+  public
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
+{$IFDEF RX_D4}
+    function ExecuteAction(Action: TBasicAction): Boolean; override;
+    function UpdateAction(Action: TBasicAction): Boolean; override;
+    function UseRightToLeftAlignment: Boolean; override;
+{$ENDIF}
+    property Button;
+    property Field: TField read GetField;
+  published
+    property Align;
+    property AutoSelect;
+    property BorderStyle;
+    property ButtonHint;
+    property CharCase;
+    property ClickKey;
+    property Color;
+    property Ctl3D;
+    property DataField: string read GetDataField write SetDataField;
+    property DataSource: TDataSource read GetDataSource write SetDataSource;
+    property DirectInput;
+    property DragCursor;
+    property DragMode;
+    property Enabled;
+    property Font;
+    property GlyphKind;
+    property Glyph;
+    property ButtonWidth;
+    property HideSelection;
+{$IFDEF RX_D4}
+    property Anchors;
+    property BiDiMode;
+    property Constraints;
+    property DragKind;
+    property ParentBiDiMode;
+{$ENDIF}
+{$IFDEF WIN32}
+{$IFNDEF VER90}
+    property ImeMode;
+    property ImeName;
+{$ENDIF}
+{$ENDIF}
+    property MaxLength;
+    property NumGlyphs;
+    property ParentColor;
+    property ParentCtl3D;
+    property ParentFont;
+    property ParentShowHint;
+    property PopupMenu;
+    property ReadOnly: Boolean read GetReadOnly write SetReadOnly default False;
+    property ShowHint;
+    property TabOrder;
+    property TabStop;
+    property Visible;
+    property OnButtonClick;
+    property OnChange;
+    property OnClick;
+    property OnDblClick;
+    property OnDragDrop;
+    property OnDragOver;
+    property OnEndDrag;
+    property OnEnter;
+    property OnExit;
+    property OnKeyDown;
+    property OnKeyPress;
+    property OnKeyUp;
+    property OnMouseDown;
+    property OnMouseLeave;
+    property OnMouseMove;
+    property OnMouseUp;
+    property NumbersOnly;
+{$IFDEF WIN32}
+    property OnStartDrag;
+{$ENDIF}
+{$IFDEF RX_D5}
+    property OnContextPopup;
+{$ENDIF}
+{$IFDEF RX_D4}
+    property OnEndDock;
+    property OnStartDock;
+{$ENDIF}
+  end;
+
+  // type
+  TExecDateDialog = procedure(Sender: TObject; var ADate: TDateTime;
+    var Action: Boolean) of object;
+  EComboEditError = class(Exception);
+
+function EditorTextMargins(Editor: TGoCustomComboEdit): TPoint;
+function PaintComboEdit(Editor: TGoCustomComboEdit; const AText: string;
+  AAlignment: TAlignment; StandardPaint: Boolean; var ACanvas: TControlCanvas;
+  var Message: TWMPaint): Boolean;
+
+implementation
+
+uses
+  ShellAPI, Consts;
+
+{$IFDEF WIN32}
+{$R *.RES}
+{$ENDIF}
+
+const
+  sFileBmp = 'FEDITBMP'; { Filename and directory editor button glyph }
+  sDateBmp = 'DEDITBMP'; { Date editor button glyph }
+
+  { Utility routines }
+
+function EditorTextMargins(Editor: TGoCustomComboEdit): TPoint;
+var
+  DC: HDC;
+  SaveFont: HFont;
+  I: Integer;
+  SysMetrics, Metrics: TTextMetric;
+begin
+  with Editor do
+  begin
+{$IFDEF WIN32}
+    if NewStyleControls then
+    begin
+      if BorderStyle = Forms.bsNone then
+        I := 0
+      else if Ctl3D then
+        I := 1
+      else
+        I := 2;
+      Result.X := SendMessage(Handle, EM_GETMARGINS, 0, 0) and $0000FFFF + I;
+      Result.Y := I;
+    end
+    else
+    begin
+{$ENDIF}
+      if BorderStyle = Forms.bsNone then
+        I := 0
+      else
+      begin
+        DC := GetDC(0);
+        GetTextMetrics(DC, SysMetrics);
+        SaveFont := SelectObject(DC, Font.Handle);
+        GetTextMetrics(DC, Metrics);
+        SelectObject(DC, SaveFont);
+        ReleaseDC(0, DC);
+        I := SysMetrics.tmHeight;
+        if I > Metrics.tmHeight then
+          I := Metrics.tmHeight;
+        I := I div 4;
+      end;
+      Result.X := I;
+      Result.Y := I;
+{$IFDEF WIN32}
+    end;
+{$ENDIF}
+  end;
+end;
+
+function PaintComboEdit(Editor: TGoCustomComboEdit; const AText: string;
+  AAlignment: TAlignment; StandardPaint: Boolean; var ACanvas: TControlCanvas;
+  var Message: TWMPaint): Boolean;
+var
+  AWidth, ALeft: Integer;
+{$IFNDEF RX_D10}
+  _Margins: TPoint;
+{$ENDIF}
+  R: TRect;
+  DC: HDC;
+  PS: TPaintStruct;
+  S: string;
+{$IFDEF RX_D4}
+  ExStyle: DWORD;
+const
+  AlignStyle: array [Boolean, TAlignment] of DWORD = ((WS_EX_LEFT, WS_EX_RIGHT,
+    WS_EX_LEFT), (WS_EX_RIGHT, WS_EX_LEFT, WS_EX_LEFT));
+{$ENDIF}
+begin
+  Result := True;
+  with Editor do
+  begin
+{$IFDEF RX_D4}
+    if UseRightToLeftAlignment then
+      ChangeBiDiModeAlignment(AAlignment);
+{$ENDIF}
+    if StandardPaint {$IFDEF WIN32} and not(csPaintCopy in ControlState)
+    {$ENDIF} then
+    begin
+{$IFDEF RX_D4}
+      if SysLocale.MiddleEast and HandleAllocated and (IsRightToLeft) then
+      begin { This keeps the right aligned text, right aligned }
+        ExStyle := DWORD(GetWindowLong(Handle, GWL_EXSTYLE)) and
+          (not WS_EX_RIGHT) and (not WS_EX_RTLREADING) and
+          (not WS_EX_LEFTSCROLLBAR);
+        if UseRightToLeftReading then
+          ExStyle := ExStyle or WS_EX_RTLREADING;
+        if UseRightToLeftScrollbar then
+          ExStyle := ExStyle or WS_EX_LEFTSCROLLBAR;
+        ExStyle := ExStyle or AlignStyle[UseRightToLeftAlignment, AAlignment];
+        if DWORD(GetWindowLong(Handle, GWL_EXSTYLE)) <> ExStyle then
+          SetWindowLong(Handle, GWL_EXSTYLE, ExStyle);
+      end;
+{$ENDIF RX_D4}
+      Result := False;
+      { return false if we need to use standard paint handler }
+      Exit;
+    end;
+    { Since edit controls do not handle justification unless multi-line (and
+      then only poorly) we will draw right and center justify manually unless
+      the edit has the focus. }
+    if ACanvas = nil then
+    begin
+      ACanvas := TControlCanvas.Create;
+      ACanvas.Control := Editor;
+    end;
+    DC := Message.DC;
+    if DC = 0 then
+      DC := BeginPaint(Handle, PS);
+    ACanvas.Handle := DC;
+    try
+      ACanvas.Font := Font;
+      if not Enabled and NewStyleControls and not(csDesigning in ComponentState)
+        and (ColorToRGB(Color) <> ColorToRGB(clGrayText)) then
+        ACanvas.Font.Color := clGrayText;
+      with ACanvas do
+      begin
+        R := ClientRect;
+        if {$IFDEF WIN32} not(NewStyleControls and Ctl3D) and {$ENDIF}
+          (BorderStyle = bsSingle) then
+        begin
+          Brush.Color := clWindowFrame;
+          FrameRect(R);
+          InflateRect(R, -1, -1);
+        end;
+        Brush.Color := Color;
+        S := AText;
+        AWidth := TextWidth(S);
+{$IFDEF RX_D10}
+        Editor.Margins.Left := EditorTextMargins(Editor).X;
+        Editor.Margins.Top := EditorTextMargins(Editor).Y;
+{$ELSE}
+        _Margins := EditorTextMargins(Editor);
+{$ENDIF}
+{$IFDEF RX_D10}
+        if PopupVisible then
+          ALeft := Editor.Margins.Left
+{$ELSE}
+        if PopupVisible then
+          ALeft := _Margins.X
+{$ENDIF}
+        else
+        begin
+          if ButtonWidth > 0 then
+            Inc(AWidth);
+          case AAlignment of
+            taLeftJustify:
+{$IFDEF RX_D10}
+              ALeft := Editor.Margins.Left;
+{$ELSE}
+              ALeft := _Margins.X;
+{$ENDIF}
+            taRightJustify:
+{$IFDEF RX_D10}
+              ALeft := Editor.ClientWidth - Editor.ButtonWidth - AWidth -
+                Editor.Margins.Left - 2;
+{$ELSE}
+              ALeft := ClientWidth - ButtonWidth - AWidth -
+                _Margins.X { Polaris - 2 };
+{$ENDIF}
+          else
+            ALeft := (ClientWidth - ButtonWidth - AWidth) div 2;
+          end;
+        end;
+{$IFDEF RX_D4}
+        if SysLocale.MiddleEast then
+          UpdateTextFlags;
+{$ENDIF}
+{$IFDEF RX_D10}
+        TextRect(R, ALeft, Editor.Margins.Top, S);
+{$ELSE}
+        TextRect(R, ALeft, _Margins.Y, S);
+{$ENDIF}
+      end;
+    finally
+      ACanvas.Handle := 0;
+      if Message.DC = 0 then
+        EndPaint(Handle, PS);
+    end;
+  end;
+end;
+
+{ TEditButton }
+
+constructor TEditButton.Create(AOwner: TComponent);
+begin
+  inherited Create(AOwner);
+  FStandart := True;
+{$IFDEF WIN32}
+  ControlStyle := ControlStyle + [csReplicatable];
+{$ELSE}
+  Style := bsWin31;
+{$ENDIF}
+  ParentShowHint := True;
+end;
+
+procedure TEditButton.MouseDown(Button: TMouseButton; Shift: TShiftState;
+  X, Y: Integer);
+begin
+  if (Button = mbLeft) then
+    with TGoCustomComboEdit(Owner) do
+    begin
+      FNoAction := (FPopup <> nil) and FPopupVisible;
+      if not FPopupVisible then
+      begin
+        if TabStop and CanFocus and (GetFocus <> Handle) then
+          SetFocus;
+      end
+      // else PopupCloseUp(FPopup, True);
+      else
+        PopupCloseUp(FPopup, FStandart);
+    end;
+  inherited MouseDown(Button, Shift, X, Y);
+end;
+
+procedure TEditButton.Click;
+begin
+  if not FNoAction then
+    inherited Click
+  else
+    FNoAction := False;
+end;
+
+{ TPopupWindow }
+
+constructor TPopupWindow.Create(AOwner: TComponent);
+begin
+  inherited Create(AOwner);
+  FEditor := TWinControl(AOwner);
+{$IFDEF WIN32}
+  ControlStyle := ControlStyle + [csNoDesignVisible, csReplicatable,
+    csAcceptsControls];
+{$ELSE}
+  ControlStyle := ControlStyle + [csAcceptsControls];
+{$ENDIF}
+  Ctl3D := False;
+  ParentCtl3D := False;
+  Visible := False;
+  Parent := FEditor;
+  OnMouseUp := PopupMouseUp;
+end;
+
+procedure TPopupWindow.CreateParams(var Params: TCreateParams);
+begin
+  inherited CreateParams(Params);
+  with Params do
+  begin
+    Style := WS_POPUP or WS_BORDER or WS_CLIPCHILDREN;
+{$IFDEF WIN32}
+    ExStyle := WS_EX_TOOLWINDOW;
+{$ENDIF}
+    WindowClass.Style := WindowClass.Style or CS_SAVEBITS;
+  end;
+end;
+
+{$IFNDEF WIN32}
+
+procedure TPopupWindow.CreateWnd;
+begin
+  inherited CreateWnd;
+  if (csDesigning in ComponentState) then
+    SetParent(nil);
+end;
+{$ENDIF}
+
+procedure TPopupWindow.WMMouseActivate(var Message: TMessage);
+begin
+  Message.Result := MA_NOACTIVATE;
+end;
+
+function TPopupWindow.GetPopupText: string;
+begin
+  Result := '';
+end;
+
+procedure TPopupWindow.InvalidateEditor;
+var
+  R: TRect;
+begin
+  if (FEditor is TGoCustomComboEdit) then
+  begin
+    with TGoCustomComboEdit(FEditor) do
+      SetRect(R, 0, 0, ClientWidth - FBtnControl.Width - 2, ClientHeight + 1);
+  end
+  else
+    R := FEditor.ClientRect;
+  InvalidateRect(FEditor.Handle, @R, False);
+  UpdateWindow(FEditor.Handle);
+end;
+
+procedure TPopupWindow.PopupMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  if Button = mbLeft then
+    CloseUp(PtInRect(Self.ClientRect, Point(X, Y)));
+end;
+
+procedure TPopupWindow.CloseUp(Accept: Boolean);
+begin
+  if Assigned(FCloseUp) then
+    FCloseUp(Self, Accept);
+end;
+
+procedure TPopupWindow.Hide;
+begin
+  SetWindowPos(Handle, 0, 0, 0, 0, 0, SWP_NOZORDER or SWP_NOMOVE or
+    SWP_NOSIZE or SWP_NOACTIVATE or SWP_HIDEWINDOW);
+  Visible := False;
+end;
+
+procedure TPopupWindow.Show(Origin: TPoint);
+begin
+  SetWindowPos(Handle, HWND_TOP, Origin.X, Origin.Y, 0, 0, SWP_NOACTIVATE or
+    SWP_SHOWWINDOW or SWP_NOSIZE);
+  Visible := True;
+end;
+
+{ TCustomComboEdit }
+
+constructor TGoCustomComboEdit.Create(AOwner: TComponent);
+begin
+  inherited Create(AOwner);
+{$IFDEF RX_D3}
+  ControlStyle := ControlStyle + [csCaptureMouse];
+{$ENDIF}
+  FDirectInput := True;
+  FClickKey := scAltDown;
+  FPopupAlign := epaRight;
+  FBtnControl := TWinControl.Create(Self);
+{$IFDEF WIN32}
+  with FBtnControl do
+    ControlStyle := ControlStyle + [csReplicatable];
+{$ENDIF}
+  FBtnControl.Width := DefEditBtnWidth;
+  FBtnControl.Height := 22;
+  FBtnControl.Visible := True;
+  FBtnControl.Parent := Self;
+
+  FButton := TEditButton.Create(Self);
+  FButton.SetBounds(0, 0, FBtnControl.Width, FBtnControl.Height);
+  FButton.Visible := True;
+  FButton.Parent := FBtnControl;
+  TEditButton(FButton).OnClick := EditButtonClick;
+
+  Height := 26;
+
+  FDefNumGlyphs := 1;
+  FGlyphKind := gkCustom;
+
+end;
+
+destructor TGoCustomComboEdit.Destroy;
+begin
+  FButton.OnClick := nil;
+  inherited Destroy;
+end;
+
+procedure TGoCustomComboEdit.CreateParams(var Params: TCreateParams);
+const
+  Alignments: array [TAlignment] of Longword = (ES_LEFT, ES_RIGHT, ES_CENTER);
+begin
+  inherited CreateParams(Params);
+  Params.Style := Params.Style or ES_MULTILINE or WS_CLIPCHILDREN or
+    Alignments[FAlignment];
+end;
+
+procedure TGoCustomComboEdit.CreateWnd;
+begin
+  inherited CreateWnd;
+  SetEditRect;
+end;
+
+procedure TGoCustomComboEdit.HidePopup;
+begin
+  TPopupWindow(FPopup).Hide;
+end;
+
+procedure TGoCustomComboEdit.ShowPopup(Origin: TPoint);
+begin
+  TPopupWindow(FPopup).Show(Origin);
+end;
+
+procedure TGoCustomComboEdit.PopupDropDown(DisableEdit: Boolean);
+var
+  P: TPoint;
+  Y: Integer;
+begin
+  if (FPopup <> nil) and not(ReadOnly or FPopupVisible) then
+  begin
+    P := Parent.ClientToScreen(Point(Left, Top));
+    Y := P.Y + Height;
+    if Y + FPopup.Height > Screen.Height then
+      Y := P.Y - FPopup.Height;
+    case FPopupAlign of
+      epaRight:
+        begin
+          Dec(P.X, FPopup.Width - Width);
+          if P.X < 0 then
+            Inc(P.X, FPopup.Width - Width);
+        end;
+      epaLeft:
+        begin
+          if P.X + FPopup.Width > Screen.Width then
+            Dec(P.X, FPopup.Width - Width);
+        end;
+    end;
+    if P.X < 0 then
+      P.X := 0
+    else if P.X + FPopup.Width > Screen.Width then
+      P.X := Screen.Width - FPopup.Width;
+{$IFDEF WIN32}
+    if Text <> '' then
+      SetPopupValue(Text)
+    else
+      SetPopupValue(Null);
+{$ELSE}
+    SetPopupValue(Text);
+{$ENDIF}
+    if CanFocus then
+      SetFocus;
+    ShowPopup(Point(P.X, Y));
+    FPopupVisible := True;
+    if DisableEdit then
+    begin
+      inherited ReadOnly := True;
+      HideCaret(Handle);
+    end;
+  end;
+end;
+
+procedure TGoCustomComboEdit.PopupCloseUp(Sender: TObject; Accept: Boolean);
+var
+{$IFDEF WIN32}
+  AValue: Variant;
+{$ELSE}
+  AValue: string;
+{$ENDIF}
+begin
+  if (FPopup <> nil) and FPopupVisible then
+  begin
+    if GetCapture <> 0 then
+      SendMessage(GetCapture, WM_CANCELMODE, 0, 0);
+    AValue := GetPopupValue;
+    HidePopup;
+    try
+      try
+        if CanFocus then
+        begin
+          SetFocus;
+          if GetFocus = Handle then
+            SetShowCaret;
+        end;
+      except
+        { ignore exceptions }
+      end;
+      SetDirectInput(DirectInput);
+      Invalidate;
+      if Accept and AcceptPopup(AValue) and EditCanModify then
+      begin
+        AcceptValue(AValue);
+        if FFocused then
+          inherited SelectAll;
+      end;
+    finally
+      FPopupVisible := False;
+    end;
+  end;
+end;
+
+procedure TGoCustomComboEdit.DoChange;
+begin
+  inherited Change;
+end;
+
+{$IFDEF WIN32}
+
+function TGoCustomComboEdit.GetPopupValue: Variant;
+{$ELSE}
+
+function TGoCustomComboEdit.GetPopupValue: string;
+{$ENDIF}
+begin
+  if FPopup <> nil then
+    Result := TPopupWindow(FPopup).GetValue
+  else
+    Result := '';
+end;
+
+{$IFDEF WIN32}
+
+procedure TGoCustomComboEdit.SetPopupValue(const Value: Variant);
+{$ELSE}
+
+procedure TGoCustomComboEdit.SetPopupValue(const Value: string);
+{$ENDIF}
+begin
+  if FPopup <> nil then
+    TPopupWindow(FPopup).SetValue(Value);
+end;
+
+{$IFDEF WIN32}
+
+procedure TGoCustomComboEdit.AcceptValue(const Value: Variant);
+begin
+  if Text <> VarToStr(Value) then
+  begin
+{$ELSE}
+
+procedure TGobt_CustomComboEdit.AcceptValue(const Value: string);
+begin
+  if Text <> Value then
+  begin
+{$ENDIF}
+    Text := Value;
+    Modified := True;
+    UpdatePopupVisible;
+    DoChange;
+  end;
+end;
+
+{$IFDEF WIN32}
+
+function TGoCustomComboEdit.AcceptPopup(var Value: Variant): Boolean;
+{$ELSE}
+
+function TGoCustomComboEdit.AcceptPopup(var Value: string): Boolean;
+{$ENDIF}
+begin
+  Result := True;
+end;
+
+function TGoCustomComboEdit.EditCanModify: Boolean;
+begin
+  Result := not FReadOnly;
+end;
+
+procedure TGoCustomComboEdit.Change;
+begin
+  if not PopupVisible then
+    DoChange
+  else
+    PopupChange;
+end;
+
+procedure TGoCustomComboEdit.PopupChange;
+begin
+end;
+
+type
+  TCrackWin = class(TWinControl);
+
+procedure TGoCustomComboEdit.KeyDown(var Key: Word; Shift: TShiftState);
+// Polaris
+var
+  Form: TCustomForm;
+begin
+  // Polaris
+  Form := GetParentForm(Self);
+  if (ssCtrl in Shift) then
+    case Key of
+      VK_RETURN:
+        if (Form <> nil) { and Form.KeyPreview } then
+        begin
+          TCrackWin(Form).KeyDown(Key, Shift);
+          Key := 0;
+        end;
+      VK_TAB:
+        if (Form <> nil) { and Form.KeyPreview } then
+        begin
+          TCrackWin(Form).KeyDown(Key, Shift);
+          Key := 0;
+        end;
+    end;
+
+  // Original
+  inherited KeyDown(Key, Shift);
+
+  if (FClickKey = ShortCut(Key, Shift)) and (ButtonWidth > 0) then
+  begin
+    EditButtonClick(Self);
+    Key := 0;
+  end;
+end;
+
+procedure TGoCustomComboEdit.KeyPress(var Key: Char);
+var
+  Form: TCustomForm;
+begin
+  Form := GetParentForm(Self);
+
+  // if (Key = Char(VK_RETURN)) or (Key = Char(VK_ESCAPE)) or ((KEY=#10) and PopupVisible) then
+  if (Key = Char(VK_RETURN)) or (Key = Char(VK_ESCAPE)) or
+    ((Key = #10) and PopupVisible) then
+  begin
+    if PopupVisible then
+    begin
+      // PopupCloseUp(FPopup, Key = Char(VK_RETURN));
+      PopupCloseUp(FPopup, Key <> Char(VK_ESCAPE));
+      Key := #0;
+    end
+    else
+    begin
+      { must catch and remove this, since is actually multi-line }
+      GetParentForm(Self).Perform(CM_DIALOGKEY, Byte(Key), 0);
+      if Key = Char(VK_RETURN) then
+      begin
+        inherited KeyPress(Key);
+        Key := #0;
+        Exit;
+      end;
+    end;
+  end;
+  if {$IFDEF UNICODE}CharInSet(Key, [#10, #9]){$ELSE}Key in [#10, #9]{$ENDIF} then
+  begin
+    Key := #0;
+    if (Form <> nil) { and Form.KeyPreview } then
+      TCrackWin(Form).KeyPress(Key);
+  end;
+  inherited KeyPress(Key);
+end;
+
+procedure TGoCustomComboEdit.MouseDown(Button: TMouseButton; Shift: TShiftState;
+  X, Y: Integer);
+begin
+  if (FPopup <> nil) and (Button = mbLeft) then
+  begin
+    if CanFocus then
+      SetFocus;
+    if not FFocused then
+      Exit;
+    if FPopupVisible then
+      PopupCloseUp(FPopup, False);
+    { else if (not ReadOnly or AlwaysEnable) and (not DirectInput) then
+      PopupDropDown(True); }
+  end;
+  inherited MouseDown(Button, Shift, X, Y);
+end;
+
+function TGoCustomComboEdit.GetButtonWidth: Integer;
+begin
+  Result := FButton.Width;
+end;
+
+procedure TGoCustomComboEdit.SetButtonWidth(Value: Integer);
+begin
+  if ButtonWidth <> Value then
+  begin
+    FBtnControl.Visible := Value > 1;
+    if (csCreating in ControlState) then
+    begin
+      FBtnControl.Width := Value;
+      FButton.Width := Value;
+      with FButton do
+        ControlStyle := ControlStyle - [csFixedWidth];
+      RecreateGlyph;
+    end
+    // else if (Value <> ButtonWidth) and (Value < ClientWidth) then begin
+    else if (Value <> ButtonWidth) and
+      ((Assigned(Parent) and (Value < ClientWidth)) or
+      (not Assigned(Parent) and (Value < Width))) then
+    begin
+      FButton.Width := Value;
+      with FButton do
+        ControlStyle := ControlStyle - [csFixedWidth];
+      if HandleAllocated then
+        RecreateWnd;
+      RecreateGlyph;
+    end;
+  end;
+end;
+
+function TGoCustomComboEdit.GetButtonHint: string;
+begin
+  Result := FButton.Hint;
+end;
+
+procedure TGoCustomComboEdit.SetButtonHint(const Value: string);
+begin
+  FButton.Hint := Value;
+end;
+
+function TGoCustomComboEdit.GetGlyph: TBitmap;
+begin
+  Result := FButton.Glyph;
+end;
+
+procedure TGoCustomComboEdit.SetGlyph(Value: TBitmap);
+begin
+  FButton.Glyph := Value;
+  FGlyphKind := gkCustom;
+end;
+
+function TGoCustomComboEdit.GetNumGlyphs: TNumGlyphs;
+begin
+  Result := FButton.NumGlyphs;
+end;
+
+procedure TGoCustomComboEdit.SetNumGlyphs(Value: TNumGlyphs);
+begin
+  if FGlyphKind in [gkDropDown, gkEllipsis] then
+    FButton.NumGlyphs := 1
+  else if FGlyphKind = gkDefault then
+    FButton.NumGlyphs := FDefNumGlyphs
+  else
+    FButton.NumGlyphs := Value;
+end;
+
+procedure TGoCustomComboEdit.SetEditRect;
+var
+  Loc: TRect;
+begin
+  SetRect(Loc, 0, 0, ClientWidth - FBtnControl.Width - 2, ClientHeight + 1);
+  SendMessage(Handle, EM_SETRECTNP, 0, LongInt(@Loc));
+  // SendMessage(Handle, EM_SETMARGINS, EC_RIGHTMARGIN, MakeLong(0, FBtnControl.Width));
+end;
+
+procedure TGoCustomComboEdit.UpdateBtnBounds;
+var
+  BtnRect: TRect;
+begin
+{$IFDEF WIN32}
+  if NewStyleControls then
+  begin
+    if Ctl3D and (BorderStyle = bsSingle) then
+      BtnRect := Bounds(Width - FButton.Width - 4, 0, FButton.Width, Height - 4)
+    else
+    begin
+      if BorderStyle = bsSingle then
+        BtnRect := Bounds(Width - FButton.Width - 2, 2, FButton.Width,
+          Height - 4)
+      else
+        BtnRect := Bounds(Width - FButton.Width, 0, FButton.Width, Height);
+    end;
+  end
+  else
+    BtnRect := Bounds(Width - FButton.Width, 0, FButton.Width, Height);
+{$ELSE}
+  BtnRect := Bounds(Width - FButton.Width, 0, FButton.Width, Height);
+{$ENDIF}
+  with BtnRect do
+    FBtnControl.SetBounds(Left, Top, Right - Left, Bottom - Top);
+  FButton.Height := FBtnControl.Height;
+  SetEditRect;
+end;
+
+{$IFDEF WIN32}
+
+procedure TGoCustomComboEdit.CMCtl3DChanged(var Message: TMessage);
+begin
+  inherited;
+  UpdateBtnBounds;
+end;
+{$ENDIF}
+
+procedure TGoCustomComboEdit.WMSize(var Message: TWMSize);
+var
+  MinHeight: Integer;
+begin
+  inherited;
+  if not(csLoading in ComponentState) then
+  begin
+    MinHeight := GetMinHeight;
+    { text edit bug: if size to less than MinHeight, then edit ctrl does
+      not display the text }
+    if Height < MinHeight then
+    begin
+      Height := MinHeight;
+      Exit;
+    end;
+  end
+  else
+  begin
+    if (FPopup <> nil) and (csDesigning in ComponentState) then
+      FPopup.SetBounds(0, Height + 1, 10, 10);
+  end;
+  UpdateBtnBounds;
+end;
+
+function TGoCustomComboEdit.GetTextHeight: Integer;
+var
+  DC: HDC;
+  SaveFont: HFont;
+  SysMetrics, Metrics: TTextMetric;
+begin
+  DC := GetDC(0);
+  try
+    GetTextMetrics(DC, SysMetrics);
+    SaveFont := SelectObject(DC, Font.Handle);
+    GetTextMetrics(DC, Metrics);
+    SelectObject(DC, SaveFont);
+  finally
+    ReleaseDC(0, DC);
+  end;
+  // Result := Min(SysMetrics.tmHeight, Metrics.tmHeight);
+  Result := Metrics.tmHeight;
+end;
+
+function TGoCustomComboEdit.GetMinHeight: Integer;
+var
+  I: Integer;
+begin
+  I := GetTextHeight;
+  Result := I + GetSystemMetrics(SM_CYBORDER) * 4 + 1
+  {$IFNDEF WIN32} + (I div 4) {$ENDIF};
+end;
+
+procedure TGoCustomComboEdit.UpdatePopupVisible;
+begin
+  FPopupVisible := (FPopup <> nil) and FPopup.Visible;
+end;
+
+function TGoCustomComboEdit.GetPopupVisible: Boolean;
+begin
+  Result := (FPopup <> nil) and FPopupVisible;
+end;
+
+procedure TGoCustomComboEdit.CMFontChanged(var Message: TMessage);
+begin
+  inherited;
+  if HandleAllocated then
+    SetEditRect;
+end;
+
+procedure TGoCustomComboEdit.CMEnabledChanged(var Message: TMessage);
+begin
+  inherited;
+  FButton.Enabled := Enabled;
+end;
+
+procedure TGoCustomComboEdit.CMCancelMode(var Message: TCMCancelMode);
+begin
+  if (Message.Sender <> Self) and (Message.Sender <> FPopup) and
+    (Message.Sender <> FButton) and
+    ((FPopup <> nil) and not FPopup.ContainsControl(Message.Sender)) then
+    PopupCloseUp(FPopup, False);
+end;
+
+procedure TGoCustomComboEdit.CMEnter(var Message: TMessage);
+begin
+  if AutoSelect and not(csLButtonDown in ControlState) then
+    SelectAll;
+  inherited;
+end;
+
+procedure TGoCustomComboEdit.CNCtlColor(var Message: TMessage);
+var
+  TextColor: LongInt;
+begin
+  inherited;
+  if NewStyleControls then
+  begin
+    TextColor := ColorToRGB(Font.Color);
+    if not Enabled and (ColorToRGB(Color) <> ColorToRGB(clGrayText)) then
+      TextColor := ColorToRGB(clGrayText);
+    SetTextColor(Message.WParam, TextColor);
+  end;
+end;
+
+procedure TGoCustomComboEdit.WMKillFocus(var Message: TWMKillFocus);
+begin
+  inherited;
+  FFocused := False;
+  PopupCloseUp(FPopup, False);
+end;
+
+procedure TGoCustomComboEdit.WMSetFocus(var Message: TMessage);
+begin
+  inherited;
+  FFocused := True;
+  SetShowCaret;
+end;
+
+{$IFDEF RX_D4}
+
+procedure TGoCustomComboEdit.CMBiDiModeChanged(var Message: TMessage);
+begin
+  inherited;
+  if FPopup <> nil then
+    FPopup.BiDiMode := BiDiMode;
+end;
+{$ENDIF}
+
+procedure TGoCustomComboEdit.SetShowCaret;
+const
+  CaretWidth: array [Boolean] of Byte = (1, 2);
+begin
+  CreateCaret(Handle, 0, CaretWidth[fsBold in Font.Style], GetTextHeight);
+  ShowCaret(Handle);
+end;
+
+procedure TGoCustomComboEdit.EditButtonClick(Sender: TObject);
+begin
+  if (not FReadOnly) or AlwaysEnable then
+    ButtonClick;
+end;
+
+procedure TGoCustomComboEdit.DoClick;
+begin
+  EditButtonClick(Self);
+end;
+
+procedure TGoCustomComboEdit.ButtonClick;
+begin
+  if Assigned(FOnButtonClick) then
+    FOnButtonClick(Self);
+  if FPopup <> nil then
+  begin
+    if FPopupVisible then
+      PopupCloseUp(FPopup, True)
+    else
+      PopupDropDown(True);
+  end;
+end;
+
+procedure TGoCustomComboEdit.SelectAll;
+begin
+  if DirectInput then
+    inherited SelectAll;
+end;
+
+function TGoCustomComboEdit.GetDirectInput: Boolean;
+begin
+  Result := FDirectInput;
+end;
+
+procedure TGoCustomComboEdit.SetDirectInput(Value: Boolean);
+begin
+  inherited ReadOnly := not Value or FReadOnly;
+  FDirectInput := Value;
+end;
+
+procedure TGoCustomComboEdit.WMPaste(var Message: TWMPaste);
+begin
+  if not FDirectInput or ReadOnly then
+    Exit;
+  inherited;
+end;
+
+procedure TGoCustomComboEdit.WMCut(var Message: TWMCut);
+begin
+  if not FDirectInput or ReadOnly then
+    Exit;
+  inherited;
+end;
+
+function TGoCustomComboEdit.GetReadOnly: Boolean;
+begin
+  Result := FReadOnly;
+end;
+
+procedure TGoCustomComboEdit.SetReadOnly(Value: Boolean);
+begin
+  if Value <> FReadOnly then
+  begin
+    FReadOnly := Value;
+    inherited ReadOnly := Value or not FDirectInput;
+  end;
+end;
+
+procedure TGoCustomComboEdit.SetAlignment(Value: TAlignment);
+begin
+  if FAlignment <> Value then
+  begin
+    FAlignment := Value;
+    RecreateWnd;
+  end;
+end;
+
+function TGoCustomComboEdit.BtnWidthStored: Boolean;
+begin
+  if (FGlyphKind = gkDefault) and (Glyph <> nil) then
+    Result := ButtonWidth <> Max(Glyph.Width div FButton.NumGlyphs + 6,
+      DefEditBtnWidth)
+  else if FGlyphKind = gkDropDown then
+    Result := ButtonWidth <> GetSystemMetrics(SM_CXVSCROLL)
+{$IFNDEF WIN32} + 1{$ENDIF}
+  else
+    Result := ButtonWidth <> DefEditBtnWidth;
+end;
+
+function TGoCustomComboEdit.IsCustomGlyph: Boolean;
+begin
+  Result := FGlyphKind = gkCustom;
+end;
+
+procedure TGoCustomComboEdit.SetGlyphKind(Value: TGlyphKind);
+begin
+  if FGlyphKind <> Value then
+  begin
+    FGlyphKind := Value;
+    if (FGlyphKind = gkCustom) and (csReading in ComponentState) then
+    begin
+      Glyph := nil;
+    end;
+    RecreateGlyph;
+    if (FGlyphKind = gkDefault) and (Glyph <> nil) then
+      ButtonWidth := Max(Glyph.Width div FButton.NumGlyphs + 6, FButton.Width)
+    else if FGlyphKind = gkDropDown then
+    begin
+      ButtonWidth := GetSystemMetrics(SM_CXVSCROLL){$IFNDEF WIN32} + 1{$ENDIF};
+      with FButton do
+        ControlStyle := ControlStyle + [csFixedWidth];
+    end;
+  end;
+end;
+
+function TGoCustomComboEdit.GetDefaultBitmap(var DestroyNeeded
+  : Boolean): TBitmap;
+begin
+  Result := nil;
+end;
+
+procedure TGoCustomComboEdit.RecreateGlyph;
+
+  function CreateEllipsisGlyph: TBitmap;
+  var
+    W, G, I: Integer;
+  begin
+    Result := TBitmap.Create;
+    with Result do
+      try
+        Monochrome := True;
+        Width := Max(1, FButton.Width - 6);
+        Height := 4;
+        W := 2;
+        G := (Result.Width - 3 * W) div 2;
+        if G <= 0 then
+          G := 1;
+        if G > 3 then
+          G := 3;
+        I := (Width - 3 * W - 2 * G) div 2;
+        PatBlt(Canvas.Handle, I, 1, W, W, BLACKNESS);
+        PatBlt(Canvas.Handle, I + G + W, 1, W, W, BLACKNESS);
+        PatBlt(Canvas.Handle, I + 2 * G + 2 * W, 1, W, W, BLACKNESS);
+      except
+        Free;
+        raise;
+      end;
+  end;
+
+var
+  NewGlyph: TBitmap;
+  DestroyNeeded: Boolean;
+begin
+  case FGlyphKind of
+    gkDefault:
+      begin
+        DestroyNeeded := False;
+        NewGlyph := GetDefaultBitmap(DestroyNeeded);
+        try
+          FButton.Glyph.Assign(NewGlyph);
+          NumGlyphs := FDefNumGlyphs;
+        finally
+          if DestroyNeeded then
+            NewGlyph.Destroy;
+        end;
+      end;
+    gkDropDown:
+      begin
+        FButton.Glyph.Handle := LoadBitmap(0, PChar(32738));
+        NumGlyphs := 1;
+      end;
+    gkEllipsis:
+      begin
+        NewGlyph := CreateEllipsisGlyph;
+        try
+          FButton.Glyph := NewGlyph;
+          NumGlyphs := 1;
+        finally
+          NewGlyph.Destroy;
+        end;
+      end;
+  end;
+end;
+
+{ TGobt_DBComboEdit }
+
+procedure ResetMaxLength(DBEdit: TGoDBComboEdit);
+var
+  F: TField;
+begin
+  with DBEdit do
+    if (MaxLength > 0) and (DataSource <> nil) and (DataSource.DataSet <> nil)
+    then
+    begin
+      F := DataSource.DataSet.FindField(DataField);
+      if Assigned(F) and (F.DataType = ftString) and (F.Size = MaxLength) then
+        MaxLength := 0;
+    end;
+end;
+
+constructor TGoDBComboEdit.Create(AOwner: TComponent);
+begin
+  inherited Create(AOwner);
+{$IFDEF WIN32}
+  ControlStyle := ControlStyle + [csReplicatable];
+{$ENDIF}
+  inherited ReadOnly := True;
+  FDataLink := TFieldDataLink.Create;
+  FDataLink.Control := Self;
+  FDataLink.OnDataChange := DataChange;
+  FDataLink.OnEditingChange := EditingChange;
+  FDataLink.OnUpdateData := UpdateData;
+  AlwaysEnable := True;
+end;
+
+destructor TGoDBComboEdit.Destroy;
+begin
+  FDataLink.Free;
+  FDataLink := nil;
+{$IFDEF WIN32}
+  FCanvas.Free;
+{$ENDIF}
+  inherited Destroy;
+end;
+
+procedure TGoDBComboEdit.Loaded;
+begin
+  inherited Loaded;
+  ResetMaxLength(Self);
+  if (csDesigning in ComponentState) then
+    DataChange(Self);
+end;
+
+procedure TGoDBComboEdit.Notification(AComponent: TComponent;
+  Operation: TOperation);
+begin
+  inherited Notification(AComponent, Operation);
+  if (Operation = opRemove) and (FDataLink <> nil) and (AComponent = DataSource)
+  then
+    DataSource := nil;
+end;
+
+procedure TGoDBComboEdit.KeyDown(var Key: Word; Shift: TShiftState);
+begin
+  inherited KeyDown(Key, Shift);
+  if (Key = VK_DELETE) or ((Key = VK_INSERT) and (ssShift in Shift)) then
+    FDataLink.Edit;
+end;
+
+procedure TGoDBComboEdit.KeyPress(var Key: Char);
+begin
+  inherited KeyPress(Key);
+  if (Key >= #32) and (FDataLink.Field <> nil) and
+    not FDataLink.Field.IsValidChar(Key) then
+  begin
+    MessageBeep(0);
+    Key := #0;
+  end;
+  case Key of
+    ^H, ^V, ^X, #32 .. High(Char):
+      if not FDataLink.Edit then
+        Key := #0;
+    #27:
+      begin
+        FDataLink.Reset;
+        SelectAll;
+        Key := #0;
+      end;
+  end;
+end;
+
+function TGoDBComboEdit.EditCanModify: Boolean;
+begin
+  Result := FDataLink.Edit;
+end;
+
+procedure TGoDBComboEdit.Reset;
+begin
+  FDataLink.Reset;
+  SelectAll;
+end;
+
+procedure TGoDBComboEdit.SetFocused(Value: Boolean);
+begin
+  if FFocused <> Value then
+  begin
+    FFocused := Value;
+    if (Alignment <> taLeftJustify) and not IsMasked then
+      Invalidate;
+    FDataLink.Reset;
+  end;
+end;
+
+procedure TGoDBComboEdit.Change;
+begin
+  FDataLink.Modified;
+  inherited Change;
+end;
+
+function TGoDBComboEdit.GetDataSource: TDataSource;
+begin
+  Result := FDataLink.DataSource;
+end;
+
+procedure TGoDBComboEdit.SetDataSource(Value: TDataSource);
+begin
+{$IFDEF RX_D4}
+  if not(FDataLink.DataSourceFixed and (csLoading in ComponentState)) then
+{$ENDIF}
+    FDataLink.DataSource := Value;
+{$IFDEF WIN32}
+  if Value <> nil then
+    Value.FreeNotification(Self);
+{$ENDIF}
+end;
+
+function TGoDBComboEdit.GetDataField: string;
+begin
+  Result := FDataLink.FieldName;
+end;
+
+procedure TGoDBComboEdit.SetDataField(const Value: string);
+begin
+  if not(csDesigning in ComponentState) then
+    ResetMaxLength(Self);
+  FDataLink.FieldName := Value;
+end;
+
+function TGoDBComboEdit.GetReadOnly: Boolean;
+begin
+  Result := FDataLink.ReadOnly;
+end;
+
+procedure TGoDBComboEdit.SetReadOnly(Value: Boolean);
+begin
+  FDataLink.ReadOnly := Value;
+end;
+
+function TGoDBComboEdit.GetField: TField;
+begin
+  Result := FDataLink.Field;
+end;
+
+procedure TGoDBComboEdit.DataChange(Sender: TObject);
+begin
+  if FDataLink.Field <> nil then
+  begin
+    if Alignment <> FDataLink.Field.Alignment then
+    begin
+      EditText := ''; { forces update }
+      Alignment := FDataLink.Field.Alignment;
+    end;
+    EditMask := FDataLink.Field.EditMask;
+    if not(csDesigning in ComponentState) then
+    begin
+      if (FDataLink.Field.DataType in [ftString, ftWideString]) and
+        (MaxLength = 0) then
+        MaxLength := FDataLink.Field.Size;
+    end;
+    if FFocused and FDataLink.CanModify then
+      Text := FDataLink.Field.Text
+    else
+    begin
+      EditText := FDataLink.Field.DisplayText;
+      if FDataLink.Editing then
+        Modified := True;
+    end;
+  end
+  else
+  begin
+    Alignment := taLeftJustify;
+    EditMask := '';
+    if csDesigning in ComponentState then
+      EditText := Name
+    else
+      EditText := '';
+  end;
+end;
+
+procedure TGoDBComboEdit.EditingChange(Sender: TObject);
+begin
+  inherited ReadOnly := not FDataLink.Editing;
+end;
+
+procedure TGoDBComboEdit.UpdateData(Sender: TObject);
+begin
+  ValidateEdit;
+  FDataLink.Field.Text := Text;
+end;
+
+procedure TGoDBComboEdit.WMPaste(var Message: TMessage);
+begin
+  if FDataLink.Edit then
+    inherited;
+end;
+
+procedure TGoDBComboEdit.WMCut(var Message: TMessage);
+begin
+  if FDataLink.Edit then
+    inherited;
+end;
+
+procedure TGoDBComboEdit.CMEnter(var Message: TCMEnter);
+begin
+  SetFocused(True);
+  inherited;
+  if FDataLink.CanModify then
+    inherited ReadOnly := False;
+end;
+
+procedure TGoDBComboEdit.CMExit(var Message: TCMExit);
+begin
+  try
+    FDataLink.UpdateRecord;
+  except
+    SelectAll;
+    if CanFocus then
+      SetFocus;
+    raise;
+  end;
+  SetFocused(False);
+  CheckCursor;
+  DoExit;
+end;
+
+{$IFDEF WIN32}
+
+procedure TGoDBComboEdit.WMPaint(var Message: TWMPaint);
+var
+  S: string;
+begin
+  if (csPaintCopy in ControlState) and (FDataLink.Field <> nil) then
+  begin
+    S := FDataLink.Field.DisplayText;
+    case CharCase of
+      ecUpperCase:
+        S := AnsiUpperCase(S);
+      ecLowerCase:
+        S := AnsiLowerCase(S);
+    end;
+  end
+  else
+    S := EditText;
+  if not PaintComboEdit(Self, S, Alignment, True, FCanvas, Message) then
+    inherited;
+
+end;
+
+procedure TGoDBComboEdit.CMGetDataLink(var Message: TMessage);
+begin
+  Message.Result := Integer(FDataLink);
+end;
+{$ENDIF}
+{$IFDEF RX_D4}
+
+function TGoDBComboEdit.UseRightToLeftAlignment: Boolean;
+begin
+  Result := DBUseRightToLeftAlignment(Self, Field);
+end;
+
+function TGobt_DBComboEdit.ExecuteAction(Action: TBasicAction): Boolean;
+begin
+  Result := inherited ExecuteAction(Action) or (FDataLink <> nil) and
+    FDataLink.ExecuteAction(Action);
+end;
+
+function TGoDBComboEdit.UpdateAction(Action: TBasicAction): Boolean;
+begin
+  Result := inherited UpdateAction(Action) or (FDataLink <> nil) and
+    FDataLink.UpdateAction(Action);
+end;
+{$ENDIF}
+
+initialization
+
+finalization
+
+end.

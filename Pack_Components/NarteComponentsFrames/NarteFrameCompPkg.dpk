@@ -1,0 +1,42 @@
+package NarteFrameCompPkg;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  designide,
+  dbrtl,
+  vcldb,
+  GOBT_Library_Package_DX11;
+
+contains
+  Narte_Register in 'Narte_Register.pas',
+  Narte_Lookup in 'Narte_Lookup.pas' {FrameLookup: TFrame},
+  Narte_DBNavigator in 'Narte_DBNavigator.pas' {FrameDBNavigator: TFrame},
+  Narte_DBLookup in 'Narte_DBLookup.pas' {FrameDBLookup: TFrame};
+
+end.

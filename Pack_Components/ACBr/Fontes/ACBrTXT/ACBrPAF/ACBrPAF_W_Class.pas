@@ -1,0 +1,247 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{ Direitos Autorais Reservados (c) 2020 Daniel Simoes de Almeida               }
+{                                                                              }
+{ Colaboradores nesse arquivo: Juliomar Marchetti                              }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+
+{$I ACBr.inc}
+
+unit ACBrPAF_W_Class;
+
+interface
+
+uses SysUtils, Classes, ACBrTXTClass, ACBrPAFRegistros,
+     ACBrPAF_W;
+
+type
+
+  { TPAF_W }
+
+  TPAF_W = class(TACBrTXTClass)
+  private
+    FRegistroW1: TRegistroW1;       // FRegistroW1
+    FRegistroW2: TRegistroW2;       // FRegistroW2
+    FRegistroW3: TRegistroW3;       // FRegistroW3
+    FRegistroW4: TRegistroW4List;   // Lista de FRegistroW4
+    FRegistroW9: TRegistroW9;       // FRegistroW9
+
+    procedure CriaRegistros;
+    procedure LiberaRegistros;
+    function limpaCampo(pValor: String):String;
+    procedure WriteRegistroW2;
+    procedure WriteRegistroW3(Layout: TLayoutPAF);
+    procedure WriteRegistroW4(Layout: TLayoutPAF);
+    procedure WriteRegistroW9(Layout: TLayoutPAF);
+  public
+    constructor Create;/// Create
+    destructor Destroy; override; /// Destroy
+    procedure LimpaRegistros;
+
+    procedure WriteRegistroW1(Layout: TLayoutPAF);
+
+    property RegistroW1: TRegistroW1 read FRegistroW1 write FRegistroW1;
+    property RegistroW2: TRegistroW2 read FRegistroW2 write FRegistroW2;
+    property RegistroW3: TRegistroW3 read FRegistroW3 write FRegistroW3;
+    property RegistroW4: TRegistroW4List read FRegistroW4 write FRegistroW4;
+    property RegistroW9: TRegistroW9 read FRegistroW9 write FRegistroW9;
+  end;
+
+implementation
+
+uses ACBrTXTUtils, ACBrUtil.Strings, ACBrValidador, StrUtils;
+
+{ TPAF_W }
+
+constructor TPAF_W.Create;
+begin
+  inherited;
+  CriaRegistros;
+end;
+
+procedure TPAF_W.CriaRegistros;
+begin
+  FRegistroW1 := TRegistroW1.Create;
+  FRegistroW2 := TRegistroW2.Create;
+  FRegistroW3 := TRegistroW3.Create;
+  FRegistroW4 := TRegistroW4List.Create;
+  FRegistroW9 := TRegistroW9.Create;
+
+  FRegistroW9.TOT_REG := 0;
+end;
+
+
+destructor TPAF_W.Destroy;
+begin
+  LiberaRegistros;
+  inherited;
+end;
+
+procedure TPAF_W.LiberaRegistros;
+begin
+  FRegistroW1.Free;
+  FRegistroW2.Free;
+  FRegistroW3.Free;
+  FRegistroW4.Free;
+  FRegistroW9.Free;
+end;
+
+function TPAF_W.limpaCampo(pValor: String): String;
+begin
+  pValor := StringReplace(pValor,'.', '', [rfReplaceAll] );
+  pValor := StringReplace(pValor,'-', '', [rfReplaceAll] );
+  pValor := StringReplace(pValor,'/', '', [rfReplaceAll] );
+  pValor := StringReplace(pValor,',', '', [rfReplaceAll] );
+  Result := pValor;
+end;
+
+procedure TPAF_W.LimpaRegistros;
+begin
+  /// Limpa os Registros
+  LiberaRegistros;
+  /// Recriar os Registros Limpos
+  CriaRegistros;
+end;
+
+procedure TPAF_W.WriteRegistroW1(Layout: TLayoutPAF);
+begin
+  if Assigned(FRegistroW1) then
+  begin
+    with FRegistroW1 do
+    begin
+      Check(funChecaCNPJ(CNPJ), '(W1) IDENTIFICAÇÃO DO USUÁRIO DO PAF-ECF: O CNPJ "%s" digitado é inválido!', [CNPJ]);
+      Check(funChecaIE(IE, UF), '(W1) IDENTIFICAÇÃO DO USUÁRIO DO PAF-ECF: A Inscrição Estadual "%s" digitada é inválida!', [IE]);
+      ///
+      Add(LFill('W1') +
+          LFill(limpaCampo(CNPJ)        , 14) +
+          RFill(limpaCampo(IE)          , 14) +
+          RFill(limpaCampo(IM)          , 14) +
+          RFill(UpperCase(TiraAcentos(RAZAOSOCIAL)), 50));
+    end;
+    WriteRegistroW2;
+    WriteRegistroW3(Layout);
+    WriteRegistroW4(Layout);
+    WriteRegistroW9(Layout);
+  end;
+end;
+
+procedure TPAF_W.WriteRegistroW2;
+begin
+  if Assigned(FRegistroW2) then
+  begin
+    with FRegistroW2 do
+    begin
+      Check(funChecaCNPJ(CNPJ), '(W2) IDENTIFICAÇÃO DA EMPRESA DESENVOLVEDORA DO PAF-ECF: O CNPJ "%s" digitado é inválido!', [CNPJ]);
+      Check(funChecaIE(IE, UF), '(W2) IDENTIFICAÇÃO DA EMPRESA DESENVOLVEDORA DO PAF-ECF: A Inscrição Estadual "%s" digitada é inválida!', [IE]);
+      ///
+      Add(LFill('W2') +
+          LFill(limpaCampo(CNPJ)        , 14) +
+          RFill(limpaCampo(IE)          , 14) +
+          RFill(limpaCampo(IM)          , 14) +
+          RFill(UpperCase(TiraAcentos(RAZAOSOCIAL)), 50));
+    end;
+  end;
+end;
+
+procedure TPAF_W.WriteRegistroW3(Layout: TLayoutPAF);
+begin
+  if Assigned(FRegistroW3) then
+  begin
+    with FRegistroW3 do
+    begin
+      case Layout of
+        lpPAFECF:
+          Add(LFill('W3') +
+              RFill(UpperCase(LAUDO) , 10) +
+              RFill(UpperCase(NOME)  , 50) +
+              RFill(UpperCase(VERSAO), 10));
+        lpPAFNFCe:
+          Add(LFill('W3') +
+              RFill(UpperCase(NOME)  , 50) +
+              RFill(UpperCase(VERSAO), 10));
+      end;
+    end;
+  end;
+end;
+
+procedure TPAF_W.WriteRegistroW4(Layout: TLayoutPAF);
+var
+  intFor: integer;
+begin
+  if Assigned(FRegistroW4) then
+  begin
+    for intFor := 0 to FRegistroW4.Count - 1 do
+    begin
+      with FRegistroW4.Items[intFor] do
+      begin
+        case Layout of
+          lpPAFECF :
+            Add(LFill('W4') +
+                RFill(UpperCase(TiraAcentos(ORIGEMDARE)), 20) +
+                RFill(UpperCase(STATUSDARE), 1) +
+                LFill(CRE, 9) +
+                LFill(DAV, 13) +
+                LFill(PREVENDA, 10) +
+                LFill(CCF, 9) +
+                LFill(VALORTOTALDARE, 14, 2) +
+                RFill(limpaCampo(NUMEROFABRICACAO), 20));
+          lpPAFNFCe:
+            Add(LFill('W4') +
+                RFill(UpperCase(TiraAcentos(ORIGEMDARE)), 20) +
+                RFill(UpperCase(STATUSDARE), 1) +
+                LFill(CRE, 9) +
+                LFill(DAV, 13) +
+                LFill(PREVENDA, 10) +
+                RFill(IDENTIFICACAOPEDIDO,40) +
+                LFill(VALORTOTALDARE, 14, 2));
+        end;
+      end;
+      FRegistroW9.TOT_REG := FRegistroW9.TOT_REG + 1;
+    end;
+  end;
+end;
+
+procedure TPAF_W.WriteRegistroW9(Layout: TLayoutPAF);
+begin
+  if Assigned(FRegistroW9) then
+  begin
+    with FRegistroW9 do
+    begin
+      Check(funChecaCNPJ(FRegistroW2.CNPJ),             '('+IfThen((Layout = lpPAFECF),'W9','W5')+') TOTALIZAÇÃO: O CNPJ "%s" digitado é inválido!', [FRegistroW2.CNPJ]);
+      Check(funChecaIE(FRegistroW2.IE, FRegistroW2.UF), '('+IfThen((Layout = lpPAFECF),'W9','W5')+') TOTALIZAÇÃO: A Inscrição Estadual "%s" digitada é inválida!', [FRegistroW2.IE]);
+      ///
+      Add(LFill(IfThen((Layout = lpPAFECF),'W9','W5')) +
+          LFill(limpaCampo(FRegistroW2.CNPJ), 14  ) +
+          RFill(limpaCampo(FRegistroW2.IE)  , 14  ) +
+          LFill(TOT_REG         , 6, 0));
+    end;
+  end;
+end;
+
+end.
+

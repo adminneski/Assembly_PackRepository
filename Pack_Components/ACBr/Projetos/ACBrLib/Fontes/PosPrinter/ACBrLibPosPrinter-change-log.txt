@@ -1,0 +1,116 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+Agradecimentos:
+
+* Administradores:
+- Daniel Simões de Almeida
+
+{******************************************************************************
+|* ACBrLibNFe
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+13/03/2024
+--- ACBrLibPosPrinterDataModule --
+[*] Adicionado uses ACBrUtil.filesIO
+Por: Daniel Morais Infocotidiano
+
+11/01/2023
+--- ACBrLibPosPrinterBase ---
+[-] Correção para conversão das respostas com Erros, em ANSI, se assim estiver configurado
+	Por: Antonio Carlos Junior
+
+20/07/2022
+--- ACBrLibPOSPrinter ---
+[*] Remoção de Warning @deprecated ref. ACBrUtils
+
+07/09/2020
+--- ACBrLibPosPrinterMT, ACBrLibPosPrinterST ---
+[+] Removido o metodo PosPrinter_ConfigImportar.
+   Por: Rafael Dias
+[+] Removido o metodo PosPrinter_ConfigExportar.
+   Por: Rafael Dias
+[-] Removido o metodo PosPrinter_ImportarConfig.
+   Por: Rafael Dias
+
+19/05/2020
+-- ACBrLibPosPrinterClass --
+[*] Trocado StrToFloat por StringToFloatDef no metodo POS_ImprimirCheque.
+    (Por: Rafael Dias)
+
+09/05/2020
+-- ACBrLibPosPrinterClass --
+[+] Adiciona os metodos POS_ImprimirCheque, POS_ImprimirTextoCheque, 
+    POS_LeituraCheque, POS_LerCMC7, POS_EjetarCheque, POS_PodeLerDaPorta e POS_LerCaracteristicas.
+    (Por: Rafael Dias)
+
+18/04/2020
+-- ACBrLibPosPrinterClass, ACBrLibPosPrinterDataModule --
+[-] Correção na ordem de passagem de parâmetros em 
+    function POS_RetornarTags(IncluiAjuda: Boolean; const sResposta: PChar; var esTamanho: longint): longint;
+[+] Adicionada rotina de verificação do Encoding de Entrada. Para correta conversão da Página de código
+[-] Correções e Novos testes Unitários
+	(por: DSA)
+
+24/12/2019
+--- ACBrLibPosPrinter ---
+[-] Arrumado ordem dos parametos do metodo POS_RetornarTags.  Por: (Rafael Dias)
+[+] Adicionado metodo para achar as portas seriais e as impressoras USB(impressoras USB funciona apenas no windows).  Por: (Rafael Dias)
+
+18/04/2018
+--- ACBrLibPosPrinter ---
+[+] Adicionado a propriedade TimeOut do componente PosPrinter.  Por: (Rafael Dias)
+[-] Corrigido erro na função POS_UltimoRetorno.  Por: (Rafael Dias)
+
+09/04/2018
+--- ACBrLibPosPrinter ---
+[+] Adicionado a propriedade ArqLog do componente PosPrinter.  Por: (Rafael Dias)
+[+] Adicionado o metodo POS_RetornarTags para retornar as tags que a impressoa aceita.
+    Por: (Rafael Dias)
+
+29/03/2018
+--- ACBrLibPosPrinterConfig ---
+[-] Corrigido de não salvar as configurações de Logo.  Por: (Rafael Dias)
+
+--- ACBrLibPosPrinterDataModule ---
+[-] Corrigido erro na hora de setar as propriedades do componente.  Por: (Rafael Dias)
+
+--- ACBrLibPosPrinter ---
+[+] Finalizado a implementação do metodos do ACBrPosPrinter.  Por: (Rafael Dias)
+[-] Correção na compilação CDECL x86. Por: (Rafael Dias)
+
+26/03/2018
+--- ACBrLibPosPrinter ---
+[+] Inicio do projeto.  Por: (Rafael Dias)

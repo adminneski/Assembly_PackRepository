@@ -1,0 +1,58 @@
+package dclfrReportFiles;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'FastReport VCL Components dcl'}
+{$LIBSUFFIX AUTO}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  frReportFiles,
+  designIde;
+
+contains
+  fs_iadoreg in '..\Sources\FastScript\VCL\Sources\fs_iadoreg.pas',
+  fs_idbreg in '..\Sources\FastScript\VCL\Sources\fs_idbreg.pas',
+  fs_ireg in '..\Sources\FastScript\VCL\Sources\fs_ireg.pas',
+  frCoreReg in '..\Sources\FastCore\VCL\Sources\frCoreReg.pas',
+  fqbReg in '..\Sources\FastQueryBuilder\VCL\Sources\fqbReg.pas',
+  fqbRegADO in '..\Sources\FastQueryBuilder\VCL\Sources\fqbRegADO.pas',
+  frLocalizationReg in '..\Sources\FastLocalization\VCL\Sources\frLocalizationReg.pas',
+  frxReg in '..\Sources\FastReport\VCL\Sources\frxReg.pas',
+  frxADOReg in '..\Sources\FastReport\VCL\Sources\frxADOReg.pas',
+  frxeReg in '..\Sources\FastReport\VCL\Sources\frxeReg.pas',
+  frxPDFReg in '..\Sources\FastReport\VCL\Sources\frxPDFReg.pas',
+  frxRegDB in '..\Sources\FastReport\VCL\Sources\frxRegDB.pas',
+  frxRegHTML in '..\Sources\FastReport\VCL\Sources\frxRegHTML.pas',
+  frxRegIntIO in '..\Sources\FastReport\VCL\Sources\frxRegIntIO.pas',
+  frxRegIntIOIndy in '..\Sources\FastReport\VCL\Sources\frxRegIntIOIndy.pas',
+  frxRegCS in '..\Sources\FastReport Client-Server\VCL\Sources\frxRegCS.pas',
+  frxFDReg in '..\Sources\FastReport\VCL\Sources\frxFDReg.pas',
+  fs_ifdreg in '..\Sources\FastScript\VCL\Sources\fs_ifdreg.pas';
+
+end.

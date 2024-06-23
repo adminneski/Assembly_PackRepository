@@ -1,0 +1,1798 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3204ED40-A93C-4B8E-B2EB-BEC22CAA7264}</ProjectGuid>
+        <MainSource>frReportFiles.dpk</MainSource>
+        <ProjectVersion>20.1</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>3</TargetedPlatforms>
+        <AppType>Package</AppType>
+        <ProjectName Condition="'$(ProjectName)'==''">frReportFiles</ProjectName>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64x' and '$(Base)'=='true') or '$(Base_Win64x)'!=''">
+        <Base_Win64x>true</Base_Win64x>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_DcuOutput>..\Lib$(ProductVersion)\VCL\$(Platform)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <GenDll>true</GenDll>
+        <GenPackage>true</GenPackage>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;VclTee;$(DCC_Namespace)</DCC_Namespace>
+        <SanitizedProjectName>frReportFiles</SanitizedProjectName>
+        <DCC_DcpOutput>..\Lib$(ProductVersion)\VCL\$(Platform)</DCC_DcpOutput>
+        <DCC_BplOutput>..\Lib$(ProductVersion)\VCL\$(Platform)</DCC_BplOutput>
+        <VerInfo_Locale>3082</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
+        <DllSuffix>$(Auto)</DllSuffix>
+        <DCC_Description>FastReport VCL Components rtl</DCC_Description>
+        <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64x)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="adortl.dcp"/>
+        <DCCReference Include="vclx.dcp"/>
+        <DCCReference Include="vcl.dcp"/>
+        <DCCReference Include="vclie.dcp"/>
+        <DCCReference Include="vcledge.dcp"/>
+        <DCCReference Include="vclimg.dcp"/>
+        <DCCReference Include="vclwinx.dcp"/>
+        <DCCReference Include="IndySystem.dcp"/>
+        <DCCReference Include="IndyProtocols.dcp"/>
+        <DCCReference Include="IndyCore.dcp"/>
+        <DCCReference Include="dsnap.dcp"/>
+        <DCCReference Include="vcldb.dcp"/>
+        <DCCReference Include="vclFireDAC.dcp"/>
+        <DCCReference Include="FireDAC.dcp"/>
+        <DCCReference Include="FireDACCommonDriver.dcp"/>
+        <DCCReference Include="FireDACCommon.dcp"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iadortti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_ibasic.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iclassesrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iconst.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_icpp.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_idbctrlsrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_idbrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_idialogsrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_idisp.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_ievents.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iexpression.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iextctrlsrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iformsrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_igraphicsrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iilparser.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iinirtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iinterpreter.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_ijs.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_imenusrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_iparser.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_ipascal.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_isysrtti.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_itools.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_synmemo.pas">
+            <Form>fsSynMemoSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_tree.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_xml.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frAbout.pas">
+            <Form>frxAboutForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frBaseForm.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frCore.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frCoreClasses.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frDPIAwareControls.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frDPIAwareInt.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frDPIAwareUtils.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frGraphics.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frGZip.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frHashUtils.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frResources.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frThreading.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frTypes.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frUnicodeUtils.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frUtils.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frXML.pas"/>
+        <DCCReference Include="..\Sources\FastCore\VCL\Sources\frZip.pas"/>
+        <DCCReference Include="..\Sources\FastQueryBuilder\VCL\Sources\fqbADOEngine.pas"/>
+        <DCCReference Include="..\Sources\FastQueryBuilder\VCL\Sources\fqbClass.pas"/>
+        <DCCReference Include="..\Sources\FastQueryBuilder\VCL\Sources\fqbDesign.pas"/>
+        <DCCReference Include="..\Sources\FastQueryBuilder\VCL\Sources\fqbLinkForm.pas">
+            <Form>fqbLinkForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastQueryBuilder\VCL\Sources\fqbrcDesign.pas"/>
+        <DCCReference Include="..\Sources\FastQueryBuilder\VCL\Sources\fqbRes.pas"/>
+        <DCCReference Include="..\Sources\FastQueryBuilder\VCL\Sources\fqbSynmemo.pas">
+            <Form>fqbSynMemoSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastQueryBuilder\VCL\Sources\fqbUtils.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frBaseGraphicsTypes.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frCSSStyle.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frCSSTransform.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGDIPAPI.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGDIPKerning.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGDIPOBJ.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGDIPPathText.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGif1.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGif2.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGIFGraphic.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGIFGraphics.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frGraphicUtils.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frICOGraphics.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frJPEGGraphics.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frMetafileGraphics.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frPictureCache.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frPictureGraphics.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frPNGGraphics.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGAttribute.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGBase.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGCanvas.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGColor.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGComponents.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGElement.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGGDIPCanvas.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGGraphic.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGGraphics.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGHelpers.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGPaint.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGParse.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frSVGPath.pas"/>
+        <DCCReference Include="..\Sources\FastGraphics\VCL\Sources\frWinGraphicUtils.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageArabic.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageBrazil.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageBrazil1.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageBrazil2.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageBulgarian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageCatalon.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageChinese.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageCroatian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageCzech.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageDanish.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageDutch.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageEnglish.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageFarsi.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageFrench.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageGerman.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageGreek.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageHebrew.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageHungarian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageIndonesian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageItalian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageJapanese.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageLatvian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageLithuanian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguagePolish.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguagePortuguese.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageRomanian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageRussian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageSerbian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageSlovak.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageSlovene.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageSpanish.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageSwedish.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageSwiss.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageTaiwan.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageTurkish.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLanguageUkrainian.pas"/>
+        <DCCReference Include="..\Sources\FastLocalization\VCL\Sources\frLocalization.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\CmdLine.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\ConverterDMP2GDI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\ConverterGDI2DMP.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frx2DBarcodesPresets.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxADOComponents.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxADOEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxADORTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxAggregate.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxAnaliticGeometry.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxASN1.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcod.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcode.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcode2D.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcode2DBase.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcode2DEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcode2DRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeAztec.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeBarPressetEANUPCSupp.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeBaseBarPresset.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeBaseDrawPresset.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeComposite.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeCompositeEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeDataMatrix.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeDrawPressetMark.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeInterface.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeMaxiCode.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodePDF417.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodePharmacodeTT.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeProperties.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeQR.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodeRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBarcodOneCode.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBaseForm.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBaseFormEditorDataTree.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBaseMailApi.pas">
+            <Form>frxBaseMailIOTransportForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBaseSocketIOHandler.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBaseTransportConnection.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBaseTransportDialogForm.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBIFF.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBiffConverter.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBreakPointsForm.pas">
+            <Form>frxBreakPointsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBrowser.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBrowserStub.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxBrowserWeb.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCBFF.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCellularTextEdit.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCellularTextInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCellularTextObject.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCellularTextObjectRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxChBox.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxChBoxRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCipher.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxClassRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCmapTableClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCodeUtils.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxComboBox.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxComboBoxInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxComboBoxRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxComCtrls.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxConnEditor.pas">
+            <Form>frxConnEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxConnItemEdit.pas">
+            <Form>frxConnectionItemEdit</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxConnType.pas">
+            <Form>frxConnTypeEdit</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxConnWizard.pas">
+            <Form>frxConnectionWizardForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCross.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCrossEditor.pas">
+            <Form>frxCrossEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCrossInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCrossRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCrypt.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCrypto.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCtrls.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCustomDB.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCustomDBEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCustomDBRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxCustomEditors.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDataLinkInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDataTree.pas">
+            <Form>frxDataTreeForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDBSet.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDCtrl.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDCtrlRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDelphiMaxiCode.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDelphiZXIngAztecCode.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDelphiZXIngCode.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxdelphizxingqrcode.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDesgn.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDesgnCtrls.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDesgnEditors.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDesgnWorkspace.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDesgnWorkspace1.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDialogForm.pas">
+            <Form>frxDialogForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDMPClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDMPExport.pas">
+            <Form>frxDMPExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDock.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDPIAwareBaseControls.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDraftPool.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxDsgnIntf.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditAliases.pas">
+            <Form>frxAliasesEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditDataBand.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditExpr.pas">
+            <Form>frxExprEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditFill.pas">
+            <Form>frxFillEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditFormat.pas">
+            <Form>frxFormatEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditFrame.pas">
+            <Form>frxFrameEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditGroup.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditHighlight.pas">
+            <Form>frxHighlightEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditHyperlink.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditMD.pas">
+            <Form>frxMDEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditMemo.pas">
+            <Form>frxMemoEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditOptions.pas">
+            <Form>frxOptionsEditor</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditPage.pas">
+            <Form>frxPageEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditPDF.pas">
+            <Form>frxPDFEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditPicture.pas">
+            <Form>frxPictureEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditQueryParams.pas">
+            <Form>frxParamsEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditReport.pas">
+            <Form>frxReportEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditReportData.pas">
+            <Form>frxReportDataForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditSQL.pas">
+            <Form>frxSQLEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditSQLDialect.pas">
+            <Form>frxSQLDialectForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditStrings.pas">
+            <Form>frxStringsEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditStyle.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditSysMemo.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditTabOrder.pas">
+            <Form>frxTabOrderEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEditVar.pas">
+            <Form>frxVarEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEMFAbstractExport.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEMFFormat.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEMFtoPDFExport.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEMFtoSVGExport.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEngine.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxERSIShapeDBFImport.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxERSIShapeFileFormat.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEscher.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEULAForm.pas">
+            <Form>frxEULAConfirmForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxEvaluateForm.pas">
+            <Form>frxEvaluateForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportBaseDialog.pas">
+            <Form>frxBaseExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportBIFF.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportBIFFDialog.pas">
+            <Form>frxBIFFExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportBlank.pas">
+            <Form>frxBlankExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportCSV.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportCSVDialog.pas">
+            <Form>frxCSVExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportDBF.pas">
+            <Form>frxDBFExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportDOCX.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportDOCXDialog.pas">
+            <Form>frxDOCXExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportHelpers.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportHTML.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportHTMLDialog.pas">
+            <Form>frxHTMLExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportHTMLDiv.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportHTMLDivDialog.pas">
+            <Form>frxHTMLDIVExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportImage.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportImageDialog.pas">
+            <Form>frxIMGExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportMail.pas">
+            <Form>frxMailExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportMatrix.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportODF.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportODFDialog.pas">
+            <Form>frxODFExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPDF.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPDFDialog.pas">
+            <Form>frxPDFExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPDFHelpers.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPPML.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPPMLDialog.pas">
+            <Form>frxExportPPMLDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPPMLDocument.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPPTX.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPPTXDialog.pas">
+            <Form>frxPPTXExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportProto.pas">
+            <Form>frxProtoExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPS.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPSDialog.pas">
+            <Form>frxExportPSDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPSDocument.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportPSHelper.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportRTF.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportRTFDialog.pas">
+            <Form>frxRTFExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportSVG.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportSVGDialog.pas">
+            <Form>frxSVGExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportText.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportTextDialog.pas">
+            <Form>frxSimpleTextExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportTXT.pas">
+            <Form>frxTXTExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportTxtPrn.pas">
+            <Form>frxPrnInit</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportXLS.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportXLSDialog.pas">
+            <Form>frxXLSExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportXLSX.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportXLSXDialog.pas">
+            <Form>frxXLSXExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportXML.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportXMLDialog.pas">
+            <Form>frxXMLExportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportZPL.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxExportZPLDialog.pas">
+            <Form>frxExportZPLDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFIBConnItemEdit.pas">
+            <Form>frxFIBConnItem</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFileUtils.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFontHeaderClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFPUMask.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGauge.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGaugeControlRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGaugeDialogControl.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGaugeEditor.pas">
+            <Form>frxGaugeEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGaugePanel.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGaugeView.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGaugeViewRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGlyphSubstitutionClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGlyphTableClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGML.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGPXFileFormat.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGradient.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGradientRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGraphicControls.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGraphicUtils.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGS1Databar.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGS1Databar_Helper.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGS1Helper.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxGZip.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHash.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHashStreebog.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHelpers.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHint.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHorizontalHeaderClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHorizontalMetrixClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTML.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLBuffConv.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLBuffConvArrays.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLBuffer.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLCaches.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLFonts.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLGlobals.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLImages.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLRead.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLStylePars.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLStyleTypes.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLStyleUn.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLSubs.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLSymb.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLUn2.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLURLSubs.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLViewer.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTMLViewInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTTPProtocol.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTTPSProtocol.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxHTTPTransportsProtocol.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxImageConverter.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIndexToLocationClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxInheritError.pas">
+            <Form>frxInheritErrorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxInPlaceClipboards.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxInPlaceEditors.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxInsp.pas">
+            <Form>frxObjectInspector</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOSendMAPI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOSMTP.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportBoxCom.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportBoxComBase.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportBoxComIndy.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportDialog.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportDropbox.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportDropboxBase.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportDropboxIndy.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportFTP.pas">
+            <Form>frxFTPIOTransportForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportGMail.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportGMailBase.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportGMailIndy.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportGoogleDrive.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportGoogleDriveBase.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportGoogleDriveIndy.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportHelpers.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportIndyMail.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportIntDialog.pas">
+            <Form>frxIOTransportDialogIntForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportIntf.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportMail.pas">
+            <Form>frxMailIOTransportForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportOAuthDialog.pas">
+            <Form>frxOAuthTransportDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportOneDrive.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportOneDriveBase.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportOneDriveIndy.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportOutlook.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportOutlookBase.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportOutlookIndy.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportYandexDisk.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportYandexDiskBase.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportYandexDiskIndy.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxIOTransportZip.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxJSON.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxKerningTableClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxListBox.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxListBoxRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxListControl.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxListControlEditor.pas">
+            <Form>frxListControlEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxLkJSON.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxLoopBackAutorize.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMap.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapColorRangeForm.pas">
+            <Form>MapColorRangeForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapGeodataLayer.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapHelpers.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapILEditor.pas">
+            <Form>frxMapILEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapInteractiveLayer.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapLayer.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapLayerForm.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapLayerTags.pas">
+            <Form>MapLayerTagsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapRanges.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapShape.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapShapeTags.pas">
+            <Form>MapShapeTagsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMapSizeRangeForm.pas">
+            <Form>MapSizeRangeForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxMaximumProfileClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxNameTableClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxNetUtils.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxNewItem.pas">
+            <Form>frxNewItemForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOfficeOpen.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOLE.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOLEEditor.pas">
+            <Form>frxOleEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOLEPS.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOLERTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOpenSSL.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOS2WindowsMetricsClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOSMFileFormat.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxOTF.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPassw.pas">
+            <Form>frxPasswordForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFFile.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFium.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFPFX.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFRSA.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFSignature.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFViewer.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFViewInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPDFX509Certificate.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPlatformServices.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxpnglang.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPolygonTemplate.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPopupForm.pas">
+            <Form>frxPopupForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPostScriptClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPreProgramClass.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPreview.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPreviewPages.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPreviewPageSettings.pas">
+            <Form>frxPageSettingsForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPrintDialog.pas">
+            <Form>frxPrintDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxPrinter.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxProgress.pas">
+            <Form>frxProgress</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxProtocolFactory.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxQRCodeEPCPreset.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxQRCodeSberPreset.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxQRCodeSwissPreset.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxRC4.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxRegistredEditorsDialog.pas">
+            <Form>frxRegEditorsDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxReportTree.pas">
+            <Form>frxReportTreeForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxRes.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxResultTableObject.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxRich.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxRichEdit.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxRichEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxRichInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxRichRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSaveFilterBrowser.pas">
+            <Form>BrowserForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSaveFilterFRX.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSaveFRX.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSearchDForm.pas">
+            <Form>frxSearchDesignForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSearchDialog.pas">
+            <Form>frxSearchDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSearchForm.pas">
+            <Form>frxSearchForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSendMAPI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxServerUtils.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSignatureEditor.pas">
+            <Form>frxSignatureEditorForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSignatureErrorDialog.pas">
+            <Form>frxSignatureErrorDialog</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSMTP.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxStorage.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxSynMemo.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTable.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTableObject.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTableObjectClipboard.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTableObjectEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTableObjectRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTransportHTTP.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTransportIndyConnector.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTransportIndyConnectorHTTP.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTrueTypeCollection.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTrueTypeFont.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxTrueTypeTable.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxUnicodeCtrls.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxUtils.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxVariables.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxVectorCanvas.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxWatchForm.pas">
+            <Form>frxWatchForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxXMLSerializer.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxZipCode.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxZipCodeInPlaceEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\GIF.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\rc_AlgRef.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\rc_ApiRef.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\rc_Crypt.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\TTFHelpers.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxStdWizard.pas">
+            <Form>frxStdWizardForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxCGIClient.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxConfigUtils.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxHelperCS.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxHTTPClient.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxMutex.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServer.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerCache.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerClient.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerConfig.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerFormControls.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerForms.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerLog.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerPrinter.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerReports.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerReportsList.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerSessionManager.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerSSI.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerStat.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerTemplates.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxServerVariables.pas"/>
+        <DCCReference Include="..\Sources\FastReport Client-Server\VCL\Sources\frxUsers.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFileSignature.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxWinCrypt.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFileSignatureErrorDialog.pas">
+            <Form>frxFileSignatureErrorDialog</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFDComponents.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFDEditor.pas"/>
+        <DCCReference Include="..\Sources\FastReport\VCL\Sources\frxFDRTTI.pas"/>
+        <DCCReference Include="..\Sources\FastScript\VCL\Sources\fs_ifdrtti.pas"/>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Package</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">frReportFiles.dpk</Source>
+                </Source>
+                <Excluded_Packages/>
+            </Delphi.Personality>
+            <Deployment Version="4">
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libpcre.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\Lib22.0\VCL\Win32\frReportFiles280.bpl" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>frReportFiles.bpl</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\Lib22.0\VCL\Win32\frReportFiles280.bpl" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>frReportFiles.bpl</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\LibRS28\VCL\Win64\frReportFiles280.bpl" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>frReportFiles.bpl</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="AdditionalDebugSymbols">
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClasses">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidFileProvider">
+                    <Platform Name="Android">
+                        <RemoteDir>res\xml</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\xml</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeArmeabiFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeArmeabiv7aFile">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput_Android32">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDefV21">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-anydpi-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-anydpi-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStyles">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStylesV21">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStylesV31">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values-v31</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values-v31</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_AdaptiveIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-anydpi-v26</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-anydpi-v26</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_AdaptiveIconBackground">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_AdaptiveIconForeground">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_AdaptiveIconMonochrome">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_AdaptiveIconV33">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-anydpi-v33</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-anydpi-v33</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_Colors">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_ColorsDark">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values-night-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values-night-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_DefaultAppIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon192">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon24">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_NotificationIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xxxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_Strings">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_VectorizedNotificationIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-anydpi-v24</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-anydpi-v24</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_VectorizedSplash">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_VectorizedSplashDark">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-night-anydpi-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-night-anydpi-v21</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_VectorizedSplashV31">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-anydpi-v31</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-anydpi-v31</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_VectorizedSplashV31Dark">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-night-anydpi-v31</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>res\drawable-night-anydpi-v31</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Android">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectAndroidManifest">
+                    <Platform Name="Android">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXDebug"/>
+                <DeployClass Name="ProjectOSXEntitlements"/>
+                <DeployClass Name="ProjectOSXInfoPList"/>
+                <DeployClass Name="ProjectOSXResource">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Linux64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSXARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOutput_Android32">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectUWPManifest">
+                    <Platform Name="Win32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64x">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceDebug">
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements"/>
+                <DeployClass Name="ProjectiOSInfoPList"/>
+                <DeployClass Name="ProjectiOSLaunchScreen"/>
+                <DeployClass Name="ProjectiOSResource">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo150">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iOS_AppStore1024">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_AppIcon152">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_AppIcon167">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_LaunchDark2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Notification40">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Setting58">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_SpotLight80">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_AppIcon120">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_AppIcon180">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch3x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_LaunchDark2x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_LaunchDark3x">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Notification40">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Notification60">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Setting58">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Setting87">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Spotlight120">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Spotlight80">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimARM64">
+                        <RemoteDir>..\$(PROJECTNAME).launchscreen\Assets\AppIcon.appiconset</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSSimARM64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win64x" Name="$(PROJECTNAME)"/>
+            </Deployment>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">True</Platform>
+                <Platform value="Win64x">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>

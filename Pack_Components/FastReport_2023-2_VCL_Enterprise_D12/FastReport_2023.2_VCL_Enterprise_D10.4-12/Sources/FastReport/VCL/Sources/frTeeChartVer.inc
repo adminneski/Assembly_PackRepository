@@ -1,0 +1,1 @@
+{$I ..\..\..\FastCore\VCL\Sources\frTeeChartVer.inc}

@@ -1,0 +1,80 @@
+package ACBr_Comum;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$DEFINITIONINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'ACBr - Biblioteca Comum, EAD, AAC  - (http://www.projetoacbr.com.br/)'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+
+{$I ACBr.inc}
+
+requires
+  rtl,
+  vcl,
+  ACBr_synapse;
+
+contains
+  ACBrBase in '..\..\..\Fontes\ACBrComum\ACBrBase.pas',
+  ACBrConsts in '..\..\..\Fontes\ACBrComum\ACBrConsts.pas',
+  ACBrUtil in '..\..\..\Fontes\ACBrComum\ACBrUtil.pas',
+  ACBrUtil.Compatibilidade in '..\..\..\Fontes\ACBrComum\ACBrUtil.Compatibilidade.pas',
+  ACBrUtil.Base in '..\..\..\Fontes\ACBrComum\ACBrUtil.Base.pas',
+  ACBrUtil.DateTime in '..\..\..\Fontes\ACBrComum\ACBrUtil.DateTime.pas',
+  ACBrUtil.FilesIO in '..\..\..\Fontes\ACBrComum\ACBrUtil.FilesIO.pas',
+  ACBrUtil.Math in '..\..\..\Fontes\ACBrComum\ACBrUtil.Math.pas',
+  ACBrUtil.Strings in '..\..\..\Fontes\ACBrComum\ACBrUtil.Strings.pas',
+  ACBrUtil.XMLHTML in '..\..\..\Fontes\ACBrComum\ACBrUtil.XMLHTML.pas',
+  ACBrAAC in '..\..\..\Fontes\ACBrComum\ACBrAAC.pas',
+  {$IfNDef USE_ZLibExGZ}
+  GZIPUtils in '..\..\..\Fontes\Terceiros\GZIPUtils\GZIPUtils.pas',
+  {$Else}
+  ACBrZLibExGZ in '..\..\..\Fontes\Terceiros\ZLibExGZ\ACBrZLibExGZ.pas',
+  {$EndIf}
+  ACBrCompress in '..\..\..\Fontes\ACBrComum\ACBrCompress.pas',
+  ACBrImage in '..\..\..\Fontes\ACBrComum\ACBrImage.pas',
+  ACBrPAFClass in '..\..\..\Fontes\ACBrComum\ACBrPAFClass.pas',
+  StrUtilsEx in '..\..\..\Fontes\Terceiros\FastStringReplace\StrUtilsEx.pas',
+  ACBrDelphiZXingQRCode in '..\..\..\Fontes\Terceiros\DelphiZXingQRCode\ACBrDelphiZXingQRCode.pas',
+  ACBr_fpdf in '..\..\..\Fontes\Terceiros\FPDF-Pascal\ACBr_fpdf.pas',
+  ACBr_fpdf_ext in '..\..\..\Fontes\Terceiros\FPDF-Pascal\ACBr_fpdf_ext.pas',
+  ACBr_fpdf_report in '..\..\..\Fontes\Terceiros\FPDF-Pascal\ACBr_fpdf_report.pas',
+  Jsons in '..\..\..\Fontes\Terceiros\json4delphi\src\Jsons.pas',
+  ACBrJSON in '..\..\..\Fontes\ACBrComum\ACBrJSON.pas',
+  ACBrUtil.FPDF in '..\..\..\Fontes\ACBrComum\ACBrUtil.FPDF.pas';
+
+// Código repetido aqui porque o Delphi costuma remover IFDEFs de Uses em pacotes (dpk).
+//  {$IfNDef USE_ZLibExGZ}
+//  GZIPUtils in '..\..\..\Fontes\Terceiros\GZIPUtils\GZIPUtils.pas',
+//  {$Else}
+//  ACBrZLibExGZ in '..\..\..\Fontes\Terceiros\ZLibExGZ\ACBrZLibExGZ.pas',
+//  {$EndIf}
+
+
+end.
+
+
+

@@ -1,0 +1,75 @@
+package RXLibD22;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'NSKLib -  RXLib Lite V2.7.7'}
+{$IMPLICITBUILD ON}
+
+requires
+  designide,
+  dclstd,
+  dbrtl,
+  vcldb;
+
+contains
+  Rxctlreg in '..\Source\Rxctlreg.pas',
+  rxDateutil in '..\Source\rxDateutil.pas',
+  Rxdbcomb in '..\Source\Rxdbcomb.pas',
+  RXDBCtrl in '..\Source\RXDBCtrl.pas',
+  RxDBReg in '..\Source\RxDBReg.pas',
+  rxMaxmin in '..\Source\rxMaxmin.pas',
+  rxPickdate in '..\Source\rxPickdate.pas',
+  rxToolEdit in '..\Source\rxToolEdit.pas',
+  rxStrUtils in '..\Source\rxStrUtils.pas',
+  RxResConst in '..\Source\RxResConst.pas',
+  RxResConst_bul in '..\Source\RxResConst_bul.pas',
+  RxResConst_chi in '..\Source\RxResConst_chi.pas',
+  RxResConst_cht in '..\Source\RxResConst_cht.pas',
+  RxResConst_cze in '..\Source\RxResConst_cze.pas',
+  RxResConst_dan in '..\Source\RxResConst_dan.pas',
+  RxResConst_dut in '..\Source\RxResConst_dut.pas',
+  RxResConst_eng in '..\Source\RxResConst_eng.pas',
+  RxResConst_fra in '..\Source\RxResConst_fra.pas',
+  RxResConst_gal in '..\Source\RxResConst_gal.pas',
+  RxResConst_ger in '..\Source\RxResConst_ger.pas',
+  RxResConst_gre in '..\Source\RxResConst_gre.pas',
+  RxResConst_hun in '..\Source\RxResConst_hun.pas',
+  RxResConst_ita in '..\Source\RxResConst_ita.pas',
+  RxResConst_kor in '..\Source\RxResConst_kor.pas',
+  RxResConst_mex in '..\Source\RxResConst_mex.pas',
+  RxResConst_pol in '..\Source\RxResConst_pol.pas',
+  RxResConst_por in '..\Source\RxResConst_por.pas',
+  RxResConst_rom in '..\Source\RxResConst_rom.pas',
+  RxResConst_rus in '..\Source\RxResConst_rus.pas',
+  RxResConst_slo in '..\Source\RxResConst_slo.pas',
+  RxResConst_spa in '..\Source\RxResConst_spa.pas',
+  RxResConst_srb in '..\Source\RxResConst_srb.pas',
+  RxResConst_svk in '..\Source\RxResConst_svk.pas',
+  RxResConst_swe in '..\Source\RxResConst_swe.pas',
+  RxResConst_tur in '..\Source\RxResConst_tur.pas',
+  RxResConst_ukr in '..\Source\RxResConst_ukr.pas';
+
+end.

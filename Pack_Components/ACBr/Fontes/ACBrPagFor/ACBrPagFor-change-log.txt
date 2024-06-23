@@ -1,0 +1,493 @@
+{******************************************************************************}
+{ Projeto: Componentes ACBr                                                    }
+{  Biblioteca multiplataforma de componentes Delphi para interação com equipa- }
+{ mentos de Automação Comercial utilizados no Brasil                           }
+{                                                                              }
+{ Direitos Autorais Reservados (c) 2022 Daniel Simoes de Almeida               }
+{                                                                              }
+{ Colaboradores nesse arquivo: Italo Giurizzato Junior                         }
+{                                                                              }
+{  Você pode obter a última versão desse arquivo na pagina do  Projeto ACBr    }
+{ Componentes localizado em      http://www.sourceforge.net/projects/acbr      }
+{                                                                              }
+{  Esta biblioteca é software livre; você pode redistribuí-la e/ou modificá-la }
+{ sob os termos da Licença Pública Geral Menor do GNU conforme publicada pela  }
+{ Free Software Foundation; tanto a versão 2.1 da Licença, ou (a seu critério) }
+{ qualquer versão posterior.                                                   }
+{                                                                              }
+{  Esta biblioteca é distribuída na expectativa de que seja útil, porém, SEM   }
+{ NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU      }
+{ ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a Licença Pública Geral Menor}
+{ do GNU para mais detalhes. (Arquivo LICENÇA.TXT ou LICENSE.TXT)              }
+{                                                                              }
+{  Você deve ter recebido uma cópia da Licença Pública Geral Menor do GNU junto}
+{ com esta biblioteca; se não, escreva para a Free Software Foundation, Inc.,  }
+{ no endereço 59 Temple Street, Suite 330, Boston, MA 02111-1307 USA.          }
+{ Você também pode obter uma copia da licença em:                              }
+{ http://www.opensource.org/licenses/lgpl-license.php                          }
+{                                                                              }
+{ Daniel Simões de Almeida - daniel@projetoacbr.com.br - www.projetoacbr.com.br}
+{       Rua Coronel Aureliano de Camargo, 963 - Tatuí - SP - 18270-170         }
+{******************************************************************************}
+
+{******************************************************************************
+|* ACBrPagFor
+|*
+|* PROPÓSITO: Registro de Alterações
+******************************************************************************}
+
+Símbolo : Significado
+
+[+]     : Novo recurso
+[*]     : Recurso modificado/melhorado
+[-]     : Correção de Bug (assim esperamos)
+
+
+24/05/2024
+-- PagFor.BancodoBrasil.GravarTxtRemessa --
+[*] Alteração visando a geração do Segmento J52 com as informações da chave PIX e
+    do TXID.
+   Por: Marcelo Gonçalves
+
+15/05/2024
+-- PagFor.BancodoBrasil.LerTxtRetorno --
+[*] Alteração visando a leitura do Segmento Z ao ler o Segmento A.
+   Por: Marcelo Gonçalves
+
+01/02/2024
+--- ACBrPagForConversao ---
+[*] Inclusão do banco: 403-Banco Cora
+   Por: José Geraldo
+
+25/01/2024
+--- Diversos ---
+[+] Implementação do Banco Inter.
+   Por: Lucas Rampin
+--- Diversos ---
+[*] Alterado o nome da variável protegida de FSequencialDeLote para 
+    FSequencialDoRegistroNoLote, com esse nome deixa claro a sua finalidade.
+   Por: Italo Giurizzato Junior
+
+19/01/2024
+--- CNAB240.GravarTxtRemessa ---
+[-] Incluído o incremento do sequencial de lote nos Segmentos W e Z.
+   Por: Italo Giurizzato Junior
+--- ACBrPagForConversao ---
+[*] TK-2011 Inclusão dos bancos: 380-PicPay e 536-Neon
+   Por: Carlos Solla
+
+18/01/2024
+--- PagFor.BancodoBrasil.GravarTxtRemessa ---
+[-] Corrigido de 4 para 6 digitos ao formatar o campo Receita dos Segmentos N.
+   Por: Italo Giurizzato Junior
+
+12/01/2024
+--- PagFor.Itau.LerTxtRetorno ---
+[*] Alteração visando a leitura do Segmento Z ao ler o Segmento A. TK-4978
+   Por: Wanderson Robert
+
+27/12/2023
+--- Diversos ---
+[-] Correção, a posição correta do campo Desconto1 do Segmento G é 214 e não 114.
+   Por: Luciano Soares Atacado
+--- PagFor.Santander.GravarTxtRemessa ---
+[-] Alterado o tipo de conversão de tcInt para tcStr ao gerar o conteudo do campo
+    Agencia.DV no Registro1.
+   Por: Arthur ZSR
+
+22/11/2023
+--- PagFor.Itau.LerTxtRetorno/ACBrPagForConversao ---
+[*] TK-4751 Reescrito o GetOcorrencia por conter diferenças do padrão CNAB.
+    e incluido novos valores de ocorrencias no tipo: TOcorrencia.
+   Por: Alex Klehm
+--- PagFor.Itau.LerTxtRetorno ---
+[*] TK-4751 Reescrito o LerSegmentoJ por conter diferenças do padrão CNAB.
+   Por: Fabricio Furtado
+--- PagFor.Bradesco.GravarTxtRemessa ---
+[*]TK-4764 Ajuste na posição 172/174 Identificação Remessa Pix 
+    Por: Victor Hugo Gonzales - Pandaaa
+
+19/09/2023
+-- Diversos --
+[*] Ajuste para gerar corretamente o Tipo de Movimento no Segmento J.
+   Por: Italo Giurizzato Junior
+-- ACBrPagForClass/CNAB240.LerTxtRetorno --
+[*] Alteração visando a leitura do Segmento E muito utilizado para a 
+    conciliação bancária.
+   Por: Valter FC
+-- Diversos --
+[*] Alteração visando colocar cada ocorrência em um item da lista: Aviso.
+   Por: Italo Giurizzato Junior
+
+16/09/2023
+-- PagFor.Itau.GravarTxtRemessa/ACBrPagForClass/CNAB240.GravarTxtRemessa --
+[*] Correção para gerar o campo TipoMovimento nos segmentos N e J52
+   Por: SuporteATInfo/Italo Giurizzato Junior
+-- CNAB240.LerTxtRetorno --
+[*] Alterado o caracter usando para separar as descrições ocorrências, antes era o "/"
+    agora é o "|", pois algumas descrições contem o caractere "/".
+   Por: Alex Klehn
+
+29/08/2023
+-- PagFor.Itau.GravarTxtRemessa --
+[*] Ajuste para gerar o campo do numero de inscrição do favorecido com 14 digitos.
+   Por: Fabricio Furtado
+
+23/08/2023
+-- CNAB240.LerTxtRetorno --
+[*] Ajuste para a leitura correta do segmento opcional (Segmento H) ao ler o 
+    Segmento G.
+   Por: Innovae Brasil Engenharia
+
+14/08/2023
+-- PagFor.Bradesco.LerTxtRetorno/ACBrPagForClass --
+[*] Acrescentado no Registro 1 a leitura de ocorrências.
+    O Bradesco inclui nesse registro algumas ocorrências.
+   Por: Italo Giurizzato Junior
+
+21/07/2023
+-- PagFor.Sicoob.GravarTxtRemessa --
+[*] Implementado a sobrecarga da procedure GeraSegmentoJ52 e realizado mais alguns
+    ajustes.
+   Por: jjribas
+
+14/07/2023
+-- PagFor.BancodoBrasil.GravarTxtRemessa/ACBrPagForClass --
+[*] Adicionada a propriedade RemessaTeste para gerar na posição 51-52 o texto:
+    "TS" se a propriedade for True ou brancos se for False.
+   Por: Alex Klehm
+
+07/07/2023
+-- PagFor.Sicoob.GravarTxtRemessa/CNAB240.GravarTxtRemessa --
+[*] Ajustes para gerar com a versão correta para Pagamento de Contas.
+   Por: Augusto Leão / Italo Giurizzato Junior
+
+29/06/2023
+-- ACBrPagForClass/PagFor.Bradesco.LerTxtRetorno --
+[*] Ajustes na leitura do Segmento A para ler o Segmento Z.
+   Por: Wanderson Robert / Italo Giurizzato Junior
+
+23/05/2023
+-- PagFor.Caixa.GravarTxtRemessa --
+[*] Ajustes nos segmentos: A, B e J e incluído o segmento J52.
+   Por: Raphael F. B. Soares
+
+17/05/2023
+-- PagFor.Sicredi.GravarTxtRemessa --
+[*] Correção no Segmento B para gerar correntamente quando se tratar de PIX com
+    Dados.
+   Por: Raphael F. B. Soares
+
+17/05/2023
+-- CNAB240.LerTxtRetorno --
+[*] Removido a condição que verifica a ocorrencia de pagamento para que na lista
+    de avisos conste também os pagamentos efetuados.
+   Por: Rafael Luís Acco/Italo Giurizzato Junior
+
+12/05/2023
+-- PagFor.Santander.GravarTxtRemessa --
+[*] Correção no Segmento B para gerar correntamente quando se tratar de PIX.
+   Por: Raphael F. B. Soares
+
+28/04/2023
+-- Diversos --
+[+] Implementado o campo TipoMovimento no SegmentoO, pois estava gerando o 
+    segmento com um valor fixo.
+   Por: Centrodata Sistemas
+
+14/04/2023
+-- Diversos --
+[+] Implementação do Banco UnicredCooperativa
+   Por: Grupo FS
+
+10/04/2023
+-- Diversos --
+[+] Implementação do Banco Banrisul
+   Por: Grupo FS
+
+06/04/2023
+-- PagFor.Caixa.GravarTxtRemessa --
+[*] Altera o final do registro 0 para que fique condizente com o manual.
+   Por: Grupo FS/ Diego F
+
+21/03/2023
+-- PagFor.Sicredi.GravarTxtRemessa --
+[*] Altera a informação do Layout do Arquivo no Header do Arquivo para coincidir com o manual disponível.
+   Por: Rafael Luis Acco/ Diego F 
+
+14/02/2023
+-- PagFor.Santander.GravarTxtRemessa --
+[*] Correção nos registros 0, 1 e 9, para deixar em conformidade com o manual 
+    do Banco.
+   Por: Keiller Rodrigues
+
+06/02/2023
+-- ACBrPagForLerTxt --
+[*] Ajustes na leitura de datas em branco
+   Por: Adriano Lucas
+
+30/11/2022
+-- ACBrPagForClass/CNAB240.LerTxtRetorno --
+[*] Ajustes na leitura do Registro 1.
+   Por: Italo Giurizzato Junior
+
+08/11/2022
+-- ACBrPagForClass/CNAB240.LerTxtRetorno --
+[*] Não estava Gerando os avisos ao ler o Segmento O.
+   Por: Italo Giurizzato Junior
+
+04/11/2022
+-- PagFor.Sicredi.GravarTxtRemessa --
+[*] Correção no Segmento B para PIX, não estava usando os campos corretos.
+   Por: Centrodata Sistemas
+
+21/10/2022
+-- PagFor.Santander.GravarTxtRemessa --
+[*] Correção no Registro 0, não estava incluindo o DV da Agencia.
+   Por: Italo Giurizzato Junior
+
+10/10/2022
+-- ACBrPagForArquivo --
+[*] Alterado o método LoadFromString para que o mesmo identifique qual é
+    o banco que consta no arquivo de retorno.
+   Por: Italo Giurizzato Junior
+
+24/08/2022
+-- Diversos --
+[+] Implementado o banco Caixa Economica Federal (pagCaixaEconomica).
+   Por: Italo Giurizzato Junior
+
+23/08/2022
+-- Diversos --
+[*] Ajustes para reduzir códigos repetitivos.
+   Por: Italo Giurizzato Junior
+-- PagFor.Sicoob.GravarTxtRemessa --
+[*] Correções no Segmento B (Campo Endereco.Numero é numérico).
+   Por: Suporte AT Info
+
+18/08/2022
+-- Diversos --
+[+] Implementado o banco Sicoob (pagBanCooB).
+   Por: Italo Giurizzato Junior
+
+17/08/2022
+-- Diversos --
+[*] Correções no Segmento N.
+   Por: Suporte AT Info
+
+15/08/2022
+-- PagFor.Itau.GravarTxtRemessa/PagFor.BancodoBrasil.GravarTxtRemessa/PagFor.Sicredi.GravarTxtRemessa --
+[*] Correções no Segmento N.
+   Por: Suporte AT Info/Italo Giurizzato Junior
+
+02/08/2022
+-- ACBrPagForClass/CNAB240.LerTxtRetorno --
+[*] Alterações para que seja lido o Segmento Z do arquivo de Retorno.
+   Por: Warobert
+
+29/07/2022
+-- ACBrPagForConversao --
+[*] Implementado a função BancoToIspb que retorna o código ISPB utilizado pelo 
+    banco informado como parâmetro.
+   Por: Alphajoy
+
+07/07/2022
+-- ACBrPagForConfiguracoes --
+[*] Correção: estava com vazamento de memória.
+   Por: Renato Pavan
+
+29/06/2022
+-- ACBrPagForConversao --
+[*] Correção no tipo TTipoMovimento e nas funções TpMovimentoToStr e StrToTpMovimento.
+   Por: Cristofer Rodrigues
+
+23/06/2022
+-- PagFor.Itau.GravarTxtRemessa --
+[*] Correção no Segmento J52, o caractere da posíção 15 segundo a FEBRABAN é um espaço em branco
+    já para o Itaú tem que ser o "0".
+   Por: Suporte AT Info
+
+22/06/2022
+-- Diversos --
+[*] Remoção dos parâmetros: I e J da procedure: SegmentoN, pois eles não tem utilidade.
+   Por: Italo Giurizzato Junior
+-- PagFor.Itau.GravarTxtRemessa --
+[*] Correções no Registro 1 e Segmento B (Alterado o tipo de campo de tcStr para tcStrZero) e 
+    Segmento N1 (acrescentado o Nome do Contribuinte para ser gerado na posição 166 até 195).
+   Por: Italo Giurizzato Junior/Suporte AT Info
+-- PagFor.Itau.GravarTxtRemessa --
+[*] Alterado o tipo de campo de tcInt para tcInt64, pois o numero da conta pode ter até 12 digitos.
+   Por: Rogerio Alves
+
+17/06/2022
+-- PagFor.Bradesco.GravarTxtRemessa/PagFor.BancodoBrasil.GravarTxtRemessa/PagFor.Sicredi.GravarTxtRemessa --
+[*] Correção no Segmento J52, estava gerando J2 sendo que o correto é 52.
+-- PagFor.Sicredi.GravarTxtRemessa --
+[*] Correção no Segmento B e Registro 1, Endereco.Numero é numerico com zero a esquerda.
+    Informações passadas por: Suporte AT Info.
+   Por: Italo Giurizzato Junior
+
+10/06/2022
+-- Diversos --
+[*] Ajustes para a leitura do arquivo de retorno do banco.
+   Por: Italo Giurizzato Junior
+-- PagFor.Bradesco.GravarTxtRemessa --
+[*] Correções para atender o Banco Bradesco.
+   Por: Italo Giurizzato Junior/Diego A. Folieni
+-- Diversos --
+[-] Correção nos Segmentos que são uma lista, não estava inicializando a linha a
+    cada ocorrência do segmento.
+   Por: Italo Giurizzato Junior
+
+09/06/2022
+-- Diversos --
+[*] Ajustes para o Lazarus.
+   Por: Italo Giurizzato Junior
+-- Diversos --
+[*] Refactoring no componente ACBrPagFor, para mais informações leia o tópico no 
+    fórum:
+    https://www.projetoacbr.com.br/forum/topic/67704-refactoring-no-componente-acbrpagfor/
+   Por: Italo Giurizzato Junior
+
+07/06/2022
+-- ACBrPagForGravarTxt --
+[*] Possível solução para geração correta do Registro 5- Banco Bradesco.
+   Por: Italo Giurizzato Junior
+
+03/06/2022
+-- ACBrPagForGravarTxt/ACBrPagForClass --
+[*] Inclusão do campo CodigoISPB no Segmento A para ser utilizado pelo banco
+    Itaú.
+   Por: Rogerio Alves
+
+31/05/2022
+-- ACBrPagForGravarTxt --
+[*] Correção na geração dos Segmentos N - Banco Sicredi.
+   Por: SuporteATInfo
+
+26/05/2022
+-- ACBrPagForGravarTxt --
+[*] Possível solução para geração correta dos Segmentos N (Código da Receita)- Banco Sicredi.
+   Por: Italo Giurizzato Junior
+
+24/05/2022
+-- ACBrPagForGravarTxt --
+[*] Possível solução para geração correta dos Segmentos N - Banco Sicredi.
+   Por: Italo Giurizzato Junior
+-- ACBrPagForGravarTxt --
+[*] Correção na versão do Lote - Banco Santander com exceção do segmento A os demais 
+    a versão é 030.
+   Por: Wesley Lopes
+
+18/05/2022
+-- ACBrPagForGravarTxt --
+[*] Ajuste no Segmento: A, se a DataReal for zero devemos gerar no arquivo 8 zeros. 
+   Por: Wanessa Franco
+
+11/05/2022
+-- ACBrPagForLerTxt --
+[*] Correção para ler o retorno do Segmento A - Banco Bradesco.
+   Por: Wesley Lopes
+
+09/05/2022
+-- ACBrPagForGravarTxt --
+[*] Ajustes nos Segmentos: J e J52, segundo orientação do banco Sicredi.
+   Por: Italo Giurizzato Junior
+
+04/05/2022
+-- ACBrPagForGravarTxt --
+[*] Ajustes nos registros: 1 e 5, bem como nos segmentos:  A, B e J52 para o banco
+    Bradesco.
+   Por: Wanessa Franco
+
+22/04/2022
+-- ACBrPagForLerTxt --
+[*] Os registros 0 e 1 não estava sendo tratado o banco Bradesco ao ler os dados
+    de agência e conta e feita uma correção na leitura da inscrição da empresa no
+    Registro 1.
+   Por: Wanessa Franco
+-- ACBrPagForLerTxt --
+[*] Os Segmentos G e H retornados pelo banco Sicredi as datas estão no formato
+    AAAAMMDD em vez de DDMMAAAA.
+   Por: SuporteATInfo
+
+01/04/2022
+-- ACBrPagForConversao/ACBrPagForLerTxt --
+[*] Ajustes nos nomes dos bancos e correções para a leitura
+    correta do retorno.
+   Por: SuporteATInfo
+
+31/03/2022
+-- ACBrPagForGravarTxt/ACBrPagForLerTxt --
+[*] Mais ajustes para o Sicredi
+   Por: SuporteATInfo
+-- ACBrPagForConversao --
+[*] Acrescentado todos os bancos (assim espero) e
+    refeito as funções: BancoToStr, BancoToDesc e StrToBanco  
+   Por: Italo Giurizzato Junior
+
+29/03/2022
+-- Diversos --
+[*] Ajustes para atender o banco Sicredi.
+   Por: Suporte AT Info
+
+23/03/2022
+-- ACBrPagForGravarTxt --
+[*] Ajustes no Segmento B para o PIX do banco Itau.
+   Por: Cantú
+
+18/03/2022
+-- ACBrPagForClass/ACBrPagForConversao/ACBrPagForGravarTxt/ACBrPagForLerTxt --
+[*] Ajustes para funcionar com o banco Itau
+   Por: Cantú
+-- ACBrPagForArquivo/ACBrPagForConversao/ACBrPagForGravarTxt --
+[*] Ajustes para funcionar com o banco Bradesco
+   Por: Diego A. Folieni
+
+14/01/2022
+-- ACBrPagForGravarTxt/ACBrPagForLerTxt --
+[*] Ajustes para funcionar com o banco Bradesco
+   Por: Paulo Henrique Panico
+
+13/12/2021
+-- Diversos --
+[+] Inclusão dos Bancos: Ailos (085) e Safra (422).
+   Por: TI CentroData
+
+08/10/2021
+-- ACBrPagForGravarTxt/ACBrPagForLerTxt --
+[-] https://www.projetoacbr.com.br/forum/topic/64494-pagfor-sicredi-retornando-dv-ag%C3%AAncia-inv%C3%A1lido-durante-homologa%C3%A7%C3%A3o/
+   Por: Leandro Ledo
+
+21/07/2021
+-- ACBrPagForConversao/ACBrPagForLerTxt --
+[*] Alterações visando a leitura do retorno do banco Santander.
+   Por: Ronaldo Negreiros Daniel
+
+14/05/2021
+-- ACBrPagFor --
+[*] A parâmetro CarregarArquivo do método LerTXT passa a ter o valor True como
+    default.
+   Por: Italo Giurizzato Junior
+
+06/04/2021
+-- Diversos --
+[*] Alterações para gerar o arquivo de remessa e a leitura do arquivo de retorno
+    do Banco Sicredi
+   Por: Maurício Sareto
+
+16/02/2021
+[*] Envio do componente para o Trunk2
+   Por: Italo Giurizzato Junior
+
+19/07/2017
+[+] Ajustes layout e Homologado - Santander, HSBC, ITAU
+
+26/05/2010
+---------------
+[+] Início do Projeto
+[+] Primeira Versao lançada baseado no componente fornecido por Italo Jurisato Junior.
+
+
+
+

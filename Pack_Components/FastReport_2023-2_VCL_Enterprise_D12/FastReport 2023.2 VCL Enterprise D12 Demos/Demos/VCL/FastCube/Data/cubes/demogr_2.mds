@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<slice version="2" timestamp="09.04.2013 9:33:45">
+  <Script ScriptLanguage="PascalScript" Code="begin&#13;&#10;&#13;&#10;end.&#13;&#10;"/>
+  <fields>
+    <field name="AGE_GROUP" caption="AGE_GROUP" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="COUNTRY" caption="COUNTRY" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="PEOPLE" caption="PEOPLE" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="SEX" caption="SEX" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="YEAR" caption="YEAR" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+  </fields>
+  <page_fields>
+    <fields>
+      <field name="AGE_GROUP" caption="AGE_GROUP" alignment="taLeftJustify" captionwidth="100" field_name="AGE_GROUP" SortDirection="fcsd_Desc" TotalPosition="fctp_After" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+    </fields>
+  </page_fields>
+  <xaxis_fields GrandTotalPosition="fctp_Hide" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields>
+      <field name="YEAR" caption="YEAR" alignment="taLeftJustify" captionwidth="100" field_name="YEAR" SortDirection="fcsd_Asc" TotalPosition="fctp_After" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+    </fields>
+    <AdditionalGrandTotals/>
+  </xaxis_fields>
+  <yaxis_fields GrandTotalPosition="fctp_Before" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields>
+      <field name="COUNTRY" caption="COUNTRY" alignment="taLeftJustify" captionwidth="100" field_name="COUNTRY" SortDirection="fcsd_Asc" TotalPosition="fctp_After" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+    </fields>
+    <AdditionalGrandTotals/>
+  </yaxis_fields>
+  <measure_fields caption="Measures" CaptionWidth="100" Region="X" Position="1">
+    <fields>
+      <field name="PEOPLE" caption="PEOPLE" alignment="taRightJustify" captionwidth="100" field_name="PEOPLE" AgrFunc="af_Sum" Visible="-1" DisplayAs="da_Value" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" ScriptFunctionForTotals="" ScriptOrderForTotals="-1" CalcAllCells="0" CalcAllCellsForTotals="0" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="0" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%2.2n" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS>
+          <TfcxContinuousHighlight ApplyTo="1" Kind="chkThreeColorScale" MinValue="0" MaxValue="0" MidValue="50" MinValueType="chvBoundByRow" MaxValueType="chvBoundByRow" MidValueType="chvPercentileByRow" MinValueColor="255" MaxValueColor="32768" MidValueColor="65535" GradientDraw="-1" FrameColor="255" ShowCellValue="-1">
+            <STYLE TextColor="536870911" FillColor="32768" GradientColor="536870911" GradientDirection="0">
+              <FONT Charset="1" Color="-16777208" Height="-11" Name="MS Sans Serif" Pitch="0" Size="8" Style="0"/>
+            </STYLE>
+            <ICONSET Value="0">
+              <ICON ImageIndex="1" ImageValue="0" ImageValueType="chvPercentByRow" ImageValueGE="-1"/>
+              <ICON ImageIndex="2" ImageValue="33" ImageValueType="chvPercentByRow" ImageValueGE="-1"/>
+              <ICON ImageIndex="0" ImageValue="66" ImageValueType="chvPercentByRow" ImageValueGE="-1"/>
+            </ICONSET>
+          </TfcxContinuousHighlight>
+        </HIGHLIGHTS>
+      </field>
+    </fields>
+  </measure_fields>
+  <selection col="3" row="6" measure="0"/>
+  <options HideColZeros="0" HideRowZeros="0"/>
+  <groups version="2" timestamp="09.04.2013 9:33:45"/>
+  <filters version="2" timestamp="09.04.2013 9:33:45">
+    <filter name="#UVFilter">
+      <field name="COUNTRY" type="uvfield" fcxVarType="fcvtString" StoreEnabledValues="0">
+        <values>
+          <value value="Afghanistan"/>
+          <value value="Albania"/>
+          <value value="Algeria"/>
+          <value value="American Samoa"/>
+          <value value="Andorra"/>
+          <value value="Angola"/>
+          <value value="Anguilla"/>
+          <value value="Antigua and Barbuda"/>
+          <value value="Argentina"/>
+          <value value="Armenia"/>
+          <value value="Aruba"/>
+          <value value="Australia"/>
+          <value value="Austria"/>
+          <value value="Azerbaijan"/>
+          <value value="Bahamas, The"/>
+          <value value="Bahrain"/>
+          <value value="Bangladesh"/>
+          <value value="Barbados"/>
+          <value value="Belarus"/>
+          <value value="Belgium"/>
+          <value value="Belize"/>
+          <value value="Benin"/>
+          <value value="Bermuda"/>
+          <value value="Bhutan"/>
+          <value value="Bolivia"/>
+          <value value="Bosnia and Herzegovina"/>
+          <value value="Botswana"/>
+          <value value="Brazil"/>
+          <value value="Brunei"/>
+          <value value="Bulgaria"/>
+          <value value="Burkina Faso"/>
+          <value value="Burma"/>
+          <value value="Burundi"/>
+          <value value="Cambodia"/>
+          <value value="Cameroon"/>
+          <value value="Canada"/>
+          <value value="Cape Verde"/>
+          <value value="Cayman Islands"/>
+          <value value="Central African Republic"/>
+          <value value="Chad"/>
+          <value value="Chile"/>
+          <value value="Colombia"/>
+          <value value="Comoros"/>
+          <value value="Congo (Brazzaville)"/>
+          <value value="Congo (Kinshasa)"/>
+          <value value="Costa Rica"/>
+          <value value="Cote d'Ivoire"/>
+          <value value="Croatia"/>
+          <value value="Cuba"/>
+          <value value="Cyprus"/>
+          <value value="Czech Republic"/>
+          <value value="Denmark"/>
+          <value value="Djibouti"/>
+          <value value="Dominica"/>
+          <value value="Dominican Republic"/>
+          <value value="East Timor"/>
+          <value value="Ecuador"/>
+          <value value="Egypt"/>
+          <value value="El Salvador"/>
+          <value value="Equatorial Guinea"/>
+          <value value="Eritrea"/>
+          <value value="Estonia"/>
+          <value value="Ethiopia"/>
+          <value value="Faroe Islands"/>
+          <value value="Fiji"/>
+          <value value="Finland"/>
+          <value value="French Guiana"/>
+          <value value="French Polynesia"/>
+          <value value="Gabon"/>
+          <value value="Gambia, The"/>
+          <value value="Gaza Strip"/>
+          <value value="Georgia"/>
+          <value value="Ghana"/>
+          <value value="Gibraltar"/>
+          <value value="Greece"/>
+          <value value="Greenland"/>
+          <value value="Grenada"/>
+          <value value="Guadeloupe"/>
+          <value value="Guam"/>
+          <value value="Guatemala"/>
+          <value value="Guernsey"/>
+          <value value="Guinea"/>
+          <value value="Guinea-Bissau"/>
+          <value value="Guyana"/>
+          <value value="Haiti"/>
+          <value value="Honduras"/>
+          <value value="Hong Kong S.A.R."/>
+          <value value="Hungary"/>
+          <value value="Iceland"/>
+          <value value="India"/>
+          <value value="Indonesia"/>
+          <value value="Iran"/>
+          <value value="Iraq"/>
+          <value value="Ireland"/>
+          <value value="Isle of Man"/>
+          <value value="Israel"/>
+          <value value="Italy"/>
+          <value value="Jamaica"/>
+          <value value="Japan"/>
+          <value value="Jersey"/>
+          <value value="Jordan"/>
+          <value value="Kazakhstan"/>
+          <value value="Kenya"/>
+          <value value="Kiribati"/>
+          <value value="Korea, North"/>
+          <value value="Korea, South"/>
+          <value value="Kuwait"/>
+          <value value="Kyrgyzstan"/>
+          <value value="Laos"/>
+          <value value="Latvia"/>
+          <value value="Lebanon"/>
+          <value value="Lesotho"/>
+          <value value="Liberia"/>
+          <value value="Libya"/>
+          <value value="Liechtenstein"/>
+          <value value="Lithuania"/>
+          <value value="Luxembourg"/>
+          <value value="Macau S.A.R."/>
+          <value value="Macedonia"/>
+          <value value="Madagascar"/>
+          <value value="Malawi"/>
+          <value value="Malaysia"/>
+          <value value="Maldives"/>
+          <value value="Mali"/>
+          <value value="Malta"/>
+          <value value="Marshall Islands"/>
+          <value value="Martinique"/>
+          <value value="Mauritania"/>
+          <value value="Mauritius"/>
+          <value value="Mayotte"/>
+          <value value="Mexico"/>
+          <value value="Micronesia, Federated States of"/>
+          <value value="Moldova"/>
+          <value value="Monaco"/>
+          <value value="Mongolia"/>
+          <value value="Montenegro"/>
+          <value value="Montserrat"/>
+          <value value="Morocco"/>
+          <value value="Mozambique"/>
+          <value value="Namibia"/>
+          <value value="Nauru"/>
+          <value value="Nepal"/>
+          <value value="Netherlands"/>
+          <value value="Netherlands Antilles"/>
+          <value value="New Caledonia"/>
+          <value value="New Zealand"/>
+          <value value="Nicaragua"/>
+          <value value="Niger"/>
+          <value value="Nigeria"/>
+          <value value="Northern Mariana Islands"/>
+          <value value="Norway"/>
+          <value value="Oman"/>
+          <value value="Pakistan"/>
+          <value value="Palau"/>
+          <value value="Panama"/>
+          <value value="Papua New Guinea"/>
+          <value value="Paraguay"/>
+          <value value="Peru"/>
+          <value value="Philippines"/>
+          <value value="Poland"/>
+          <value value="Portugal"/>
+          <value value="Puerto Rico"/>
+          <value value="Qatar"/>
+          <value value="Reunion"/>
+          <value value="Romania"/>
+          <value value="Rwanda"/>
+          <value value="Saint Helena"/>
+          <value value="Saint Kitts and Nevis"/>
+          <value value="Saint Lucia"/>
+          <value value="Saint Pierre and Miquelon"/>
+          <value value="Saint Vincent and the Grenadines"/>
+          <value value="Samoa"/>
+          <value value="San Marino"/>
+          <value value="Sao Tome and Principe"/>
+          <value value="Saudi Arabia"/>
+          <value value="Senegal"/>
+          <value value="Serbia"/>
+          <value value="Seychelles"/>
+          <value value="Sierra Leone"/>
+          <value value="Singapore"/>
+          <value value="Slovakia"/>
+          <value value="Slovenia"/>
+          <value value="Solomon Islands"/>
+          <value value="Somalia"/>
+          <value value="South Africa"/>
+          <value value="Spain"/>
+          <value value="Sri Lanka"/>
+          <value value="Sudan"/>
+          <value value="Suriname"/>
+          <value value="Swaziland"/>
+          <value value="Sweden"/>
+          <value value="Switzerland"/>
+          <value value="Syria"/>
+          <value value="Taiwan"/>
+          <value value="Tajikistan"/>
+          <value value="Tanzania"/>
+          <value value="Thailand"/>
+          <value value="Togo"/>
+          <value value="Tonga"/>
+          <value value="Trinidad and Tobago"/>
+          <value value="Tunisia"/>
+          <value value="Turkey"/>
+          <value value="Turkmenistan"/>
+          <value value="Turks and Caicos Islands"/>
+          <value value="Tuvalu"/>
+          <value value="Uganda"/>
+          <value value="Ukraine"/>
+          <value value="United Arab Emirates"/>
+          <value value="Uruguay"/>
+          <value value="Uzbekistan"/>
+          <value value="Vanuatu"/>
+          <value value="Venezuela"/>
+          <value value="Vietnam"/>
+          <value value="Virgin Islands"/>
+          <value value="Virgin Islands, British"/>
+          <value value="West Bank"/>
+          <value value="Western Sahara"/>
+          <value value="Yemen"/>
+          <value value="Zambia"/>
+          <value value="Zimbabwe"/>
+        </values>
+      </field>
+      <field name="YEAR" type="uvfield" fcxVarType="fcvtString" StoreEnabledValues="0">
+        <values>
+          <value value="1997"/>
+          <value value="1998"/>
+          <value value="1999"/>
+          <value value="2000"/>
+          <value value="2002"/>
+          <value value="2003"/>
+          <value value="2004"/>
+          <value value="2005"/>
+        </values>
+      </field>
+    </filter>
+  </filters>
+</slice>

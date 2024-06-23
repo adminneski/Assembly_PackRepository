@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<slice version="2" timestamp="17.12.2012 16:19:29">
+  <fields>
+    <field name="Amount" caption="Amount" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="Balance " caption="Balance " Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="Cost" caption="Cost" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="Customer" caption="Customer" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="Date" caption="Date" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="#Year_Date" caption="Year_Date" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="#Quarter_Date" caption="Quarter_Date" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="#Month_Date" caption="Month_Date" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="#DayOfWeeek_Date" caption="Day_Of_Week_Date" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="#Day_Date" caption="Day_Date" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="Manager" caption="Manager" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="Margin" caption="Margin" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="Paid" caption="Paid" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="Product" caption="Product" Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+    <field name="TypeOfPayment " caption="TypeOfPayment " Width="0" Height="0" PopupWidth="120" PopupShowAvailable="0" Collapsed="0" CollapsedSubGroup="0"/>
+  </fields>
+  <page_fields>
+    <fields>
+      <field name="" caption="Product" alignment="taLeftJustify" captionwidth="100" field_name="Product" SortDirection="fcsd_Asc" TotalPosition="fctp_Before" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+      <field name="" caption="Manager" alignment="taLeftJustify" captionwidth="100" field_name="Manager" SortDirection="fcsd_Asc" TotalPosition="fctp_Before" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+    </fields>
+  </page_fields>
+  <xaxis_fields GrandTotalPosition="fctp_Before" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields>
+      <field name="" caption="Customer" alignment="taLeftJustify" captionwidth="100" field_name="Customer" SortDirection="fcsd_Asc" TotalPosition="fctp_Before" UseTotalPositionFromMeasure="0">
+        <AdditionalTotals/>
+      </field>
+    </fields>
+    <AdditionalGrandTotals/>
+  </xaxis_fields>
+  <yaxis_fields GrandTotalPosition="fctp_Before" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields/>
+    <AdditionalGrandTotals/>
+  </yaxis_fields>
+  <measure_fields caption="Measures" CaptionWidth="100" Region="Y" Position="0">
+    <fields>
+      <field name="" caption="Amount" alignment="taRightJustify" captionwidth="100" field_name="Amount" AgrFunc="af_Sum" Visible="-1" DisplayAs="da_Value" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="-1" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%g" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS/>
+      </field>
+      <field name="" caption="Cost" alignment="taRightJustify" captionwidth="100" field_name="Cost" AgrFunc="af_Sum" Visible="-1" DisplayAs="da_Value" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="-1" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%2.2n" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS/>
+      </field>
+      <field name="" caption="Paid" alignment="taRightJustify" captionwidth="100" field_name="Paid" AgrFunc="af_Sum" Visible="-1" DisplayAs="da_Value" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="-1" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%2.2n" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS/>
+      </field>
+      <field name="" caption="Balance" alignment="taRightJustify" captionwidth="100" field_name="Balance " AgrFunc="af_Sum" Visible="-1" DisplayAs="da_Value" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="-1" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%2.2n" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS/>
+      </field>
+    </fields>
+  </measure_fields>
+  <selection col="0" row="0" measure="0"/>
+  <options HideColZeros="0" HideRowZeros="0"/>
+</slice>

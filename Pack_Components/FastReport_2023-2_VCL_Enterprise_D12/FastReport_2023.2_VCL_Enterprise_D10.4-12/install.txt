@@ -1,0 +1,27 @@
+IDEs supported D10.4, D11, D12
+
+Open delphi IDE.
+
+Tools- Options - language - delphi - library -> Library Path 
+  Win32 and Win64 -> add  C:\... \Lib$(ProductVersion)\VCL\$(Platform)
+
+
+Tools - Options - Environment Variables -> User Systems Overrides
+  Edit $(PATH) add -> C:\... \LibXX.0\VCL\Win32; ...
+                      D:\Neski_Components\FastReport_2023-2_VCL_Enterprise_D12\FastReport_2023.2_VCL_Enterprise_D10.4-12\Lib23.0\VCL\Win32;
+
+  where XX = 21->D10.4, 22->D11, 23->D12
+Note that if the PATH var does not exist in the "User System Overrides" section, then add it as follow:
+Variable Name = PATH
+Content = C:\... \LibXX.0\VCL\Win32;$(PATH)
+
+
+Open C:\... \PackagesVCL\FastReportGrp.groupproj
+Compile and install needed packages
+
+Copy resource files from "C:\... \LibResources\VCL\Resources FastReport" dir to 
+C:\... \Lib$(ProductVersion)\VCL\$(Platform) dirs
+=========
+www.downloadly.ir
+
+

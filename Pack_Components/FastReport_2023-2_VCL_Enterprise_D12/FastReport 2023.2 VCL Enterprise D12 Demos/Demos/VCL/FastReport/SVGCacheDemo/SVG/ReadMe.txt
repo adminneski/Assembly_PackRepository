@@ -1,0 +1,1 @@
+Pictures taken from the site https://freesvg.org

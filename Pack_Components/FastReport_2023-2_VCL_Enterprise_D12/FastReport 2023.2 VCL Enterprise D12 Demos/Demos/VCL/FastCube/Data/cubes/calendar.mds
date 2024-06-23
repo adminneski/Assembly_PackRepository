@@ -1,0 +1,57 @@
+<?xml version="1.1" encoding="utf-8"?>
+<slice version="2" timestamp="09.02.2012 12:31:28">
+  <fields>
+    <field name="Date" caption="Date" Width="111" Height="0" PopUpWidth="180"/>
+    <field name="#Year_Date" caption="Год_Date" Width="0" Height="0" PopUpWidth="180"/>
+    <field name="#Month_Date" caption="Месяц_Date" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="#Day_Date" caption="День_Date" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="#DayOfWeeek_Date" caption="День_недели_Date" Width="0" Height="0" PopUpWidth="120"/>
+    <field name="#WeekNumber_Date" caption="Номер_недели_Date" Width="0" Height="0" PopUpWidth="120"/>
+  </fields>
+  <page_fields>
+    <fields>
+      <field name="#Year_Date" caption="Год_Date" alignment="taLeftJustify" captionwidth="00" field_name="#Year_Date" SortDirection="fcsd_Asc" TotalPosition="fctp_Hide" UseTotalPositionFromMeasure="0">
+        <display_format decimal_separator="," format_str="%g" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <AdditionalTotals/>
+      </field>
+    </fields>
+  </page_fields>
+  <xaxis_fields GrandTotalPosition="fctp_Hide" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields>
+      <field name="#DayOfWeeek_Date" caption="День_недели_Date" alignment="taLeftJustify" captionwidth="00" field_name="#DayOfWeeek_Date" SortDirection="fcsd_Asc" TotalPosition="fctp_Hide" UseTotalPositionFromMeasure="0">
+        <display_format decimal_separator="," format_str="%g" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <AdditionalTotals/>
+      </field>
+    </fields>
+    <AdditionalGrandTotals/>
+  </xaxis_fields>
+  <yaxis_fields GrandTotalPosition="fctp_Hide" UseGrandTotalPositionFromMeasure="0" DefaultTypeSort="md_tsa_ByAxisValue" AxisType="at_Standard">
+    <fields>
+      <field name="#Month_Date" caption="Месяц_Date" alignment="taLeftJustify" captionwidth="00" field_name="#Month_Date" SortDirection="fcsd_Asc" TotalPosition="fctp_Hide" UseTotalPositionFromMeasure="0">
+        <display_format decimal_separator="," format_str="%g" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <AdditionalTotals/>
+      </field>
+      <field name="#WeekNumber_Date" caption="Номер_недели_Date" alignment="taLeftJustify" captionwidth="00" field_name="#WeekNumber_Date" SortDirection="fcsd_Asc" TotalPosition="fctp_Before" UseTotalPositionFromMeasure="0">
+        <display_format decimal_separator="," format_str="%g" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <AdditionalTotals/>
+      </field>
+    </fields>
+    <AdditionalGrandTotals/>
+  </yaxis_fields>
+  <measure_fields caption="Показатели" captionwidth="00" Region="X" Position="0">
+    <fields>
+      <field name="#Day_Date" caption="День_Date" alignment="taRightJustify" captionwidth="00" field_name="#Day_Date" AgrFunc="af_FirstValue" Visible="-1" DisplayAs="da_Value" ScriptFunction="" ScriptOrder="-1" FilterScriptFunction="" DefaultTotalPosition="fctp_After" UseDifferentAggForTotals="0" AgrFuncForTotals="af_Sum" CalcTotalsOnTotals="0" UseXAxisTotalsAsBase="-1" ConflictResolve="tcrEmptyValue">
+        <display_format decimal_separator="," format_str="%g" kind="fkNumeric" QuarterDisplayFormat="qdf_System" WeekDayDisplayFormat="wddf_Long" WeekNumberDisplayFormat="wndf_System" MonthDisplayFormat="mdf_Long"/>
+        <HIGHLIGHTS>
+          <TfcxRangeHighlight ApplyTo="1" CompareObject="rcoNotNull" LowRange="0" HighRange="0" ValueCondition="rvcBetween" TextCondition="rtcContains" Text="">
+            <STYLE TextColor="536870911" FillColor="15780518" GradientColor="536870911" GradientDirection="0">
+              <FONT Charset="1" Color="-16777208" Height="-11" Name="MS Sans Serif" Pitch="0" Size="8" Style="0"/>
+            </STYLE>
+          </TfcxRangeHighlight>
+        </HIGHLIGHTS>
+      </field>
+    </fields>
+  </measure_fields>
+  <selection col="1" row="2" measure="0"/>
+  <options HideColZeros="0" HideRowZeros="0"/>
+</slice>

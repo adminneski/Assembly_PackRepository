@@ -1,0 +1,168 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{894E5304-66CE-43E1-8FB0-E899A26BE136}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="frReportFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dclfrReportFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="frTeeChartFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dclfrTeeChartFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="frDBXFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dclfrDBXFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="frIBXFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dclfrIBXFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="frBDEFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dclfrBDEFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="frFIBFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dclfrFIBFiles.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="frReportFiles">
+        <MSBuild Projects="frReportFiles.dproj"/>
+    </Target>
+    <Target Name="frReportFiles:Clean">
+        <MSBuild Projects="frReportFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="frReportFiles:Make">
+        <MSBuild Projects="frReportFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclfrReportFiles">
+        <MSBuild Projects="dclfrReportFiles.dproj"/>
+    </Target>
+    <Target Name="dclfrReportFiles:Clean">
+        <MSBuild Projects="dclfrReportFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclfrReportFiles:Make">
+        <MSBuild Projects="dclfrReportFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="frTeeChartFiles">
+        <MSBuild Projects="frTeeChartFiles.dproj"/>
+    </Target>
+    <Target Name="frTeeChartFiles:Clean">
+        <MSBuild Projects="frTeeChartFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="frTeeChartFiles:Make">
+        <MSBuild Projects="frTeeChartFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclfrTeeChartFiles">
+        <MSBuild Projects="dclfrTeeChartFiles.dproj"/>
+    </Target>
+    <Target Name="dclfrTeeChartFiles:Clean">
+        <MSBuild Projects="dclfrTeeChartFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclfrTeeChartFiles:Make">
+        <MSBuild Projects="dclfrTeeChartFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="frDBXFiles">
+        <MSBuild Projects="frDBXFiles.dproj"/>
+    </Target>
+    <Target Name="frDBXFiles:Clean">
+        <MSBuild Projects="frDBXFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="frDBXFiles:Make">
+        <MSBuild Projects="frDBXFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclfrDBXFiles">
+        <MSBuild Projects="dclfrDBXFiles.dproj"/>
+    </Target>
+    <Target Name="dclfrDBXFiles:Clean">
+        <MSBuild Projects="dclfrDBXFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclfrDBXFiles:Make">
+        <MSBuild Projects="dclfrDBXFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="frIBXFiles">
+        <MSBuild Projects="frIBXFiles.dproj"/>
+    </Target>
+    <Target Name="frIBXFiles:Clean">
+        <MSBuild Projects="frIBXFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="frIBXFiles:Make">
+        <MSBuild Projects="frIBXFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclfrIBXFiles">
+        <MSBuild Projects="dclfrIBXFiles.dproj"/>
+    </Target>
+    <Target Name="dclfrIBXFiles:Clean">
+        <MSBuild Projects="dclfrIBXFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclfrIBXFiles:Make">
+        <MSBuild Projects="dclfrIBXFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="frBDEFiles">
+        <MSBuild Projects="frBDEFiles.dproj"/>
+    </Target>
+    <Target Name="frBDEFiles:Clean">
+        <MSBuild Projects="frBDEFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="frBDEFiles:Make">
+        <MSBuild Projects="frBDEFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclfrBDEFiles">
+        <MSBuild Projects="dclfrBDEFiles.dproj"/>
+    </Target>
+    <Target Name="dclfrBDEFiles:Clean">
+        <MSBuild Projects="dclfrBDEFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclfrBDEFiles:Make">
+        <MSBuild Projects="dclfrBDEFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="frFIBFiles">
+        <MSBuild Projects="frFIBFiles.dproj"/>
+    </Target>
+    <Target Name="frFIBFiles:Clean">
+        <MSBuild Projects="frFIBFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="frFIBFiles:Make">
+        <MSBuild Projects="frFIBFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclfrFIBFiles">
+        <MSBuild Projects="dclfrFIBFiles.dproj"/>
+    </Target>
+    <Target Name="dclfrFIBFiles:Clean">
+        <MSBuild Projects="dclfrFIBFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclfrFIBFiles:Make">
+        <MSBuild Projects="dclfrFIBFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="frReportFiles;dclfrReportFiles;frTeeChartFiles;dclfrTeeChartFiles;frDBXFiles;dclfrDBXFiles;frIBXFiles;dclfrIBXFiles;frBDEFiles;dclfrBDEFiles;frFIBFiles;dclfrFIBFiles"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="frReportFiles:Clean;dclfrReportFiles:Clean;frTeeChartFiles:Clean;dclfrTeeChartFiles:Clean;frDBXFiles:Clean;dclfrDBXFiles:Clean;frIBXFiles:Clean;dclfrIBXFiles:Clean;frBDEFiles:Clean;dclfrBDEFiles:Clean;frFIBFiles:Clean;dclfrFIBFiles:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="frReportFiles:Make;dclfrReportFiles:Make;frTeeChartFiles:Make;dclfrTeeChartFiles:Make;frDBXFiles:Make;dclfrDBXFiles:Make;frIBXFiles:Make;dclfrIBXFiles:Make;frBDEFiles:Make;dclfrBDEFiles:Make;frFIBFiles:Make;dclfrFIBFiles:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
