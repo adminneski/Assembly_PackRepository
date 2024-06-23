@@ -1,0 +1,17 @@
+-- ###############################################################
+-- BUSCAR REGISTROS DUPLICADOS
+SELECT e.ACT_CODIGO, COUNT(*) AS N_REGISTROS FROM ACT_XX e
+GROUP BY e.ACT_CODIGO
+HAVING COUNT(*) > 1
+
+-- ###############################################################
+-- BUSCAR REGISTROS ORFÃOS
+SELECT
+  f5.FAT_05_ID
+  ,f5.FAT_ID  
+FROM FAT_00_05 f5
+WHERE f5.FAT_ID NOT IN (SELECT
+                          f.FAT_ID
+                        FROM FAT_00 f)
+
+DELETE FROM FAT_00_05 WHERE FAT_05_ID = 10492

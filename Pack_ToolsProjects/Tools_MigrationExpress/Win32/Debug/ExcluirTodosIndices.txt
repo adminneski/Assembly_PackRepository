@@ -1,0 +1,65 @@
+ -- VERIFICA SE EXISTE ESTES ÍNDICES ESPECÍFICOS E OS APAGA 
+ IF  EXISTS (SELECT * 
+             FROM sys.indexes AS si 
+             WHERE si.name IS NOT NULL 
+             AND si.name = 'primary key123')
+             ALTER TABLE dbo.SHORTCUTS
+             DROP CONSTRAINT [primary key123]
+
+ IF  EXISTS (SELECT * 
+             FROM sys.indexes AS si 
+             WHERE si.name IS NOT NULL 
+             AND si.name = 'MENUS_pk')
+             ALTER TABLE dbo.MENUS
+             DROP CONSTRAINT [MENUS_pk]
+
+ IF  EXISTS (SELECT * 
+             FROM sys.indexes AS si 
+             WHERE si.name IS NOT NULL 
+             AND si.name = 'primary key88')
+             ALTER TABLE dbo.MOSTUSED
+             DROP CONSTRAINT [primary key88]             
+
+-- Drop All Indices RESTANTES
+declare @qry nvarchar(max);
+select @qry = (
+
+    select  'IF EXISTS(SELECT * FROM sys.indexes WHERE name='''+ i.name +''' AND object_id = OBJECT_ID(''['+s.name+'].['+o.name+']''))   drop index ['+i.name+'] ON ['+s.name+'].['+o.name+'];  '
+    from sys.indexes i 
+        inner join sys.objects o on  i.object_id=o.object_id
+        inner join sys.schemas s on o.schema_id = s.schema_id
+    where o.type<>'S' and is_primary_key<>1 and index_id>0
+    and s.name!='sys' and s.name!='sys' and is_unique_constraint=0
+for xml path(''));
+
+exec sp_executesql @qry
+
+
+
+DECLARE @Script NVARCHAR(MAX)
+DECLARE curIndices CURSOR FAST_FORWARD READ_ONLY FOR
+
+  
+    SELECT 'ALTER TABLE [' + O.NAME + '] DROP CONSTRAINT  ' + IX.NAME + '; '
+    FROM  SYS.INDEXES IX
+      JOIN SYS.OBJECTS O ON  IX.OBJECT_ID = O.OBJECT_ID
+      INNER JOIN SYS.SCHEMAS S ON O.SCHEMA_ID = S.SCHEMA_ID
+    WHERE 
+      IX.NAME IS NOT NULL 
+      AND O.TYPE <> 'S' 
+      AND INDEX_ID > 0
+      AND S.NAME != 'SYS' AND S.NAME!= 'SYS'
+
+        
+        
+OPEN curIndices
+FETCH NEXT FROM curIndices INTO @Script
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    PRINT @Script
+    EXECUTE sp_executesql @Script 
+
+    FETCH NEXT FROM curIndices INTO @Script
+END
+CLOSE curIndices
+DEALLOCATE curIndices

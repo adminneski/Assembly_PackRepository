@@ -1,0 +1,70 @@
+ -- Cria o SEQUENCE para o campo [CMP_ID] da table [CMP_00]
+ IF NOT EXISTS( SELECT * FROM SYS.OBJECTS WHERE TYPE = 'SO'AND OBJECT_ID = OBJECT_ID(N'SEQ_CMP_ID'))
+  CREATE SEQUENCE dbo.SEQ_CMP_ID
+  AS int 
+  START WITH 1
+  NO MINVALUE 
+  NO MAXVALUE 
+  NO CYCLE 
+  CACHE 
+  GO 
+  
+  
+ -- Criando campo [CMP_ID_OLD] pra receber IDs do campo [CMP_ID] PARA GUARDAR OS IDs ANTIGOS 
+ IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS 
+ WHERE COLUMNS.TABLE_NAME = 'CMP_00'
+ AND COLUMNS.COLUMN_NAME = 'CMP_ID_OLD')
+ BEGIN 
+ ALTER TABLE dbo.CMP_00
+ ADD CMP_ID_OLD int NULL 
+ END; 
+ GO 
+ 
+  
+ -- Guarda [CMP_ID] de relação com o cabeçalho no novo [CMP_ID_OLD] bkp 
+ UPDATE CMP_00
+ SET    CMP_ID_OLD = CMP_ID
+ WHERE  CMP_ID_OLD IS NULL 
+ GO 
+  
+ -- Executa o SEQ_CMP_ID pra gerar os novos IDs do campo [CMP_ID] 
+ UPDATE CMP_00
+ SET    CMP_ID = NEXT VALUE FOR SEQ_CMP_ID
+ GO 
+  
+ -- Recria índice Primary Key da table  [CMP_ID] para o campo [CMP_ID] 
+ IF EXISTS ( SELECT count(table_name) 
+    FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
+    WHERE table_name = 'CMP_00'
+    HAVING COUNT(*) > 1 ) 
+ BEGIN
+ -- DESABILITA INDICE 
+ ALTER INDEX ALL ON [CMP_00]
+ DISABLE 
+  
+ -- VERIFICA SE EXISTE O INDICE E O APAGA 
+ IF  EXISTS (SELECT * 
+             FROM sys.indexes AS si 
+             WHERE si.name = 'CMP_00_PK')
+             ALTER TABLE dbo.CMP_00
+             DROP CONSTRAINT CMP_00_pk 
+  
+ -- ALTERA A TABLE CRIANDO O INDICE 
+ ALTER TABLE dbo.CMP_00
+ ADD CONSTRAINT CMP_00_pk 
+ PRIMARY KEY CLUSTERED (CMP_ID) 
+ WITH ( 
+   PAD_INDEX = OFF, 
+   FILLFACTOR = 90, 
+   IGNORE_DUP_KEY = OFF, 
+   STATISTICS_NORECOMPUTE = OFF, 
+   ALLOW_ROW_LOCKS = ON, 
+   ALLOW_PAGE_LOCKS = ON) 
+ ON [PRIMARY] 
+  
+ -- REABILITA INDICES 
+ ALTER INDEX ALL ON [CMP_00] 
+ REBUILD 
+ END
+ GO
+  

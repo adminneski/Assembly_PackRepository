@@ -1,0 +1,70 @@
+ -- Cria o SEQUENCE para o campo [CCC_ID] da table [CCC_00]
+ IF NOT EXISTS( SELECT * FROM SYS.OBJECTS WHERE TYPE = 'SO'AND OBJECT_ID = OBJECT_ID(N'SEQ_CCC_ID'))
+  CREATE SEQUENCE dbo.SEQ_CCC_ID
+  AS int 
+  START WITH 1
+  NO MINVALUE 
+  NO MAXVALUE 
+  NO CYCLE 
+  CACHE 
+  GO 
+  
+  
+ -- Criando campo [CCC_ID_OLD] pra receber IDs do campo [CCC_ID] PARA GUARDAR OS IDs ANTIGOS 
+ IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS 
+ WHERE COLUMNS.TABLE_NAME = 'CCC_00'
+ AND COLUMNS.COLUMN_NAME = 'CCC_ID_OLD')
+ BEGIN 
+ ALTER TABLE dbo.CCC_00
+ ADD CCC_ID_OLD int NULL 
+ END; 
+ GO 
+
+  
+ -- Guarda [CCC_ID] de relação com o cabeçalho no novo [CCC_ID_OLD] bkp 
+ UPDATE CCC_00
+ SET    CCC_ID_OLD = CCC_ID
+ WHERE  CCC_ID_OLD IS NULL 
+ GO 
+  
+ -- Executa o SEQ_CCC_ID pra gerar os novos IDs do campo [CCC_ID] 
+ UPDATE CCC_00
+ SET    CCC_ID = NEXT VALUE FOR SEQ_CCC_ID
+ GO 
+  
+ -- Recria índice Primary Key da table  [CCC_ID] para o campo [CCC_ID] 
+ IF EXISTS ( SELECT count(table_name) 
+    FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
+    WHERE table_name = 'CCC_00'
+    HAVING COUNT(*) > 1 ) 
+ BEGIN
+ -- DESABILITA INDICE 
+ ALTER INDEX ALL ON [CCC_00]
+ DISABLE 
+  
+ -- VERIFICA SE EXISTE O INDICE E O APAGA 
+ IF  EXISTS (SELECT * 
+             FROM sys.indexes AS si 
+             WHERE si.name = 'CCC_00_PK')
+             ALTER TABLE dbo.CCC_00
+             DROP CONSTRAINT CCC_00_pk 
+  
+ -- ALTERA A TABLE CRIANDO O INDICE 
+ ALTER TABLE dbo.CCC_00
+ ADD CONSTRAINT CCC_00_pk 
+ PRIMARY KEY CLUSTERED (CCC_ID) 
+ WITH ( 
+   PAD_INDEX = OFF, 
+   FILLFACTOR = 90, 
+   IGNORE_DUP_KEY = OFF, 
+   STATISTICS_NORECOMPUTE = OFF, 
+   ALLOW_ROW_LOCKS = ON, 
+   ALLOW_PAGE_LOCKS = ON) 
+ ON [PRIMARY] 
+  
+ -- REABILITA INDICES 
+ ALTER INDEX ALL ON [CCC_00] 
+ REBUILD 
+ END
+ GO
+  

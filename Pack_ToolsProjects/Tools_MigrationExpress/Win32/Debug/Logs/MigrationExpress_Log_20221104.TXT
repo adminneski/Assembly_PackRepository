@@ -1,0 +1,3 @@
+04/11/2022 09:26:35 ::: Arquivo de Log Inicializado.
+04/11/2022 09:26:35 ::: TRESTConnection: Error sending data: (12007) O nome ou o endereço do servidor não pôde ser resolvido
+04/11/2022 09:28:14 ::: TRESTConnection: Error sending data: (12007) O nome ou o endereço do servidor não pôde ser resolvido

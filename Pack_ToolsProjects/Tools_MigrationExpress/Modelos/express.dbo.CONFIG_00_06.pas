@@ -1,0 +1,437 @@
+unit express.dbo.CONFIG_00_06;
+
+interface
+
+uses
+  DB, 
+  Classes, 
+  SysUtils, 
+  Generics.Collections, 
+
+  //goxormbr 
+  goxormbr.core.types.blob,
+  goxormbr.core.types.mapping,
+  goxormbr.core.mapping.classes,
+  goxormbr.core.mapping.register,
+  goxormbr.core.mapping.attributes;
+
+type
+  [Entity]
+  [Table('CONFIG_00_06', '')]
+  [PrimaryKey('CFG_CODIGO', AutoInc, NoSort, False, 'Chave primária')]
+  [Sequence('SEQ_CFG_CODIGO')]
+  TDtoCONFIG_00_06 = class
+  private
+    { Private declarations } 
+    FCFG_CODIGO: Integer;
+    FCFG_TRIBUTACAOENTRADACST_00: String;
+    FCFG_TRIBUTACAOENTRADACST_10: String;
+    FCFG_TRIBUTACAOENTRADACST_20: String;
+    FCFG_TRIBUTACAOENTRADACST_30: String;
+    FCFG_TRIBUTACAOENTRADACST_40: String;
+    FCFG_TRIBUTACAOENTRADACST_41: String;
+    FCFG_TRIBUTACAOENTRADACST_50: String;
+    FCFG_TRIBUTACAOENTRADACST_51: String;
+    FCFG_TRIBUTACAOENTRADACST_60: String;
+    FCFG_TRIBUTACAOENTRADACST_70: String;
+    FCFG_TRIBUTACAOENTRADACST_90: String;
+    FCST_CODIGOPADRAOENTRADACST_00: String;
+    FCST_CODIGOPADRAOENTRADACST_10: String;
+    FCST_CODIGOPADRAOENTRADACST_20: String;
+    FCST_CODIGOPADRAOENTRADACST_30: String;
+    FCST_CODIGOPADRAOENTRADACST_40: String;
+    FCST_CODIGOPADRAOENTRADACST_41: String;
+    FCST_CODIGOPADRAOENTRADACST_50: String;
+    FCST_CODIGOPADRAOENTRADACST_51: String;
+    FCST_CODIGOPADRAOENTRADACST_60: String;
+    FCST_CODIGOPADRAOENTRADACST_70: String;
+    FCST_CODIGOPADRAOENTRADACST_90: String;
+    FCFOP_CODIGOPADRAOENTRADACST_00: String;
+    FCFOP_CODIGOPADRAOENTRADACST_10: String;
+    FCFOP_CODIGOPADRAOENTRADACST_20: String;
+    FCFOP_CODIGOPADRAOENTRADACST_30: String;
+    FCFOP_CODIGOPADRAOENTRADACST_40: String;
+    FCFOP_CODIGOPADRAOENTRADACST_41: String;
+    FCFOP_CODIGOPADRAOENTRADACST_50: String;
+    FCFOP_CODIGOPADRAOENTRADACST_51: String;
+    FCFOP_CODIGOPADRAOENTRADACST_60: String;
+    FCFOP_CODIGOPADRAOENTRADACST_70: String;
+    FCFOP_CODIGOPADRAOENTRADACST_90: String;
+    FCFG_TRIBUTACAOSAIDACST_00: String;
+    FCFG_TRIBUTACAOSAIDACST_10: String;
+    FCFG_TRIBUTACAOSAIDACST_20: String;
+    FCFG_TRIBUTACAOSAIDACST_30: String;
+    FCFG_TRIBUTACAOSAIDACST_40: String;
+    FCFG_TRIBUTACAOSAIDACST_41: String;
+    FCFG_TRIBUTACAOSAIDACST_50: String;
+    FCFG_TRIBUTACAOSAIDACST_51: String;
+    FCFG_TRIBUTACAOSAIDACST_60: String;
+    FCFG_TRIBUTACAOSAIDACST_70: String;
+    FCFG_TRIBUTACAOSAIDACST_90: String;
+    FCFG_DATAALTERACAO: TDateTime;
+    FNCM_CODIGOPADRAOENTRADACST_00: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_10: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_20: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_30: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_40: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_41: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_50: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_51: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_60: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_70: Integer;
+    FNCM_CODIGOPADRAOENTRADACST_90: Integer;
+  public 
+    { Public declarations } 
+     const Table      = 'CONFIG_00_06';
+     const PrimaryKey = 'CFG_CODIGO';
+     const Sequence   = 'SEQ_CFG_CODIGO';
+
+    [Restrictions([NoValidate, NotNull])]
+    [Column('CFG_CODIGO', ftInteger)]
+    [Dictionary('CFG_CODIGO', 'Mensagem de validação', '0', '', '', taCenter)]
+    property CFG_CODIGO: Integer read FCFG_CODIGO write FCFG_CODIGO;
+    const CFG_CODIGO_Name = 'CFG_CODIGO';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_00', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_00', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_00: String read FCFG_TRIBUTACAOENTRADACST_00 write FCFG_TRIBUTACAOENTRADACST_00;
+    const CFG_TRIBUTACAOENTRADACST_00_Name = 'CFG_TRIBUTACAOENTRADACST_00';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_10', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_10', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_10: String read FCFG_TRIBUTACAOENTRADACST_10 write FCFG_TRIBUTACAOENTRADACST_10;
+    const CFG_TRIBUTACAOENTRADACST_10_Name = 'CFG_TRIBUTACAOENTRADACST_10';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_20', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_20', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_20: String read FCFG_TRIBUTACAOENTRADACST_20 write FCFG_TRIBUTACAOENTRADACST_20;
+    const CFG_TRIBUTACAOENTRADACST_20_Name = 'CFG_TRIBUTACAOENTRADACST_20';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_30', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_30', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_30: String read FCFG_TRIBUTACAOENTRADACST_30 write FCFG_TRIBUTACAOENTRADACST_30;
+    const CFG_TRIBUTACAOENTRADACST_30_Name = 'CFG_TRIBUTACAOENTRADACST_30';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_40', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_40', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_40: String read FCFG_TRIBUTACAOENTRADACST_40 write FCFG_TRIBUTACAOENTRADACST_40;
+    const CFG_TRIBUTACAOENTRADACST_40_Name = 'CFG_TRIBUTACAOENTRADACST_40';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_41', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_41', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_41: String read FCFG_TRIBUTACAOENTRADACST_41 write FCFG_TRIBUTACAOENTRADACST_41;
+    const CFG_TRIBUTACAOENTRADACST_41_Name = 'CFG_TRIBUTACAOENTRADACST_41';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_50', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_50', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_50: String read FCFG_TRIBUTACAOENTRADACST_50 write FCFG_TRIBUTACAOENTRADACST_50;
+    const CFG_TRIBUTACAOENTRADACST_50_Name = 'CFG_TRIBUTACAOENTRADACST_50';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_51', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_51', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_51: String read FCFG_TRIBUTACAOENTRADACST_51 write FCFG_TRIBUTACAOENTRADACST_51;
+    const CFG_TRIBUTACAOENTRADACST_51_Name = 'CFG_TRIBUTACAOENTRADACST_51';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_60', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_60', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_60: String read FCFG_TRIBUTACAOENTRADACST_60 write FCFG_TRIBUTACAOENTRADACST_60;
+    const CFG_TRIBUTACAOENTRADACST_60_Name = 'CFG_TRIBUTACAOENTRADACST_60';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_70', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_70', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_70: String read FCFG_TRIBUTACAOENTRADACST_70 write FCFG_TRIBUTACAOENTRADACST_70;
+    const CFG_TRIBUTACAOENTRADACST_70_Name = 'CFG_TRIBUTACAOENTRADACST_70';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOENTRADACST_90', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOENTRADACST_90', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOENTRADACST_90: String read FCFG_TRIBUTACAOENTRADACST_90 write FCFG_TRIBUTACAOENTRADACST_90;
+    const CFG_TRIBUTACAOENTRADACST_90_Name = 'CFG_TRIBUTACAOENTRADACST_90';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_00', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_00', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_00: String read FCST_CODIGOPADRAOENTRADACST_00 write FCST_CODIGOPADRAOENTRADACST_00;
+    const CST_CODIGOPADRAOENTRADACST_00_Name = 'CST_CODIGOPADRAOENTRADACST_00';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_10', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_10', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_10: String read FCST_CODIGOPADRAOENTRADACST_10 write FCST_CODIGOPADRAOENTRADACST_10;
+    const CST_CODIGOPADRAOENTRADACST_10_Name = 'CST_CODIGOPADRAOENTRADACST_10';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_20', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_20', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_20: String read FCST_CODIGOPADRAOENTRADACST_20 write FCST_CODIGOPADRAOENTRADACST_20;
+    const CST_CODIGOPADRAOENTRADACST_20_Name = 'CST_CODIGOPADRAOENTRADACST_20';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_30', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_30', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_30: String read FCST_CODIGOPADRAOENTRADACST_30 write FCST_CODIGOPADRAOENTRADACST_30;
+    const CST_CODIGOPADRAOENTRADACST_30_Name = 'CST_CODIGOPADRAOENTRADACST_30';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_40', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_40', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_40: String read FCST_CODIGOPADRAOENTRADACST_40 write FCST_CODIGOPADRAOENTRADACST_40;
+    const CST_CODIGOPADRAOENTRADACST_40_Name = 'CST_CODIGOPADRAOENTRADACST_40';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_41', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_41', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_41: String read FCST_CODIGOPADRAOENTRADACST_41 write FCST_CODIGOPADRAOENTRADACST_41;
+    const CST_CODIGOPADRAOENTRADACST_41_Name = 'CST_CODIGOPADRAOENTRADACST_41';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_50', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_50', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_50: String read FCST_CODIGOPADRAOENTRADACST_50 write FCST_CODIGOPADRAOENTRADACST_50;
+    const CST_CODIGOPADRAOENTRADACST_50_Name = 'CST_CODIGOPADRAOENTRADACST_50';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_51', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_51', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_51: String read FCST_CODIGOPADRAOENTRADACST_51 write FCST_CODIGOPADRAOENTRADACST_51;
+    const CST_CODIGOPADRAOENTRADACST_51_Name = 'CST_CODIGOPADRAOENTRADACST_51';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_60', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_60', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_60: String read FCST_CODIGOPADRAOENTRADACST_60 write FCST_CODIGOPADRAOENTRADACST_60;
+    const CST_CODIGOPADRAOENTRADACST_60_Name = 'CST_CODIGOPADRAOENTRADACST_60';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_70', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_70', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_70: String read FCST_CODIGOPADRAOENTRADACST_70 write FCST_CODIGOPADRAOENTRADACST_70;
+    const CST_CODIGOPADRAOENTRADACST_70_Name = 'CST_CODIGOPADRAOENTRADACST_70';
+
+    [Restrictions([NoValidate])]
+    [Column('CST_CODIGOPADRAOENTRADACST_90', ftString, 2)]
+    [Dictionary('CST_CODIGOPADRAOENTRADACST_90', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CST_CODIGOPADRAOENTRADACST_90: String read FCST_CODIGOPADRAOENTRADACST_90 write FCST_CODIGOPADRAOENTRADACST_90;
+    const CST_CODIGOPADRAOENTRADACST_90_Name = 'CST_CODIGOPADRAOENTRADACST_90';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_00', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_00', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_00: String read FCFOP_CODIGOPADRAOENTRADACST_00 write FCFOP_CODIGOPADRAOENTRADACST_00;
+    const CFOP_CODIGOPADRAOENTRADACST_00_Name = 'CFOP_CODIGOPADRAOENTRADACST_00';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_10', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_10', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_10: String read FCFOP_CODIGOPADRAOENTRADACST_10 write FCFOP_CODIGOPADRAOENTRADACST_10;
+    const CFOP_CODIGOPADRAOENTRADACST_10_Name = 'CFOP_CODIGOPADRAOENTRADACST_10';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_20', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_20', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_20: String read FCFOP_CODIGOPADRAOENTRADACST_20 write FCFOP_CODIGOPADRAOENTRADACST_20;
+    const CFOP_CODIGOPADRAOENTRADACST_20_Name = 'CFOP_CODIGOPADRAOENTRADACST_20';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_30', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_30', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_30: String read FCFOP_CODIGOPADRAOENTRADACST_30 write FCFOP_CODIGOPADRAOENTRADACST_30;
+    const CFOP_CODIGOPADRAOENTRADACST_30_Name = 'CFOP_CODIGOPADRAOENTRADACST_30';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_40', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_40', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_40: String read FCFOP_CODIGOPADRAOENTRADACST_40 write FCFOP_CODIGOPADRAOENTRADACST_40;
+    const CFOP_CODIGOPADRAOENTRADACST_40_Name = 'CFOP_CODIGOPADRAOENTRADACST_40';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_41', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_41', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_41: String read FCFOP_CODIGOPADRAOENTRADACST_41 write FCFOP_CODIGOPADRAOENTRADACST_41;
+    const CFOP_CODIGOPADRAOENTRADACST_41_Name = 'CFOP_CODIGOPADRAOENTRADACST_41';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_50', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_50', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_50: String read FCFOP_CODIGOPADRAOENTRADACST_50 write FCFOP_CODIGOPADRAOENTRADACST_50;
+    const CFOP_CODIGOPADRAOENTRADACST_50_Name = 'CFOP_CODIGOPADRAOENTRADACST_50';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_51', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_51', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_51: String read FCFOP_CODIGOPADRAOENTRADACST_51 write FCFOP_CODIGOPADRAOENTRADACST_51;
+    const CFOP_CODIGOPADRAOENTRADACST_51_Name = 'CFOP_CODIGOPADRAOENTRADACST_51';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_60', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_60', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_60: String read FCFOP_CODIGOPADRAOENTRADACST_60 write FCFOP_CODIGOPADRAOENTRADACST_60;
+    const CFOP_CODIGOPADRAOENTRADACST_60_Name = 'CFOP_CODIGOPADRAOENTRADACST_60';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_70', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_70', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_70: String read FCFOP_CODIGOPADRAOENTRADACST_70 write FCFOP_CODIGOPADRAOENTRADACST_70;
+    const CFOP_CODIGOPADRAOENTRADACST_70_Name = 'CFOP_CODIGOPADRAOENTRADACST_70';
+
+    [Restrictions([NoValidate])]
+    [Column('CFOP_CODIGOPADRAOENTRADACST_90', ftString, 4)]
+    [Dictionary('CFOP_CODIGOPADRAOENTRADACST_90', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFOP_CODIGOPADRAOENTRADACST_90: String read FCFOP_CODIGOPADRAOENTRADACST_90 write FCFOP_CODIGOPADRAOENTRADACST_90;
+    const CFOP_CODIGOPADRAOENTRADACST_90_Name = 'CFOP_CODIGOPADRAOENTRADACST_90';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_00', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_00', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_00: String read FCFG_TRIBUTACAOSAIDACST_00 write FCFG_TRIBUTACAOSAIDACST_00;
+    const CFG_TRIBUTACAOSAIDACST_00_Name = 'CFG_TRIBUTACAOSAIDACST_00';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_10', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_10', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_10: String read FCFG_TRIBUTACAOSAIDACST_10 write FCFG_TRIBUTACAOSAIDACST_10;
+    const CFG_TRIBUTACAOSAIDACST_10_Name = 'CFG_TRIBUTACAOSAIDACST_10';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_20', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_20', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_20: String read FCFG_TRIBUTACAOSAIDACST_20 write FCFG_TRIBUTACAOSAIDACST_20;
+    const CFG_TRIBUTACAOSAIDACST_20_Name = 'CFG_TRIBUTACAOSAIDACST_20';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_30', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_30', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_30: String read FCFG_TRIBUTACAOSAIDACST_30 write FCFG_TRIBUTACAOSAIDACST_30;
+    const CFG_TRIBUTACAOSAIDACST_30_Name = 'CFG_TRIBUTACAOSAIDACST_30';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_40', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_40', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_40: String read FCFG_TRIBUTACAOSAIDACST_40 write FCFG_TRIBUTACAOSAIDACST_40;
+    const CFG_TRIBUTACAOSAIDACST_40_Name = 'CFG_TRIBUTACAOSAIDACST_40';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_41', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_41', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_41: String read FCFG_TRIBUTACAOSAIDACST_41 write FCFG_TRIBUTACAOSAIDACST_41;
+    const CFG_TRIBUTACAOSAIDACST_41_Name = 'CFG_TRIBUTACAOSAIDACST_41';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_50', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_50', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_50: String read FCFG_TRIBUTACAOSAIDACST_50 write FCFG_TRIBUTACAOSAIDACST_50;
+    const CFG_TRIBUTACAOSAIDACST_50_Name = 'CFG_TRIBUTACAOSAIDACST_50';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_51', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_51', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_51: String read FCFG_TRIBUTACAOSAIDACST_51 write FCFG_TRIBUTACAOSAIDACST_51;
+    const CFG_TRIBUTACAOSAIDACST_51_Name = 'CFG_TRIBUTACAOSAIDACST_51';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_60', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_60', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_60: String read FCFG_TRIBUTACAOSAIDACST_60 write FCFG_TRIBUTACAOSAIDACST_60;
+    const CFG_TRIBUTACAOSAIDACST_60_Name = 'CFG_TRIBUTACAOSAIDACST_60';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_70', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_70', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_70: String read FCFG_TRIBUTACAOSAIDACST_70 write FCFG_TRIBUTACAOSAIDACST_70;
+    const CFG_TRIBUTACAOSAIDACST_70_Name = 'CFG_TRIBUTACAOSAIDACST_70';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_TRIBUTACAOSAIDACST_90', ftString, 1)]
+    [Dictionary('CFG_TRIBUTACAOSAIDACST_90', 'Mensagem de validação', '', '', '', taLeftJustify)]
+    property CFG_TRIBUTACAOSAIDACST_90: String read FCFG_TRIBUTACAOSAIDACST_90 write FCFG_TRIBUTACAOSAIDACST_90;
+    const CFG_TRIBUTACAOSAIDACST_90_Name = 'CFG_TRIBUTACAOSAIDACST_90';
+
+    [Restrictions([NoValidate])]
+    [Column('CFG_DATAALTERACAO', ftDateTime)]
+    [Dictionary('CFG_DATAALTERACAO', 'Mensagem de validação', '', '', '', taCenter)]
+    property CFG_DATAALTERACAO: TDateTime read FCFG_DATAALTERACAO write FCFG_DATAALTERACAO;
+    const CFG_DATAALTERACAO_Name = 'CFG_DATAALTERACAO';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_00', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_00', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_00: Integer read FNCM_CODIGOPADRAOENTRADACST_00 write FNCM_CODIGOPADRAOENTRADACST_00;
+    const NCM_CODIGOPADRAOENTRADACST_00_Name = 'NCM_CODIGOPADRAOENTRADACST_00';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_10', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_10', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_10: Integer read FNCM_CODIGOPADRAOENTRADACST_10 write FNCM_CODIGOPADRAOENTRADACST_10;
+    const NCM_CODIGOPADRAOENTRADACST_10_Name = 'NCM_CODIGOPADRAOENTRADACST_10';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_20', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_20', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_20: Integer read FNCM_CODIGOPADRAOENTRADACST_20 write FNCM_CODIGOPADRAOENTRADACST_20;
+    const NCM_CODIGOPADRAOENTRADACST_20_Name = 'NCM_CODIGOPADRAOENTRADACST_20';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_30', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_30', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_30: Integer read FNCM_CODIGOPADRAOENTRADACST_30 write FNCM_CODIGOPADRAOENTRADACST_30;
+    const NCM_CODIGOPADRAOENTRADACST_30_Name = 'NCM_CODIGOPADRAOENTRADACST_30';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_40', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_40', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_40: Integer read FNCM_CODIGOPADRAOENTRADACST_40 write FNCM_CODIGOPADRAOENTRADACST_40;
+    const NCM_CODIGOPADRAOENTRADACST_40_Name = 'NCM_CODIGOPADRAOENTRADACST_40';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_41', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_41', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_41: Integer read FNCM_CODIGOPADRAOENTRADACST_41 write FNCM_CODIGOPADRAOENTRADACST_41;
+    const NCM_CODIGOPADRAOENTRADACST_41_Name = 'NCM_CODIGOPADRAOENTRADACST_41';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_50', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_50', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_50: Integer read FNCM_CODIGOPADRAOENTRADACST_50 write FNCM_CODIGOPADRAOENTRADACST_50;
+    const NCM_CODIGOPADRAOENTRADACST_50_Name = 'NCM_CODIGOPADRAOENTRADACST_50';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_51', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_51', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_51: Integer read FNCM_CODIGOPADRAOENTRADACST_51 write FNCM_CODIGOPADRAOENTRADACST_51;
+    const NCM_CODIGOPADRAOENTRADACST_51_Name = 'NCM_CODIGOPADRAOENTRADACST_51';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_60', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_60', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_60: Integer read FNCM_CODIGOPADRAOENTRADACST_60 write FNCM_CODIGOPADRAOENTRADACST_60;
+    const NCM_CODIGOPADRAOENTRADACST_60_Name = 'NCM_CODIGOPADRAOENTRADACST_60';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_70', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_70', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_70: Integer read FNCM_CODIGOPADRAOENTRADACST_70 write FNCM_CODIGOPADRAOENTRADACST_70;
+    const NCM_CODIGOPADRAOENTRADACST_70_Name = 'NCM_CODIGOPADRAOENTRADACST_70';
+
+    [Restrictions([NoValidate])]
+    [Column('NCM_CODIGOPADRAOENTRADACST_90', ftInteger)]
+    [Dictionary('NCM_CODIGOPADRAOENTRADACST_90', 'Mensagem de validação', '0', '', '', taCenter)]
+    property NCM_CODIGOPADRAOENTRADACST_90: Integer read FNCM_CODIGOPADRAOENTRADACST_90 write FNCM_CODIGOPADRAOENTRADACST_90;
+    const NCM_CODIGOPADRAOENTRADACST_90_Name = 'NCM_CODIGOPADRAOENTRADACST_90';
+  end;
+
+implementation
+
+initialization
+  TRegisterClass.RegisterEntity(TDtoCONFIG_00_06)
+
+end.

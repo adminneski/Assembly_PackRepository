@@ -1,0 +1,70 @@
+ -- Cria o SEQUENCE para o campo [PPD_ID] da table [PPD_00]
+ IF NOT EXISTS( SELECT * FROM SYS.OBJECTS WHERE TYPE = 'SO'AND OBJECT_ID = OBJECT_ID(N'SEQ_PPD_ID'))
+  CREATE SEQUENCE dbo.SEQ_PPD_ID
+  AS int 
+  START WITH 1
+  NO MINVALUE 
+  NO MAXVALUE 
+  NO CYCLE 
+  CACHE 
+  GO 
+  
+  
+ -- "1058" Criando campo [PPD_ID_OLD] pra receber IDs do campo [PPD_ID] PARA GUARDAR OS IDs ANTIGOS 
+ IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS 
+ WHERE COLUMNS.TABLE_NAME = 'PPD_00'
+ AND COLUMNS.COLUMN_NAME = 'PPD_ID_OLD')
+ BEGIN 
+ ALTER TABLE dbo.PPD_00
+ ADD PPD_ID_OLD int NULL 
+ END; 
+ GO 
+  
+ -- "1267" Guarda [PPD_ID] de relação com o cabeçalho no novo [PPD_ID_OLD] bkp 
+ UPDATE PPD_00
+ SET    PPD_ID_OLD = PPD_ID
+ WHERE  PPD_ID_OLD IS NULL 
+ GO 
+  
+  
+ -- Executa o SEQ_PPD_ID pra gerar os novos IDs do campo [PPD_ID] 
+ UPDATE PPD_00
+ SET    PPD_ID = NEXT VALUE FOR SEQ_PPD_ID
+ GO 
+  
+ -- Recria índice Primary Key da table  [PPD_ID] para o campo [PPD_ID] 
+ IF EXISTS ( SELECT count(table_name) 
+    FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
+    WHERE table_name = 'PPD_00'
+    HAVING COUNT(*) > 1 ) 
+ BEGIN
+ -- DESABILITA INDICE 
+ ALTER INDEX ALL ON [PPD_00]
+ DISABLE 
+  
+ -- VERIFICA SE EXISTE O INDICE E O APAGA 
+ IF  EXISTS (SELECT * 
+             FROM sys.indexes AS si 
+             WHERE si.name = 'PPD_00_PK')
+             ALTER TABLE dbo.PPD_00
+             DROP CONSTRAINT PPD_00_pk 
+  
+ -- ALTERA A TABLE CRIANDO O INDICE 
+ ALTER TABLE dbo.PPD_00
+ ADD CONSTRAINT PPD_00_pk 
+ PRIMARY KEY CLUSTERED (PPD_ID) 
+ WITH ( 
+   PAD_INDEX = OFF, 
+   FILLFACTOR = 90, 
+   IGNORE_DUP_KEY = OFF, 
+   STATISTICS_NORECOMPUTE = OFF, 
+   ALLOW_ROW_LOCKS = ON, 
+   ALLOW_PAGE_LOCKS = ON) 
+ ON [PRIMARY] 
+  
+ -- REABILITA INDICES 
+ ALTER INDEX ALL ON [PPD_00] 
+ REBUILD 
+ END
+ GO
+  
