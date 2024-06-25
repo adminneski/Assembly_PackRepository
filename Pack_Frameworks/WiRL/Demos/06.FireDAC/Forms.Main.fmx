@@ -1,0 +1,220 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'FireDAC Client'
+  ClientHeight = 593
+  ClientWidth = 838
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 838.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 19
+    object BindNavigator1: TBindNavigator
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 234.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      DataSource = BindSourceDB2
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+      xRadius = 4.000000000000000000
+      yRadius = 4.000000000000000000
+    end
+    object btnPUT: TButton
+      Position.X = 561.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Save to Server'
+      OnClick = btnPUTClick
+    end
+    object btnGETALL: TButton
+      Position.X = 255.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Load from Server'
+      OnClick = btnGETALLClick
+    end
+    object BtnGET: TButton
+      Position.X = 408.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Load employee'
+      OnClick = BtnGETClick
+    end
+  end
+  object StringGrid1: TStringGrid
+    Anchors = [akLeft, akTop, akRight]
+    CanFocus = True
+    ClipChildren = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 100.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 54.000000000000000000
+    Size.Width = 407.000000000000000000
+    Size.Height = 348.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    RowHeight = 21.000000000000000000
+    RowCount = 42
+    Viewport.Width = 403.000000000000000000
+    Viewport.Height = 323.000000000000000000
+  end
+  object memoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 10.000000000000000000
+    Position.Y = 416.000000000000000000
+    Size.Width = 728.000000000000000000
+    Size.Height = 169.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 26
+    Viewport.Width = 724.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+  object StringGrid2: TStringGrid
+    Anchors = [akLeft, akTop, akRight]
+    CanFocus = True
+    ClipChildren = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 100.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 425.000000000000000000
+    Position.Y = 54.000000000000000000
+    Size.Width = 309.000000000000000000
+    Size.Height = 348.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    RowHeight = 21.000000000000000000
+    RowCount = 0
+    Viewport.Width = 305.000000000000000000
+    Viewport.Height = 323.000000000000000000
+  end
+  object WiRLClient1: TWiRLClient
+    WiRLEngineURL = 'http://localhost:8080/rest'
+    ConnectTimeout = 0
+    ReadTimeout = -1
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Left = 688
+    Top = 56
+  end
+  object WiRLClientApplication1: TWiRLClientApplication
+    DefaultMediaType = 'application/json'
+    Client = WiRLClient1
+    Filters.Strings = (
+      '*')
+    Readers.Strings = (
+      '*')
+    Writers.Strings = (
+      '*')
+    Left = 688
+    Top = 120
+    object WiRLClientResource1: TWiRLClientResource
+      Application = WiRLClientApplication1
+      Resource = 'maindata/employee'
+    end
+    object WiRLClientResource2: TWiRLClientResource
+      Application = WiRLClientApplication1
+      Resource = 'maindata/array'
+    end
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 692
+    Top = 373
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = StringGrid1
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid2
+      Columns = <>
+    end
+  end
+  object employee: TFDMemTable
+    ActiveStoredUsage = []
+    CachedUpdates = True
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    Left = 688
+    Top = 248
+    object employeeEmployeeID: TIntegerField
+      FieldName = 'EmployeeID'
+    end
+    object employeeFirstName: TStringField
+      DisplayWidth = 30
+      FieldName = 'FirstName'
+      Size = 100
+    end
+    object employeeLastName: TStringField
+      DisplayWidth = 30
+      FieldName = 'LastName'
+      Size = 100
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = employee
+    ScopeMappings = <>
+    Left = 688
+    Top = 320
+  end
+  object customers: TFDMemTable
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    Left = 768
+    Top = 312
+    object customersCustomerID: TStringField
+      DisplayWidth = 10
+      FieldName = 'CustomerID'
+      Size = 100
+    end
+    object customersCompanyName: TStringField
+      DisplayWidth = 30
+      FieldName = 'CompanyName'
+      Size = 100
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = customers
+    ScopeMappings = <>
+    Left = 545
+    Top = 286
+  end
+end

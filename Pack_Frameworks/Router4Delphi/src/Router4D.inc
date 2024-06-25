@@ -1,0 +1,11 @@
+
+
+{$IFDEF FMX}
+  {$DEFINE HAS_FMX}
+{$ELSE}
+  {$DEFINE HAS_VCL}
+{$ENDIF}
+
+
+
+{.$DEFINE HAS_FMX}
