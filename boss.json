@@ -1,0 +1,9 @@
+{
+	"name": "Assembly_PackRepository",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "Pack_Frameworks",
+	"projects": [],
+	"dependencies": {}
+}
